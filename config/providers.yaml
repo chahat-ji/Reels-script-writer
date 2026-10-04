@@ -1,0 +1,15 @@
+capabilities:
+  speech:
+    assemblyai:
+      tier: paid
+      api_key_env: ASSEMBLYAI_API_KEY
+      languages: ["en", "hi"]
+    mlx_whisper:
+      tier: local
+      needs_gpu: true
+      min_ram_gb: 4.0
+  diarization:
+    pyannote:
+      tier: local
+      api_key_env: HF_TOKEN
+      min_ram_gb: 4.0

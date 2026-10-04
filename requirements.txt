@@ -1,0 +1,11 @@
+# Core data validation and config
+pydantic>=2.5.0
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+
+# Speech / Phase 0.1 Provider
+assemblyai>=0.20.0
+
+# Optional testing utility
+pytest>=8.0.0
+rich>=13.7.0
