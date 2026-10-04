@@ -1,0 +1,5583 @@
+{
+  "reel_id": "DeEKAEKhx_Z",
+  "version": "1.0.0",
+  "duration_ms": 96266,
+  "duration_sec": 96.27,
+  "pacing_dna": {
+    "duration_ms": 96266,
+    "duration_sec": 96.27,
+    "pacing": {
+      "total_shots": 71,
+      "avg_shot_duration_sec": 1.36,
+      "hook_shot_duration_sec": 1.03
+    },
+    "speech": {
+      "total_words": 178,
+      "words_per_minute": 110.9,
+      "primary_asr": "assemblyai",
+      "total_utterances": 13
+    },
+    "visuals": {
+      "ocr_coverage_pct": 6.9,
+      "total_text_overlays": 20,
+      "face_on_screen_pct": 82.9,
+      "visual_speech_pct": 9.1,
+      "total_face_tracks": 27
+    },
+    "speakers": {
+      "unique_speakers_detected": 3,
+      "speaker_resolution": {
+        "SPEAKER_00": {
+          "face_id": "face_28",
+          "status": "matched",
+          "overlap_ms": 6600,
+          "speaking_overlap_ms": 6600,
+          "confidence": 0.57
+        },
+        "SPEAKER_01": {
+          "face_id": "face_5",
+          "status": "matched",
+          "overlap_ms": 18500,
+          "speaking_overlap_ms": 0,
+          "confidence": 0.5
+        },
+        "SPEAKER_02": {
+          "face_id": "face_21",
+          "status": "matched",
+          "overlap_ms": 9360,
+          "speaking_overlap_ms": 0,
+          "confidence": 0.5
+        }
+      }
+    }
+  },
+  "resolved_speakers": {
+    "speaker_to_face": {
+      "SPEAKER_00": "face_28",
+      "SPEAKER_01": "face_5",
+      "SPEAKER_02": "face_21"
+    },
+    "face_to_speaker": {
+      "face_28": "SPEAKER_00",
+      "face_5": "SPEAKER_01",
+      "face_21": "SPEAKER_02"
+    },
+    "details": {
+      "SPEAKER_00": {
+        "face_id": "face_28",
+        "status": "matched",
+        "overlap_ms": 6600,
+        "speaking_overlap_ms": 6600,
+        "confidence": 0.57
+      },
+      "SPEAKER_01": {
+        "face_id": "face_5",
+        "status": "matched",
+        "overlap_ms": 18500,
+        "speaking_overlap_ms": 0,
+        "confidence": 0.5
+      },
+      "SPEAKER_02": {
+        "face_id": "face_21",
+        "status": "matched",
+        "overlap_ms": 9360,
+        "speaking_overlap_ms": 0,
+        "confidence": 0.5
+      }
+    }
+  },
+  "tracks": {
+    "speech_words": [
+      {
+        "track": "speech",
+        "start_ms": 1210,
+        "end_ms": 1960,
+        "type": "word",
+        "payload": {
+          "text": "ओए",
+          "raw": "ओए",
+          "speaker": "A"
+        },
+        "confidence": 0.958,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 1960,
+        "end_ms": 2860,
+        "type": "word",
+        "payload": {
+          "text": "देख",
+          "raw": "देख",
+          "speaker": "A"
+        },
+        "confidence": 0.994,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 2860,
+        "end_ms": 3400,
+        "type": "word",
+        "payload": {
+          "text": "तेरे",
+          "raw": "तेरे",
+          "speaker": "A"
+        },
+        "confidence": 0.985,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 3400,
+        "end_ms": 3500,
+        "type": "word",
+        "payload": {
+          "text": "डब्बे",
+          "raw": "डब्बे",
+          "speaker": "A"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 3500,
+        "end_ms": 3680,
+        "type": "word",
+        "payload": {
+          "text": "में",
+          "raw": "में",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 3680,
+        "end_ms": 4000,
+        "type": "word",
+        "payload": {
+          "text": "खाना",
+          "raw": "खाना",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 4000,
+        "end_ms": 4220,
+        "type": "word",
+        "payload": {
+          "text": "खा",
+          "raw": "खा",
+          "speaker": "A"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 4220,
+        "end_ms": 7420,
+        "type": "word",
+        "payload": {
+          "text": "गया",
+          "raw": "गया।",
+          "speaker": "B"
+        },
+        "confidence": 0.988,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 7420,
+        "end_ms": 7420,
+        "type": "word",
+        "payload": {
+          "text": "ओए",
+          "raw": "ओए",
+          "speaker": "B"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 7420,
+        "end_ms": 7840,
+        "type": "word",
+        "payload": {
+          "text": "राशन",
+          "raw": "राशन",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 7840,
+        "end_ms": 8000,
+        "type": "word",
+        "payload": {
+          "text": "की",
+          "raw": "की",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 8000,
+        "end_ms": 8240,
+        "type": "word",
+        "payload": {
+          "text": "लिस्ट",
+          "raw": "लिस्ट",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 8240,
+        "end_ms": 8560,
+        "type": "word",
+        "payload": {
+          "text": "बना",
+          "raw": "बना",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 8560,
+        "end_ms": 8680,
+        "type": "word",
+        "payload": {
+          "text": "रही",
+          "raw": "रही",
+          "speaker": "B"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 8680,
+        "end_ms": 9040,
+        "type": "word",
+        "payload": {
+          "text": "हूँ",
+          "raw": "हूँ।",
+          "speaker": "B"
+        },
+        "confidence": 0.935,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 9040,
+        "end_ms": 9240,
+        "type": "word",
+        "payload": {
+          "text": "तुम",
+          "raw": "तुम",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 9240,
+        "end_ms": 9440,
+        "type": "word",
+        "payload": {
+          "text": "दोनों",
+          "raw": "दोनों",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 9440,
+        "end_ms": 9480,
+        "type": "word",
+        "payload": {
+          "text": "को",
+          "raw": "को",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 9480,
+        "end_ms": 9720,
+        "type": "word",
+        "payload": {
+          "text": "कुछ",
+          "raw": "कुछ",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 9720,
+        "end_ms": 10100,
+        "type": "word",
+        "payload": {
+          "text": "मंगाना",
+          "raw": "मंगाना",
+          "speaker": "B"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 10100,
+        "end_ms": 10100,
+        "type": "word",
+        "payload": {
+          "text": "है",
+          "raw": "है",
+          "speaker": "B"
+        },
+        "confidence": 0.977,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 10100,
+        "end_ms": 10220,
+        "type": "word",
+        "payload": {
+          "text": "तो",
+          "raw": "तो",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 10220,
+        "end_ms": 10360,
+        "type": "word",
+        "payload": {
+          "text": "अभी",
+          "raw": "अभी",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 10360,
+        "end_ms": 10660,
+        "type": "word",
+        "payload": {
+          "text": "बता",
+          "raw": "बता",
+          "speaker": "B"
+        },
+        "confidence": 0.988,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 10660,
+        "end_ms": 10740,
+        "type": "word",
+        "payload": {
+          "text": "दो",
+          "raw": "दो",
+          "speaker": "B"
+        },
+        "confidence": 0.997,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 10740,
+        "end_ms": 11000,
+        "type": "word",
+        "payload": {
+          "text": "मॉल",
+          "raw": "मॉल",
+          "speaker": "B"
+        },
+        "confidence": 0.996,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 11000,
+        "end_ms": 11740,
+        "type": "word",
+        "payload": {
+          "text": "चलेंगे",
+          "raw": "चलेंगे।",
+          "speaker": "B"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 11740,
+        "end_ms": 12060,
+        "type": "word",
+        "payload": {
+          "text": "हाँ",
+          "raw": "हाँ",
+          "speaker": "B"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 12060,
+        "end_ms": 12720,
+        "type": "word",
+        "payload": {
+          "text": "लिखना",
+          "raw": "लिखना",
+          "speaker": "B"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 12720,
+        "end_ms": 12880,
+        "type": "word",
+        "payload": {
+          "text": "हम",
+          "raw": "हम",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 12880,
+        "end_ms": 13360,
+        "type": "word",
+        "payload": {
+          "text": "बताते",
+          "raw": "बताते",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 13360,
+        "end_ms": 13680,
+        "type": "word",
+        "payload": {
+          "text": "हैं",
+          "raw": "हैं।",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 13680,
+        "end_ms": 13940,
+        "type": "word",
+        "payload": {
+          "text": "एक",
+          "raw": "एक",
+          "speaker": "B"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 13940,
+        "end_ms": 14400,
+        "type": "word",
+        "payload": {
+          "text": "चॉकलेट",
+          "raw": "चॉकलेट",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 14400,
+        "end_ms": 14560,
+        "type": "word",
+        "payload": {
+          "text": "का",
+          "raw": "का",
+          "speaker": "B"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 14560,
+        "end_ms": 15220,
+        "type": "word",
+        "payload": {
+          "text": "पैकेट",
+          "raw": "पैकेट,",
+          "speaker": "B"
+        },
+        "confidence": 0.973,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 15220,
+        "end_ms": 15520,
+        "type": "word",
+        "payload": {
+          "text": "दो",
+          "raw": "दो",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 15520,
+        "end_ms": 15800,
+        "type": "word",
+        "payload": {
+          "text": "पैकेट",
+          "raw": "पैकेट",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 15800,
+        "end_ms": 16180,
+        "type": "word",
+        "payload": {
+          "text": "चीज़",
+          "raw": "चीज़",
+          "speaker": "A"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 16180,
+        "end_ms": 16800,
+        "type": "word",
+        "payload": {
+          "text": "बॉल्स",
+          "raw": "बॉल्स,",
+          "speaker": "A"
+        },
+        "confidence": 0.977,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 16800,
+        "end_ms": 17120,
+        "type": "word",
+        "payload": {
+          "text": "दस",
+          "raw": "दस",
+          "speaker": "C"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 17120,
+        "end_ms": 17460,
+        "type": "word",
+        "payload": {
+          "text": "पैकेट",
+          "raw": "पैकेट",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 17460,
+        "end_ms": 18180,
+        "type": "word",
+        "payload": {
+          "text": "लेस",
+          "raw": "लेस,",
+          "speaker": "C"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 18180,
+        "end_ms": 18440,
+        "type": "word",
+        "payload": {
+          "text": "दो",
+          "raw": "दो",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 18440,
+        "end_ms": 18760,
+        "type": "word",
+        "payload": {
+          "text": "पैकेट",
+          "raw": "पैकेट",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 18760,
+        "end_ms": 19200,
+        "type": "word",
+        "payload": {
+          "text": "लौटी",
+          "raw": "लौटी",
+          "speaker": "A"
+        },
+        "confidence": 0.774,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 19200,
+        "end_ms": 20080,
+        "type": "word",
+        "payload": {
+          "text": "चकोपाएँ",
+          "raw": "चकोपाएँ,",
+          "speaker": "A"
+        },
+        "confidence": 0.856,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 20080,
+        "end_ms": 20340,
+        "type": "word",
+        "payload": {
+          "text": "एक",
+          "raw": "एक",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 20340,
+        "end_ms": 20760,
+        "type": "word",
+        "payload": {
+          "text": "डब्बा",
+          "raw": "डब्बा",
+          "speaker": "C"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 20760,
+        "end_ms": 21780,
+        "type": "word",
+        "payload": {
+          "text": "पेंटा",
+          "raw": "पेंटा,",
+          "speaker": "B"
+        },
+        "confidence": 0.988,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 21780,
+        "end_ms": 22000,
+        "type": "word",
+        "payload": {
+          "text": "एक",
+          "raw": "एक",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 22000,
+        "end_ms": 22260,
+        "type": "word",
+        "payload": {
+          "text": "पैकेट",
+          "raw": "पैकेट",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 22260,
+        "end_ms": 29940,
+        "type": "word",
+        "payload": {
+          "text": "नटखट",
+          "raw": "नटखट।",
+          "speaker": "B"
+        },
+        "confidence": 0.834,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 29940,
+        "end_ms": 29980,
+        "type": "word",
+        "payload": {
+          "text": "ये",
+          "raw": "ये",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 29980,
+        "end_ms": 29980,
+        "type": "word",
+        "payload": {
+          "text": "क्या",
+          "raw": "क्या",
+          "speaker": "B"
+        },
+        "confidence": 0.809,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 32510,
+        "end_ms": 33260,
+        "type": "word",
+        "payload": {
+          "text": "गरीब",
+          "raw": "गरीब",
+          "speaker": "A"
+        },
+        "confidence": 0.972,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 33260,
+        "end_ms": 34840,
+        "type": "word",
+        "payload": {
+          "text": "पैसे",
+          "raw": "पैसे",
+          "speaker": "B"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 34840,
+        "end_ms": 35480,
+        "type": "word",
+        "payload": {
+          "text": "आके",
+          "raw": "आके",
+          "speaker": "B"
+        },
+        "confidence": 0.981,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 35480,
+        "end_ms": 35640,
+        "type": "word",
+        "payload": {
+          "text": "ले",
+          "raw": "ले",
+          "speaker": "B"
+        },
+        "confidence": 0.99,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 35640,
+        "end_ms": 36920,
+        "type": "word",
+        "payload": {
+          "text": "लेना",
+          "raw": "लेना",
+          "speaker": "B"
+        },
+        "confidence": 0.993,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 36920,
+        "end_ms": 37440,
+        "type": "word",
+        "payload": {
+          "text": "ये",
+          "raw": "ये",
+          "speaker": "B"
+        },
+        "confidence": 0.983,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 37440,
+        "end_ms": 37440,
+        "type": "word",
+        "payload": {
+          "text": "लो",
+          "raw": "लो",
+          "speaker": "B"
+        },
+        "confidence": 0.987,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 37440,
+        "end_ms": 37720,
+        "type": "word",
+        "payload": {
+          "text": "मम्मी",
+          "raw": "मम्मी",
+          "speaker": "B"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 37720,
+        "end_ms": 38320,
+        "type": "word",
+        "payload": {
+          "text": "काट",
+          "raw": "काट",
+          "speaker": "B"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 38320,
+        "end_ms": 38420,
+        "type": "word",
+        "payload": {
+          "text": "के",
+          "raw": "के",
+          "speaker": "B"
+        },
+        "confidence": 0.997,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 38420,
+        "end_ms": 38760,
+        "type": "word",
+        "payload": {
+          "text": "दे",
+          "raw": "दे",
+          "speaker": "B"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 38760,
+        "end_ms": 39080,
+        "type": "word",
+        "payload": {
+          "text": "दो",
+          "raw": "दो",
+          "speaker": "B"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 39080,
+        "end_ms": 43800,
+        "type": "word",
+        "payload": {
+          "text": "नानी",
+          "raw": "नानी",
+          "speaker": "C"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 43800,
+        "end_ms": 44280,
+        "type": "word",
+        "payload": {
+          "text": "ये",
+          "raw": "ये",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 44280,
+        "end_ms": 44660,
+        "type": "word",
+        "payload": {
+          "text": "देखो",
+          "raw": "देखो",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 44660,
+        "end_ms": 45040,
+        "type": "word",
+        "payload": {
+          "text": "मैंने",
+          "raw": "मैंने",
+          "speaker": "C"
+        },
+        "confidence": 0.997,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 45040,
+        "end_ms": 45300,
+        "type": "word",
+        "payload": {
+          "text": "मम्मी",
+          "raw": "मम्मी",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 45300,
+        "end_ms": 45420,
+        "type": "word",
+        "payload": {
+          "text": "को",
+          "raw": "को",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 45420,
+        "end_ms": 45720,
+        "type": "word",
+        "payload": {
+          "text": "सौ",
+          "raw": "सौ",
+          "speaker": "C"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 45720,
+        "end_ms": 45860,
+        "type": "word",
+        "payload": {
+          "text": "का",
+          "raw": "का",
+          "speaker": "C"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 45860,
+        "end_ms": 46020,
+        "type": "word",
+        "payload": {
+          "text": "नोट",
+          "raw": "नोट",
+          "speaker": "C"
+        },
+        "confidence": 0.996,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 46020,
+        "end_ms": 46320,
+        "type": "word",
+        "payload": {
+          "text": "दिया",
+          "raw": "दिया",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 46320,
+        "end_ms": 46740,
+        "type": "word",
+        "payload": {
+          "text": "मम्मी",
+          "raw": "मम्मी",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 46740,
+        "end_ms": 46860,
+        "type": "word",
+        "payload": {
+          "text": "ने",
+          "raw": "ने",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 46860,
+        "end_ms": 47040,
+        "type": "word",
+        "payload": {
+          "text": "सौ",
+          "raw": "सौ",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 47040,
+        "end_ms": 47180,
+        "type": "word",
+        "payload": {
+          "text": "में",
+          "raw": "में",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 47180,
+        "end_ms": 47280,
+        "type": "word",
+        "payload": {
+          "text": "से",
+          "raw": "से",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 47280,
+        "end_ms": 47660,
+        "type": "word",
+        "payload": {
+          "text": "पचास",
+          "raw": "पचास",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 47660,
+        "end_ms": 47880,
+        "type": "word",
+        "payload": {
+          "text": "रुपए",
+          "raw": "रुपए",
+          "speaker": "C"
+        },
+        "confidence": 0.978,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 47880,
+        "end_ms": 48139,
+        "type": "word",
+        "payload": {
+          "text": "काट",
+          "raw": "काट",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 48139,
+        "end_ms": 48320,
+        "type": "word",
+        "payload": {
+          "text": "के",
+          "raw": "के",
+          "speaker": "C"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 48320,
+        "end_ms": 48740,
+        "type": "word",
+        "payload": {
+          "text": "मेरे",
+          "raw": "मेरे",
+          "speaker": "C"
+        },
+        "confidence": 0.996,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 48740,
+        "end_ms": 48880,
+        "type": "word",
+        "payload": {
+          "text": "को",
+          "raw": "को",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 48880,
+        "end_ms": 49200,
+        "type": "word",
+        "payload": {
+          "text": "डेढ़",
+          "raw": "डेढ़",
+          "speaker": "C"
+        },
+        "confidence": 0.996,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 49200,
+        "end_ms": 49380,
+        "type": "word",
+        "payload": {
+          "text": "सौ",
+          "raw": "सौ",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 49380,
+        "end_ms": 49620,
+        "type": "word",
+        "payload": {
+          "text": "रुपए",
+          "raw": "रुपए",
+          "speaker": "C"
+        },
+        "confidence": 0.778,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 49620,
+        "end_ms": 50020,
+        "type": "word",
+        "payload": {
+          "text": "वापस",
+          "raw": "वापस",
+          "speaker": "C"
+        },
+        "confidence": 0.99,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 50020,
+        "end_ms": 50280,
+        "type": "word",
+        "payload": {
+          "text": "दिए",
+          "raw": "दिए",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 50280,
+        "end_ms": 50900,
+        "type": "word",
+        "payload": {
+          "text": "मम्मी",
+          "raw": "मम्मी",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 50900,
+        "end_ms": 51080,
+        "type": "word",
+        "payload": {
+          "text": "को",
+          "raw": "को",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 51080,
+        "end_ms": 51320,
+        "type": "word",
+        "payload": {
+          "text": "लगा",
+          "raw": "लगा",
+          "speaker": "C"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 51320,
+        "end_ms": 51680,
+        "type": "word",
+        "payload": {
+          "text": "मेरे",
+          "raw": "मेरे",
+          "speaker": "C"
+        },
+        "confidence": 0.949,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 51680,
+        "end_ms": 52220,
+        "type": "word",
+        "payload": {
+          "text": "तोस्सों",
+          "raw": "तोस्सों",
+          "speaker": "C"
+        },
+        "confidence": 0.646,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 52220,
+        "end_ms": 52260,
+        "type": "word",
+        "payload": {
+          "text": "का",
+          "raw": "का",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 52260,
+        "end_ms": 52520,
+        "type": "word",
+        "payload": {
+          "text": "नोट",
+          "raw": "नोट",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 52520,
+        "end_ms": 52840,
+        "type": "word",
+        "payload": {
+          "text": "दिया",
+          "raw": "दिया",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 52840,
+        "end_ms": 53160,
+        "type": "word",
+        "payload": {
+          "text": "है",
+          "raw": "है",
+          "speaker": "C"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 53160,
+        "end_ms": 53600,
+        "type": "word",
+        "payload": {
+          "text": "बिकारी",
+          "raw": "बिकारी",
+          "speaker": "A"
+        },
+        "confidence": 0.894,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 53600,
+        "end_ms": 53780,
+        "type": "word",
+        "payload": {
+          "text": "है",
+          "raw": "है",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 53780,
+        "end_ms": 54020,
+        "type": "word",
+        "payload": {
+          "text": "तू",
+          "raw": "तू",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 54020,
+        "end_ms": 54400,
+        "type": "word",
+        "payload": {
+          "text": "गरीब",
+          "raw": "गरीब",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 54400,
+        "end_ms": 54740,
+        "type": "word",
+        "payload": {
+          "text": "आदमी",
+          "raw": "आदमी",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 54740,
+        "end_ms": 54840,
+        "type": "word",
+        "payload": {
+          "text": "के",
+          "raw": "के",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 54840,
+        "end_ms": 55160,
+        "type": "word",
+        "payload": {
+          "text": "पैसे",
+          "raw": "पैसे",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 55160,
+        "end_ms": 55480,
+        "type": "word",
+        "payload": {
+          "text": "मार",
+          "raw": "मार",
+          "speaker": "A"
+        },
+        "confidence": 0.888,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 55480,
+        "end_ms": 55580,
+        "type": "word",
+        "payload": {
+          "text": "ली",
+          "raw": "ली",
+          "speaker": "A"
+        },
+        "confidence": 0.949,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 55580,
+        "end_ms": 56100,
+        "type": "word",
+        "payload": {
+          "text": "शर्म",
+          "raw": "शर्म",
+          "speaker": "A"
+        },
+        "confidence": 0.996,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 56100,
+        "end_ms": 56220,
+        "type": "word",
+        "payload": {
+          "text": "नहीं",
+          "raw": "नहीं",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 56220,
+        "end_ms": 56540,
+        "type": "word",
+        "payload": {
+          "text": "आती",
+          "raw": "आती",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 56540,
+        "end_ms": 57260,
+        "type": "word",
+        "payload": {
+          "text": "इज्जतदार",
+          "raw": "इज्जतदार",
+          "speaker": "A"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 57260,
+        "end_ms": 57600,
+        "type": "word",
+        "payload": {
+          "text": "लोग",
+          "raw": "लोग",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 57600,
+        "end_ms": 57860,
+        "type": "word",
+        "payload": {
+          "text": "हैं",
+          "raw": "हैं",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 57860,
+        "end_ms": 58120,
+        "type": "word",
+        "payload": {
+          "text": "हमलोग",
+          "raw": "हमलोग",
+          "speaker": "A"
+        },
+        "confidence": 0.884,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 63930,
+        "end_ms": 64680,
+        "type": "word",
+        "payload": {
+          "text": "आधे-आधे",
+          "raw": "आधे-आधे",
+          "speaker": "A"
+        },
+        "confidence": 0.943,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 64680,
+        "end_ms": 65080,
+        "type": "word",
+        "payload": {
+          "text": "कर",
+          "raw": "कर",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 65080,
+        "end_ms": 65400,
+        "type": "word",
+        "payload": {
+          "text": "लेंगे",
+          "raw": "लेंगे,",
+          "speaker": "A"
+        },
+        "confidence": 0.927,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 65400,
+        "end_ms": 65740,
+        "type": "word",
+        "payload": {
+          "text": "आधे",
+          "raw": "आधे",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 65740,
+        "end_ms": 66060,
+        "type": "word",
+        "payload": {
+          "text": "आपके",
+          "raw": "आपके",
+          "speaker": "A"
+        },
+        "confidence": 0.979,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 66060,
+        "end_ms": 66300,
+        "type": "word",
+        "payload": {
+          "text": "आधे",
+          "raw": "आधे",
+          "speaker": "A"
+        },
+        "confidence": 0.975,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 66300,
+        "end_ms": 67020,
+        "type": "word",
+        "payload": {
+          "text": "मेरे",
+          "raw": "मेरे।",
+          "speaker": "A"
+        },
+        "confidence": 0.983,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 67020,
+        "end_ms": 67260,
+        "type": "word",
+        "payload": {
+          "text": "प्लीज",
+          "raw": "प्लीज",
+          "speaker": "A"
+        },
+        "confidence": 0.903,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 67260,
+        "end_ms": 67520,
+        "type": "word",
+        "payload": {
+          "text": "ना",
+          "raw": "ना",
+          "speaker": "A"
+        },
+        "confidence": 0.499,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 67520,
+        "end_ms": 67580,
+        "type": "word",
+        "payload": {
+          "text": "नानी",
+          "raw": "नानी",
+          "speaker": "A"
+        },
+        "confidence": 0.997,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 67580,
+        "end_ms": 67980,
+        "type": "word",
+        "payload": {
+          "text": "मान",
+          "raw": "मान",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 67980,
+        "end_ms": 68960,
+        "type": "word",
+        "payload": {
+          "text": "जाओ",
+          "raw": "जाओ।",
+          "speaker": "A"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 68960,
+        "end_ms": 69300,
+        "type": "word",
+        "payload": {
+          "text": "ओए",
+          "raw": "ओए",
+          "speaker": "A"
+        },
+        "confidence": 0.871,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 69300,
+        "end_ms": 69560,
+        "type": "word",
+        "payload": {
+          "text": "एक",
+          "raw": "एक",
+          "speaker": "A"
+        },
+        "confidence": 0.888,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 69560,
+        "end_ms": 69880,
+        "type": "word",
+        "payload": {
+          "text": "गलती",
+          "raw": "गलती",
+          "speaker": "A"
+        },
+        "confidence": 0.97,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 69880,
+        "end_ms": 70220,
+        "type": "word",
+        "payload": {
+          "text": "करी",
+          "raw": "करी",
+          "speaker": "A"
+        },
+        "confidence": 0.997,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 70220,
+        "end_ms": 70240,
+        "type": "word",
+        "payload": {
+          "text": "है",
+          "raw": "है",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 70240,
+        "end_ms": 71040,
+        "type": "word",
+        "payload": {
+          "text": "तूने",
+          "raw": "तूने?",
+          "speaker": "A"
+        },
+        "confidence": 0.959,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 71260,
+        "end_ms": 71520,
+        "type": "word",
+        "payload": {
+          "text": "अभी",
+          "raw": "अभी",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 71520,
+        "end_ms": 71620,
+        "type": "word",
+        "payload": {
+          "text": "भी",
+          "raw": "भी",
+          "speaker": "A"
+        },
+        "confidence": 0.963,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 71620,
+        "end_ms": 71919,
+        "type": "word",
+        "payload": {
+          "text": "कह",
+          "raw": "कह",
+          "speaker": "A"
+        },
+        "confidence": 0.997,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 71919,
+        "end_ms": 72000,
+        "type": "word",
+        "payload": {
+          "text": "रही",
+          "raw": "रही",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 72000,
+        "end_ms": 72180,
+        "type": "word",
+        "payload": {
+          "text": "हूँ",
+          "raw": "हूँ",
+          "speaker": "A"
+        },
+        "confidence": 0.993,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 72180,
+        "end_ms": 72300,
+        "type": "word",
+        "payload": {
+          "text": "नानी",
+          "raw": "नानी",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 72300,
+        "end_ms": 72760,
+        "type": "word",
+        "payload": {
+          "text": "मान",
+          "raw": "मान",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 72760,
+        "end_ms": 73300,
+        "type": "word",
+        "payload": {
+          "text": "जाओ",
+          "raw": "जाओ।",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 73300,
+        "end_ms": 73520,
+        "type": "word",
+        "payload": {
+          "text": "चुप",
+          "raw": "चुप",
+          "speaker": "A"
+        },
+        "confidence": 0.994,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 73520,
+        "end_ms": 73920,
+        "type": "word",
+        "payload": {
+          "text": "कर",
+          "raw": "कर।",
+          "speaker": "A"
+        },
+        "confidence": 0.971,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 73920,
+        "end_ms": 74380,
+        "type": "word",
+        "payload": {
+          "text": "ओए",
+          "raw": "ओए",
+          "speaker": "A"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 74380,
+        "end_ms": 74780,
+        "type": "word",
+        "payload": {
+          "text": "इसने",
+          "raw": "इसने",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 74780,
+        "end_ms": 75060,
+        "type": "word",
+        "payload": {
+          "text": "तुझे",
+          "raw": "तुझे",
+          "speaker": "A"
+        },
+        "confidence": 0.994,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 75060,
+        "end_ms": 75400,
+        "type": "word",
+        "payload": {
+          "text": "पांच",
+          "raw": "पांच",
+          "speaker": "A"
+        },
+        "confidence": 0.96,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 75400,
+        "end_ms": 75520,
+        "type": "word",
+        "payload": {
+          "text": "सौ",
+          "raw": "सौ",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 75520,
+        "end_ms": 75740,
+        "type": "word",
+        "payload": {
+          "text": "रुपए",
+          "raw": "रुपए",
+          "speaker": "A"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 75740,
+        "end_ms": 75940,
+        "type": "word",
+        "payload": {
+          "text": "दिए",
+          "raw": "दिए",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 75940,
+        "end_ms": 76320,
+        "type": "word",
+        "payload": {
+          "text": "थे",
+          "raw": "थे,",
+          "speaker": "A"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 76320,
+        "end_ms": 76620,
+        "type": "word",
+        "payload": {
+          "text": "तूने",
+          "raw": "तूने",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 76620,
+        "end_ms": 76860,
+        "type": "word",
+        "payload": {
+          "text": "सिर्फ",
+          "raw": "सिर्फ",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 76860,
+        "end_ms": 77120,
+        "type": "word",
+        "payload": {
+          "text": "डेढ़",
+          "raw": "डेढ़",
+          "speaker": "A"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 77120,
+        "end_ms": 77240,
+        "type": "word",
+        "payload": {
+          "text": "सौ",
+          "raw": "सौ",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 77240,
+        "end_ms": 77500,
+        "type": "word",
+        "payload": {
+          "text": "वापस",
+          "raw": "वापस",
+          "speaker": "A"
+        },
+        "confidence": 0.955,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 77500,
+        "end_ms": 78000,
+        "type": "word",
+        "payload": {
+          "text": "करे",
+          "raw": "करे।",
+          "speaker": "A"
+        },
+        "confidence": 0.805,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 78000,
+        "end_ms": 78300,
+        "type": "word",
+        "payload": {
+          "text": "ला",
+          "raw": "ला",
+          "speaker": "A"
+        },
+        "confidence": 0.988,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 78300,
+        "end_ms": 78700,
+        "type": "word",
+        "payload": {
+          "text": "तीन",
+          "raw": "तीन",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 78700,
+        "end_ms": 78860,
+        "type": "word",
+        "payload": {
+          "text": "सौ",
+          "raw": "सौ",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 78860,
+        "end_ms": 79040,
+        "type": "word",
+        "payload": {
+          "text": "और",
+          "raw": "और",
+          "speaker": "A"
+        },
+        "confidence": 0.926,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 79040,
+        "end_ms": 79480,
+        "type": "word",
+        "payload": {
+          "text": "दे",
+          "raw": "दे।",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 79480,
+        "end_ms": 79980,
+        "type": "word",
+        "payload": {
+          "text": "सॉरी",
+          "raw": "सॉरी",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 80290,
+        "end_ms": 81140,
+        "type": "word",
+        "payload": {
+          "text": "सॉरी",
+          "raw": "सॉरी।",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 81140,
+        "end_ms": 82360,
+        "type": "word",
+        "payload": {
+          "text": "सॉरी",
+          "raw": "सॉरी",
+          "speaker": "A"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 82360,
+        "end_ms": 82620,
+        "type": "word",
+        "payload": {
+          "text": "बोरी",
+          "raw": "बोरी",
+          "speaker": "A"
+        },
+        "confidence": 0.858,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 82620,
+        "end_ms": 82960,
+        "type": "word",
+        "payload": {
+          "text": "सुनने",
+          "raw": "सुनने",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 82960,
+        "end_ms": 83080,
+        "type": "word",
+        "payload": {
+          "text": "की",
+          "raw": "की",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 83080,
+        "end_ms": 83360,
+        "type": "word",
+        "payload": {
+          "text": "आदत",
+          "raw": "आदत",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 83360,
+        "end_ms": 83540,
+        "type": "word",
+        "payload": {
+          "text": "नहीं",
+          "raw": "नहीं",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 83540,
+        "end_ms": 83740,
+        "type": "word",
+        "payload": {
+          "text": "है",
+          "raw": "है",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 83740,
+        "end_ms": 84120,
+        "type": "word",
+        "payload": {
+          "text": "मैं",
+          "raw": "मैं।",
+          "speaker": "A"
+        },
+        "confidence": 0.991,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 84120,
+        "end_ms": 91920,
+        "type": "word",
+        "payload": {
+          "text": "पागल",
+          "raw": "पागल",
+          "speaker": "A"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 91920,
+        "end_ms": 91940,
+        "type": "word",
+        "payload": {
+          "text": "ही",
+          "raw": "ही",
+          "speaker": "A"
+        },
+        "confidence": 0.82,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 91940,
+        "end_ms": 92690,
+        "type": "word",
+        "payload": {
+          "text": "बना",
+          "raw": "बना",
+          "speaker": "A"
+        },
+        "confidence": 0.998,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      }
+    ],
+    "speech_utterances": [
+      {
+        "track": "speech",
+        "start_ms": 1210,
+        "end_ms": 4220,
+        "type": "utterance",
+        "payload": {
+          "text": "ओए देख तेरे डब्बे में खाना खा",
+          "speaker": "A",
+          "speaker_canonical": "SPEAKER_00",
+          "resolved_face_id": "face_28",
+          "is_on_screen": true
+        },
+        "confidence": 0.99,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 4220,
+        "end_ms": 15220,
+        "type": "utterance",
+        "payload": {
+          "text": "गया। ओए राशन की लिस्ट बना रही हूँ। तुम दोनों को कुछ मंगाना है तो अभी बता दो मॉल चलेंगे। हाँ लिखना हम बताते हैं। एक चॉकलेट का पैकेट,",
+          "speaker": "B",
+          "speaker_canonical": "SPEAKER_01",
+          "resolved_face_id": "face_5",
+          "is_on_screen": true
+        },
+        "confidence": 0.995,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 15220,
+        "end_ms": 16800,
+        "type": "utterance",
+        "payload": {
+          "text": "दो पैकेट चीज़ बॉल्स,",
+          "speaker": "A",
+          "speaker_canonical": "SPEAKER_00",
+          "resolved_face_id": "face_28",
+          "is_on_screen": true
+        },
+        "confidence": 0.994,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 16800,
+        "end_ms": 18180,
+        "type": "utterance",
+        "payload": {
+          "text": "दस पैकेट लेस,",
+          "speaker": "C",
+          "speaker_canonical": "SPEAKER_02",
+          "resolved_face_id": "face_21",
+          "is_on_screen": true
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 18180,
+        "end_ms": 20080,
+        "type": "utterance",
+        "payload": {
+          "text": "दो पैकेट लौटी चकोपाएँ,",
+          "speaker": "A",
+          "speaker_canonical": "SPEAKER_00",
+          "resolved_face_id": "face_28",
+          "is_on_screen": true
+        },
+        "confidence": 0.908,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 20080,
+        "end_ms": 20760,
+        "type": "utterance",
+        "payload": {
+          "text": "एक डब्बा",
+          "speaker": "C",
+          "speaker_canonical": "SPEAKER_02",
+          "resolved_face_id": "face_21",
+          "is_on_screen": true
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 20760,
+        "end_ms": 21780,
+        "type": "utterance",
+        "payload": {
+          "text": "पेंटा,",
+          "speaker": "B",
+          "speaker_canonical": "SPEAKER_01",
+          "resolved_face_id": "face_5",
+          "is_on_screen": true
+        },
+        "confidence": 0.988,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 21780,
+        "end_ms": 22260,
+        "type": "utterance",
+        "payload": {
+          "text": "एक पैकेट",
+          "speaker": "A",
+          "speaker_canonical": "SPEAKER_00",
+          "resolved_face_id": "face_28",
+          "is_on_screen": true
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 22260,
+        "end_ms": 29980,
+        "type": "utterance",
+        "payload": {
+          "text": "नटखट। ये क्या",
+          "speaker": "B",
+          "speaker_canonical": "SPEAKER_01",
+          "resolved_face_id": "face_5",
+          "is_on_screen": true
+        },
+        "confidence": 0.881,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 32510,
+        "end_ms": 33260,
+        "type": "utterance",
+        "payload": {
+          "text": "गरीब",
+          "speaker": "A",
+          "speaker_canonical": "SPEAKER_00",
+          "resolved_face_id": "face_28",
+          "is_on_screen": true
+        },
+        "confidence": 0.972,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 33260,
+        "end_ms": 39080,
+        "type": "utterance",
+        "payload": {
+          "text": "पैसे आके ले लेना ये लो मम्मी काट के दे दो",
+          "speaker": "B",
+          "speaker_canonical": "SPEAKER_01",
+          "resolved_face_id": "face_5",
+          "is_on_screen": true
+        },
+        "confidence": 0.993,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 39080,
+        "end_ms": 53160,
+        "type": "utterance",
+        "payload": {
+          "text": "नानी ये देखो मैंने मम्मी को सौ का नोट दिया मम्मी ने सौ में से पचास रुपए काट के मेरे को डेढ़ सौ रुपए वापस दिए मम्मी को लगा मेरे तोस्सों का नोट दिया है",
+          "speaker": "C",
+          "speaker_canonical": "SPEAKER_02",
+          "resolved_face_id": "face_21",
+          "is_on_screen": true
+        },
+        "confidence": 0.981,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      },
+      {
+        "track": "speech",
+        "start_ms": 53160,
+        "end_ms": 92690,
+        "type": "utterance",
+        "payload": {
+          "text": "बिकारी है तू गरीब आदमी के पैसे मार ली शर्म नहीं आती इज्जतदार लोग हैं हमलोग आधे-आधे कर लेंगे, आधे आपके आधे मेरे। प्लीज ना नानी मान जाओ। ओए एक गलती करी है तूने? अभी भी कह रही हूँ नानी मान जाओ। चुप कर। ओए इसने तुझे पांच सौ रुपए दिए थे, तूने सिर्फ डेढ़ सौ वापस करे। ला तीन सौ और दे। सॉरी सॉरी। सॉरी बोरी सुनने की आदत नहीं है मैं। पागल ही बना",
+          "speaker": "A",
+          "speaker_canonical": "SPEAKER_00",
+          "resolved_face_id": "face_28",
+          "is_on_screen": true
+        },
+        "confidence": 0.97,
+        "provider": "assemblyai",
+        "provider_version": "1.3.0",
+        "run_id": null
+      }
+    ],
+    "shots": [
+      {
+        "track": "shot",
+        "start_ms": 0,
+        "end_ms": 1033,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 0,
+          "duration_ms": 1033,
+          "duration_sec": 1.03,
+          "start_frame": 0,
+          "end_frame": 31
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 1033,
+        "end_ms": 1933,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 1,
+          "duration_ms": 900,
+          "duration_sec": 0.9,
+          "start_frame": 31,
+          "end_frame": 58
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 1933,
+        "end_ms": 2566,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 2,
+          "duration_ms": 633,
+          "duration_sec": 0.63,
+          "start_frame": 58,
+          "end_frame": 77
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 2566,
+        "end_ms": 3533,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 3,
+          "duration_ms": 967,
+          "duration_sec": 0.97,
+          "start_frame": 77,
+          "end_frame": 106
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 3533,
+        "end_ms": 4500,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 4,
+          "duration_ms": 967,
+          "duration_sec": 0.97,
+          "start_frame": 106,
+          "end_frame": 135
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 4500,
+        "end_ms": 5700,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 5,
+          "duration_ms": 1200,
+          "duration_sec": 1.2,
+          "start_frame": 135,
+          "end_frame": 171
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 5700,
+        "end_ms": 6600,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 6,
+          "duration_ms": 900,
+          "duration_sec": 0.9,
+          "start_frame": 171,
+          "end_frame": 198
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 6600,
+        "end_ms": 7900,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 7,
+          "duration_ms": 1300,
+          "duration_sec": 1.3,
+          "start_frame": 198,
+          "end_frame": 237
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 7900,
+        "end_ms": 8900,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 8,
+          "duration_ms": 1000,
+          "duration_sec": 1.0,
+          "start_frame": 237,
+          "end_frame": 267
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 8900,
+        "end_ms": 10300,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 9,
+          "duration_ms": 1400,
+          "duration_sec": 1.4,
+          "start_frame": 267,
+          "end_frame": 309
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 10300,
+        "end_ms": 11133,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 10,
+          "duration_ms": 833,
+          "duration_sec": 0.83,
+          "start_frame": 309,
+          "end_frame": 334
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 11133,
+        "end_ms": 11666,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 11,
+          "duration_ms": 533,
+          "duration_sec": 0.53,
+          "start_frame": 334,
+          "end_frame": 350
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 11666,
+        "end_ms": 13666,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 12,
+          "duration_ms": 2000,
+          "duration_sec": 2.0,
+          "start_frame": 350,
+          "end_frame": 410
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 13666,
+        "end_ms": 14800,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 13,
+          "duration_ms": 1134,
+          "duration_sec": 1.13,
+          "start_frame": 410,
+          "end_frame": 444
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 14800,
+        "end_ms": 15533,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 14,
+          "duration_ms": 733,
+          "duration_sec": 0.73,
+          "start_frame": 444,
+          "end_frame": 466
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 15533,
+        "end_ms": 16600,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 15,
+          "duration_ms": 1067,
+          "duration_sec": 1.07,
+          "start_frame": 466,
+          "end_frame": 498
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 16600,
+        "end_ms": 17833,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 16,
+          "duration_ms": 1233,
+          "duration_sec": 1.23,
+          "start_frame": 498,
+          "end_frame": 535
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 17833,
+        "end_ms": 18566,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 17,
+          "duration_ms": 733,
+          "duration_sec": 0.73,
+          "start_frame": 535,
+          "end_frame": 557
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 18566,
+        "end_ms": 19966,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 18,
+          "duration_ms": 1400,
+          "duration_sec": 1.4,
+          "start_frame": 557,
+          "end_frame": 599
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 19966,
+        "end_ms": 21000,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 19,
+          "duration_ms": 1034,
+          "duration_sec": 1.03,
+          "start_frame": 599,
+          "end_frame": 630
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 21000,
+        "end_ms": 21833,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 20,
+          "duration_ms": 833,
+          "duration_sec": 0.83,
+          "start_frame": 630,
+          "end_frame": 655
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 21833,
+        "end_ms": 23033,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 21,
+          "duration_ms": 1200,
+          "duration_sec": 1.2,
+          "start_frame": 655,
+          "end_frame": 691
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 23033,
+        "end_ms": 24200,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 22,
+          "duration_ms": 1167,
+          "duration_sec": 1.17,
+          "start_frame": 691,
+          "end_frame": 726
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 24200,
+        "end_ms": 25733,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 23,
+          "duration_ms": 1533,
+          "duration_sec": 1.53,
+          "start_frame": 726,
+          "end_frame": 772
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 25733,
+        "end_ms": 26933,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 24,
+          "duration_ms": 1200,
+          "duration_sec": 1.2,
+          "start_frame": 772,
+          "end_frame": 808
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 26933,
+        "end_ms": 27800,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 25,
+          "duration_ms": 867,
+          "duration_sec": 0.87,
+          "start_frame": 808,
+          "end_frame": 834
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 27800,
+        "end_ms": 29800,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 26,
+          "duration_ms": 2000,
+          "duration_sec": 2.0,
+          "start_frame": 834,
+          "end_frame": 894
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 29800,
+        "end_ms": 30933,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 27,
+          "duration_ms": 1133,
+          "duration_sec": 1.13,
+          "start_frame": 894,
+          "end_frame": 928
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 30933,
+        "end_ms": 32166,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 28,
+          "duration_ms": 1233,
+          "duration_sec": 1.23,
+          "start_frame": 928,
+          "end_frame": 965
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 32166,
+        "end_ms": 33200,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 29,
+          "duration_ms": 1034,
+          "duration_sec": 1.03,
+          "start_frame": 965,
+          "end_frame": 996
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 33200,
+        "end_ms": 34000,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 30,
+          "duration_ms": 800,
+          "duration_sec": 0.8,
+          "start_frame": 996,
+          "end_frame": 1020
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 34000,
+        "end_ms": 35000,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 31,
+          "duration_ms": 1000,
+          "duration_sec": 1.0,
+          "start_frame": 1020,
+          "end_frame": 1050
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 35000,
+        "end_ms": 36733,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 32,
+          "duration_ms": 1733,
+          "duration_sec": 1.73,
+          "start_frame": 1050,
+          "end_frame": 1102
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 36733,
+        "end_ms": 38033,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 33,
+          "duration_ms": 1300,
+          "duration_sec": 1.3,
+          "start_frame": 1102,
+          "end_frame": 1141
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 38033,
+        "end_ms": 38666,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 34,
+          "duration_ms": 633,
+          "duration_sec": 0.63,
+          "start_frame": 1141,
+          "end_frame": 1160
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 38666,
+        "end_ms": 40266,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 35,
+          "duration_ms": 1600,
+          "duration_sec": 1.6,
+          "start_frame": 1160,
+          "end_frame": 1208
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 40266,
+        "end_ms": 40800,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 36,
+          "duration_ms": 534,
+          "duration_sec": 0.53,
+          "start_frame": 1208,
+          "end_frame": 1224
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 40800,
+        "end_ms": 41900,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 37,
+          "duration_ms": 1100,
+          "duration_sec": 1.1,
+          "start_frame": 1224,
+          "end_frame": 1257
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 41900,
+        "end_ms": 42833,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 38,
+          "duration_ms": 933,
+          "duration_sec": 0.93,
+          "start_frame": 1257,
+          "end_frame": 1285
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 42833,
+        "end_ms": 44300,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 39,
+          "duration_ms": 1467,
+          "duration_sec": 1.47,
+          "start_frame": 1285,
+          "end_frame": 1329
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 44300,
+        "end_ms": 45166,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 40,
+          "duration_ms": 866,
+          "duration_sec": 0.87,
+          "start_frame": 1329,
+          "end_frame": 1355
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 45166,
+        "end_ms": 49100,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 41,
+          "duration_ms": 3934,
+          "duration_sec": 3.93,
+          "start_frame": 1355,
+          "end_frame": 1473
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 49100,
+        "end_ms": 49833,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 42,
+          "duration_ms": 733,
+          "duration_sec": 0.73,
+          "start_frame": 1473,
+          "end_frame": 1495
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 49833,
+        "end_ms": 51266,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 43,
+          "duration_ms": 1433,
+          "duration_sec": 1.43,
+          "start_frame": 1495,
+          "end_frame": 1538
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 51266,
+        "end_ms": 52333,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 44,
+          "duration_ms": 1067,
+          "duration_sec": 1.07,
+          "start_frame": 1538,
+          "end_frame": 1570
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 52333,
+        "end_ms": 53200,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 45,
+          "duration_ms": 867,
+          "duration_sec": 0.87,
+          "start_frame": 1570,
+          "end_frame": 1596
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 53200,
+        "end_ms": 53900,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 46,
+          "duration_ms": 700,
+          "duration_sec": 0.7,
+          "start_frame": 1596,
+          "end_frame": 1617
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 53900,
+        "end_ms": 54566,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 47,
+          "duration_ms": 666,
+          "duration_sec": 0.67,
+          "start_frame": 1617,
+          "end_frame": 1637
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 54566,
+        "end_ms": 56300,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 48,
+          "duration_ms": 1734,
+          "duration_sec": 1.73,
+          "start_frame": 1637,
+          "end_frame": 1689
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 56300,
+        "end_ms": 57166,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 49,
+          "duration_ms": 866,
+          "duration_sec": 0.87,
+          "start_frame": 1689,
+          "end_frame": 1715
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 57166,
+        "end_ms": 58833,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 50,
+          "duration_ms": 1667,
+          "duration_sec": 1.67,
+          "start_frame": 1715,
+          "end_frame": 1765
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 58833,
+        "end_ms": 59566,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 51,
+          "duration_ms": 733,
+          "duration_sec": 0.73,
+          "start_frame": 1765,
+          "end_frame": 1787
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 59566,
+        "end_ms": 61333,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 52,
+          "duration_ms": 1767,
+          "duration_sec": 1.77,
+          "start_frame": 1787,
+          "end_frame": 1840
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 61333,
+        "end_ms": 63933,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 53,
+          "duration_ms": 2600,
+          "duration_sec": 2.6,
+          "start_frame": 1840,
+          "end_frame": 1918
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 63933,
+        "end_ms": 65166,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 54,
+          "duration_ms": 1233,
+          "duration_sec": 1.23,
+          "start_frame": 1918,
+          "end_frame": 1955
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 65166,
+        "end_ms": 69600,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 55,
+          "duration_ms": 4434,
+          "duration_sec": 4.43,
+          "start_frame": 1955,
+          "end_frame": 2088
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 69600,
+        "end_ms": 70433,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 56,
+          "duration_ms": 833,
+          "duration_sec": 0.83,
+          "start_frame": 2088,
+          "end_frame": 2113
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 70433,
+        "end_ms": 71266,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 57,
+          "duration_ms": 833,
+          "duration_sec": 0.83,
+          "start_frame": 2113,
+          "end_frame": 2138
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 71266,
+        "end_ms": 73866,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 58,
+          "duration_ms": 2600,
+          "duration_sec": 2.6,
+          "start_frame": 2138,
+          "end_frame": 2216
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 73866,
+        "end_ms": 74733,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 59,
+          "duration_ms": 867,
+          "duration_sec": 0.87,
+          "start_frame": 2216,
+          "end_frame": 2242
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 74733,
+        "end_ms": 79333,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 60,
+          "duration_ms": 4600,
+          "duration_sec": 4.6,
+          "start_frame": 2242,
+          "end_frame": 2380
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 79333,
+        "end_ms": 80166,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 61,
+          "duration_ms": 833,
+          "duration_sec": 0.83,
+          "start_frame": 2380,
+          "end_frame": 2405
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 80166,
+        "end_ms": 80966,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 62,
+          "duration_ms": 800,
+          "duration_sec": 0.8,
+          "start_frame": 2405,
+          "end_frame": 2429
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 80966,
+        "end_ms": 82033,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 63,
+          "duration_ms": 1067,
+          "duration_sec": 1.07,
+          "start_frame": 2429,
+          "end_frame": 2461
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 82033,
+        "end_ms": 84900,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 64,
+          "duration_ms": 2867,
+          "duration_sec": 2.87,
+          "start_frame": 2461,
+          "end_frame": 2547
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 84900,
+        "end_ms": 85733,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 65,
+          "duration_ms": 833,
+          "duration_sec": 0.83,
+          "start_frame": 2547,
+          "end_frame": 2572
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 85733,
+        "end_ms": 86900,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 66,
+          "duration_ms": 1167,
+          "duration_sec": 1.17,
+          "start_frame": 2572,
+          "end_frame": 2607
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 86900,
+        "end_ms": 88033,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 67,
+          "duration_ms": 1133,
+          "duration_sec": 1.13,
+          "start_frame": 2607,
+          "end_frame": 2641
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 88033,
+        "end_ms": 94666,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 68,
+          "duration_ms": 6633,
+          "duration_sec": 6.63,
+          "start_frame": 2641,
+          "end_frame": 2840
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 94666,
+        "end_ms": 95533,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 69,
+          "duration_ms": 867,
+          "duration_sec": 0.87,
+          "start_frame": 2840,
+          "end_frame": 2866
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "shot",
+        "start_ms": 95533,
+        "end_ms": 96266,
+        "type": "scene_cut",
+        "payload": {
+          "scene_index": 70,
+          "duration_ms": 733,
+          "duration_sec": 0.73,
+          "start_frame": 2866,
+          "end_frame": 2888
+        },
+        "confidence": 1.0,
+        "provider": "pyscenedetect",
+        "provider_version": "1.0.0",
+        "run_id": null
+      }
+    ],
+    "ocr": [
+      {
+        "track": "ocr",
+        "start_ms": 333,
+        "end_ms": 666,
+        "type": "text_overlay",
+        "payload": {
+          "text": "mm",
+          "bbox": [
+            0.5328,
+            0.6167,
+            0.7562,
+            0.975
+          ],
+          "frame_count": 1,
+          "span_index": 0
+        },
+        "confidence": 0.752,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 666,
+        "end_ms": 999,
+        "type": "text_overlay",
+        "payload": {
+          "text": "80",
+          "bbox": [
+            0.325,
+            0.6458,
+            0.4297,
+            0.7514
+          ],
+          "frame_count": 1,
+          "span_index": 1
+        },
+        "confidence": 0.6562,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 2666,
+        "end_ms": 2999,
+        "type": "text_overlay",
+        "payload": {
+          "text": "m",
+          "bbox": [
+            0.5633,
+            0.6333,
+            0.7297,
+            0.9264
+          ],
+          "frame_count": 1,
+          "span_index": 2
+        },
+        "confidence": 0.9313,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 9333,
+        "end_ms": 9666,
+        "type": "text_overlay",
+        "payload": {
+          "text": "创",
+          "bbox": [
+            0.5156,
+            0.5292,
+            0.568,
+            0.5736
+          ],
+          "frame_count": 1,
+          "span_index": 3
+        },
+        "confidence": 0.6512,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 10333,
+        "end_ms": 10666,
+        "type": "text_overlay",
+        "payload": {
+          "text": "08",
+          "bbox": [
+            0.4289,
+            0.0181,
+            0.4844,
+            0.0778
+          ],
+          "frame_count": 1,
+          "span_index": 4
+        },
+        "confidence": 0.6794,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 10666,
+        "end_ms": 10999,
+        "type": "text_overlay",
+        "payload": {
+          "text": "50",
+          "bbox": [
+            0.4437,
+            0.0208,
+            0.4844,
+            0.0667
+          ],
+          "frame_count": 1,
+          "span_index": 5
+        },
+        "confidence": 0.6234,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 26000,
+        "end_ms": 26333,
+        "type": "text_overlay",
+        "payload": {
+          "text": "囍",
+          "bbox": [
+            0.6578,
+            0.7292,
+            0.6797,
+            0.7556
+          ],
+          "frame_count": 1,
+          "span_index": 6
+        },
+        "confidence": 0.8021,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 34666,
+        "end_ms": 34999,
+        "type": "text_overlay",
+        "payload": {
+          "text": "O",
+          "bbox": [
+            0.457,
+            0.0708,
+            0.4781,
+            0.1083
+          ],
+          "frame_count": 1,
+          "span_index": 7
+        },
+        "confidence": 0.6015,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 38666,
+        "end_ms": 38999,
+        "type": "text_overlay",
+        "payload": {
+          "text": "香",
+          "bbox": [
+            0.2961,
+            0.3847,
+            0.3984,
+            0.5472
+          ],
+          "frame_count": 1,
+          "span_index": 8
+        },
+        "confidence": 0.6909,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 39333,
+        "end_ms": 39666,
+        "type": "text_overlay",
+        "payload": {
+          "text": "福",
+          "bbox": [
+            0.6289,
+            0.6208,
+            0.6609,
+            0.675
+          ],
+          "frame_count": 1,
+          "span_index": 9
+        },
+        "confidence": 0.6419,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 39666,
+        "end_ms": 39999,
+        "type": "text_overlay",
+        "payload": {
+          "text": "0042",
+          "bbox": [
+            0.732,
+            0.3694,
+            0.7508,
+            0.4181
+          ],
+          "frame_count": 1,
+          "span_index": 10
+        },
+        "confidence": 0.6536,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 44333,
+        "end_ms": 44666,
+        "type": "text_overlay",
+        "payload": {
+          "text": "000",
+          "bbox": [
+            0.1961,
+            0.7861,
+            0.3508,
+            0.8931
+          ],
+          "frame_count": 1,
+          "span_index": 11
+        },
+        "confidence": 0.7277,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 47000,
+        "end_ms": 47333,
+        "type": "text_overlay",
+        "payload": {
+          "text": "®",
+          "bbox": [
+            0.3852,
+            0.5639,
+            0.4,
+            0.6028
+          ],
+          "frame_count": 1,
+          "span_index": 12
+        },
+        "confidence": 0.7538,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 49000,
+        "end_ms": 49333,
+        "type": "text_overlay",
+        "payload": {
+          "text": "100",
+          "bbox": [
+            0.3414,
+            0.7917,
+            0.3688,
+            0.825
+          ],
+          "frame_count": 1,
+          "span_index": 13
+        },
+        "confidence": 0.9665,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 49333,
+        "end_ms": 49666,
+        "type": "text_overlay",
+        "payload": {
+          "text": "0",
+          "bbox": [
+            0.1719,
+            0.0861,
+            0.2109,
+            0.1819
+          ],
+          "frame_count": 1,
+          "span_index": 14
+        },
+        "confidence": 0.7008,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 54333,
+        "end_ms": 54666,
+        "type": "text_overlay",
+        "payload": {
+          "text": "®",
+          "bbox": [
+            0.3531,
+            0.3444,
+            0.3703,
+            0.3944
+          ],
+          "frame_count": 1,
+          "span_index": 15
+        },
+        "confidence": 0.724,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 65000,
+        "end_ms": 65333,
+        "type": "text_overlay",
+        "payload": {
+          "text": "T",
+          "bbox": [
+            0.1383,
+            0.0528,
+            0.2313,
+            0.2861
+          ],
+          "frame_count": 1,
+          "span_index": 16
+        },
+        "confidence": 0.7358,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 77333,
+        "end_ms": 77666,
+        "type": "text_overlay",
+        "payload": {
+          "text": "茶",
+          "bbox": [
+            0.9461,
+            0.4042,
+            0.975,
+            0.4597
+          ],
+          "frame_count": 1,
+          "span_index": 17
+        },
+        "confidence": 0.678,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 93333,
+        "end_ms": 93666,
+        "type": "text_overlay",
+        "payload": {
+          "text": "营",
+          "bbox": [
+            0.5625,
+            0.3028,
+            0.5961,
+            0.3514
+          ],
+          "frame_count": 1,
+          "span_index": 18
+        },
+        "confidence": 0.7964,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "ocr",
+        "start_ms": 94333,
+        "end_ms": 94666,
+        "type": "text_overlay",
+        "payload": {
+          "text": "0",
+          "bbox": [
+            0.5266,
+            0.7917,
+            0.5578,
+            0.8847
+          ],
+          "frame_count": 1,
+          "span_index": 19
+        },
+        "confidence": 0.6241,
+        "provider": "rapidocr",
+        "provider_version": "1.0.0",
+        "run_id": null
+      }
+    ],
+    "faces": [
+      {
+        "track": "face",
+        "start_ms": 0,
+        "end_ms": 1200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_0",
+          "bbox": [
+            0.2999,
+            0.3001,
+            0.5421,
+            0.7032
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.046,
+          "avg_jaw_open": 0.0054,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 6,
+          "duration_ms": 1200
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 2000,
+        "end_ms": 5000,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_1",
+          "bbox": [
+            0.2859,
+            0.2129,
+            0.6194,
+            0.73
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0666,
+          "avg_jaw_open": 0.0222,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 15,
+          "duration_ms": 3000
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 5800,
+        "end_ms": 6800,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_2",
+          "bbox": [
+            0.3124,
+            0.2604,
+            0.6829,
+            0.8597
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0537,
+          "avg_jaw_open": 0.0008,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 5,
+          "duration_ms": 1000
+        },
+        "confidence": 0.95,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 7200,
+        "end_ms": 8000,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_3",
+          "bbox": [
+            0.3477,
+            0.4003,
+            0.4772,
+            0.5956
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0676,
+          "avg_jaw_open": 0.0662,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 4,
+          "duration_ms": 800
+        },
+        "confidence": 0.9,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 8000,
+        "end_ms": 9000,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_4",
+          "bbox": [
+            0.2867,
+            0.5765,
+            0.4147,
+            0.749
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0793,
+          "avg_jaw_open": 0.0085,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 5,
+          "duration_ms": 1000
+        },
+        "confidence": 0.95,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 10400,
+        "end_ms": 11200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_6",
+          "bbox": [
+            0.2992,
+            0.5967,
+            0.4278,
+            0.7726
+          ],
+          "is_speaking": true,
+          "avg_mar": 0.1368,
+          "avg_jaw_open": 0.0304,
+          "speaking_ratio": 0.25,
+          "speaking_frames": 1,
+          "total_frames": 4,
+          "duration_ms": 800
+        },
+        "confidence": 0.9,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 15600,
+        "end_ms": 16200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_7",
+          "bbox": [
+            0.2613,
+            0.8242,
+            0.4372,
+            1.0
+          ],
+          "is_speaking": true,
+          "avg_mar": 0.1669,
+          "avg_jaw_open": 0.0037,
+          "speaking_ratio": 0.33,
+          "speaking_frames": 1,
+          "total_frames": 3,
+          "duration_ms": 600
+        },
+        "confidence": 0.85,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 18600,
+        "end_ms": 20000,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_9",
+          "bbox": [
+            0.2759,
+            0.7009,
+            0.4511,
+            0.9934
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.1653,
+          "avg_jaw_open": 0.0146,
+          "speaking_ratio": 0.14,
+          "speaking_frames": 1,
+          "total_frames": 7,
+          "duration_ms": 1400
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 22000,
+        "end_ms": 23200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_10",
+          "bbox": [
+            0.2712,
+            0.7203,
+            0.4519,
+            1.0
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.1328,
+          "avg_jaw_open": 0.0082,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 6,
+          "duration_ms": 1200
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 24200,
+        "end_ms": 25800,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_11",
+          "bbox": [
+            0.2779,
+            0.7032,
+            0.4567,
+            0.9908
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.1297,
+          "avg_jaw_open": 0.0098,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 8,
+          "duration_ms": 1600
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 27000,
+        "end_ms": 27800,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_12",
+          "bbox": [
+            0.3633,
+            0.2057,
+            0.536,
+            0.4917
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0046,
+          "avg_jaw_open": 0.0002,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 4,
+          "duration_ms": 800
+        },
+        "confidence": 0.9,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 29800,
+        "end_ms": 31000,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_13",
+          "bbox": [
+            0.3674,
+            0.1746,
+            0.5325,
+            0.4673
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0018,
+          "avg_jaw_open": 0.0001,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 6,
+          "duration_ms": 1200
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 32200,
+        "end_ms": 33200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_14",
+          "bbox": [
+            0.3923,
+            0.1976,
+            0.569,
+            0.5008
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0527,
+          "avg_jaw_open": 0.0012,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 5,
+          "duration_ms": 1000
+        },
+        "confidence": 0.95,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 34000,
+        "end_ms": 35000,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_15",
+          "bbox": [
+            0.401,
+            0.2055,
+            0.5724,
+            0.5042
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0171,
+          "avg_jaw_open": 0.0003,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 5,
+          "duration_ms": 1000
+        },
+        "confidence": 0.95,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 8400,
+        "end_ms": 36200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_5",
+          "bbox": [
+            0.298,
+            0.2882,
+            0.5459,
+            0.6802
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0803,
+          "avg_jaw_open": 0.062,
+          "speaking_ratio": 0.19,
+          "speaking_frames": 26,
+          "total_frames": 139,
+          "duration_ms": 27800
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 37800,
+        "end_ms": 38200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_17",
+          "bbox": [
+            0.3481,
+            0.3654,
+            0.478,
+            0.5494
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.1355,
+          "avg_jaw_open": 0.0263,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 2,
+          "duration_ms": 400
+        },
+        "confidence": 0.8,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 38800,
+        "end_ms": 39200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_18",
+          "bbox": [
+            0.2637,
+            0.3369,
+            0.447,
+            0.6132
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.1328,
+          "avg_jaw_open": 0.028,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 2,
+          "duration_ms": 400
+        },
+        "confidence": 0.8,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 39600,
+        "end_ms": 40400,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_19",
+          "bbox": [
+            0.2796,
+            0.3256,
+            0.4602,
+            0.614
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0775,
+          "avg_jaw_open": 0.0108,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 4,
+          "duration_ms": 800
+        },
+        "confidence": 0.9,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 40800,
+        "end_ms": 42000,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_20",
+          "bbox": [
+            0.3336,
+            0.4693,
+            0.4953,
+            0.7603
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0235,
+          "avg_jaw_open": 0.0048,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 6,
+          "duration_ms": 1200
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 43800,
+        "end_ms": 61800,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_21",
+          "bbox": [
+            0.2941,
+            0.3028,
+            0.5398,
+            0.6977
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0791,
+          "avg_jaw_open": 0.0199,
+          "speaking_ratio": 0.09,
+          "speaking_frames": 8,
+          "total_frames": 90,
+          "duration_ms": 18000
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 63200,
+        "end_ms": 64000,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_22",
+          "bbox": [
+            0.1851,
+            0.3395,
+            0.3206,
+            0.5347
+          ],
+          "is_speaking": true,
+          "avg_mar": 0.2432,
+          "avg_jaw_open": 0.2183,
+          "speaking_ratio": 0.75,
+          "speaking_frames": 3,
+          "total_frames": 4,
+          "duration_ms": 800
+        },
+        "confidence": 0.9,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 74600,
+        "end_ms": 79000,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_23",
+          "bbox": [
+            0.3273,
+            0.5245,
+            0.4545,
+            0.7292
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0111,
+          "avg_jaw_open": 0.0057,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 22,
+          "duration_ms": 4400
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 79400,
+        "end_ms": 80200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_26",
+          "bbox": [
+            0.371,
+            0.5275,
+            0.5157,
+            0.7498
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0547,
+          "avg_jaw_open": 0.0621,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 4,
+          "duration_ms": 800
+        },
+        "confidence": 0.9,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 80200,
+        "end_ms": 81000,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_27",
+          "bbox": [
+            0.2596,
+            0.0195,
+            0.7535,
+            0.7099
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.173,
+          "avg_jaw_open": 0.0542,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 4,
+          "duration_ms": 800
+        },
+        "confidence": 0.9,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 83800,
+        "end_ms": 84200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_30",
+          "bbox": [
+            0.475,
+            0.2166,
+            0.6159,
+            0.4629
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.027,
+          "avg_jaw_open": 0.0009,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 2,
+          "duration_ms": 400
+        },
+        "confidence": 0.8,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 81600,
+        "end_ms": 88200,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_28",
+          "bbox": [
+            0.3247,
+            0.3934,
+            0.5898,
+            0.7913
+          ],
+          "is_speaking": true,
+          "avg_mar": 0.0858,
+          "avg_jaw_open": 0.0668,
+          "speaking_ratio": 0.27,
+          "speaking_frames": 9,
+          "total_frames": 33,
+          "duration_ms": 6600
+        },
+        "confidence": 1.0,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "face",
+        "start_ms": 94800,
+        "end_ms": 95600,
+        "type": "face_track",
+        "payload": {
+          "face_id": "face_32",
+          "bbox": [
+            0.3713,
+            0.5211,
+            0.5131,
+            0.7304
+          ],
+          "is_speaking": false,
+          "avg_mar": 0.0295,
+          "avg_jaw_open": 0.0242,
+          "speaking_ratio": 0.0,
+          "speaking_frames": 0,
+          "total_frames": 4,
+          "duration_ms": 800
+        },
+        "confidence": 0.9,
+        "provider": "mediapipe",
+        "provider_version": "1.0.0",
+        "run_id": null
+      }
+    ],
+    "diarization": [
+      {
+        "track": "diarization",
+        "start_ms": 1210,
+        "end_ms": 4220,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 0,
+          "speaker": "SPEAKER_00",
+          "speaker_raw": "A",
+          "start_ms": 1210,
+          "end_ms": 4220,
+          "duration_ms": 3010,
+          "duration_sec": 3.01,
+          "text": "ओए देख तेरे डब्बे में खाना खा"
+        },
+        "confidence": 0.99,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 4220,
+        "end_ms": 15220,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 1,
+          "speaker": "SPEAKER_01",
+          "speaker_raw": "B",
+          "start_ms": 4220,
+          "end_ms": 15220,
+          "duration_ms": 11000,
+          "duration_sec": 11.0,
+          "text": "गया। ओए राशन की लिस्ट बना रही हूँ। तुम दोनों को कुछ मंगाना है तो अभी बता दो मॉल चलेंगे। हाँ लिखना हम बताते हैं। एक चॉकलेट का पैकेट,"
+        },
+        "confidence": 0.995,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 15220,
+        "end_ms": 16800,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 2,
+          "speaker": "SPEAKER_00",
+          "speaker_raw": "A",
+          "start_ms": 15220,
+          "end_ms": 16800,
+          "duration_ms": 1580,
+          "duration_sec": 1.58,
+          "text": "दो पैकेट चीज़ बॉल्स,"
+        },
+        "confidence": 0.994,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 16800,
+        "end_ms": 18180,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 3,
+          "speaker": "SPEAKER_02",
+          "speaker_raw": "C",
+          "start_ms": 16800,
+          "end_ms": 18180,
+          "duration_ms": 1380,
+          "duration_sec": 1.38,
+          "text": "दस पैकेट लेस,"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 18180,
+        "end_ms": 20080,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 4,
+          "speaker": "SPEAKER_00",
+          "speaker_raw": "A",
+          "start_ms": 18180,
+          "end_ms": 20080,
+          "duration_ms": 1900,
+          "duration_sec": 1.9,
+          "text": "दो पैकेट लौटी चकोपाएँ,"
+        },
+        "confidence": 0.908,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 20080,
+        "end_ms": 20760,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 5,
+          "speaker": "SPEAKER_02",
+          "speaker_raw": "C",
+          "start_ms": 20080,
+          "end_ms": 20760,
+          "duration_ms": 680,
+          "duration_sec": 0.68,
+          "text": "एक डब्बा"
+        },
+        "confidence": 0.999,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 20760,
+        "end_ms": 21780,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 6,
+          "speaker": "SPEAKER_01",
+          "speaker_raw": "B",
+          "start_ms": 20760,
+          "end_ms": 21780,
+          "duration_ms": 1020,
+          "duration_sec": 1.02,
+          "text": "पेंटा,"
+        },
+        "confidence": 0.988,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 21780,
+        "end_ms": 22260,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 7,
+          "speaker": "SPEAKER_00",
+          "speaker_raw": "A",
+          "start_ms": 21780,
+          "end_ms": 22260,
+          "duration_ms": 480,
+          "duration_sec": 0.48,
+          "text": "एक पैकेट"
+        },
+        "confidence": 1.0,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 22260,
+        "end_ms": 29980,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 8,
+          "speaker": "SPEAKER_01",
+          "speaker_raw": "B",
+          "start_ms": 22260,
+          "end_ms": 29980,
+          "duration_ms": 7720,
+          "duration_sec": 7.72,
+          "text": "नटखट। ये क्या"
+        },
+        "confidence": 0.881,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 32510,
+        "end_ms": 33260,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 9,
+          "speaker": "SPEAKER_00",
+          "speaker_raw": "A",
+          "start_ms": 32510,
+          "end_ms": 33260,
+          "duration_ms": 750,
+          "duration_sec": 0.75,
+          "text": "गरीब"
+        },
+        "confidence": 0.972,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 33260,
+        "end_ms": 39080,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 10,
+          "speaker": "SPEAKER_01",
+          "speaker_raw": "B",
+          "start_ms": 33260,
+          "end_ms": 39080,
+          "duration_ms": 5820,
+          "duration_sec": 5.82,
+          "text": "पैसे आके ले लेना ये लो मम्मी काट के दे दो"
+        },
+        "confidence": 0.993,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 39080,
+        "end_ms": 53160,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 11,
+          "speaker": "SPEAKER_02",
+          "speaker_raw": "C",
+          "start_ms": 39080,
+          "end_ms": 53160,
+          "duration_ms": 14080,
+          "duration_sec": 14.08,
+          "text": "नानी ये देखो मैंने मम्मी को सौ का नोट दिया मम्मी ने सौ में से पचास रुपए काट के मेरे को डेढ़ सौ रुपए वापस दिए मम्मी को लगा मेरे तोस्सों का नोट दिया है"
+        },
+        "confidence": 0.981,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      },
+      {
+        "track": "diarization",
+        "start_ms": 53160,
+        "end_ms": 92690,
+        "type": "speaker_turn",
+        "payload": {
+          "turn_index": 12,
+          "speaker": "SPEAKER_00",
+          "speaker_raw": "A",
+          "start_ms": 53160,
+          "end_ms": 92690,
+          "duration_ms": 39530,
+          "duration_sec": 39.53,
+          "text": "बिकारी है तू गरीब आदमी के पैसे मार ली शर्म नहीं आती इज्जतदार लोग हैं हमलोग आधे-आधे कर लेंगे, आधे आपके आधे मेरे। प्लीज ना नानी मान जाओ। ओए एक गलती करी है तूने? अभी भी कह रही हूँ नानी मान जाओ। चुप कर। ओए इसने तुझे पांच सौ रुपए दिए थे, तूने सिर्फ डेढ़ सौ वापस करे। ला तीन सौ और दे। सॉरी सॉरी। सॉरी बोरी सुनने की आदत नहीं है मैं। पागल ही बना"
+        },
+        "confidence": 0.97,
+        "provider": "assemblyai",
+        "provider_version": "1.0.0",
+        "run_id": null
+      }
+    ]
+  }
+}

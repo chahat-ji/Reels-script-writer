@@ -1,7 +1,7 @@
 # Phase 0.3: Visual & Speaker Lanes — Implementation Progress
 
 **Current Active Phase:** `Phase 0.3: Visual and Speaker Lanes`  
-**Status:** In Progress  
+**Status:** COMPLETED  
 **Target:** Modular, test-driven implementation across 5 sub-phases.
 
 ---
@@ -10,11 +10,11 @@
 
 ```text
 Phase 0.3: Visual & Speaker Lanes
-├── 3.1: Shot Boundary Detection (PySceneDetect) [READY TO START]
-├── 3.2: On-Screen OCR & Text Extraction (RapidOCR / Apple Vision) [PENDING]
-├── 3.3: Face & Mouth Aspect Ratio Tracking (MediaPipe) [PENDING]
-├── 3.4: Dedicated Speaker Diarization (PyAnnote Audio) [PENDING]
-└── 3.5: Multimodal Fusion & Speaker Resolver (TimelineAligner + Resolver) [PENDING]
+├── 3.1: Shot Boundary Detection (PySceneDetect) [COMPLETED]
+├── 3.2: On-Screen OCR & Text Extraction (RapidOCR) [COMPLETED]
+├── 3.3: Face & Mouth Aspect Ratio Tracking (MediaPipe) [COMPLETED]
+├── 3.4: Dedicated Speaker Diarization (PyAnnote & AssemblyAI) [COMPLETED]
+└── 3.5: Multimodal Fusion & Speaker Resolver (TimelineAligner + Resolver) [COMPLETED]
 ```
 
 ---
@@ -61,8 +61,10 @@ Phase 0.3: Visual & Speaker Lanes
 
 ---
 
-### 🔲 Sub-Phase 3.5: Consensus, Speaker Resolver & Multimodal Fusion (`fusion`)
-- [ ] Implement `app/fusion/timeline_aligner.py`: Chronologically fuse `speech`, `shots`, `ocr`, `faces`, and `diarization`.
-- [ ] Implement `app/fusion/speaker_resolver.py`: Correlate voice clusters from diarization with visual mouth movement (MAR) to pair voice to face.
-- [ ] Implement fallback safety: Produce valid `timeline.json` even if optional lanes (e.g. OCR or faces) detect nothing.
-- [ ] Create test CLI: `tests/test_fusion.py`.
+### 🔄 Sub-Phase 3.5: Consensus, Speaker Resolver & Multimodal Fusion (`fusion`) — *COMPLETED*
+- [x] Implement `app/fusion/timeline_aligner.py`: Chronologically fuse `speech`, `shots`, `ocr`, `faces`, and `diarization`.
+- [x] Implement `app/fusion/speaker_resolver.py`: Correlate voice clusters from diarization with visual mouth movement (MAR) to pair voice to face.
+- [x] Implement `app/fusion/consensus.py`: Resolve multi-ASR discrepancies into primary unified speech track.
+- [x] Implement fallback safety: Produce valid `timeline.json` even if optional lanes (e.g. OCR or faces) detect nothing.
+- [x] Create test CLI: `tests/test_fusion.py`.
+- [x] Verify test CLI in terminal and save master `timeline.json` for all test reels.
