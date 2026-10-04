@@ -58,6 +58,7 @@ def _merge_spans(
     detections: List[Dict[str, Any]],
     similarity_threshold: float,
     min_duration_ms: int,
+    frame_interval_ms: int = 333,
 ) -> List[Dict[str, Any]]:
     """
     Merge consecutive frame detections with similar text into time spans.
@@ -73,14 +74,14 @@ def _merge_spans(
     spans: List[Dict[str, Any]] = []
     current = dict(detections[0])
     current["start_ms"] = current["frame_ms"]
-    current["end_ms"] = current["frame_ms"]
+    current["end_ms"] = current["frame_ms"] + frame_interval_ms
     current["frame_count"] = 1
 
     for det in detections[1:]:
         sim = _text_similarity(current["text"], det["text"])
         if sim >= similarity_threshold:
             # Extend the current span
-            current["end_ms"] = det["frame_ms"]
+            current["end_ms"] = det["frame_ms"] + frame_interval_ms
             current["frame_count"] += 1
             # Update to the highest-confidence text in the span
             if det["confidence"] > current["confidence"]:
@@ -92,13 +93,13 @@ def _merge_spans(
             spans.append(current)
             current = dict(det)
             current["start_ms"] = current["frame_ms"]
-            current["end_ms"] = current["frame_ms"]
+            current["end_ms"] = current["frame_ms"] + frame_interval_ms
             current["frame_count"] = 1
 
     spans.append(current)
 
-    # Filter out very short flickers
-    spans = [s for s in spans if (s["end_ms"] - s["start_ms"]) >= min_duration_ms or s["frame_count"] > 1]
+    # Filter out spans shorter than min_duration_ms
+    spans = [s for s in spans if (s["end_ms"] - s["start_ms"]) >= min_duration_ms]
 
     return spans
 
@@ -243,7 +244,8 @@ class RapidOCRProvider(Provider):
         all_detections.sort(key=lambda d: (d["frame_ms"], d.get("bbox", [0])[0] if d.get("bbox") else 0))
 
         # Merge consecutive detections into spans
-        merged_spans = _merge_spans(all_detections, similarity_threshold, min_duration_ms)
+        frame_interval_ms = max(min_duration_ms, int((frame_interval / video_fps) * 1000))
+        merged_spans = _merge_spans(all_detections, similarity_threshold, min_duration_ms, frame_interval_ms)
 
         console.print(
             f"[bold blue][OCR MERGED][/bold blue] {len(all_detections)} raw detections → "
