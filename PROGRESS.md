@@ -8,10 +8,11 @@ This document details the architecture, design contracts, class hierarchies, and
 
 The `script-writer` system processes short-form video content (Instagram Reels, local MP4 files) into standardized, multimodal timelines (`timeline.json`). It solves several domain-specific challenges:
 
-* **Audio Standardization & Stem Isolation**: Separates vocal tracks from background music and sound effects (SFX) using deep neural stem separation (`demucs`) and spectral noise reduction (`noisereduce`).
-* **Multi-Provider Speech Architecture**: Implements a unified interface for cloud-based speech recognition (AssemblyAI) and local Apple Silicon inference (`mlx-whisper`), complete with disk caching and automated failover.
-* **Dialect Handling (Hinglish/Devanagari)**: Normalizes Devanagari script to colloquial Roman text using rule-based morphological normalization and Hindi schwa deletion.
-* **Preflight Profiling & Dynamic Routing**: Inspects audio attributes prior to heavy model execution to configure cost- and profile-constrained execution plans.
+* **Audio Standardization & Ingestion**: Extracts pristine 16 kHz mono 16-bit PCM WAV tracks (`audio.wav`) directly from input media using `ffmpeg`/`ffprobe`. Destructive spectral noise reduction (`noisereduce`) has been removed, and heavy stem separation (`demucs`) is bypassed by default to avoid vocal phase distortion and speed up ingestion by 30+ seconds per reel.
+* **Multi-Provider Speech Architecture (v1.3.0)**: Implements a unified interface for cloud-based speech recognition (AssemblyAI) and local Apple Silicon inference (`mlx-whisper`), complete with disk caching, automated failover, and speaker diarization.
+* **Native Script Fidelity**: Preserves authentic native script (Devanagari for Hindi, Latin for English) with exact word- and utterance-level timestamps. Brittle rule-based ITRANS and regex schwa deletion have been eliminated from the speech pipeline to preserve linguistic integrity.
+* **Local Whisper Anti-Loop Optimization**: Uses `mlx-community/whisper-large-v3-mlx` with multi-temperature fallback (`0.0` to `0.8`), silence hallucination filtering, and consecutive token deduplication to prevent repetition loops.
+* **Preflight Profiling & Dynamic Routing**: Inspects duration, volume health (clipping/low-level detection), and silence ratios prior to model execution to configure cost- and profile-constrained execution plans.
 
 ---
 
@@ -25,11 +26,10 @@ script-writer/
 │   └── reels/
 │       └── <reel_id>/                      # Run-store per reel
 │           ├── video.mp4                   # Downloaded/copied raw video
-│           ├── audio.wav                   # Extracted 16 kHz mono WAV (full mix)
-│           ├── vocals.wav                  # Demucs-isolated speech track
+│           ├── audio.wav                   # Extracted 16 kHz mono WAV (pristine mix)
 │           ├── metadata.json               # Platform/source metadata
 │           ├── media_specs.json            # ffprobe container & codec parameters
-│           ├── condition_report.json       # Preflight analysis output
+│           ├── condition_report.json       # Preflight audio health analysis output
 │           ├── plan.json                   # Router execution blueprint
 │           ├── manifest_speech_<prov>_<ver>.json  # Provider execution result
 │           └── timeline.json               # Integrated multimodal event sequence
@@ -39,8 +39,8 @@ script-writer/
 │   │   ├── speech/
 │   │   │   ├── __init__.py                 # Capability registration hook
 │   │   │   └── providers/
-│   │   │       ├── assemblyai.py           # AssemblyAI cloud implementation
-│   │   │       └── mlx_whisper.py          # MLX Whisper local Apple Silicon implementation
+│   │   │       ├── assemblyai.py           # AssemblyAI cloud implementation (v1.3.0, diarization)
+│   │   │       └── mlx_whisper.py          # MLX Whisper local Large-v3 implementation (v1.3.0)
 │   │   └── shots/
 │   │       ├── __init__.py                 # Shot detection registration hook
 │   │       └── providers/
@@ -48,25 +48,26 @@ script-writer/
 │   ├── core/
 │   │   ├── config.py                       # Configuration & environment variable loader
 │   │   ├── registry.py                     # Provider service locator / registry
-│   │   ├── preflight.py                    # Audio metrics analysis & language identification
+│   │   ├── preflight.py                    # Audio metrics analysis & volume health probe
 │   │   ├── router.py                       # Plan creation & budget checks
 │   │   └── runner.py                       # TaskRunner: caching & fallback chain execution
 │   ├── fusion/
 │   │   └── timeline_aligner.py             # Event fusion & timeline aggregation
 │   ├── ingestion/
-│   │   ├── coordinator.py                  # Ingestion orchestrator
+│   │   ├── coordinator.py                  # Ingestion orchestrator (standard audio.wav)
 │   │   └── instagram.py                    # yt-dlp download wrapper
 │   ├── media/
-│   │   ├── normalizer.py                   # ffprobe inspection & ffmpeg audio conversion
-│   │   ├── separator.py                    # Demucs stem separation & spectral gating
-│   │   └── text_normalizer.py              # Devanagari-to-Roman transliteration & schwa deletion
+│   │   ├── normalizer.py                   # ffprobe inspection & ffmpeg audio extraction
+│   │   ├── separator.py                    # Demucs stem isolation (optional utility)
+│   │   └── text_normalizer.py              # Text utilities
 │   └── models/
 │       ├── media.py                        # Pydantic models for media container specs
 │       └── state.py                        # Pydantic models for preflight and execution state
 ├── compare_speech.py                       # Side-by-side provider verification script
+├── test_speech_pipeline.py                 # End-to-end pipeline verification CLI
+├── analyze_reel.py                         # Single-provider analysis CLI
 ├── requirements.txt                        # Python dependencies
 └── .env                                    # API credentials
-
 ```
 
 ---
@@ -76,57 +77,38 @@ script-writer/
 ### `app.models.media`
 
 * **`VideoSpecs(BaseModel)`**: Container for video stream metadata.
-* Fields: `width: int`, `height: int`, `fps: float`, `duration_seconds: float`, `codec: str`.
-
-
+  * Fields: `width: int`, `height: int`, `fps: float`, `duration_seconds: float`, `codec: str`.
 * **`AudioSpecs(BaseModel)`**: Container for audio stream metadata.
-* Fields: `sample_rate: int`, `channels: int`, `duration_seconds: float`, `codec: str`.
-
-
+  * Fields: `sample_rate: int`, `channels: int`, `duration_seconds: float`, `codec: str`.
 * **`IngestedMedia(BaseModel)`**: Aggregate returned by `ingest_media`.
-* Fields: `reel_id: str`, `source_url: Optional[str]`, `video_path: Path`, `audio_path: Path`, `metadata_path: Path`, `audio_specs: AudioSpecs`, `video_specs: Optional[VideoSpecs]`, `raw_metadata: Dict[str, Any]`.
-
-
+  * Fields: `reel_id: str`, `source_url: Optional[str]`, `video_path: Path`, `audio_path: Path`, `metadata_path: Path`, `audio_specs: AudioSpecs`, `video_specs: Optional[VideoSpecs]`, `raw_metadata: Dict[str, Any]`.
 
 ### `app.models.state`
 
 * **`AudioCondition(BaseModel)`**: Low-level audio characteristics from preflight checks.
-* Fields: `has_heavy_music: bool`, `music_energy_ratio: float`, `silence_ratio: float`, `average_db: float`, `needs_stem_separation: bool`.
-
-
+  * Fields: `has_heavy_music: bool`, `music_energy_ratio: float`, `silence_ratio: float`, `average_db: float`, `needs_stem_separation: bool`.
 * **`ConditionReport(BaseModel)`**: Overall preflight health and attribute assessment.
-* Fields: `reel_id: str`, `audio_condition: AudioCondition`, `duration_seconds: float`, `flags: List[str]`.
-
-
+  * Fields: `reel_id: str`, `audio_condition: AudioCondition`, `duration_seconds: float`, `flags: List[str]`.
 * **`TaskPlan(BaseModel)`**: Execution instructions for an individual capability.
-* Fields: `capability: str`, `provider_chain: List[str]`, `estimated_cost_usd: float`, `estimated_seconds: float`.
-
-
+  * Fields: `capability: str`, `provider_chain: List[str]`, `estimated_cost_usd: float`, `estimated_seconds: float`.
 * **`ExecutionPlan(BaseModel)`**: Top-level execution plan persisted to `plan.json`.
-* Fields: `reel_id: str`, `profile: str`, `preflight: ConditionReport`, `plans: Dict[str, TaskPlan]`.
-
-
+  * Fields: `reel_id: str`, `profile: str`, `preflight: ConditionReport`, `plans: Dict[str, TaskPlan]`.
 
 ### `app.capabilities.base`
 
-* **`CanonicalEvent(BaseModel)`**: Normalized event schema for all pipeline outputs.
-* Fields:
-* `track: str`: Domain track identifier (`"speech"`, `"shot"`, `"diarization"`).
-* `start_ms: int`: Event start time in milliseconds.
-* `end_ms: int`: Event end time in milliseconds.
-* `type: str`: Event subclass (`"word"`, `"utterance"`, `"scene_cut"`).
-* `payload: Dict[str, Any]`: Payload data (e.g., `{"text": "dekh", "raw": "देख"}`).
-* `confidence: float`: Provider confidence score (`0.0` to `1.0`).
-* `provider: str`: Provider name that emitted the event.
-* `provider_version: str`: Semantic version of the provider.
-
-
-
+* **`CanonicalEvent(BaseModel)`**: Normalized event schema across all pipeline tracks.
+  * Fields:
+    * `track: str`: Domain track identifier (`"speech"`, `"shot"`, `"diarization"`).
+    * `start_ms: int`: Event start time in milliseconds.
+    * `end_ms: int`: Event end time in milliseconds.
+    * `type: str`: Event subclass (`"word"`, `"utterance"`, `"scene_cut"`).
+    * `payload: Dict[str, Any]`: Payload data (e.g., `{"text": "खाना", "raw": "खाना", "speaker": "A"}`).
+    * `confidence: float`: Provider confidence score (`0.0` to `1.0`).
+    * `provider: str`: Provider name that emitted the event.
+    * `provider_version: str`: Semantic version of the provider (`"1.3.0"`).
 
 * **`ProviderResult(BaseModel)`**: Container persisted to `manifest_<capability>_<provider>_v<version>.json`.
-* Fields: `capability: str`, `provider_name: str`, `provider_version: str`, `events: List[CanonicalEvent]`, `raw_payload: Dict[str, Any]`, `metadata: Dict[str, Any]`.
-
-
+  * Fields: `capability: str`, `provider_name: str`, `provider_version: str`, `events: List[CanonicalEvent]`, `raw_payload: Dict[str, Any]`, `metadata: Dict[str, Any]`.
 
 ---
 
@@ -135,162 +117,59 @@ script-writer/
 ### 4.1 Ingestion & Media Processing
 
 #### `app.ingestion.instagram`
-
-* **`download_instagram_reel(url: str, output_root: str = "data/reels") -> Tuple[str, Path, dict]`**
-* Uses `yt-dlp` to download media and extract metadata without re-downloading existing content.
-* Returns `(reel_id, video_path, metadata_dict)`.
-
-
+* **`download_instagram_reel(url: str, output_root: str = "data/reels") -> Tuple[str, Path, dict]`**: Uses `yt-dlp` to download media and metadata without re-downloading existing files.
 
 #### `app.media.normalizer`
-
-* **`probe_media(file_path: Path) -> dict`**
-* Invokes `ffprobe` as a subprocess with `-show_format` and `-show_streams` in JSON mode.
-
-
-* **`extract_media_specs(probe_data: dict) -> Tuple[Optional[VideoSpecs], AudioSpecs]`**
-* Parses raw `ffprobe` output into typed `VideoSpecs` and `AudioSpecs` models.
-
-
-* **`normalize_audio(video_path: Path, output_audio_path: Path) -> AudioSpecs`**
-* Executes `ffmpeg` to extract a 16-bit, 16 kHz mono PCM WAV file (`audio.wav`).
-
-
-
-#### `app.media.separator`
-
-* **`clean_residual_noise(vocal_wav_path: Path, output_path: Path) -> Path`**
-* Applies non-stationary spectral gating using `noisereduce` to suppress transient SFX and residual noise.
-
-
-* **`isolate_vocals(audio_path: Path, output_dir: Path = None, shifts: int = 2) -> Path`**
-* Runs Demucs (`htdemucs`) using `--two-stems=vocals` and `--shifts=<shifts>`.
-* Post-processes output to 16 kHz mono WAV via `ffmpeg`, applies `clean_residual_noise`, and outputs `vocals.wav`.
-
-
+* **`probe_media(file_path: Path) -> dict`**: Invokes `ffprobe` in JSON mode to inspect streams and format container tags.
+* **`extract_media_specs(probe_data: dict) -> Tuple[Optional[VideoSpecs], AudioSpecs]`**: Parses ffprobe JSON into typed models.
+* **`normalize_audio(video_path: Path, output_audio_path: Path) -> AudioSpecs`**: Converts video audio track into standard 16-bit, 16 kHz mono PCM WAV (`audio.wav`).
 
 #### `app.ingestion.coordinator`
+* **`ingest_media(source: str, data_root: str = "data", separate_stems: bool = False) -> IngestedMedia`**: Orchestrates media acquisition $\to$ container probing $\to$ 16 kHz audio extraction $\to$ metadata serialization. Sets `audio_path` to `audio.wav` by default for pristine speech transcription.
 
-* **`ingest_media(source: str, data_root: str = "data", separate_stems: bool = True) -> IngestedMedia`**
-* Orchestrates the entire input pipeline: media acquisition $\to$ container probing $\to$ audio extraction $\to$ stem isolation $\to$ metadata serialization.
-* Sets `audio_path` to `vocals.wav` when stem separation is enabled, falling back to `audio.wav` otherwise.
-
-
+#### `app.media.separator`
+* **`isolate_vocals(audio_path: Path, output_dir: Path = None, shifts: int = 1) -> Path`**: Utility to run Demucs (`htdemucs`) and downsample directly to 16 kHz mono WAV without destructive spectral gating.
 
 ---
 
-### 4.2 Text & Script Normalization
-
-#### `app.media.text_normalizer`
-
-* **`contains_devanagari(text: str) -> bool`**
-* Regex validation against the Unicode range `[\u0900-\u097F]`.
-
-
-* **`devanagari_to_roman(text: str) -> str`**
-* Normalizes Devanagari input via `indicnlp.normalize.DevanagariNormalizer`.
-* Transliterates to Latin characters via `indic_transliteration.sanscript`.
-* Applies automated Hindi schwa deletion (`[consonant]a\b` $\to$ `[consonant]`) to prevent Sanskrit-style trailing vowels (e.g., converting `dekha` to `dekh`).
-* Normalizes nasals (`mem` $\to$ `me`, `haim` $\to$ `hain`, `hu.n` $\to$ `hoon`).
-
-
-
----
-
-### 4.3 Core Execution Engine & Architecture
+### 4.2 Core Engine & Orchestration
 
 #### `app.core.config.ConfigManager`
-
-* **`get_api_key(key_name: str) -> Optional[str]`**: Resolves secrets from environment variables or `.env`.
-* **`get_profile(profile_name: str) -> dict`**: Reads configuration profiles and budget thresholds from `config/profiles.yaml`.
+* Resolves API keys from environment/`.env` and reads profiles/budget limits from `config/profiles.yaml`.
 
 #### `app.core.registry.CapabilityRegistry`
-
-* Implements a central service locator for capability providers:
-* **`register(capability: str, name: str, provider_cls: Type[Provider]) -> None`**
-* **`get(capability: str, name: str) -> Optional[Type[Provider]]`**
-* **`list_providers(capability: Optional[str] = None) -> Dict[str, List[str]]`**
-
-
+* Central service locator: registers and dynamic resolves providers (`speech`, `shots`, `diarization`, etc.).
 
 #### `app.core.preflight`
-
-* **`detect_spoken_language(audio_path: Path) -> str`**
-* Reads an initial 15-second slice of audio using `ffmpeg` and infers the spoken language via `mlx_whisper` to output an ISO 639-1 code (`"hi"`, `"en"`).
-
-
-* **`analyze_audio_condition(audio_path: Path, reel_id: str) -> ConditionReport`**
-* Runs `ffmpeg volumedetect` and `silencedetect` filters to calculate dynamic range, mean volume, and silence ratios.
-* Adds diagnostic flags (`LANG_HI`, `HEAVY_BACKGROUND_MUSIC`, `HIGH_SILENCE_RATIO`).
-
-
+* **`analyze_audio_condition(audio_path: Path, reel_id: str) -> ConditionReport`**: Measures duration, dynamic range, mean/max volume dBFS, and silence ratios via `ffmpeg volumedetect` and `silencedetect`. Flags `EXTREMELY_LOW_VOLUME`, `AUDIO_PEAK_CLIPPED`, and `HIGH_SILENCE_RATIO`.
 
 #### `app.core.router`
-
-* **`create_execution_plan(condition_report: ConditionReport, profile_name: str = "default", data_root: str = "data") -> ExecutionPlan`**
-* Evaluates preflight condition flags and estimates execution costs against `limits.max_usd_per_reel`.
-* Configures fallback provider chains (e.g., falling back from `assemblyai` to local `mlx_whisper` if budget is exceeded).
-* Writes `condition_report.json` and `plan.json` to the reel directory.
-
-
+* **`create_execution_plan(condition_report: ConditionReport, profile_name: str = "default", data_root: str = "data") -> ExecutionPlan`**: Evaluates conditions and profiles against budget caps (`limits.max_usd_per_reel`) and constructs fallback chains.
 
 #### `app.core.runner.TaskRunner`
-
-* **`execute(reel_id: str, provider: Provider, job: Dict[str, Any]) -> ProviderResult`**
-* Checks for an existing `manifest_<capability>_<provider>_v<version>.json` on disk to return cached results when available.
-* Runs `provider.health()` checks before execution.
-* Persists execution results to disk upon completion.
-
-
-* **`execute_chain(reel_id: str, capability: str, provider_names: List[str], job: Dict[str, Any]) -> ProviderResult`**
-* Iterates through an ordered provider list, executing each sequentially and falling back to the next candidate if an error occurs.
-
-
+* **`execute(reel_id: str, provider: Provider, job: Dict[str, Any]) -> ProviderResult`**: Enforces idempotency via disk caching (`manifest_<cap>_<prov>_v<ver>.json`), verifies provider health, executes inference, and serializes results.
+* **`execute_chain(reel_id: str, capability: str, provider_names: List[str], job: Dict[str, Any]) -> ProviderResult`**: Automatically executes candidate providers in order, falling back to the next on failure.
 
 ---
 
-### 4.4 Capability Providers
-
-#### `app.capabilities.base.Provider (ABC)`
-
-All providers implement this abstract interface:
-
-* **`health() -> Health`**: Validates dependencies, drivers, and API keys.
-* **`estimate(media_info: Dict[str, Any]) -> Estimate`**: Projects cost in USD, runtime duration, and RAM consumption.
-* **`run(job: Dict[str, Any]) -> ProviderResult`**: Executes inference and returns normalized `CanonicalEvent` models.
+### 4.3 Capability Providers (v1.3.0)
 
 #### `app.capabilities.speech.providers.assemblyai.AssemblyAISpeechProvider`
-
-* **Capability**: `"speech"` | **Tier**: `"paid"` | **Version**: `"1.2.0"`
-* Uploads target audio to AssemblyAI, applies language settings, and parses responses into `utterance` and `word` canonical events.
-* Passes all output text through `devanagari_to_roman` to produce standardized Roman script.
+* **Capability**: `"speech"` | **Tier**: `"paid"` | **Version**: `"1.3.0"`
+* Uploads clean `audio.wav` to AssemblyAI.
+* Supports **speaker diarization labels** (`speaker_labels=True`), populating `speaker` on words and utterances.
+* Emits authentic native script (Devanagari for Hindi, Latin for English) with millisecond timestamps and confidence scores.
 
 #### `app.capabilities.speech.providers.mlx_whisper.MLXWhisperProvider`
-
-* **Capability**: `"speech"` | **Tier**: `"local"` | **Version**: `"1.2.0"`
-* Uses `mlx-community/whisper-large-v3-turbo` for GPU-accelerated local transcription on Apple Silicon.
-* Sets `task="transcribe"`, `condition_on_previous_text=False`, and `compression_ratio_threshold=2.2` to mitigate repetition loops during audio transitions.
-* Converts token payloads to Roman Hinglish via `devanagari_to_roman`.
+* **Capability**: `"speech"` | **Tier**: `"local"` | **Version**: `"1.3.0"`
+* Uses `mlx-community/whisper-large-v3-mlx` (Full Large v3 architecture, 1.54B parameters) for Apple Silicon Metal inference.
+* Multi-temperature fallback: `temperature=(0.0, 0.2, 0.4, 0.6, 0.8)` preventing token deadlocks.
+* Anti-hallucination guards: `hallucination_silence_threshold=2.0`, `compression_ratio_threshold=2.2`, and consecutive token deduplication (`suppress_repetition_loops`).
+* Emits authentic native script directly into `CanonicalEvent` tokens.
 
 #### `app.capabilities.shots.providers.pyscenedetect.PySceneDetectProvider`
-
 * **Capability**: `"shots"` | **Tier**: `"local"` | **Version**: `"1.0.0"`
 * Uses `scenedetect.ContentDetector(threshold=27.0)` to detect visual shot boundaries and cuts.
-* Emits `"scene_cut"` events with start and end timestamps in milliseconds, scene indices, and durations.
-
----
-
-### 4.5 Fusion & Timeline Integration
-
-#### `app.fusion.timeline_aligner.TimelineAligner`
-
-* **`fuse(reel_id: str, results: List[ProviderResult], data_root: str = "data") -> Dict[str, Any]`**
-* Merges disparate `CanonicalEvent` streams across different tracks (`"speech"`, `"shot"`).
-* Sorts all events chronologically by `(start_ms, end_ms)`.
-* Computes video-level pacing metrics, including total shot counts, total spoken words, and **Average Shot Duration (ASD)**.
-* Saves the consolidated output to `data/reels/<reel_id>/timeline.json`.
-
-
 
 ---
 
@@ -303,113 +182,82 @@ All providers implement this abstract interface:
 1. INGESTION (app.ingestion.coordinator)
    ├── Fetch Video via yt-dlp (instagram.py)
    ├── Extract Container Specs via ffprobe (normalizer.py)
-   ├── Standardize Audio mix -> audio.wav via ffmpeg (normalizer.py)
-   └── Separate Vocals -> vocals.wav via Demucs & Noisereduce (separator.py)
+   └── Standardize Audio mix -> audio.wav via ffmpeg (normalizer.py)
            │
            ▼
 2. PREFLIGHT & ROUTING (app.core.preflight & app.core.router)
-   ├── Compute volume, dynamic range, and silence ratios
-   ├── Run 15-second acoustic language identification
-   ├── Check budget constraints from profiles.yaml
+   ├── Probe volume health (clipping, silence ratio, mean/max dBFS)
+   ├── Validate budget ceilings in profiles.yaml
    └── Serialize condition_report.json and plan.json
            │
            ▼
 3. EXECUTION CHAIN (app.core.runner)
-   ├── Read task plan from plan.json
-   ├── Check disk cache for existing manifest files
-   ├── Execute primary provider (fallback to secondary on error)
-   │     ├── Paid Cloud: AssemblyAISpeechProvider
-   │     └── Local Metal: MLXWhisperProvider
-   └── Transliterate text to Roman Hinglish via text_normalizer.py
+   ├── Check disk cache for manifest_<cap>_<prov>_v1.3.0.json
+   ├── Execute primary provider (with automatic fallback on error)
+   │     ├── Paid Cloud: AssemblyAISpeechProvider (native script + diarization)
+   │     └── Local Metal: MLXWhisperProvider (large-v3-mlx + anti-loop guards)
+   └── Output clean native script (Devanagari / English)
            │
            ▼
 4. MULTIMODAL FUSION (app.fusion.timeline_aligner)
    ├── Run PySceneDetectProvider on video.mp4
-   ├── Collate speech tokens and scene cuts
-   ├── Sort events chronologically into a unified index
+   ├── Collate speech tokens, diarization turns, and scene cuts
+   ├── Sort events chronologically into unified timeline
    └── Calculate Average Shot Duration (ASD) -> timeline.json
-
 ```
 
 ---
 
-## 6. Manifest & Timeline Output Structure
+## 6. Manifest Output Schema Example (v1.3.0)
 
-### Provider Manifest Output: `manifest_speech_mlx_whisper_v1.2.0.json`
+### Native Script Manifest Output (`manifest_speech_assemblyai_v1.3.0.json`)
 
 ```json
 {
   "capability": "speech",
-  "provider_name": "mlx_whisper",
-  "provider_version": "1.2.0",
+  "provider_name": "assemblyai",
+  "provider_version": "1.3.0",
   "events": [
     {
       "track": "speech",
-      "start_ms": 1219,
+      "start_ms": 1210,
       "end_ms": 1960,
       "type": "word",
       "payload": {
-        "text": "oye",
-        "raw": "ओए"
+        "text": "ओए",
+        "raw": "ओए",
+        "speaker": "A"
       },
-      "confidence": 0.95,
-      "provider": "mlx_whisper",
-      "provider_version": "1.2.0"
-    }
-  ],
-  "raw_payload": {
-    "text": "oye dekh tere dabbe me khana kha gaya",
-    "language": "hi",
-    "segment_count": 12
-  },
-  "metadata": {
-    "audio_path": "data/reels/DeEKAEKhx_Z/vocals.wav",
-    "model": "mlx-community/whisper-large-v3-turbo"
-  }
-}
-
-```
-
-### Fused Timeline Output: `timeline.json`
-
-```json
-{
-  "reel_id": "DeEKAEKhx_Z",
-  "metrics": {
-    "total_shots": 14,
-    "total_words": 178,
-    "avg_shot_duration_sec": 2.14
-  },
-  "events": [
-    {
-      "track": "shot",
-      "start_ms": 0,
-      "end_ms": 1850,
-      "type": "scene_cut",
-      "payload": {
-        "scene_index": 0,
-        "duration_ms": 1850,
-        "duration_sec": 1.85
-      },
-      "confidence": 1.0,
-      "provider": "pyscenedetect",
-      "provider_version": "1.0.0"
+      "confidence": 0.98,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0"
     },
     {
       "track": "speech",
-      "start_ms": 1219,
-      "end_ms": 1960,
+      "start_ms": 3680,
+      "end_ms": 4000,
       "type": "word",
       "payload": {
-        "text": "oye"
+        "text": "खाना",
+        "raw": "खाना",
+        "speaker": "A"
       },
-      "confidence": 0.95,
-      "provider": "mlx_whisper",
-      "provider_version": "1.2.0"
+      "confidence": 0.99,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0"
     }
-  ]
+  ],
+  "raw_payload": {
+    "text": "ओए देख तेरे डब्बे में खाना खा गया...",
+    "raw_text": "ओए देख तेरे डब्बे में खाना खा गया...",
+    "status": "TranscriptStatus.completed",
+    "words_count": 179
+  },
+  "metadata": {
+    "audio_path": "data/reels/DeEKAEKhx_Z/audio.wav",
+    "language_code": "hi"
+  }
 }
-
 ```
 
 ---
@@ -423,13 +271,14 @@ All providers implement this abstract interface:
 3. **Preflight Health Inspection**: Probes duration, dynamic range, volume clipping/sanity, and silence ratio before generating budget-guarded task plans.
 4. **Idempotent TaskRunner**: Supports disk caching (`manifest_<cap>_<prov>_v<ver>.json`) and automatic fallback chains.
 5. **Dual Speech Transcription (v1.3.0)**:
-   - **AssemblyAI Cloud**: Native script output (Devanagari for Hindi, Latin for English) with word-level timestamps.
+   - **AssemblyAI Cloud**: Native script output (Devanagari for Hindi, Latin for English) with word-level timestamps and speaker diarization.
    - **MLX Whisper Local**: Upgraded to `mlx-community/whisper-large-v3-mlx` with multi-temperature fallback (`(0.0, 0.2, 0.4, 0.6, 0.8)`), silence hallucination thresholds, and anti-repetition deduplication (completely eliminating token loops).
 6. **Native Script Preservation**: Removed brittle rule-based ITRANS and regex schwa deletion from Phase 2, preserving authentic transcripts directly.
+7. **Clean Cache Management**: Purged unused test weights (`whisper-tiny-mlx`, `whisper-large-v3-turbo`) from HuggingFace cache while retaining active models (`large-v3-mlx`, `HTDemucs`).
 
 ### Next Implementation Steps (Phase 0.3: Visual & Speaker Lanes)
 
 1. **Shot Boundary Detection**: PySceneDetect boundary detection integration (`app/capabilities/shots/providers/pyscenedetect.py`).
-2. **Speaker Diarization Track**: Add `diarization` capability using `pyannote-audio` to segment and cluster speaker voices.
+2. **Speaker Diarization Track**: Add dedicated local `diarization` capability using `pyannote-audio` to segment and cluster speaker voices across any ASR backend.
 3. **On-Screen OCR**: Add local OCR (`apple_vision` / `rapidocr`) to extract on-screen caption overlays.
 4. **Active Speaker Resolver**: Correlate face bounding boxes & mouth aspect ratio (MAR) with audio diarization clusters.
