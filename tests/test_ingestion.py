@@ -4,6 +4,10 @@ Verify Phase 1: Ingestion & Normalization pipeline standalone.
 """
 
 import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table

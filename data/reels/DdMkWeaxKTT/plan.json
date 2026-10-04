@@ -1,26 +1,26 @@
 {
   "reel_id": "DdMkWeaxKTT",
-  "profile": "local_only",
+  "profile": "default",
   "preflight": {
     "reel_id": "DdMkWeaxKTT",
     "audio_condition": {
       "has_heavy_music": false,
-      "music_energy_ratio": 0.14,
+      "music_energy_ratio": 0.0,
       "silence_ratio": 0.0,
       "average_db": -17.7,
       "needs_stem_separation": false
     },
-    "duration_seconds": 52.429188,
+    "duration_seconds": 52.43,
     "flags": []
   },
   "plans": {
     "speech": {
       "capability": "speech",
       "provider_chain": [
-        "mlx_whisper"
+        "assemblyai"
       ],
-      "estimated_cost_usd": 0.0,
-      "estimated_seconds": 7.9
+      "estimated_cost_usd": 0.0131,
+      "estimated_seconds": 13.1
     }
   }
 }

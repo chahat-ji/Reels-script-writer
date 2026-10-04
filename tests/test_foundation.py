@@ -3,6 +3,11 @@ test_foundation.py
 Verification test for Phase 0.1 Foundation.
 """
 
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from rich.console import Console
 from rich.table import Table
 from rich.panel import Panel
@@ -72,29 +77,36 @@ def main():
     provider_instance = provider_cls()
 
     reel_id = "test_reel_123"
-    result = runner.execute(reel_id, provider_instance, {"audio_path": "dummy.wav"})
+    test_dir = Path("data/reels") / reel_id
+    try:
+        result = runner.execute(reel_id, provider_instance, {"audio_path": "dummy.wav"})
 
-    # 4. Display result summary
-    res_table = Table(title=f"Execution Manifest ({reel_id})")
-    res_table.add_column("Track", style="yellow")
-    res_table.add_column("Time (ms)", style="cyan")
-    res_table.add_column("Type", style="green")
-    res_table.add_column("Payload", style="white")
-    res_table.add_column("Confidence", style="magenta")
+        # 4. Display result summary
+        res_table = Table(title=f"Execution Manifest ({reel_id})")
+        res_table.add_column("Track", style="yellow")
+        res_table.add_column("Time (ms)", style="cyan")
+        res_table.add_column("Type", style="green")
+        res_table.add_column("Payload", style="white")
+        res_table.add_column("Confidence", style="magenta")
 
-    for ev in result.events:
-        res_table.add_row(
-            ev.track,
-            f"{ev.start_ms} - {ev.end_ms}",
-            ev.type,
-            str(ev.payload),
-            f"{ev.confidence:.2f}"
-        )
-    console.print(res_table)
+        for ev in result.events:
+            res_table.add_row(
+                ev.track,
+                f"{ev.start_ms} - {ev.end_ms}",
+                ev.type,
+                str(ev.payload),
+                f"{ev.confidence:.2f}"
+            )
+        console.print(res_table)
 
-    # 5. Display loaded config profiles
-    default_profile = config.get_profile("default")
-    console.print(Panel(f"[bold]Default Profile Settings:[/bold]\n{default_profile}", title="Configuration Loader"))
+        # 5. Display loaded config profiles
+        default_profile = config.get_profile("default")
+        console.print(Panel(f"[bold]Default Profile Settings:[/bold]\n{default_profile}", title="Configuration Loader"))
+    finally:
+        import shutil
+        if test_dir.exists():
+            shutil.rmtree(test_dir, ignore_errors=True)
+            console.print(f"[dim]Cleaned up temporary test directory: {test_dir}[/dim]")
 
 
 if __name__ == "__main__":

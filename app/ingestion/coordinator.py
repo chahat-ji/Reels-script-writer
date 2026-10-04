@@ -35,12 +35,23 @@ def ingest_media(source: str, data_root: str = "data", separate_stems: bool = Fa
         src_path = Path(source)
         if not src_path.exists():
             raise FileNotFoundError(f"Input file not found: {source}")
-        reel_id = src_path.stem
-        reel_dir = root_dir / reel_id
-        reel_dir.mkdir(parents=True, exist_ok=True)
-        video_path = reel_dir / f"video{src_path.suffix}"
-        if not video_path.exists():
-            shutil.copy(src_path, video_path)
+
+        if src_path.is_file() and src_path.parent.parent.name == "reels":
+            reel_id = src_path.parent.name
+            reel_dir = src_path.parent
+            video_path = src_path if src_path.suffix.lower() in [".mp4", ".mov", ".mkv"] else (reel_dir / "video.mp4")
+        elif src_path.is_dir() and src_path.parent.name == "reels":
+            reel_id = src_path.name
+            reel_dir = src_path
+            video_path = reel_dir / "video.mp4"
+        else:
+            reel_id = src_path.stem
+            reel_dir = root_dir / reel_id
+            reel_dir.mkdir(parents=True, exist_ok=True)
+            video_path = reel_dir / f"video{src_path.suffix}"
+            if not video_path.exists() and src_path != video_path:
+                shutil.copy(src_path, video_path)
+
         metadata = {"id": reel_id, "source": str(src_path)}
         source_url = None
 

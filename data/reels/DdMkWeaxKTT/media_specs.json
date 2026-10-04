@@ -12,5 +12,7 @@
     "channels": 1,
     "codec": "pcm_s16le",
     "duration_seconds": 52.429187
-  }
+  },
+  "speech_audio_file": "audio.wav",
+  "stems_isolated": false
 }
