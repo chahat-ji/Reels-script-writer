@@ -51,11 +51,13 @@ Phase 0.3: Visual & Speaker Lanes
 
 ---
 
-### 🔲 Sub-Phase 3.4: Dedicated Speaker Diarization (`diarization`)
-- [ ] Implement `PyAnnoteDiarizationProvider` in `app/capabilities/diarization/providers/pyannote.py`.
-- [ ] Emit `CanonicalEvent(track="diarization", type="speaker_turn")` with acoustic voice cluster IDs (`SPEAKER_00`, `SPEAKER_01`).
-- [ ] Ensure provider works agnostically across any speech backend (Whisper or AssemblyAI).
-- [ ] Create test CLI: `tests/test_diarization.py`.
+### 🔄 Sub-Phase 3.4: Dedicated Speaker Diarization (`diarization`) — *COMPLETED*
+- [x] Implement `PyAnnoteDiarizationProvider` in `app/capabilities/diarization/providers/pyannote.py`.
+- [x] Implement `AssemblyAIDiarizationProvider` in `app/capabilities/diarization/providers/assemblyai.py` (with intelligent cache reuse).
+- [x] Emit `CanonicalEvent(track="diarization", type="speaker_turn")` with acoustic voice cluster IDs (`SPEAKER_00`, `SPEAKER_01`, `SPEAKER_02`).
+- [x] Support automatic fallback chain: `pyannote` -> `assemblyai`.
+- [x] Create test CLI: `tests/test_diarization.py`.
+- [x] Verify test CLI in terminal and save manifests: `manifest_diarization_assemblyai_v1.0.0.json`.
 
 ---
 

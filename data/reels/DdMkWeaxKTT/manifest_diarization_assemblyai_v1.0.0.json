@@ -1,0 +1,55 @@
+{
+  "capability": "diarization",
+  "provider_name": "assemblyai",
+  "provider_version": "1.0.0",
+  "events": [
+    {
+      "track": "diarization",
+      "start_ms": 112,
+      "end_ms": 52092,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 0,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 112,
+        "end_ms": 52092,
+        "duration_ms": 51980,
+        "duration_sec": 51.98,
+        "text": "The biggest status symbol for Gen Z is something you can't buy— taste. Think about it, everyone has started doing the same things. The books you are reading, the logos you're wearing, things you're talking about, and even how you style yourself. But rich are doing it very differently. Their interest lies in architecture, culture, arts, books, vintage items. And Gen Z is also going in the same direction, because when everyone starts looking expensive, expensive stops feeling special. So the new flex is knowing something and being a part of the tribe not everyone else can reach to. Basically something that shows that you got taste, because your personality and thinking is a reflection of that, and that is the new status symbol. So if you are building a brand, build a world that people want to be a part of. Build something people with taste would like to carry it and show it off, because money can buy you expensive logos, but taste differentiates on another level. That's it. Bye."
+      },
+      "confidence": 0.986,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "metrics": {
+      "total_speaker_turns": 1,
+      "unique_speakers": [
+        "SPEAKER_00"
+      ],
+      "speaker_count": 1,
+      "total_speech_duration_ms": 51980,
+      "speaker_mapping": {
+        "A": "SPEAKER_00"
+      }
+    },
+    "turns": [
+      {
+        "turn_index": 0,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 112,
+        "end_ms": 52092,
+        "duration_ms": 51980,
+        "duration_sec": 51.98,
+        "text": "The biggest status symbol for Gen Z is something you can't buy— taste. Think about it, everyone has started doing the same things. The books you are reading, the logos you're wearing, things you're talking about, and even how you style yourself. But rich are doing it very differently. Their interest lies in architecture, culture, arts, books, vintage items. And Gen Z is also going in the same direction, because when everyone starts looking expensive, expensive stops feeling special. So the new flex is knowing something and being a part of the tribe not everyone else can reach to. Basically something that shows that you got taste, because your personality and thinking is a reflection of that, and that is the new status symbol. So if you are building a brand, build a world that people want to be a part of. Build something people with taste would like to carry it and show it off, because money can buy you expensive logos, but taste differentiates on another level. That's it. Bye."
+      }
+    ]
+  },
+  "metadata": {
+    "audio_path": "data/reels/DdMkWeaxKTT/audio.wav"
+  }
+}

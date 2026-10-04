@@ -1,0 +1,419 @@
+{
+  "capability": "diarization",
+  "provider_name": "assemblyai",
+  "provider_version": "1.0.0",
+  "events": [
+    {
+      "track": "diarization",
+      "start_ms": 1210,
+      "end_ms": 4220,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 0,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 1210,
+        "end_ms": 4220,
+        "duration_ms": 3010,
+        "duration_sec": 3.01,
+        "text": "ओए देख तेरे डब्बे में खाना खा"
+      },
+      "confidence": 0.99,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 4220,
+      "end_ms": 15220,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 1,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 4220,
+        "end_ms": 15220,
+        "duration_ms": 11000,
+        "duration_sec": 11.0,
+        "text": "गया। ओए राशन की लिस्ट बना रही हूँ। तुम दोनों को कुछ मंगाना है तो अभी बता दो मॉल चलेंगे। हाँ लिखना हम बताते हैं। एक चॉकलेट का पैकेट,"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 15220,
+      "end_ms": 16800,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 2,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 15220,
+        "end_ms": 16800,
+        "duration_ms": 1580,
+        "duration_sec": 1.58,
+        "text": "दो पैकेट चीज़ बॉल्स,"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 16800,
+      "end_ms": 18180,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 3,
+        "speaker": "SPEAKER_02",
+        "speaker_raw": "C",
+        "start_ms": 16800,
+        "end_ms": 18180,
+        "duration_ms": 1380,
+        "duration_sec": 1.38,
+        "text": "दस पैकेट लेस,"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 18180,
+      "end_ms": 20080,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 4,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 18180,
+        "end_ms": 20080,
+        "duration_ms": 1900,
+        "duration_sec": 1.9,
+        "text": "दो पैकेट लौटी चकोपाएँ,"
+      },
+      "confidence": 0.908,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 20080,
+      "end_ms": 20760,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 5,
+        "speaker": "SPEAKER_02",
+        "speaker_raw": "C",
+        "start_ms": 20080,
+        "end_ms": 20760,
+        "duration_ms": 680,
+        "duration_sec": 0.68,
+        "text": "एक डब्बा"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 20760,
+      "end_ms": 21780,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 6,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 20760,
+        "end_ms": 21780,
+        "duration_ms": 1020,
+        "duration_sec": 1.02,
+        "text": "पेंटा,"
+      },
+      "confidence": 0.988,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 21780,
+      "end_ms": 22260,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 7,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 21780,
+        "end_ms": 22260,
+        "duration_ms": 480,
+        "duration_sec": 0.48,
+        "text": "एक पैकेट"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 22260,
+      "end_ms": 29980,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 8,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 22260,
+        "end_ms": 29980,
+        "duration_ms": 7720,
+        "duration_sec": 7.72,
+        "text": "नटखट। ये क्या"
+      },
+      "confidence": 0.881,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 32510,
+      "end_ms": 33260,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 9,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 32510,
+        "end_ms": 33260,
+        "duration_ms": 750,
+        "duration_sec": 0.75,
+        "text": "गरीब"
+      },
+      "confidence": 0.972,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 33260,
+      "end_ms": 39080,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 10,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 33260,
+        "end_ms": 39080,
+        "duration_ms": 5820,
+        "duration_sec": 5.82,
+        "text": "पैसे आके ले लेना ये लो मम्मी काट के दे दो"
+      },
+      "confidence": 0.993,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 39080,
+      "end_ms": 53160,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 11,
+        "speaker": "SPEAKER_02",
+        "speaker_raw": "C",
+        "start_ms": 39080,
+        "end_ms": 53160,
+        "duration_ms": 14080,
+        "duration_sec": 14.08,
+        "text": "नानी ये देखो मैंने मम्मी को सौ का नोट दिया मम्मी ने सौ में से पचास रुपए काट के मेरे को डेढ़ सौ रुपए वापस दिए मम्मी को लगा मेरे तोस्सों का नोट दिया है"
+      },
+      "confidence": 0.981,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 53160,
+      "end_ms": 92690,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 12,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 53160,
+        "end_ms": 92690,
+        "duration_ms": 39530,
+        "duration_sec": 39.53,
+        "text": "बिकारी है तू गरीब आदमी के पैसे मार ली शर्म नहीं आती इज्जतदार लोग हैं हमलोग आधे-आधे कर लेंगे, आधे आपके आधे मेरे। प्लीज ना नानी मान जाओ। ओए एक गलती करी है तूने? अभी भी कह रही हूँ नानी मान जाओ। चुप कर। ओए इसने तुझे पांच सौ रुपए दिए थे, तूने सिर्फ डेढ़ सौ वापस करे। ला तीन सौ और दे। सॉरी सॉरी। सॉरी बोरी सुनने की आदत नहीं है मैं। पागल ही बना"
+      },
+      "confidence": 0.97,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "metrics": {
+      "total_speaker_turns": 13,
+      "unique_speakers": [
+        "SPEAKER_00",
+        "SPEAKER_01",
+        "SPEAKER_02"
+      ],
+      "speaker_count": 3,
+      "total_speech_duration_ms": 88950,
+      "speaker_mapping": {
+        "A": "SPEAKER_00",
+        "B": "SPEAKER_01",
+        "C": "SPEAKER_02"
+      }
+    },
+    "turns": [
+      {
+        "turn_index": 0,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 1210,
+        "end_ms": 4220,
+        "duration_ms": 3010,
+        "duration_sec": 3.01,
+        "text": "ओए देख तेरे डब्बे में खाना खा"
+      },
+      {
+        "turn_index": 1,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 4220,
+        "end_ms": 15220,
+        "duration_ms": 11000,
+        "duration_sec": 11.0,
+        "text": "गया। ओए राशन की लिस्ट बना रही हूँ। तुम दोनों को कुछ मंगाना है तो अभी बता दो मॉल चलेंगे। हाँ लिखना हम बताते हैं। एक चॉकलेट का पैकेट,"
+      },
+      {
+        "turn_index": 2,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 15220,
+        "end_ms": 16800,
+        "duration_ms": 1580,
+        "duration_sec": 1.58,
+        "text": "दो पैकेट चीज़ बॉल्स,"
+      },
+      {
+        "turn_index": 3,
+        "speaker": "SPEAKER_02",
+        "speaker_raw": "C",
+        "start_ms": 16800,
+        "end_ms": 18180,
+        "duration_ms": 1380,
+        "duration_sec": 1.38,
+        "text": "दस पैकेट लेस,"
+      },
+      {
+        "turn_index": 4,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 18180,
+        "end_ms": 20080,
+        "duration_ms": 1900,
+        "duration_sec": 1.9,
+        "text": "दो पैकेट लौटी चकोपाएँ,"
+      },
+      {
+        "turn_index": 5,
+        "speaker": "SPEAKER_02",
+        "speaker_raw": "C",
+        "start_ms": 20080,
+        "end_ms": 20760,
+        "duration_ms": 680,
+        "duration_sec": 0.68,
+        "text": "एक डब्बा"
+      },
+      {
+        "turn_index": 6,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 20760,
+        "end_ms": 21780,
+        "duration_ms": 1020,
+        "duration_sec": 1.02,
+        "text": "पेंटा,"
+      },
+      {
+        "turn_index": 7,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 21780,
+        "end_ms": 22260,
+        "duration_ms": 480,
+        "duration_sec": 0.48,
+        "text": "एक पैकेट"
+      },
+      {
+        "turn_index": 8,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 22260,
+        "end_ms": 29980,
+        "duration_ms": 7720,
+        "duration_sec": 7.72,
+        "text": "नटखट। ये क्या"
+      },
+      {
+        "turn_index": 9,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 32510,
+        "end_ms": 33260,
+        "duration_ms": 750,
+        "duration_sec": 0.75,
+        "text": "गरीब"
+      },
+      {
+        "turn_index": 10,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 33260,
+        "end_ms": 39080,
+        "duration_ms": 5820,
+        "duration_sec": 5.82,
+        "text": "पैसे आके ले लेना ये लो मम्मी काट के दे दो"
+      },
+      {
+        "turn_index": 11,
+        "speaker": "SPEAKER_02",
+        "speaker_raw": "C",
+        "start_ms": 39080,
+        "end_ms": 53160,
+        "duration_ms": 14080,
+        "duration_sec": 14.08,
+        "text": "नानी ये देखो मैंने मम्मी को सौ का नोट दिया मम्मी ने सौ में से पचास रुपए काट के मेरे को डेढ़ सौ रुपए वापस दिए मम्मी को लगा मेरे तोस्सों का नोट दिया है"
+      },
+      {
+        "turn_index": 12,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 53160,
+        "end_ms": 92690,
+        "duration_ms": 39530,
+        "duration_sec": 39.53,
+        "text": "बिकारी है तू गरीब आदमी के पैसे मार ली शर्म नहीं आती इज्जतदार लोग हैं हमलोग आधे-आधे कर लेंगे, आधे आपके आधे मेरे। प्लीज ना नानी मान जाओ। ओए एक गलती करी है तूने? अभी भी कह रही हूँ नानी मान जाओ। चुप कर। ओए इसने तुझे पांच सौ रुपए दिए थे, तूने सिर्फ डेढ़ सौ वापस करे। ला तीन सौ और दे। सॉरी सॉरी। सॉरी बोरी सुनने की आदत नहीं है मैं। पागल ही बना"
+      }
+    ]
+  },
+  "metadata": {
+    "audio_path": "data/reels/DeEKAEKhx_Z/audio.wav"
+  }
+}

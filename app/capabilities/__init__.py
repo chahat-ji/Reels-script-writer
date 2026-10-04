@@ -21,3 +21,6 @@ import app.capabilities.ocr
 
 # Auto-register faces capability providers
 import app.capabilities.faces
+
+# Auto-register diarization capability providers
+import app.capabilities.diarization
