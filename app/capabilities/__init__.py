@@ -15,3 +15,6 @@ registry.register("speech", MLXWhisperProvider.name, MLXWhisperProvider)
 
 # Auto-register shots capability providers
 import app.capabilities.shots
+
+# Auto-register ocr capability providers
+import app.capabilities.ocr

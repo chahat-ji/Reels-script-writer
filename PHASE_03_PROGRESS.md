@@ -31,12 +31,13 @@ Phase 0.3: Visual & Speaker Lanes
 
 ---
 
-### 🔲 Sub-Phase 3.2: On-Screen OCR (`ocr`)
-- [ ] Implement OCR provider in `app/capabilities/ocr/providers/rapidocr.py` (or `apple_vision.py`).
-- [ ] Frame sampling at 4–5 fps to balance speed with text capture.
-- [ ] Emit `CanonicalEvent(track="ocr", type="text_overlay")` with detected text, bounding boxes, and timestamp ranges.
-- [ ] Filter out transient noise and duplicate adjacent detections.
-- [ ] Create test CLI: `tests/test_ocr.py`.
+### 🔄 Sub-Phase 3.2: On-Screen OCR (`ocr`) — *READY FOR VERIFICATION*
+- [x] Implement OCR provider in `app/capabilities/ocr/providers/rapidocr.py` (RapidOCR ONNX).
+- [x] Frame sampling at 3–4 fps to balance speed with text capture.
+- [x] Emit `CanonicalEvent(track="ocr", type="text_overlay")` with detected text, bounding boxes, and timestamp ranges.
+- [x] Filter out transient noise and duplicate adjacent detections (Jaccard similarity merge).
+- [x] Create test CLI: `tests/test_ocr.py`.
+- [ ] Verify test CLI in terminal and save manifest: `manifest_ocr_rapidocr_v1.0.0.json`.
 
 ---
 
