@@ -16,8 +16,8 @@ __pycache__/
 
 # Project data & media caches
 data/cache/
-data/reels/*/audio.wav
-data/reels/*/video.mp4
+data/reels/*/*.wav
+data/reels/*/*.mp4
 export/
 
 # System files

@@ -1,6 +1,6 @@
 """
 app/ingestion/coordinator.py
-End-to-end ingestion handler: downloads, probes, and normalizes media.
+End-to-end ingestion handler: downloads, probes, and normalizes audio track.
 """
 
 import json
@@ -11,18 +11,19 @@ from rich.console import Console
 
 from app.ingestion.instagram import download_instagram_reel
 from app.media.normalizer import probe_media, extract_media_specs, normalize_audio
+from app.media.separator import isolate_vocals
 from app.models.media import IngestedMedia
 
 console = Console()
 
 
-def ingest_media(source: str, data_root: str = "data") -> IngestedMedia:
+def ingest_media(source: str, data_root: str = "data", separate_stems: bool = False) -> IngestedMedia:
     """
-    Phase 1 Entry point:
-    - Ingests URL (via yt-dlp) or local MP4.
+    Ingests URL (via yt-dlp) or local MP4:
     - Runs ffprobe container inspection.
-    - Extracts 16 kHz mono WAV.
-    - Writes metadata.json and returns typed IngestedMedia.
+    - Extracts standardized 16 kHz mono WAV (audio.wav).
+    - Preserves raw audio by default for speech transcription.
+    - Writes metadata.json, media_specs.json, and returns typed IngestedMedia.
     """
     root_dir = Path(data_root) / "reels"
 
@@ -53,24 +54,32 @@ def ingest_media(source: str, data_root: str = "data") -> IngestedMedia:
     raw_probe = probe_media(video_path)
     video_specs, _ = extract_media_specs(raw_probe)
 
-    # 3. Normalize audio track to standard 16 kHz mono WAV
-    audio_path = reel_dir / "audio.wav"
-    audio_specs = normalize_audio(video_path, audio_path)
+    # 3. Extract baseline 16 kHz mono audio mix
+    raw_audio_path = reel_dir / "audio.wav"
+    audio_specs = normalize_audio(video_path, raw_audio_path)
 
-    # 4. Save container and specs report
+    # 4. Optional stem separation (disabled by default for speech transcription)
+    if separate_stems:
+        active_audio_path = isolate_vocals(raw_audio_path, output_dir=reel_dir)
+    else:
+        active_audio_path = raw_audio_path
+
+    # 5. Save container and specs report
     specs_manifest = reel_dir / "media_specs.json"
     with open(specs_manifest, "w", encoding="utf-8") as f:
         json.dump({
             "reel_id": reel_id,
             "video_specs": video_specs.model_dump() if video_specs else None,
             "audio_specs": audio_specs.model_dump(),
+            "speech_audio_file": active_audio_path.name,
+            "stems_isolated": separate_stems and active_audio_path.name == "vocals.wav",
         }, f, indent=2)
 
     return IngestedMedia(
         reel_id=reel_id,
         source_url=source_url,
         video_path=video_path,
-        audio_path=audio_path,
+        audio_path=active_audio_path,
         metadata_path=metadata_path,
         audio_specs=audio_specs,
         video_specs=video_specs,

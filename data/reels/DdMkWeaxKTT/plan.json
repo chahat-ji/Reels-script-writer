@@ -1,26 +1,26 @@
 {
-  "reel_id": "DeEKAEKhx_Z",
-  "profile": "default",
+  "reel_id": "DdMkWeaxKTT",
+  "profile": "local_only",
   "preflight": {
-    "reel_id": "DeEKAEKhx_Z",
+    "reel_id": "DdMkWeaxKTT",
     "audio_condition": {
       "has_heavy_music": false,
-      "music_energy_ratio": 0.35,
+      "music_energy_ratio": 0.14,
       "silence_ratio": 0.0,
-      "average_db": -17.4,
+      "average_db": -17.7,
       "needs_stem_separation": false
     },
-    "duration_seconds": 96.222063,
+    "duration_seconds": 52.429188,
     "flags": []
   },
   "plans": {
     "speech": {
       "capability": "speech",
       "provider_chain": [
-        "assemblyai"
+        "mlx_whisper"
       ],
-      "estimated_cost_usd": 0.0241,
-      "estimated_seconds": 24.1
+      "estimated_cost_usd": 0.0,
+      "estimated_seconds": 7.9
     }
   }
 }

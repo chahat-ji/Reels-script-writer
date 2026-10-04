@@ -1,0 +1,2426 @@
+{
+  "capability": "speech",
+  "provider_name": "assemblyai",
+  "provider_version": "1.3.0",
+  "events": [
+    {
+      "track": "speech",
+      "start_ms": 112,
+      "end_ms": 176,
+      "type": "word",
+      "payload": {
+        "text": "The",
+        "raw": "The"
+      },
+      "confidence": 0.984,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 192,
+      "end_ms": 400,
+      "type": "word",
+      "payload": {
+        "text": "biggest",
+        "raw": "biggest"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 416,
+      "end_ms": 721,
+      "type": "word",
+      "payload": {
+        "text": "status",
+        "raw": "status"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 753,
+      "end_ms": 1074,
+      "type": "word",
+      "payload": {
+        "text": "symbol",
+        "raw": "symbol"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1074,
+      "end_ms": 1298,
+      "type": "word",
+      "payload": {
+        "text": "for",
+        "raw": "for"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1298,
+      "end_ms": 1443,
+      "type": "word",
+      "payload": {
+        "text": "Gen",
+        "raw": "Gen"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1475,
+      "end_ms": 1731,
+      "type": "word",
+      "payload": {
+        "text": "Z",
+        "raw": "Z"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1972,
+      "end_ms": 2052,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2052,
+      "end_ms": 2325,
+      "type": "word",
+      "payload": {
+        "text": "something",
+        "raw": "something"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2341,
+      "end_ms": 2389,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2437,
+      "end_ms": 2597,
+      "type": "word",
+      "payload": {
+        "text": "can't",
+        "raw": "can't"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2661,
+      "end_ms": 2854,
+      "type": "word",
+      "payload": {
+        "text": "buy—",
+        "raw": "buy—"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 3624,
+      "end_ms": 3896,
+      "type": "word",
+      "payload": {
+        "text": "taste",
+        "raw": "taste."
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 4522,
+      "end_ms": 4682,
+      "type": "word",
+      "payload": {
+        "text": "Think",
+        "raw": "Think"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 4682,
+      "end_ms": 4858,
+      "type": "word",
+      "payload": {
+        "text": "about",
+        "raw": "about"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 4923,
+      "end_ms": 4987,
+      "type": "word",
+      "payload": {
+        "text": "it",
+        "raw": "it,"
+      },
+      "confidence": 0.975,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 5484,
+      "end_ms": 5740,
+      "type": "word",
+      "payload": {
+        "text": "everyone",
+        "raw": "everyone"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 5740,
+      "end_ms": 5821,
+      "type": "word",
+      "payload": {
+        "text": "has",
+        "raw": "has"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 5821,
+      "end_ms": 6189,
+      "type": "word",
+      "payload": {
+        "text": "started",
+        "raw": "started"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6189,
+      "end_ms": 6398,
+      "type": "word",
+      "payload": {
+        "text": "doing",
+        "raw": "doing"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6446,
+      "end_ms": 6510,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6510,
+      "end_ms": 6735,
+      "type": "word",
+      "payload": {
+        "text": "same",
+        "raw": "same"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6831,
+      "end_ms": 7023,
+      "type": "word",
+      "payload": {
+        "text": "things",
+        "raw": "things."
+      },
+      "confidence": 0.894,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7569,
+      "end_ms": 7649,
+      "type": "word",
+      "payload": {
+        "text": "The",
+        "raw": "The"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7649,
+      "end_ms": 7873,
+      "type": "word",
+      "payload": {
+        "text": "books",
+        "raw": "books"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7873,
+      "end_ms": 7953,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7953,
+      "end_ms": 8050,
+      "type": "word",
+      "payload": {
+        "text": "are",
+        "raw": "are"
+      },
+      "confidence": 0.61,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8050,
+      "end_ms": 8499,
+      "type": "word",
+      "payload": {
+        "text": "reading",
+        "raw": "reading,"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8755,
+      "end_ms": 8916,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8916,
+      "end_ms": 9156,
+      "type": "word",
+      "payload": {
+        "text": "logos",
+        "raw": "logos"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9172,
+      "end_ms": 9316,
+      "type": "word",
+      "payload": {
+        "text": "you're",
+        "raw": "you're"
+      },
+      "confidence": 0.941,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9332,
+      "end_ms": 9701,
+      "type": "word",
+      "payload": {
+        "text": "wearing",
+        "raw": "wearing,"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9974,
+      "end_ms": 10134,
+      "type": "word",
+      "payload": {
+        "text": "things",
+        "raw": "things"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10134,
+      "end_ms": 10279,
+      "type": "word",
+      "payload": {
+        "text": "you're",
+        "raw": "you're"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10279,
+      "end_ms": 10583,
+      "type": "word",
+      "payload": {
+        "text": "talking",
+        "raw": "talking"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10599,
+      "end_ms": 11032,
+      "type": "word",
+      "payload": {
+        "text": "about",
+        "raw": "about,"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11161,
+      "end_ms": 11225,
+      "type": "word",
+      "payload": {
+        "text": "and",
+        "raw": "and"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11401,
+      "end_ms": 11545,
+      "type": "word",
+      "payload": {
+        "text": "even",
+        "raw": "even"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11738,
+      "end_ms": 11882,
+      "type": "word",
+      "payload": {
+        "text": "how",
+        "raw": "how"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11882,
+      "end_ms": 11914,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11914,
+      "end_ms": 12203,
+      "type": "word",
+      "payload": {
+        "text": "style",
+        "raw": "style"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 12203,
+      "end_ms": 12668,
+      "type": "word",
+      "payload": {
+        "text": "yourself",
+        "raw": "yourself."
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13021,
+      "end_ms": 13197,
+      "type": "word",
+      "payload": {
+        "text": "But",
+        "raw": "But"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13502,
+      "end_ms": 13710,
+      "type": "word",
+      "payload": {
+        "text": "rich",
+        "raw": "rich"
+      },
+      "confidence": 0.977,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14047,
+      "end_ms": 14143,
+      "type": "word",
+      "payload": {
+        "text": "are",
+        "raw": "are"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14143,
+      "end_ms": 14352,
+      "type": "word",
+      "payload": {
+        "text": "doing",
+        "raw": "doing"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14448,
+      "end_ms": 14512,
+      "type": "word",
+      "payload": {
+        "text": "it",
+        "raw": "it"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14544,
+      "end_ms": 14753,
+      "type": "word",
+      "payload": {
+        "text": "very",
+        "raw": "very"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14769,
+      "end_ms": 15234,
+      "type": "word",
+      "payload": {
+        "text": "differently",
+        "raw": "differently."
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15651,
+      "end_ms": 15811,
+      "type": "word",
+      "payload": {
+        "text": "Their",
+        "raw": "Their"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15811,
+      "end_ms": 16164,
+      "type": "word",
+      "payload": {
+        "text": "interest",
+        "raw": "interest"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16212,
+      "end_ms": 16436,
+      "type": "word",
+      "payload": {
+        "text": "lies",
+        "raw": "lies"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16469,
+      "end_ms": 16517,
+      "type": "word",
+      "payload": {
+        "text": "in",
+        "raw": "in"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16693,
+      "end_ms": 17350,
+      "type": "word",
+      "payload": {
+        "text": "architecture",
+        "raw": "architecture,"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17735,
+      "end_ms": 18232,
+      "type": "word",
+      "payload": {
+        "text": "culture",
+        "raw": "culture,"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18457,
+      "end_ms": 18874,
+      "type": "word",
+      "payload": {
+        "text": "arts",
+        "raw": "arts,"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19018,
+      "end_ms": 19355,
+      "type": "word",
+      "payload": {
+        "text": "books",
+        "raw": "books,"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19499,
+      "end_ms": 19772,
+      "type": "word",
+      "payload": {
+        "text": "vintage",
+        "raw": "vintage"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19836,
+      "end_ms": 20205,
+      "type": "word",
+      "payload": {
+        "text": "items",
+        "raw": "items."
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20718,
+      "end_ms": 20782,
+      "type": "word",
+      "payload": {
+        "text": "And",
+        "raw": "And"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20878,
+      "end_ms": 21039,
+      "type": "word",
+      "payload": {
+        "text": "Gen",
+        "raw": "Gen"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21039,
+      "end_ms": 21119,
+      "type": "word",
+      "payload": {
+        "text": "Z",
+        "raw": "Z"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21119,
+      "end_ms": 21215,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21279,
+      "end_ms": 21472,
+      "type": "word",
+      "payload": {
+        "text": "also",
+        "raw": "also"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21520,
+      "end_ms": 21728,
+      "type": "word",
+      "payload": {
+        "text": "going",
+        "raw": "going"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21760,
+      "end_ms": 21857,
+      "type": "word",
+      "payload": {
+        "text": "in",
+        "raw": "in"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21857,
+      "end_ms": 21921,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21921,
+      "end_ms": 22161,
+      "type": "word",
+      "payload": {
+        "text": "same",
+        "raw": "same"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 22161,
+      "end_ms": 22610,
+      "type": "word",
+      "payload": {
+        "text": "direction",
+        "raw": "direction,"
+      },
+      "confidence": 0.82,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 22883,
+      "end_ms": 23091,
+      "type": "word",
+      "payload": {
+        "text": "because",
+        "raw": "because"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23107,
+      "end_ms": 23220,
+      "type": "word",
+      "payload": {
+        "text": "when",
+        "raw": "when"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23268,
+      "end_ms": 23621,
+      "type": "word",
+      "payload": {
+        "text": "everyone",
+        "raw": "everyone"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23621,
+      "end_ms": 24005,
+      "type": "word",
+      "payload": {
+        "text": "starts",
+        "raw": "starts"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 24005,
+      "end_ms": 24262,
+      "type": "word",
+      "payload": {
+        "text": "looking",
+        "raw": "looking"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 24262,
+      "end_ms": 24936,
+      "type": "word",
+      "payload": {
+        "text": "expensive",
+        "raw": "expensive,"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 25288,
+      "end_ms": 25898,
+      "type": "word",
+      "payload": {
+        "text": "expensive",
+        "raw": "expensive"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 25914,
+      "end_ms": 26315,
+      "type": "word",
+      "payload": {
+        "text": "stops",
+        "raw": "stops"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 26315,
+      "end_ms": 26555,
+      "type": "word",
+      "payload": {
+        "text": "feeling",
+        "raw": "feeling"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 26732,
+      "end_ms": 27036,
+      "type": "word",
+      "payload": {
+        "text": "special",
+        "raw": "special."
+      },
+      "confidence": 0.928,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27597,
+      "end_ms": 27693,
+      "type": "word",
+      "payload": {
+        "text": "So",
+        "raw": "So"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27693,
+      "end_ms": 27790,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27790,
+      "end_ms": 27902,
+      "type": "word",
+      "payload": {
+        "text": "new",
+        "raw": "new"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27998,
+      "end_ms": 28222,
+      "type": "word",
+      "payload": {
+        "text": "flex",
+        "raw": "flex"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28335,
+      "end_ms": 28383,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28559,
+      "end_ms": 28783,
+      "type": "word",
+      "payload": {
+        "text": "knowing",
+        "raw": "knowing"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28832,
+      "end_ms": 29345,
+      "type": "word",
+      "payload": {
+        "text": "something",
+        "raw": "something"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29617,
+      "end_ms": 29681,
+      "type": "word",
+      "payload": {
+        "text": "and",
+        "raw": "and"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29777,
+      "end_ms": 29938,
+      "type": "word",
+      "payload": {
+        "text": "being",
+        "raw": "being"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29938,
+      "end_ms": 29954,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30018,
+      "end_ms": 30242,
+      "type": "word",
+      "payload": {
+        "text": "part",
+        "raw": "part"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30242,
+      "end_ms": 30322,
+      "type": "word",
+      "payload": {
+        "text": "of",
+        "raw": "of"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30322,
+      "end_ms": 30403,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30403,
+      "end_ms": 30739,
+      "type": "word",
+      "payload": {
+        "text": "tribe",
+        "raw": "tribe"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30739,
+      "end_ms": 30900,
+      "type": "word",
+      "payload": {
+        "text": "not",
+        "raw": "not"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30980,
+      "end_ms": 31236,
+      "type": "word",
+      "payload": {
+        "text": "everyone",
+        "raw": "everyone"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31284,
+      "end_ms": 31461,
+      "type": "word",
+      "payload": {
+        "text": "else",
+        "raw": "else"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31461,
+      "end_ms": 31621,
+      "type": "word",
+      "payload": {
+        "text": "can",
+        "raw": "can"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31621,
+      "end_ms": 31829,
+      "type": "word",
+      "payload": {
+        "text": "reach",
+        "raw": "reach"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31861,
+      "end_ms": 32022,
+      "type": "word",
+      "payload": {
+        "text": "to",
+        "raw": "to."
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32262,
+      "end_ms": 32599,
+      "type": "word",
+      "payload": {
+        "text": "Basically",
+        "raw": "Basically"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32599,
+      "end_ms": 32935,
+      "type": "word",
+      "payload": {
+        "text": "something",
+        "raw": "something"
+      },
+      "confidence": 0.989,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32984,
+      "end_ms": 33144,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33144,
+      "end_ms": 33352,
+      "type": "word",
+      "payload": {
+        "text": "shows",
+        "raw": "shows"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33464,
+      "end_ms": 33609,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33609,
+      "end_ms": 33641,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33705,
+      "end_ms": 33945,
+      "type": "word",
+      "payload": {
+        "text": "got",
+        "raw": "got"
+      },
+      "confidence": 0.97,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33945,
+      "end_ms": 34314,
+      "type": "word",
+      "payload": {
+        "text": "taste",
+        "raw": "taste,"
+      },
+      "confidence": 0.942,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34426,
+      "end_ms": 34667,
+      "type": "word",
+      "payload": {
+        "text": "because",
+        "raw": "because"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34667,
+      "end_ms": 34747,
+      "type": "word",
+      "payload": {
+        "text": "your",
+        "raw": "your"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34747,
+      "end_ms": 35356,
+      "type": "word",
+      "payload": {
+        "text": "personality",
+        "raw": "personality"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35388,
+      "end_ms": 35532,
+      "type": "word",
+      "payload": {
+        "text": "and",
+        "raw": "and"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35532,
+      "end_ms": 35917,
+      "type": "word",
+      "payload": {
+        "text": "thinking",
+        "raw": "thinking"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36045,
+      "end_ms": 36190,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36190,
+      "end_ms": 36254,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36254,
+      "end_ms": 36671,
+      "type": "word",
+      "payload": {
+        "text": "reflection",
+        "raw": "reflection"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36671,
+      "end_ms": 36799,
+      "type": "word",
+      "payload": {
+        "text": "of",
+        "raw": "of"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36815,
+      "end_ms": 37071,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that,"
+      },
+      "confidence": 0.963,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37392,
+      "end_ms": 37520,
+      "type": "word",
+      "payload": {
+        "text": "and",
+        "raw": "and"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37552,
+      "end_ms": 37873,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37873,
+      "end_ms": 37921,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38017,
+      "end_ms": 38049,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38049,
+      "end_ms": 38210,
+      "type": "word",
+      "payload": {
+        "text": "new",
+        "raw": "new"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38210,
+      "end_ms": 38578,
+      "type": "word",
+      "payload": {
+        "text": "status",
+        "raw": "status"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38578,
+      "end_ms": 38915,
+      "type": "word",
+      "payload": {
+        "text": "symbol",
+        "raw": "symbol."
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39235,
+      "end_ms": 39380,
+      "type": "word",
+      "payload": {
+        "text": "So",
+        "raw": "So"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39380,
+      "end_ms": 39412,
+      "type": "word",
+      "payload": {
+        "text": "if",
+        "raw": "if"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39412,
+      "end_ms": 39524,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39540,
+      "end_ms": 39636,
+      "type": "word",
+      "payload": {
+        "text": "are",
+        "raw": "are"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39636,
+      "end_ms": 39845,
+      "type": "word",
+      "payload": {
+        "text": "building",
+        "raw": "building"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39893,
+      "end_ms": 39909,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39957,
+      "end_ms": 40326,
+      "type": "word",
+      "payload": {
+        "text": "brand",
+        "raw": "brand,"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40678,
+      "end_ms": 40903,
+      "type": "word",
+      "payload": {
+        "text": "build",
+        "raw": "build"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40903,
+      "end_ms": 40919,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41063,
+      "end_ms": 41319,
+      "type": "word",
+      "payload": {
+        "text": "world",
+        "raw": "world"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41319,
+      "end_ms": 41480,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41480,
+      "end_ms": 41784,
+      "type": "word",
+      "payload": {
+        "text": "people",
+        "raw": "people"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41784,
+      "end_ms": 41961,
+      "type": "word",
+      "payload": {
+        "text": "want",
+        "raw": "want"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41961,
+      "end_ms": 42057,
+      "type": "word",
+      "payload": {
+        "text": "to",
+        "raw": "to"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42057,
+      "end_ms": 42137,
+      "type": "word",
+      "payload": {
+        "text": "be",
+        "raw": "be"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42137,
+      "end_ms": 42201,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42201,
+      "end_ms": 42586,
+      "type": "word",
+      "payload": {
+        "text": "part",
+        "raw": "part"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42586,
+      "end_ms": 42650,
+      "type": "word",
+      "payload": {
+        "text": "of",
+        "raw": "of."
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42923,
+      "end_ms": 43083,
+      "type": "word",
+      "payload": {
+        "text": "Build",
+        "raw": "Build"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 43083,
+      "end_ms": 43532,
+      "type": "word",
+      "payload": {
+        "text": "something",
+        "raw": "something"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 44125,
+      "end_ms": 44445,
+      "type": "word",
+      "payload": {
+        "text": "people",
+        "raw": "people"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 44445,
+      "end_ms": 44718,
+      "type": "word",
+      "payload": {
+        "text": "with",
+        "raw": "with"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 44718,
+      "end_ms": 45071,
+      "type": "word",
+      "payload": {
+        "text": "taste",
+        "raw": "taste"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45071,
+      "end_ms": 45167,
+      "type": "word",
+      "payload": {
+        "text": "would",
+        "raw": "would"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45167,
+      "end_ms": 45343,
+      "type": "word",
+      "payload": {
+        "text": "like",
+        "raw": "like"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45391,
+      "end_ms": 45455,
+      "type": "word",
+      "payload": {
+        "text": "to",
+        "raw": "to"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45552,
+      "end_ms": 45776,
+      "type": "word",
+      "payload": {
+        "text": "carry",
+        "raw": "carry"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45888,
+      "end_ms": 45984,
+      "type": "word",
+      "payload": {
+        "text": "it",
+        "raw": "it"
+      },
+      "confidence": 0.993,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46048,
+      "end_ms": 46193,
+      "type": "word",
+      "payload": {
+        "text": "and",
+        "raw": "and"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46193,
+      "end_ms": 46353,
+      "type": "word",
+      "payload": {
+        "text": "show",
+        "raw": "show"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46369,
+      "end_ms": 46594,
+      "type": "word",
+      "payload": {
+        "text": "it",
+        "raw": "it"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46594,
+      "end_ms": 46786,
+      "type": "word",
+      "payload": {
+        "text": "off",
+        "raw": "off,"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46930,
+      "end_ms": 47139,
+      "type": "word",
+      "payload": {
+        "text": "because",
+        "raw": "because"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47171,
+      "end_ms": 47379,
+      "type": "word",
+      "payload": {
+        "text": "money",
+        "raw": "money"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47411,
+      "end_ms": 47523,
+      "type": "word",
+      "payload": {
+        "text": "can",
+        "raw": "can"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47652,
+      "end_ms": 47764,
+      "type": "word",
+      "payload": {
+        "text": "buy",
+        "raw": "buy"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47876,
+      "end_ms": 47940,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47988,
+      "end_ms": 48533,
+      "type": "word",
+      "payload": {
+        "text": "expensive",
+        "raw": "expensive"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 48533,
+      "end_ms": 48982,
+      "type": "word",
+      "payload": {
+        "text": "logos",
+        "raw": "logos,"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49255,
+      "end_ms": 49431,
+      "type": "word",
+      "payload": {
+        "text": "but",
+        "raw": "but"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49559,
+      "end_ms": 49816,
+      "type": "word",
+      "payload": {
+        "text": "taste",
+        "raw": "taste"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49816,
+      "end_ms": 50377,
+      "type": "word",
+      "payload": {
+        "text": "differentiates",
+        "raw": "differentiates"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 50377,
+      "end_ms": 50457,
+      "type": "word",
+      "payload": {
+        "text": "on",
+        "raw": "on"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 50457,
+      "end_ms": 50762,
+      "type": "word",
+      "payload": {
+        "text": "another",
+        "raw": "another"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 50762,
+      "end_ms": 51098,
+      "type": "word",
+      "payload": {
+        "text": "level",
+        "raw": "level."
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 51579,
+      "end_ms": 51820,
+      "type": "word",
+      "payload": {
+        "text": "That's",
+        "raw": "That's"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 51820,
+      "end_ms": 51900,
+      "type": "word",
+      "payload": {
+        "text": "it",
+        "raw": "it."
+      },
+      "confidence": 0.811,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 52060,
+      "end_ms": 52092,
+      "type": "word",
+      "payload": {
+        "text": "Bye",
+        "raw": "Bye."
+      },
+      "confidence": 0.683,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "transcript_id": "ec71639a-e3ab-40e6-a4c7-10fe370a981d",
+    "text": "The biggest status symbol for Gen Z is something you can't buy— taste. Think about it, everyone has started doing the same things. The books you are reading, the logos you're wearing, things you're talking about, and even how you style yourself. But rich are doing it very differently. Their interest lies in architecture, culture, arts, books, vintage items. And Gen Z is also going in the same direction, because when everyone starts looking expensive, expensive stops feeling special. So the new flex is knowing something and being a part of the tribe not everyone else can reach to. Basically something that shows that you got taste, because your personality and thinking is a reflection of that, and that is the new status symbol. So if you are building a brand, build a world that people want to be a part of. Build something people with taste would like to carry it and show it off, because money can buy you expensive logos, but taste differentiates on another level. That's it. Bye.",
+    "raw_text": "The biggest status symbol for Gen Z is something you can't buy— taste. Think about it, everyone has started doing the same things. The books you are reading, the logos you're wearing, things you're talking about, and even how you style yourself. But rich are doing it very differently. Their interest lies in architecture, culture, arts, books, vintage items. And Gen Z is also going in the same direction, because when everyone starts looking expensive, expensive stops feeling special. So the new flex is knowing something and being a part of the tribe not everyone else can reach to. Basically something that shows that you got taste, because your personality and thinking is a reflection of that, and that is the new status symbol. So if you are building a brand, build a world that people want to be a part of. Build something people with taste would like to carry it and show it off, because money can buy you expensive logos, but taste differentiates on another level. That's it. Bye.",
+    "status": "TranscriptStatus.completed",
+    "words_count": 172
+  },
+  "metadata": {
+    "audio_path": "data/reels/DdMkWeaxKTT/audio.wav",
+    "language_code": null
+  }
+}

@@ -1,0 +1,2651 @@
+{
+  "capability": "speech",
+  "provider_name": "mlx_whisper",
+  "provider_version": "1.3.0",
+  "events": [
+    {
+      "track": "speech",
+      "start_ms": 0,
+      "end_ms": 2740,
+      "type": "utterance",
+      "payload": {
+        "text": "The biggest status symbol for Gen Z is something you can't buy.",
+        "raw_text": "The biggest status symbol for Gen Z is something you can't buy.",
+        "language": "en"
+      },
+      "confidence": 0.921,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 0,
+      "end_ms": 140,
+      "type": "word",
+      "payload": {
+        "text": "The",
+        "raw": "The"
+      },
+      "confidence": 0.845,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 140,
+      "end_ms": 300,
+      "type": "word",
+      "payload": {
+        "text": "biggest",
+        "raw": "biggest"
+      },
+      "confidence": 0.992,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 300,
+      "end_ms": 540,
+      "type": "word",
+      "payload": {
+        "text": "status",
+        "raw": "status"
+      },
+      "confidence": 0.993,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 540,
+      "end_ms": 880,
+      "type": "word",
+      "payload": {
+        "text": "symbol",
+        "raw": "symbol"
+      },
+      "confidence": 0.987,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 880,
+      "end_ms": 1160,
+      "type": "word",
+      "payload": {
+        "text": "for",
+        "raw": "for"
+      },
+      "confidence": 0.95,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1160,
+      "end_ms": 1380,
+      "type": "word",
+      "payload": {
+        "text": "Gen",
+        "raw": "Gen"
+      },
+      "confidence": 0.912,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1380,
+      "end_ms": 1460,
+      "type": "word",
+      "payload": {
+        "text": "Z",
+        "raw": "Z"
+      },
+      "confidence": 0.916,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1460,
+      "end_ms": 1760,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is"
+      },
+      "confidence": 0.938,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1760,
+      "end_ms": 2180,
+      "type": "word",
+      "payload": {
+        "text": "something",
+        "raw": "something"
+      },
+      "confidence": 0.979,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2180,
+      "end_ms": 2380,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 0.981,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2380,
+      "end_ms": 2580,
+      "type": "word",
+      "payload": {
+        "text": "can't",
+        "raw": "can't"
+      },
+      "confidence": 0.957,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2580,
+      "end_ms": 2740,
+      "type": "word",
+      "payload": {
+        "text": "buy",
+        "raw": "buy."
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 3260,
+      "end_ms": 3740,
+      "type": "utterance",
+      "payload": {
+        "text": "Taste.",
+        "raw_text": "Taste.",
+        "language": "en"
+      },
+      "confidence": 0.921,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 3260,
+      "end_ms": 3740,
+      "type": "word",
+      "payload": {
+        "text": "Taste",
+        "raw": "Taste."
+      },
+      "confidence": 0.82,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 4100,
+      "end_ms": 4940,
+      "type": "utterance",
+      "payload": {
+        "text": "Think about it.",
+        "raw_text": "Think about it.",
+        "language": "en"
+      },
+      "confidence": 0.921,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 4100,
+      "end_ms": 4580,
+      "type": "word",
+      "payload": {
+        "text": "Think",
+        "raw": "Think"
+      },
+      "confidence": 0.984,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 4580,
+      "end_ms": 4760,
+      "type": "word",
+      "payload": {
+        "text": "about",
+        "raw": "about"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 4760,
+      "end_ms": 4940,
+      "type": "word",
+      "payload": {
+        "text": "it",
+        "raw": "it."
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 5100,
+      "end_ms": 6940,
+      "type": "utterance",
+      "payload": {
+        "text": "Everyone has started doing the same things.",
+        "raw_text": "Everyone has started doing the same things.",
+        "language": "en"
+      },
+      "confidence": 0.921,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 5100,
+      "end_ms": 5580,
+      "type": "word",
+      "payload": {
+        "text": "Everyone",
+        "raw": "Everyone"
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 5580,
+      "end_ms": 5780,
+      "type": "word",
+      "payload": {
+        "text": "has",
+        "raw": "has"
+      },
+      "confidence": 0.995,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 5780,
+      "end_ms": 6000,
+      "type": "word",
+      "payload": {
+        "text": "started",
+        "raw": "started"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6000,
+      "end_ms": 6260,
+      "type": "word",
+      "payload": {
+        "text": "doing",
+        "raw": "doing"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6260,
+      "end_ms": 6440,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6440,
+      "end_ms": 6640,
+      "type": "word",
+      "payload": {
+        "text": "same",
+        "raw": "same"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6640,
+      "end_ms": 6940,
+      "type": "word",
+      "payload": {
+        "text": "things",
+        "raw": "things."
+      },
+      "confidence": 0.988,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7080,
+      "end_ms": 12360,
+      "type": "utterance",
+      "payload": {
+        "text": "The books you're reading, the logos you're wearing, things you're talking about, and even how you style yourself.",
+        "raw_text": "The books you're reading, the logos you're wearing, things you're talking about, and even how you style yourself.",
+        "language": "en"
+      },
+      "confidence": 0.921,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7080,
+      "end_ms": 7540,
+      "type": "word",
+      "payload": {
+        "text": "The",
+        "raw": "The"
+      },
+      "confidence": 0.995,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7540,
+      "end_ms": 7760,
+      "type": "word",
+      "payload": {
+        "text": "books",
+        "raw": "books"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7760,
+      "end_ms": 7900,
+      "type": "word",
+      "payload": {
+        "text": "you're",
+        "raw": "you're"
+      },
+      "confidence": 0.829,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7900,
+      "end_ms": 8240,
+      "type": "word",
+      "payload": {
+        "text": "reading",
+        "raw": "reading,"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8520,
+      "end_ms": 8740,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 0.992,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8740,
+      "end_ms": 8980,
+      "type": "word",
+      "payload": {
+        "text": "logos",
+        "raw": "logos"
+      },
+      "confidence": 0.992,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8980,
+      "end_ms": 9200,
+      "type": "word",
+      "payload": {
+        "text": "you're",
+        "raw": "you're"
+      },
+      "confidence": 0.995,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9200,
+      "end_ms": 9540,
+      "type": "word",
+      "payload": {
+        "text": "wearing",
+        "raw": "wearing,"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9740,
+      "end_ms": 9980,
+      "type": "word",
+      "payload": {
+        "text": "things",
+        "raw": "things"
+      },
+      "confidence": 0.986,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9980,
+      "end_ms": 10160,
+      "type": "word",
+      "payload": {
+        "text": "you're",
+        "raw": "you're"
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10160,
+      "end_ms": 10400,
+      "type": "word",
+      "payload": {
+        "text": "talking",
+        "raw": "talking"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10400,
+      "end_ms": 10740,
+      "type": "word",
+      "payload": {
+        "text": "about",
+        "raw": "about,"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10940,
+      "end_ms": 11140,
+      "type": "word",
+      "payload": {
+        "text": "and",
+        "raw": "and"
+      },
+      "confidence": 0.995,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11140,
+      "end_ms": 11460,
+      "type": "word",
+      "payload": {
+        "text": "even",
+        "raw": "even"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11460,
+      "end_ms": 11740,
+      "type": "word",
+      "payload": {
+        "text": "how",
+        "raw": "how"
+      },
+      "confidence": 0.997,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11740,
+      "end_ms": 11860,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11860,
+      "end_ms": 12080,
+      "type": "word",
+      "payload": {
+        "text": "style",
+        "raw": "style"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 12080,
+      "end_ms": 12360,
+      "type": "word",
+      "payload": {
+        "text": "yourself",
+        "raw": "yourself."
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 12740,
+      "end_ms": 14960,
+      "type": "utterance",
+      "payload": {
+        "text": "But rich are doing it very differently.",
+        "raw_text": "But rich are doing it very differently.",
+        "language": "en"
+      },
+      "confidence": 0.921,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 12740,
+      "end_ms": 13020,
+      "type": "word",
+      "payload": {
+        "text": "But",
+        "raw": "But"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13020,
+      "end_ms": 13600,
+      "type": "word",
+      "payload": {
+        "text": "rich",
+        "raw": "rich"
+      },
+      "confidence": 0.974,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13600,
+      "end_ms": 13920,
+      "type": "word",
+      "payload": {
+        "text": "are",
+        "raw": "are"
+      },
+      "confidence": 0.991,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13920,
+      "end_ms": 14240,
+      "type": "word",
+      "payload": {
+        "text": "doing",
+        "raw": "doing"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14240,
+      "end_ms": 14420,
+      "type": "word",
+      "payload": {
+        "text": "it",
+        "raw": "it"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14420,
+      "end_ms": 14580,
+      "type": "word",
+      "payload": {
+        "text": "very",
+        "raw": "very"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14580,
+      "end_ms": 14960,
+      "type": "word",
+      "payload": {
+        "text": "differently",
+        "raw": "differently."
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15420,
+      "end_ms": 20000,
+      "type": "utterance",
+      "payload": {
+        "text": "Their interest lies in architecture, culture, arts, books, vintage items.",
+        "raw_text": "Their interest lies in architecture, culture, arts, books, vintage items.",
+        "language": "en"
+      },
+      "confidence": 0.921,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15420,
+      "end_ms": 15660,
+      "type": "word",
+      "payload": {
+        "text": "Their",
+        "raw": "Their"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15660,
+      "end_ms": 15960,
+      "type": "word",
+      "payload": {
+        "text": "interest",
+        "raw": "interest"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15960,
+      "end_ms": 16180,
+      "type": "word",
+      "payload": {
+        "text": "lies",
+        "raw": "lies"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16180,
+      "end_ms": 16500,
+      "type": "word",
+      "payload": {
+        "text": "in",
+        "raw": "in"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16500,
+      "end_ms": 16900,
+      "type": "word",
+      "payload": {
+        "text": "architecture",
+        "raw": "architecture,"
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17280,
+      "end_ms": 17860,
+      "type": "word",
+      "payload": {
+        "text": "culture",
+        "raw": "culture,"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18120,
+      "end_ms": 18580,
+      "type": "word",
+      "payload": {
+        "text": "arts",
+        "raw": "arts,"
+      },
+      "confidence": 0.997,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18800,
+      "end_ms": 19080,
+      "type": "word",
+      "payload": {
+        "text": "books",
+        "raw": "books,"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19280,
+      "end_ms": 19600,
+      "type": "word",
+      "payload": {
+        "text": "vintage",
+        "raw": "vintage"
+      },
+      "confidence": 0.997,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19600,
+      "end_ms": 20000,
+      "type": "word",
+      "payload": {
+        "text": "items",
+        "raw": "items."
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20260,
+      "end_ms": 22320,
+      "type": "utterance",
+      "payload": {
+        "text": "And Gen Z is also going in the same direction.",
+        "raw_text": "And Gen Z is also going in the same direction.",
+        "language": "en"
+      },
+      "confidence": 0.921,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20260,
+      "end_ms": 20720,
+      "type": "word",
+      "payload": {
+        "text": "And",
+        "raw": "And"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20720,
+      "end_ms": 20920,
+      "type": "word",
+      "payload": {
+        "text": "Gen",
+        "raw": "Gen"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20920,
+      "end_ms": 21040,
+      "type": "word",
+      "payload": {
+        "text": "Z",
+        "raw": "Z"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21040,
+      "end_ms": 21160,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21160,
+      "end_ms": 21320,
+      "type": "word",
+      "payload": {
+        "text": "also",
+        "raw": "also"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21320,
+      "end_ms": 21560,
+      "type": "word",
+      "payload": {
+        "text": "going",
+        "raw": "going"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21560,
+      "end_ms": 21740,
+      "type": "word",
+      "payload": {
+        "text": "in",
+        "raw": "in"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21740,
+      "end_ms": 21840,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21840,
+      "end_ms": 21980,
+      "type": "word",
+      "payload": {
+        "text": "same",
+        "raw": "same"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21980,
+      "end_ms": 22320,
+      "type": "word",
+      "payload": {
+        "text": "direction",
+        "raw": "direction."
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 22560,
+      "end_ms": 26720,
+      "type": "utterance",
+      "payload": {
+        "text": "Because when everyone starts looking expensive, expensive stops feeling special.",
+        "raw_text": "Because when everyone starts looking expensive, expensive stops feeling special.",
+        "language": "en"
+      },
+      "confidence": 0.921,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 22560,
+      "end_ms": 22920,
+      "type": "word",
+      "payload": {
+        "text": "Because",
+        "raw": "Because"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 22920,
+      "end_ms": 23080,
+      "type": "word",
+      "payload": {
+        "text": "when",
+        "raw": "when"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23080,
+      "end_ms": 23400,
+      "type": "word",
+      "payload": {
+        "text": "everyone",
+        "raw": "everyone"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23400,
+      "end_ms": 23700,
+      "type": "word",
+      "payload": {
+        "text": "starts",
+        "raw": "starts"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23700,
+      "end_ms": 24020,
+      "type": "word",
+      "payload": {
+        "text": "looking",
+        "raw": "looking"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 24020,
+      "end_ms": 24620,
+      "type": "word",
+      "payload": {
+        "text": "expensive",
+        "raw": "expensive,"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 24860,
+      "end_ms": 25460,
+      "type": "word",
+      "payload": {
+        "text": "expensive",
+        "raw": "expensive"
+      },
+      "confidence": 0.997,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 25460,
+      "end_ms": 25900,
+      "type": "word",
+      "payload": {
+        "text": "stops",
+        "raw": "stops"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 25900,
+      "end_ms": 26320,
+      "type": "word",
+      "payload": {
+        "text": "feeling",
+        "raw": "feeling"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 26320,
+      "end_ms": 26720,
+      "type": "word",
+      "payload": {
+        "text": "special",
+        "raw": "special."
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 26720,
+      "end_ms": 31920,
+      "type": "utterance",
+      "payload": {
+        "text": "So the new flex is knowing something and being a part of the tribe not everyone else can reach to.",
+        "raw_text": "So the new flex is knowing something and being a part of the tribe not everyone else can reach to.",
+        "language": "en"
+      },
+      "confidence": 0.835,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 26720,
+      "end_ms": 27560,
+      "type": "word",
+      "payload": {
+        "text": "So",
+        "raw": "So"
+      },
+      "confidence": 0.282,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27560,
+      "end_ms": 27740,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 0.678,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27740,
+      "end_ms": 27880,
+      "type": "word",
+      "payload": {
+        "text": "new",
+        "raw": "new"
+      },
+      "confidence": 0.978,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27880,
+      "end_ms": 28140,
+      "type": "word",
+      "payload": {
+        "text": "flex",
+        "raw": "flex"
+      },
+      "confidence": 0.951,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28140,
+      "end_ms": 28320,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is"
+      },
+      "confidence": 0.667,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28320,
+      "end_ms": 28660,
+      "type": "word",
+      "payload": {
+        "text": "knowing",
+        "raw": "knowing"
+      },
+      "confidence": 0.845,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28660,
+      "end_ms": 29120,
+      "type": "word",
+      "payload": {
+        "text": "something",
+        "raw": "something"
+      },
+      "confidence": 0.994,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29120,
+      "end_ms": 29560,
+      "type": "word",
+      "payload": {
+        "text": "and",
+        "raw": "and"
+      },
+      "confidence": 0.806,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29560,
+      "end_ms": 29840,
+      "type": "word",
+      "payload": {
+        "text": "being",
+        "raw": "being"
+      },
+      "confidence": 0.99,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29840,
+      "end_ms": 29940,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a"
+      },
+      "confidence": 0.935,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29940,
+      "end_ms": 30120,
+      "type": "word",
+      "payload": {
+        "text": "part",
+        "raw": "part"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30120,
+      "end_ms": 30240,
+      "type": "word",
+      "payload": {
+        "text": "of",
+        "raw": "of"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30240,
+      "end_ms": 30300,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 0.948,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30300,
+      "end_ms": 30540,
+      "type": "word",
+      "payload": {
+        "text": "tribe",
+        "raw": "tribe"
+      },
+      "confidence": 0.983,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30540,
+      "end_ms": 30760,
+      "type": "word",
+      "payload": {
+        "text": "not",
+        "raw": "not"
+      },
+      "confidence": 0.809,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30760,
+      "end_ms": 31080,
+      "type": "word",
+      "payload": {
+        "text": "everyone",
+        "raw": "everyone"
+      },
+      "confidence": 0.988,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31080,
+      "end_ms": 31360,
+      "type": "word",
+      "payload": {
+        "text": "else",
+        "raw": "else"
+      },
+      "confidence": 0.982,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31360,
+      "end_ms": 31520,
+      "type": "word",
+      "payload": {
+        "text": "can",
+        "raw": "can"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31520,
+      "end_ms": 31720,
+      "type": "word",
+      "payload": {
+        "text": "reach",
+        "raw": "reach"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31720,
+      "end_ms": 31920,
+      "type": "word",
+      "payload": {
+        "text": "to",
+        "raw": "to."
+      },
+      "confidence": 0.849,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32000,
+      "end_ms": 36920,
+      "type": "utterance",
+      "payload": {
+        "text": "Basically something that shows that you got taste because your personality and thinking is a reflection of that.",
+        "raw_text": "Basically something that shows that you got taste because your personality and thinking is a reflection of that.",
+        "language": "en"
+      },
+      "confidence": 0.835,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32000,
+      "end_ms": 32420,
+      "type": "word",
+      "payload": {
+        "text": "Basically",
+        "raw": "Basically"
+      },
+      "confidence": 0.955,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32420,
+      "end_ms": 32720,
+      "type": "word",
+      "payload": {
+        "text": "something",
+        "raw": "something"
+      },
+      "confidence": 0.841,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32720,
+      "end_ms": 33040,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that"
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33040,
+      "end_ms": 33220,
+      "type": "word",
+      "payload": {
+        "text": "shows",
+        "raw": "shows"
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33220,
+      "end_ms": 33480,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that"
+      },
+      "confidence": 0.916,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33480,
+      "end_ms": 33600,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33600,
+      "end_ms": 33760,
+      "type": "word",
+      "payload": {
+        "text": "got",
+        "raw": "got"
+      },
+      "confidence": 0.829,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33760,
+      "end_ms": 34080,
+      "type": "word",
+      "payload": {
+        "text": "taste",
+        "raw": "taste"
+      },
+      "confidence": 0.981,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34080,
+      "end_ms": 34440,
+      "type": "word",
+      "payload": {
+        "text": "because",
+        "raw": "because"
+      },
+      "confidence": 0.601,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34440,
+      "end_ms": 34660,
+      "type": "word",
+      "payload": {
+        "text": "your",
+        "raw": "your"
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34660,
+      "end_ms": 35120,
+      "type": "word",
+      "payload": {
+        "text": "personality",
+        "raw": "personality"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35120,
+      "end_ms": 35360,
+      "type": "word",
+      "payload": {
+        "text": "and",
+        "raw": "and"
+      },
+      "confidence": 0.994,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35360,
+      "end_ms": 35720,
+      "type": "word",
+      "payload": {
+        "text": "thinking",
+        "raw": "thinking"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35720,
+      "end_ms": 36060,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is"
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36060,
+      "end_ms": 36140,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a"
+      },
+      "confidence": 0.985,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36140,
+      "end_ms": 36380,
+      "type": "word",
+      "payload": {
+        "text": "reflection",
+        "raw": "reflection"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36380,
+      "end_ms": 36680,
+      "type": "word",
+      "payload": {
+        "text": "of",
+        "raw": "of"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36680,
+      "end_ms": 36920,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that."
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37040,
+      "end_ms": 38720,
+      "type": "utterance",
+      "payload": {
+        "text": "And that is the new status symbol.",
+        "raw_text": "And that is the new status symbol.",
+        "language": "en"
+      },
+      "confidence": 0.835,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37040,
+      "end_ms": 37340,
+      "type": "word",
+      "payload": {
+        "text": "And",
+        "raw": "And"
+      },
+      "confidence": 0.982,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37340,
+      "end_ms": 37660,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that"
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37660,
+      "end_ms": 37860,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is"
+      },
+      "confidence": 0.995,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37860,
+      "end_ms": 37980,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the"
+      },
+      "confidence": 0.989,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37980,
+      "end_ms": 38120,
+      "type": "word",
+      "payload": {
+        "text": "new",
+        "raw": "new"
+      },
+      "confidence": 0.997,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38120,
+      "end_ms": 38320,
+      "type": "word",
+      "payload": {
+        "text": "status",
+        "raw": "status"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38320,
+      "end_ms": 38720,
+      "type": "word",
+      "payload": {
+        "text": "symbol",
+        "raw": "symbol."
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38900,
+      "end_ms": 42580,
+      "type": "utterance",
+      "payload": {
+        "text": "So if you are building a brand, build a world that people want to be a part of.",
+        "raw_text": "So if you are building a brand, build a world that people want to be a part of.",
+        "language": "en"
+      },
+      "confidence": 0.835,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38900,
+      "end_ms": 39240,
+      "type": "word",
+      "payload": {
+        "text": "So",
+        "raw": "So"
+      },
+      "confidence": 0.993,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39240,
+      "end_ms": 39340,
+      "type": "word",
+      "payload": {
+        "text": "if",
+        "raw": "if"
+      },
+      "confidence": 0.991,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39340,
+      "end_ms": 39460,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39460,
+      "end_ms": 39520,
+      "type": "word",
+      "payload": {
+        "text": "are",
+        "raw": "are"
+      },
+      "confidence": 0.826,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39520,
+      "end_ms": 39720,
+      "type": "word",
+      "payload": {
+        "text": "building",
+        "raw": "building"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39720,
+      "end_ms": 39880,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39880,
+      "end_ms": 40120,
+      "type": "word",
+      "payload": {
+        "text": "brand",
+        "raw": "brand,"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40280,
+      "end_ms": 40700,
+      "type": "word",
+      "payload": {
+        "text": "build",
+        "raw": "build"
+      },
+      "confidence": 0.997,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40700,
+      "end_ms": 40880,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40880,
+      "end_ms": 41160,
+      "type": "word",
+      "payload": {
+        "text": "world",
+        "raw": "world"
+      },
+      "confidence": 0.867,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41160,
+      "end_ms": 41360,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41360,
+      "end_ms": 41580,
+      "type": "word",
+      "payload": {
+        "text": "people",
+        "raw": "people"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41580,
+      "end_ms": 41800,
+      "type": "word",
+      "payload": {
+        "text": "want",
+        "raw": "want"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41800,
+      "end_ms": 41980,
+      "type": "word",
+      "payload": {
+        "text": "to",
+        "raw": "to"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41980,
+      "end_ms": 42060,
+      "type": "word",
+      "payload": {
+        "text": "be",
+        "raw": "be"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42060,
+      "end_ms": 42140,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a"
+      },
+      "confidence": 0.996,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42140,
+      "end_ms": 42360,
+      "type": "word",
+      "payload": {
+        "text": "part",
+        "raw": "part"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42360,
+      "end_ms": 42580,
+      "type": "word",
+      "payload": {
+        "text": "of",
+        "raw": "of."
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42700,
+      "end_ms": 46580,
+      "type": "utterance",
+      "payload": {
+        "text": "Build something people with taste would like to carry it and show it off.",
+        "raw_text": "Build something people with taste would like to carry it and show it off.",
+        "language": "en"
+      },
+      "confidence": 0.835,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42700,
+      "end_ms": 42980,
+      "type": "word",
+      "payload": {
+        "text": "Build",
+        "raw": "Build"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42980,
+      "end_ms": 43340,
+      "type": "word",
+      "payload": {
+        "text": "something",
+        "raw": "something"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 43340,
+      "end_ms": 44140,
+      "type": "word",
+      "payload": {
+        "text": "people",
+        "raw": "people"
+      },
+      "confidence": 0.953,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 44140,
+      "end_ms": 44460,
+      "type": "word",
+      "payload": {
+        "text": "with",
+        "raw": "with"
+      },
+      "confidence": 0.995,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 44460,
+      "end_ms": 44800,
+      "type": "word",
+      "payload": {
+        "text": "taste",
+        "raw": "taste"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 44800,
+      "end_ms": 45020,
+      "type": "word",
+      "payload": {
+        "text": "would",
+        "raw": "would"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45020,
+      "end_ms": 45220,
+      "type": "word",
+      "payload": {
+        "text": "like",
+        "raw": "like"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45220,
+      "end_ms": 45380,
+      "type": "word",
+      "payload": {
+        "text": "to",
+        "raw": "to"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45380,
+      "end_ms": 45640,
+      "type": "word",
+      "payload": {
+        "text": "carry",
+        "raw": "carry"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45640,
+      "end_ms": 45840,
+      "type": "word",
+      "payload": {
+        "text": "it",
+        "raw": "it"
+      },
+      "confidence": 0.991,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45840,
+      "end_ms": 46060,
+      "type": "word",
+      "payload": {
+        "text": "and",
+        "raw": "and"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46060,
+      "end_ms": 46260,
+      "type": "word",
+      "payload": {
+        "text": "show",
+        "raw": "show"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46260,
+      "end_ms": 46400,
+      "type": "word",
+      "payload": {
+        "text": "it",
+        "raw": "it"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46400,
+      "end_ms": 46580,
+      "type": "word",
+      "payload": {
+        "text": "off",
+        "raw": "off."
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46720,
+      "end_ms": 50880,
+      "type": "utterance",
+      "payload": {
+        "text": "Because money can buy you expensive logos but taste differentiates on another level.",
+        "raw_text": "Because money can buy you expensive logos but taste differentiates on another level.",
+        "language": "en"
+      },
+      "confidence": 0.835,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46720,
+      "end_ms": 46980,
+      "type": "word",
+      "payload": {
+        "text": "Because",
+        "raw": "Because"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46980,
+      "end_ms": 47240,
+      "type": "word",
+      "payload": {
+        "text": "money",
+        "raw": "money"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47240,
+      "end_ms": 47400,
+      "type": "word",
+      "payload": {
+        "text": "can",
+        "raw": "can"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47400,
+      "end_ms": 47700,
+      "type": "word",
+      "payload": {
+        "text": "buy",
+        "raw": "buy"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47700,
+      "end_ms": 47880,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47880,
+      "end_ms": 48160,
+      "type": "word",
+      "payload": {
+        "text": "expensive",
+        "raw": "expensive"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 48160,
+      "end_ms": 48700,
+      "type": "word",
+      "payload": {
+        "text": "logos",
+        "raw": "logos"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 48700,
+      "end_ms": 49260,
+      "type": "word",
+      "payload": {
+        "text": "but",
+        "raw": "but"
+      },
+      "confidence": 0.27,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49260,
+      "end_ms": 49620,
+      "type": "word",
+      "payload": {
+        "text": "taste",
+        "raw": "taste"
+      },
+      "confidence": 0.998,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49620,
+      "end_ms": 50260,
+      "type": "word",
+      "payload": {
+        "text": "differentiates",
+        "raw": "differentiates"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 50260,
+      "end_ms": 50360,
+      "type": "word",
+      "payload": {
+        "text": "on",
+        "raw": "on"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 50360,
+      "end_ms": 50540,
+      "type": "word",
+      "payload": {
+        "text": "another",
+        "raw": "another"
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 50540,
+      "end_ms": 50880,
+      "type": "word",
+      "payload": {
+        "text": "level",
+        "raw": "level."
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 51240,
+      "end_ms": 52220,
+      "type": "utterance",
+      "payload": {
+        "text": "That's it. Bye.",
+        "raw_text": "That's it. Bye.",
+        "language": "en"
+      },
+      "confidence": 0.835,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 51240,
+      "end_ms": 51680,
+      "type": "word",
+      "payload": {
+        "text": "That's",
+        "raw": "That's"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 51680,
+      "end_ms": 51780,
+      "type": "word",
+      "payload": {
+        "text": "it",
+        "raw": "it."
+      },
+      "confidence": 1.0,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 51940,
+      "end_ms": 52220,
+      "type": "word",
+      "payload": {
+        "text": "Bye",
+        "raw": "Bye."
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "text": "The biggest status symbol for Gen Z is something you can't buy. Taste. Think about it. Everyone has started doing the same things. The books you're reading, the logos you're wearing, things you're talking about, and even how you style yourself. But rich are doing it very differently. Their interest lies in architecture, culture, arts, books, vintage items. And Gen Z is also going in the same direction. Because when everyone starts looking expensive, expensive stops feeling special. So the new flex is knowing something and being a part of the tribe not everyone else can reach to. Basically something that shows that you got taste because your personality and thinking is a reflection of that. And that is the new status symbol. So if you are building a brand, build a world that people want to be a part of. Build something people with taste would like to carry it and show it off. Because money can buy you expensive logos but taste differentiates on another level. That's it. Bye.",
+    "raw_text": "The biggest status symbol for Gen Z is something you can't buy. Taste. Think about it. Everyone has started doing the same things. The books you're reading, the logos you're wearing, things you're talking about, and even how you style yourself. But rich are doing it very differently. Their interest lies in architecture, culture, arts, books, vintage items. And Gen Z is also going in the same direction. Because when everyone starts looking expensive, expensive stops feeling special. So the new flex is knowing something and being a part of the tribe not everyone else can reach to. Basically something that shows that you got taste because your personality and thinking is a reflection of that. And that is the new status symbol. So if you are building a brand, build a world that people want to be a part of. Build something people with taste would like to carry it and show it off. Because money can buy you expensive logos but taste differentiates on another level. That's it. Bye.",
+    "language": "en",
+    "segment_count": 16
+  },
+  "metadata": {
+    "audio_path": "data/reels/DdMkWeaxKTT/audio.wav",
+    "model": "mlx-community/whisper-large-v3-mlx"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "reel_id": "DdMkWeaxKTT",
+  "video_specs": {
+    "width": 720,
+    "height": 1280,
+    "fps": 23.98,
+    "duration_seconds": 52.469136,
+    "codec": "h264"
+  },
+  "audio_specs": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "duration_seconds": 52.429187
+  }
+}

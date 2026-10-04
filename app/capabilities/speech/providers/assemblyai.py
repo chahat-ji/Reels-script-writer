@@ -1,10 +1,10 @@
 """
 app/capabilities/speech/providers/assemblyai.py
-AssemblyAI implementation of the Speech Provider interface.
+AssemblyAI implementation of the Speech Provider interface with native script output.
 """
 
 import os
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 import assemblyai as aai
 from rich.console import Console
 
@@ -24,7 +24,7 @@ console = Console()
 class AssemblyAISpeechProvider(Provider):
     capability = "speech"
     name = "assemblyai"
-    version = "1.0.0"
+    version = "1.3.0"
     tier = "paid"
     requirements = Requirements(
         min_ram_gb=1.0,
@@ -56,7 +56,7 @@ class AssemblyAISpeechProvider(Provider):
         """
         duration_sec = media_info.get("duration_seconds", 60.0)
         expected_cost = duration_sec * 0.00025
-        expected_sec = max(5.0, duration_sec * 0.25)  # typically 25% of audio duration
+        expected_sec = max(5.0, duration_sec * 0.25)
         return Estimate(
             expected_cost_usd=round(expected_cost, 4),
             expected_seconds=round(expected_sec, 1),
@@ -65,18 +65,25 @@ class AssemblyAISpeechProvider(Provider):
 
     def run(self, job: Dict[str, Any]) -> ProviderResult:
         """
-        Transcribe audio file and normalize word/utterance tokens into CanonicalEvents.
+        Transcribe audio file and normalize word/utterance tokens into CanonicalEvents
+        preserving native script (Devanagari / English).
         """
         audio_path = job.get("audio_path")
         if not audio_path or not os.path.exists(audio_path):
             raise FileNotFoundError(f"Audio file not found: {audio_path}")
 
-        language_code = job.get("language_code", None)  # None allows auto-detection
+        language_code = job.get("language") or job.get("language_code")  # e.g., 'hi', 'en', or None
+
+        console.print(
+            f"[bold magenta][ASSEMBLYAI INFERENCE][/bold magenta] Sending [green]{os.path.basename(audio_path)}[/green] "
+            f"(Lang: [yellow]{language_code or 'auto'}[/yellow])..."
+        )
 
         transcriber_config = aai.TranscriptionConfig(
             language_code=language_code,
             punctuate=True,
             format_text=True,
+            speaker_labels=True,
         )
 
         transcriber = aai.Transcriber()
@@ -86,42 +93,62 @@ class AssemblyAISpeechProvider(Provider):
             raise RuntimeError(f"AssemblyAI transcription failed: {transcript.error}")
 
         events: List[CanonicalEvent] = []
+        punctuation_chars = ".,!?;:\"'()[]{}<>।॥«»“”"
 
         # 1. Normalize individual words
         if transcript.words:
             for word in transcript.words:
+                raw_word = word.text.strip()
+                if not raw_word:
+                    continue
+
+                clean_token = raw_word.strip(punctuation_chars).strip()
+
                 events.append(
                     CanonicalEvent(
                         track="speech",
                         start_ms=int(word.start),
                         end_ms=int(word.end),
                         type="word",
-                        payload={"text": word.text},
-                        confidence=float(word.confidence or 1.0),
+                        payload={
+                            "text": clean_token or raw_word,
+                            "raw": raw_word,
+                            "speaker": getattr(word, "speaker", None),
+                        },
+                        confidence=round(float(word.confidence or 1.0), 3),
                         provider=self.name,
                         provider_version=self.version,
                     )
                 )
 
-        # 2. Normalize full utterances / sentences if present
+        # 2. Normalize full utterances / sentences
         if transcript.utterances:
             for utt in transcript.utterances:
+                clean_utt_text = utt.text.strip()
+                if not clean_utt_text:
+                    continue
+
                 events.append(
                     CanonicalEvent(
                         track="speech",
                         start_ms=int(utt.start),
                         end_ms=int(utt.end),
                         type="utterance",
-                        payload={"text": utt.text, "speaker": getattr(utt, "speaker", None)},
-                        confidence=float(utt.confidence or 1.0),
+                        payload={
+                            "text": clean_utt_text,
+                            "speaker": getattr(utt, "speaker", None),
+                        },
+                        confidence=round(float(utt.confidence or 1.0), 3),
                         provider=self.name,
                         provider_version=self.version,
                     )
                 )
 
+        full_text = transcript.text or ""
         raw_payload = {
             "transcript_id": transcript.id,
-            "text": transcript.text,
+            "text": full_text,
+            "raw_text": full_text,
             "status": str(transcript.status),
             "words_count": len(transcript.words) if transcript.words else 0,
         }
@@ -132,5 +159,5 @@ class AssemblyAISpeechProvider(Provider):
             provider_version=self.version,
             events=events,
             raw_payload=raw_payload,
-            metadata={"audio_path": audio_path},
+            metadata={"audio_path": audio_path, "language_code": language_code},
         )

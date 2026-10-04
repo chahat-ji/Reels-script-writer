@@ -1,6 +1,6 @@
 """
 app/core/preflight.py
-Phase 0 preflight inspection probe to analyze audio characteristics before routing.
+Phase 0 preflight inspection probe to analyze audio health metrics before routing.
 """
 
 import subprocess
@@ -14,7 +14,11 @@ console = Console()
 
 def analyze_audio_condition(audio_path: Path, reel_id: str) -> ConditionReport:
     """
-    Inspects normalized audio using ffmpeg volumedetect and silencedetect filters.
+    Inspects standard 16kHz mono audio.wav using ffmpeg/ffprobe:
+    - Duration
+    - Mean and max volume in dBFS (detects silence or clipping)
+    - Silence ratio
+    - Diagnostic health flags
     """
     console.print(f"[bold yellow][PREFLIGHT][/bold yellow] Analyzing audio profile for [green]{reel_id}[/green]...")
 
@@ -62,29 +66,25 @@ def analyze_audio_condition(audio_path: Path, reel_id: str) -> ConditionReport:
 
     silence_ratio = round(min(1.0, total_silence / total_duration), 3)
 
-    # Estimate background noise/music presence based on volume dynamics
-    # When background music is loud, mean_volume stays close to max_volume (low dynamic range)
-    dynamic_range = abs(max_volume - mean_volume)
-    has_heavy_music = dynamic_range < 8.0  # highly compressed backing track
-    music_energy_ratio = round(max(0.1, min(0.9, 1.0 - (dynamic_range / 20.0))), 2)
-
     flags = []
-    if has_heavy_music:
-        flags.append("HEAVY_BACKGROUND_MUSIC")
+    if mean_volume < -45.0:
+        flags.append("EXTREMELY_LOW_VOLUME")
+    if max_volume >= -0.1:
+        flags.append("AUDIO_PEAK_CLIPPED")
     if silence_ratio > 0.4:
         flags.append("HIGH_SILENCE_RATIO")
 
     audio_condition = AudioCondition(
-        has_heavy_music=has_heavy_music,
-        music_energy_ratio=music_energy_ratio,
+        has_heavy_music=False,
+        music_energy_ratio=0.0,
         silence_ratio=silence_ratio,
         average_db=mean_volume,
-        needs_stem_separation=has_heavy_music,
+        needs_stem_separation=False,
     )
 
     return ConditionReport(
         reel_id=reel_id,
         audio_condition=audio_condition,
-        duration_seconds=total_duration,
+        duration_seconds=round(total_duration, 2),
         flags=flags,
     )
