@@ -21,13 +21,13 @@ Phase 0.3: Visual & Speaker Lanes
 
 ## Sub-Phase Checklist
 
-### 🔄 Sub-Phase 3.1: Shot Boundary Detection (`shots`) — *READY FOR VERIFICATION*
+### 🔄 Sub-Phase 3.1: Shot Boundary Detection (`shots`) — *COMPLETED*
 - [x] Implement `PySceneDetectProvider` in `app/capabilities/shots/providers/pyscenedetect.py`.
 - [x] Register capability in `app/capabilities/shots/__init__.py`.
 - [x] Emit standardized `CanonicalEvent(track="shot", type="scene_cut")` with millisecond start/end and cut transition metrics.
 - [x] Calculate video pacing statistics: `total_shots`, individual shot durations, and Average Shot Duration (`avg_shot_duration_sec`).
 - [x] Create test CLI: `tests/test_shots.py` to verify against real reels (`DdMkWeaxKTT`, `DeEKAEKhx_Z`).
-- [ ] Verify test CLI in terminal and save manifest: `manifest_shots_pyscenedetect_v1.0.0.json`.
+- [x] Verify test CLI in terminal and save manifest: `manifest_shots_pyscenedetect_v1.0.0.json`.
 
 ---
 
