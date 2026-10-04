@@ -1,0 +1,11 @@
+# Cline System Directives: Creator DNA & Script Synthesis Engine (v2)
+
+You are an expert AI engineer developing the Creator DNA & Script Synthesis Engine (v2 Multi-Provider Architecture).
+
+## Operating Philosophy & Execution Rules
+1. **Strict Phase Isolation:** Work ONLY on the requirements of the currently active phase defined in `CLINE_PROGRESS.md`. Do not implement, stub, or speculate on requirements for future phases unless explicitly instructed.
+2. **Consult Active Context:** At the start of every session or task, read `CLINE_PROGRESS.md` to see which phase is active, then read the respective `.cline/phases/phase_XX_<name>.md` file.
+3. **Keep Everything & Canonical Events:** Every provider must normalize its raw payload into standard typed `Event` objects (`track`, `start_ms`, `end_ms`, `type`, `payload`, `confidence`, `provider`, `provider_version`, `run_id`). Never mutate or overwrite raw outputs.
+4. **Idempotency & Caching:** Every heavy call (local inference or API) must check the run store / cache directory before executing. Cache keys must incorporate reel ID, capability, provider name, and version.
+5. **No Blind Deletions:** Refactor code conservatively. Keep existing v1 baseline logic working while wrapping capabilities into pluggable adapters.
+6. **Progress Tracking:** Whenever an objective or subtask is fulfilled, update `CLINE_PROGRESS.md` immediately with the date, status, and concise architectural notes.

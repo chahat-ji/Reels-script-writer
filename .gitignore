@@ -1,0 +1,25 @@
+# Environment variables & secrets
+.env
+.env.*
+*.env
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Project data & media caches
+data/cache/
+data/reels/*/audio.wav
+data/reels/*/video.mp4
+export/
+
+# System files
+.DS_Store
+Thumbs.db
