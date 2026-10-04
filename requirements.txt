@@ -9,3 +9,4 @@ assemblyai>=0.20.0
 # Optional testing utility
 pytest>=8.0.0
 rich>=13.7.0
+yt-dlp>=2024.3.10
