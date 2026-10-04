@@ -18,5 +18,5 @@ Extract comprehensive multi-modal evidence across visual and audio tracks and im
    - `consensus.py`: Resolve multi-ASR discrepancies via voting or confidence ranking.
 
 ## Acceptance Criteria
-- [ ] Pipeline produces an integrated multi-track timeline even if one lane (e.g., OCR or Diarization) fails.
-- [ ] Speaker resolver matches audio diarization clusters to visible on-screen speakers.
+- [x] Pipeline produces an integrated multi-track timeline even if one lane (e.g., OCR or Diarization) fails.
+- [x] Speaker resolver matches audio diarization clusters to visible on-screen speakers.

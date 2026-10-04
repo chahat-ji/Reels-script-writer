@@ -170,13 +170,38 @@ script-writer/
 #### `app.capabilities.shots.providers.pyscenedetect.PySceneDetectProvider`
 * **Capability**: `"shots"` | **Tier**: `"local"` | **Version**: `"1.0.0"`
 * Uses `scenedetect.ContentDetector(threshold=27.0)` to detect visual shot boundaries and cuts.
+* Emits `CanonicalEvent(track="shot", type="scene_cut")` and computes video pacing metrics (Total Cuts, Average Shot Duration `ASD`, Hook Shot Duration).
+
+#### `app.capabilities.ocr.providers.rapidocr.RapidOCRProvider`
+* **Capability**: `"ocr"` | **Tier**: `"local"` | **Version**: `"1.0.0"`
+* Samples video frames at 3.0–4.0 FPS and runs RapidOCR ONNX inference (DBNet + SVTR).
+* Emits `CanonicalEvent(track="ocr", type="text_overlay")` with normalized bounding boxes `[ymin, xmin, ymax, xmax]`.
+* Merges consecutive matching frame detections using token Jaccard similarity ($\ge 0.75$) into continuous temporal text spans, discarding transient sub-200ms flicker.
+
+#### `app.capabilities.faces.providers.mediapipe.MediaPipeFaceProvider`
+* **Capability**: `"faces"` | **Tier**: `"local"` | **Version**: `"1.0.0"`
+* Samples frames at 5.0 FPS (~200ms temporal resolution) and runs MediaPipe FaceLandmarker (478 3D landmarks) accelerated via Apple Silicon Metal.
+* Computes normalized face bounding boxes and **Mouth Aspect Ratio (MAR)**:
+  $$\text{MAR} = \frac{\|p_{13} - p_{14}\|}{\|p_{61} - p_{291}\|}$$
+* Classifies active visual speaking states ($\text{MAR} \ge 0.18$ or `jawOpen` blendshape $\ge 0.15$).
+* Spatially tracks face identities across frames, aggregating them into continuous face tracks emitting `CanonicalEvent(track="face", type="face_track")`.
+
+#### `app.capabilities.diarization.providers.pyannote.PyAnnoteDiarizationProvider`
+* **Capability**: `"diarization"` | **Tier**: `"local"` | **Version**: `"1.0.0"`
+* Uses PyTorch and PyAnnote Audio (`pyannote/speaker-diarization-3.1`) with `HF_TOKEN` authentication.
+* Emits acoustic speaker turns as `CanonicalEvent(track="diarization", type="speaker_turn")`.
+
+#### `app.capabilities.diarization.providers.assemblyai.AssemblyAIDiarizationProvider`
+* **Capability**: `"diarization"` | **Tier**: `"paid"` | **Version**: `"1.0.0"`
+* Cloud acoustic diarization engine using AssemblyAI (`speaker_labels=True`).
+* Reuses existing speech manifest utterance cache when available or transcribes audio on-demand, normalizing speaker clusters into canonical labels (`SPEAKER_00`, `SPEAKER_01`, `SPEAKER_02`).
 
 ---
 
 ## 5. End-to-End Pipeline Execution Flow
 
 ```text
-[Input URL / Local Path]
+[Input Reel URL / Local MP4]
            │
            ▼
 1. INGESTION (app.ingestion.coordinator)
@@ -191,19 +216,19 @@ script-writer/
    └── Serialize condition_report.json and plan.json
            │
            ▼
-3. EXECUTION CHAIN (app.core.runner)
-   ├── Check disk cache for manifest_<cap>_<prov>_v1.3.0.json
-   ├── Execute primary provider (with automatic fallback on error)
-   │     ├── Paid Cloud: AssemblyAISpeechProvider (native script + diarization)
-   │     └── Local Metal: MLXWhisperProvider (large-v3-mlx + anti-loop guards)
-   └── Output clean native script (Devanagari / English)
+3. MULTI-MODAL EVIDENCE GATHERING (app.core.runner)
+   ├── Track 1 [Speech]: ASR transcription (MLX Whisper or AssemblyAI)
+   ├── Track 2 [Shots]: Visual cuts & pacing rhythm (PySceneDetect)
+   ├── Track 3 [OCR]: On-screen text & hook extraction (RapidOCR)
+   ├── Track 4 [Faces]: Face tracks & MAR speaking activity (MediaPipe)
+   └── Track 5 [Diarization]: Acoustic voice clustering (PyAnnote / AssemblyAI)
            │
            ▼
-4. MULTIMODAL FUSION (app.fusion.timeline_aligner)
-   ├── Run PySceneDetectProvider on video.mp4
-   ├── Collate speech tokens, diarization turns, and scene cuts
-   ├── Sort events chronologically into unified timeline
-   └── Calculate Average Shot Duration (ASD) -> timeline.json
+4. MULTIMODAL FUSION & SPEAKER RESOLUTION (app.fusion)
+   ├── SpeechConsensus: Selects highest-confidence ASR representation
+   ├── SpeakerResolver: Correlates audio turns with visual face MAR
+   │     └── Pairs voice clusters (SPEAKER_00) to visual face tracks (face_28)
+   └── TimelineAligner: Emits unified chronological timeline.json
 ```
 
 ---
@@ -260,6 +285,94 @@ script-writer/
 }
 ```
 
+### Master Multimodal Timeline Output (`timeline.json`)
+
+Synthesized by `app.fusion.timeline_aligner`, synchronizing all 5 evidence lanes (`speech`, `shots`, `ocr`, `faces`, `diarization`) and resolving acoustic voice clusters to visual on-screen face tracks:
+
+```json
+{
+  "reel_id": "DeEKAEKhx_Z",
+  "version": "1.0.0",
+  "duration_ms": 96266,
+  "duration_sec": 96.27,
+  "pacing_dna": {
+    "duration_ms": 96266,
+    "duration_sec": 96.27,
+    "pacing": {
+      "total_shots": 71,
+      "avg_shot_duration_sec": 1.36,
+      "hook_shot_duration_sec": 1.03
+    },
+    "speech": {
+      "total_words": 178,
+      "words_per_minute": 110.9,
+      "primary_asr": "assemblyai",
+      "total_utterances": 13
+    },
+    "visuals": {
+      "ocr_coverage_pct": 6.9,
+      "total_text_overlays": 20,
+      "face_on_screen_pct": 82.9,
+      "visual_speech_pct": 9.1,
+      "total_face_tracks": 27
+    },
+    "speakers": {
+      "unique_speakers_detected": 3,
+      "speaker_resolution": {
+        "SPEAKER_00": {
+          "face_id": "face_28",
+          "status": "matched",
+          "overlap_ms": 6600,
+          "speaking_overlap_ms": 6600,
+          "confidence": 0.57
+        },
+        "SPEAKER_01": {
+          "face_id": "face_5",
+          "status": "matched",
+          "overlap_ms": 18500,
+          "speaking_overlap_ms": 0,
+          "confidence": 0.5
+        },
+        "SPEAKER_02": {
+          "face_id": "face_21",
+          "status": "matched",
+          "overlap_ms": 9360,
+          "speaking_overlap_ms": 0,
+          "confidence": 0.5
+        }
+      }
+    }
+  },
+  "resolved_speakers": {
+    "speaker_to_face": {
+      "SPEAKER_00": "face_28",
+      "SPEAKER_01": "face_5",
+      "SPEAKER_02": "face_21"
+    }
+  },
+  "tracks": {
+    "speech_utterances": [
+      {
+        "track": "speech",
+        "start_ms": 1210,
+        "end_ms": 4220,
+        "type": "utterance",
+        "payload": {
+          "text": "ओए देख तेरे डब्बे में खाना खा गया।",
+          "speaker": "A",
+          "speaker_canonical": "SPEAKER_00",
+          "resolved_face_id": "face_28",
+          "is_on_screen": true
+        }
+      }
+    ],
+    "shots": [...],
+    "ocr": [...],
+    "faces": [...]
+  }
+}
+```
+
 ---
 
 ## 7. Current Project State & Next Steps
@@ -275,10 +388,17 @@ script-writer/
    - **MLX Whisper Local**: Upgraded to `mlx-community/whisper-large-v3-mlx` with multi-temperature fallback (`(0.0, 0.2, 0.4, 0.6, 0.8)`), silence hallucination thresholds, and anti-repetition deduplication (completely eliminating token loops).
 6. **Native Script Preservation**: Removed brittle rule-based ITRANS and regex schwa deletion from Phase 2, preserving authentic transcripts directly.
 7. **Clean Cache Management**: Purged unused test weights (`whisper-tiny-mlx`, `whisper-large-v3-turbo`) from HuggingFace cache while retaining active models (`large-v3-mlx`, `HTDemucs`).
+8. **Shot Boundary Detection & Pacing DNA (Phase 3.1)**: Integrated `PySceneDetect` (`ContentDetector`), extracting cut timestamps, Average Shot Duration (`ASD`), and pacing style classification across reels.
+9. **On-Screen OCR & Hook Extraction (Phase 3.2)**: Integrated `RapidOCR` ONNX inference at 3 FPS with Jaccard similarity temporal span merging and hook/CTA keyword auto-tagging.
+10. **Face Tracking & Active Speaker Classification (Phase 3.3)**: Integrated `MediaPipe` FaceLandmarker (478 3D landmarks) running on Apple Silicon Metal; computed Mouth Aspect Ratio (MAR) and classified active visual speech ($\text{MAR} \ge 0.18$ + `jawOpen`).
+11. **Dedicated Speaker Diarization (Phase 3.4)**: Integrated `PyAnnote` (local) and `AssemblyAI` (cloud) with automatic fallback chaining, clustering acoustic speech into canonical tags (`SPEAKER_00`, `SPEAKER_01`...).
+12. **Multimodal Fusion & Speaker Resolver (Phase 3.5)**: Implemented `SpeakerResolver` cross-correlating acoustic speaker turns with visual face MAR, and `TimelineAligner` synthesizing master chronological `timeline.json`.
 
-### Next Implementation Steps (Phase 0.3: Visual & Speaker Lanes)
+---
 
-1. **Shot Boundary Detection**: PySceneDetect boundary detection integration (`app/capabilities/shots/providers/pyscenedetect.py`).
-2. **Speaker Diarization Track**: Add dedicated local `diarization` capability using `pyannote-audio` to segment and cluster speaker voices across any ASR backend.
-3. **On-Screen OCR**: Add local OCR (`apple_vision` / `rapidocr`) to extract on-screen caption overlays.
-4. **Active Speaker Resolver**: Correlate face bounding boxes & mouth aspect ratio (MAR) with audio diarization clusters.
+### Next Implementation Steps (Phase 0.4: Benchmark Arena)
+
+1. **Evaluation Metrics**: Implement Word Error Rate (WER) / Character Error Rate (CER) calculation against ground-truth human transcripts.
+2. **Timing Alignment Accuracy**: Measure timestamp delta ($|\Delta t|$) between ASR words and manual caption timing.
+3. **Cross-Engine Comparison Matrix**: Automated comparison arena benchmarking MLX Whisper vs. AssemblyAI across latency, cost, and script fidelity.
+4. **Arena CLI & Reporting**: Build `tests/test_arena.py` generating Markdown scorecards for prompt engineering and model selection.
