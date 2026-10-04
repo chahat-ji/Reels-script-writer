@@ -16,3 +16,5 @@ demucs>=4.0.0
 noisereduce>=3.0.0
 scipy>=1.11.0
 indic-nlp-library>=0.92
+scenedetect>=0.6.0
+opencv-python-headless>=4.8.0

@@ -12,3 +12,6 @@ registry.register("speech", AssemblyAISpeechProvider.name, AssemblyAISpeechProvi
 
 # Register MLX Whisper (Local Apple Silicon)
 registry.register("speech", MLXWhisperProvider.name, MLXWhisperProvider)
+
+# Auto-register shots capability providers
+import app.capabilities.shots
