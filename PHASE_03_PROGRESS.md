@@ -41,12 +41,13 @@ Phase 0.3: Visual & Speaker Lanes
 
 ---
 
-### 🔲 Sub-Phase 3.3: Face & Active Speaker Tracking (`faces`)
-- [ ] Implement Face Provider in `app/capabilities/faces/providers/mediapipe.py`.
-- [ ] Extract face bounding boxes and Mouth Aspect Ratio (MAR) per sampled frame.
-- [ ] Classify active speaking intervals (MAR > speaking threshold).
-- [ ] Emit `CanonicalEvent(track="faces", type="face_track")` with face ID, coordinates, and speaking state.
-- [ ] Create test CLI: `tests/test_faces.py`.
+### 🔄 Sub-Phase 3.3: Face & Active Speaker Tracking (`faces`) — *COMPLETED*
+- [x] Implement Face Provider in `app/capabilities/faces/providers/mediapipe.py`.
+- [x] Extract face bounding boxes and Mouth Aspect Ratio (MAR) per sampled frame.
+- [x] Classify active speaking intervals (MAR > speaking threshold and jawOpen blendshape).
+- [x] Emit `CanonicalEvent(track="face", type="face_track")` with face ID, coordinates, and speaking state.
+- [x] Create test CLI: `tests/test_faces.py`.
+- [x] Verify test CLI in terminal and save manifest: `manifest_faces_mediapipe_v1.0.0.json`.
 
 ---
 

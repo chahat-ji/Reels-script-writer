@@ -16,6 +16,7 @@ __pycache__/
 
 # Project data & media caches
 data/cache/
+data/models/
 data/reels/*/*.wav
 data/reels/*/*.mp4
 export/
@@ -23,3 +24,4 @@ export/
 # System files
 .DS_Store
 Thumbs.db
+*.ses

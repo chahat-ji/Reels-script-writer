@@ -18,3 +18,6 @@ import app.capabilities.shots
 
 # Auto-register ocr capability providers
 import app.capabilities.ocr
+
+# Auto-register faces capability providers
+import app.capabilities.faces
