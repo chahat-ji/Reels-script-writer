@@ -55,7 +55,7 @@ from app.core.preflight import analyze_audio_condition
 from app.core.router import create_execution_plan
 from app.ingestion.coordinator import ingest_media
 from app.fusion.timeline_aligner import TimelineAligner
-from tools.generate_timeline_report import generate_report_for_reel
+from tools.dashboard import generate_dashboard
 from tools.export_annotated_video import export_annotated_video
 
 console = Console()
@@ -204,11 +204,11 @@ def analyze_reel(
     # STEP 5: Visual Reports & Artifacts
     # ---------------------------------------------------------
     console.print("\n[bold cyan]▶ STEP 5/5: Generating Output Reports & Artifacts[/bold cyan]")
-    html_path = reel_dir / "timeline_report.html"
+    html_path = Path("dashboard.html")
     video_out_path = reel_dir / "annotated_debug.mp4"
 
     if generate_html:
-        generate_report_for_reel(reel_id, auto_open=False)
+        generate_dashboard(initial_reel_id=reel_id, data_root=data_root)
 
     if export_video:
         export_annotated_video(reel_id, auto_open=False)

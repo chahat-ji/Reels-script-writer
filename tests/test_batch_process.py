@@ -75,7 +75,6 @@ def test_inspect_reel_status_incomplete(tmp_path):
     assert status["speech_local"] is False
     assert status["diarization"] is False
     assert status["timeline"] is False
-    assert status["report"] is False
     assert status["is_complete"] is False
 
 
@@ -106,7 +105,6 @@ def test_inspect_reel_status_complete(tmp_path):
     (reel_dir / "manifest_speech_mlx_whisper_v1.3.0.json").write_text("{}")
     (reel_dir / "manifest_diarization_assemblyai_v1.0.0.json").write_text("{}")
     (reel_dir / "timeline.json").write_text("{}")
-    (reel_dir / "timeline_report.html").write_text("<html></html>")
 
     status = inspect_reel_status(reel_dir)
     assert status["video"] is True
@@ -120,7 +118,6 @@ def test_inspect_reel_status_complete(tmp_path):
     assert status["speech_local"] is True
     assert status["diarization"] is True
     assert status["timeline"] is True
-    assert status["report"] is True
     assert status["is_complete"] is True
 
 
@@ -140,7 +137,6 @@ def test_process_reel_on_complete_directory(tmp_path):
     (reel_dir / "manifest_speech_mlx_whisper_test.json").write_text("{}")
     (reel_dir / "manifest_diarization_test.json").write_text("{}")
     (reel_dir / "timeline.json").write_text("{}")
-    (reel_dir / "timeline_report.html").write_text("<html></html>")
 
     ok = process_reel("reel_123", data_root=str(data_root))
     assert ok is True
@@ -166,7 +162,6 @@ def test_process_all_discovers_reels(tmp_path):
         (r_dir / "manifest_speech_mlx_whisper_t.json").write_text("{}")
         (r_dir / "manifest_diarization_t.json").write_text("{}")
         (r_dir / "timeline.json").write_text("{}")
-        (r_dir / "timeline_report.html").write_text("<html></html>")
 
     ok = process_all(data_root=str(data_root))
     assert ok is True

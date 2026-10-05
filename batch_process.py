@@ -46,7 +46,7 @@ from app.core.preflight import analyze_audio_condition
 from app.core.router import create_execution_plan
 from app.ingestion.coordinator import ingest_media
 from app.fusion.timeline_aligner import TimelineAligner
-from tools.generate_timeline_report import generate_report_for_reel
+from tools.dashboard import generate_dashboard
 
 console = Console()
 
@@ -73,7 +73,6 @@ def inspect_reel_status(reel_dir: Path) -> Dict[str, Any]:
     has_diarization = any(reel_dir.glob("manifest_diarization_*.json"))
 
     has_timeline = (reel_dir / "timeline.json").exists()
-    has_report = (reel_dir / "timeline_report.html").exists()
     has_gold = (reel_dir / "ground_truth.json").exists() or (Path("data/gold") / reel_dir.name / "ground_truth.json").exists()
 
     is_complete = all([
@@ -81,7 +80,7 @@ def inspect_reel_status(reel_dir: Path) -> Dict[str, Any]:
         has_shots, has_ocr, has_faces,
         has_speech_cloud, has_speech_local,
         has_diarization,
-        has_timeline, has_report,
+        has_timeline,
     ])
 
     return {
@@ -96,7 +95,6 @@ def inspect_reel_status(reel_dir: Path) -> Dict[str, Any]:
         "speech_local": has_speech_local,
         "diarization": has_diarization,
         "timeline": has_timeline,
-        "report": has_report,
         "gold": has_gold,
         "is_complete": is_complete,
     }
@@ -183,11 +181,8 @@ def process_reel(reel_id: str, data_root: str = "data") -> bool:
         aligner = TimelineAligner(data_root=data_root)
         aligner.align(reel_id)
 
-    # Step 5: Report / Dashboard
-    report_path = reel_dir / "timeline_report.html"
-    if not report_path.exists() or not status["is_complete"]:
-        console.print("[dim]Generating HTML comparison dashboard...[/dim]")
-        generate_report_for_reel(reel_id, auto_open=False)
+    # Step 5: Update Central Dashboard
+    generate_dashboard(initial_reel_id=reel_id, data_root=data_root)
 
     console.print(f"[bold green]✓ {reel_id} is up to date and verified![/bold green]")
     return True
@@ -248,7 +243,6 @@ def process_all(data_root: str = "data") -> bool:
     initial_table.add_column("Speech (Local)", justify="center")
     initial_table.add_column("Diarization", justify="center")
     initial_table.add_column("Timeline", justify="center")
-    initial_table.add_column("Report", justify="center")
     initial_table.add_column("Gold Ref", justify="center")
     initial_table.add_column("Phase State", style="magenta")
 
@@ -267,7 +261,6 @@ def process_all(data_root: str = "data") -> bool:
             mark(st["speech_local"]),
             mark(st["diarization"]),
             mark(st["timeline"]),
-            mark(st["report"]),
             mark(st["gold"]),
             phase_state,
         )
