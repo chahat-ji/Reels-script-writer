@@ -1,0 +1,354 @@
+{
+  "reel_id": "DdMkWeaxKTT",
+  "duration_seconds": 51.5,
+  "cast_profile": [
+    {
+      "speaker_id": "SPEAKER_01",
+      "name_or_role": "Host",
+      "visual_description": "Young female with long dark hair, wearing black square glasses, a beige top, and blue jeans, sitting on a grey couch holding a small lapel microphone."
+    }
+  ],
+  "speech_utterances": [
+    {
+      "start_time": "00:00.00",
+      "end_time": "00:02.50",
+      "start_ms": 0,
+      "end_ms": 2500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "The biggest status symbol for Gen Z is something you can't buy."
+    },
+    {
+      "start_time": "00:02.50",
+      "end_time": "00:04.20",
+      "start_ms": 2500,
+      "end_ms": 4200,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Taste. Think about it."
+    },
+    {
+      "start_time": "00:04.20",
+      "end_time": "00:06.00",
+      "start_ms": 4200,
+      "end_ms": 6000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Everyone has started doing the same things."
+    },
+    {
+      "start_time": "00:06.00",
+      "end_time": "00:10.00",
+      "start_ms": 6000,
+      "end_ms": 10000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "The books you are reading, the logos you are wearing, things you are talking about,"
+    },
+    {
+      "start_time": "00:10.00",
+      "end_time": "00:13.00",
+      "start_ms": 10000,
+      "end_ms": 13000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "and even how you style yourself."
+    },
+    {
+      "start_time": "00:13.00",
+      "end_time": "00:15.50",
+      "start_ms": 13000,
+      "end_ms": 15500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "But rich are doing it very differently."
+    },
+    {
+      "start_time": "00:15.50",
+      "end_time": "00:20.10",
+      "start_ms": 15500,
+      "end_ms": 20100,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Their interest lies in architecture, culture, arts, books, vintage items."
+    },
+    {
+      "start_time": "00:20.10",
+      "end_time": "00:22.70",
+      "start_ms": 20100,
+      "end_ms": 22700,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "And Gen Z is also going in the same direction."
+    },
+    {
+      "start_time": "00:22.70",
+      "end_time": "00:27.50",
+      "start_ms": 22700,
+      "end_ms": 27500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Because when everyone starts looking expensive, expensive stops feeling special."
+    },
+    {
+      "start_time": "00:27.50",
+      "end_time": "00:31.90",
+      "start_ms": 27500,
+      "end_ms": 31900,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "So the new flex is knowing something, and being a part of the tribe not everyone else can reach to."
+    },
+    {
+      "start_time": "00:31.90",
+      "end_time": "00:36.50",
+      "start_ms": 31900,
+      "end_ms": 36500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Basically something that shows that you've got taste, because your personality and thinking is a reflection of that."
+    },
+    {
+      "start_time": "00:36.50",
+      "end_time": "00:39.00",
+      "start_ms": 36500,
+      "end_ms": 39000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "And that is the new status symbol."
+    },
+    {
+      "start_time": "00:39.00",
+      "end_time": "00:42.50",
+      "start_ms": 39000,
+      "end_ms": 42500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "So if you are building a brand, build a world that people want to be a part of."
+    },
+    {
+      "start_time": "00:42.50",
+      "end_time": "00:47.00",
+      "start_ms": 42500,
+      "end_ms": 47000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Build something people with taste would like to carry it and show it off."
+    },
+    {
+      "start_time": "00:47.00",
+      "end_time": "00:50.50",
+      "start_ms": 47000,
+      "end_ms": 50500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Because money can buy you expensive logos, but taste differentiates on another level."
+    },
+    {
+      "start_time": "00:50.50",
+      "end_time": "00:51.50",
+      "start_ms": 50500,
+      "end_ms": 51500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Host",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "That's it."
+    }
+  ],
+  "shots": [
+    {
+      "shot_index": 1,
+      "start_time": "00:00.00",
+      "end_time": "00:51.50",
+      "start_ms": 0,
+      "end_ms": 51500,
+      "visual_description": "A single continuous wide shot of the host sitting on a grey couch, talking directly to the camera while various graphics and text overlays pop up."
+    }
+  ],
+  "on_screen_text": [
+    {
+      "start_time": "00:00.00",
+      "end_time": "00:02.50",
+      "start_ms": 0,
+      "end_ms": 2500,
+      "text": "The biggest STATUS SYMBOL for GENZ something you can't buy",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:02.50",
+      "end_time": "00:04.20",
+      "start_ms": 2500,
+      "end_ms": 4200,
+      "text": "Taste",
+      "category": "title",
+      "position": "center"
+    },
+    {
+      "start_time": "00:04.20",
+      "end_time": "00:06.00",
+      "start_ms": 4200,
+      "end_ms": 6000,
+      "text": "everyone has started doing the same things",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:06.00",
+      "end_time": "00:07.40",
+      "start_ms": 6000,
+      "end_ms": 7400,
+      "text": "The books you are reading",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:07.40",
+      "end_time": "00:09.10",
+      "start_ms": 7400,
+      "end_ms": 9100,
+      "text": "the logos you are wearing",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:09.10",
+      "end_time": "00:10.00",
+      "start_ms": 9100,
+      "end_ms": 10000,
+      "text": "Things you are talking about",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:10.00",
+      "end_time": "00:13.00",
+      "start_ms": 10000,
+      "end_ms": 13000,
+      "text": "and even how you style yourself",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:13.00",
+      "end_time": "00:15.50",
+      "start_ms": 13000,
+      "end_ms": 15500,
+      "text": "But rich are doing it very differently",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:15.50",
+      "end_time": "00:20.10",
+      "start_ms": 15500,
+      "end_ms": 20100,
+      "text": "Their interest lies in architecture, culture, arts, books, vintage items",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:20.10",
+      "end_time": "00:22.50",
+      "start_ms": 20100,
+      "end_ms": 22500,
+      "text": "and GenZ is also going in the same direction",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:22.50",
+      "end_time": "00:27.50",
+      "start_ms": 22500,
+      "end_ms": 27500,
+      "text": "Because when everyone starts looking expensive, expensive stops feeling special",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:27.50",
+      "end_time": "00:31.90",
+      "start_ms": 27500,
+      "end_ms": 31900,
+      "text": "So the new flex is knowing something and being a part of the tribe not everyone else can reach to",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:31.90",
+      "end_time": "00:36.50",
+      "start_ms": 31900,
+      "end_ms": 36500,
+      "text": "basically something that shows that you got taste because your personality and thinking is a reflection of that",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:36.50",
+      "end_time": "00:39.00",
+      "start_ms": 36500,
+      "end_ms": 39000,
+      "text": "and that is the new STATUS SYMBOL",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:39.00",
+      "end_time": "00:42.50",
+      "start_ms": 39000,
+      "end_ms": 42500,
+      "text": "so if you are building a brand build a world that people want to be a part of",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:42.50",
+      "end_time": "00:47.00",
+      "start_ms": 42500,
+      "end_ms": 47000,
+      "text": "build something people with taste would like to carry it and show it off",
+      "category": "subtitle",
+      "position": "center"
+    },
+    {
+      "start_time": "00:47.00",
+      "end_time": "00:51.50",
+      "start_ms": 47000,
+      "end_ms": 51500,
+      "text": "because money can buy you expensive LOGOS but taste differentiates on another level",
+      "category": "subtitle",
+      "position": "center"
+    }
+  ]
+}
