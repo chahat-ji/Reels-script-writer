@@ -393,6 +393,9 @@ Synthesized by `app.fusion.timeline_aligner`, synchronizing all 5 evidence lanes
 10. **Face Tracking & Active Speaker Classification (Phase 3.3)**: Integrated `MediaPipe` FaceLandmarker (478 3D landmarks) running on Apple Silicon Metal; computed Mouth Aspect Ratio (MAR) and classified active visual speech ($\text{MAR} \ge 0.18$ + `jawOpen`).
 11. **Dedicated Speaker Diarization (Phase 3.4)**: Integrated `PyAnnote` (local) and `AssemblyAI` (cloud) with automatic fallback chaining, clustering acoustic speech into canonical tags (`SPEAKER_00`, `SPEAKER_01`...).
 12. **Multimodal Fusion & Speaker Resolver (Phase 3.5)**: Implemented `SpeakerResolver` cross-correlating acoustic speaker turns with visual face MAR, and `TimelineAligner` synthesizing master chronological `timeline.json`.
+13. **Inspection & Debugging Tools (Phase 3 Verification)**:
+    - **Option 1: Interactive HTML Multimodal Timeline Dashboard** (`tools/generate_timeline_report.py`): Standalone, zero-dependency browser report with synced HTML5 video player, live visual playhead scrubbing, interactive swimlane track filters (shots, speech, OCR, faces), speaker stat badges, and instant search.
+    - **Option 2: Annotated Debug Video Exporter** (`tools/export_annotated_video.py`): Burn-in visual debug video (.mp4) with real-time HUD header (shot index, pacing ASD, cut flash indicator, timecode), face bounding boxes colored by speaking status (Green = TALKING, Gray = SILENT) with live MAR metrics, OCR bounding boxes, lower-third speech subtitles with speaker badges and native Unicode/Devanagari font rendering, and original audio re-muxed via `ffmpeg`.
 
 ---
 
