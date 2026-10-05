@@ -1,0 +1,3180 @@
+{
+  "capability": "speech",
+  "provider_name": "assemblyai",
+  "provider_version": "1.3.0",
+  "events": [
+    {
+      "track": "speech",
+      "start_ms": 0,
+      "end_ms": 120,
+      "type": "word",
+      "payload": {
+        "text": "One",
+        "raw": "One",
+        "speaker": "A"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 120,
+      "end_ms": 400,
+      "type": "word",
+      "payload": {
+        "text": "of",
+        "raw": "of",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 400,
+      "end_ms": 880,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 880,
+      "end_ms": 1320,
+      "type": "word",
+      "payload": {
+        "text": "films",
+        "raw": "films",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1320,
+      "end_ms": 1560,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1560,
+      "end_ms": 1660,
+      "type": "word",
+      "payload": {
+        "text": "I",
+        "raw": "I",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1660,
+      "end_ms": 1820,
+      "type": "word",
+      "payload": {
+        "text": "was",
+        "raw": "was",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1820,
+      "end_ms": 2040,
+      "type": "word",
+      "payload": {
+        "text": "waiting",
+        "raw": "waiting",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2040,
+      "end_ms": 2240,
+      "type": "word",
+      "payload": {
+        "text": "to",
+        "raw": "to",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2240,
+      "end_ms": 2480,
+      "type": "word",
+      "payload": {
+        "text": "watch",
+        "raw": "watch",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2480,
+      "end_ms": 2620,
+      "type": "word",
+      "payload": {
+        "text": "for",
+        "raw": "for",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2620,
+      "end_ms": 2760,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2760,
+      "end_ms": 2980,
+      "type": "word",
+      "payload": {
+        "text": "last",
+        "raw": "last",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2980,
+      "end_ms": 3260,
+      "type": "word",
+      "payload": {
+        "text": "forty",
+        "raw": "forty",
+        "speaker": "A"
+      },
+      "confidence": 0.768,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 3260,
+      "end_ms": 3800,
+      "type": "word",
+      "payload": {
+        "text": "years",
+        "raw": "years",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 3800,
+      "end_ms": 4120,
+      "type": "word",
+      "payload": {
+        "text": "has",
+        "raw": "has",
+        "speaker": "A"
+      },
+      "confidence": 0.992,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 4120,
+      "end_ms": 4780,
+      "type": "word",
+      "payload": {
+        "text": "released",
+        "raw": "released",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 4780,
+      "end_ms": 5120,
+      "type": "word",
+      "payload": {
+        "text": "called",
+        "raw": "called",
+        "speaker": "A"
+      },
+      "confidence": 0.64,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 5120,
+      "end_ms": 5970,
+      "type": "word",
+      "payload": {
+        "text": "He-Man",
+        "raw": "He-Man.",
+        "speaker": "A"
+      },
+      "confidence": 0.933,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6060,
+      "end_ms": 6060,
+      "type": "word",
+      "payload": {
+        "text": "You",
+        "raw": "You",
+        "speaker": "A"
+      },
+      "confidence": 0.951,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6060,
+      "end_ms": 6240,
+      "type": "word",
+      "payload": {
+        "text": "are",
+        "raw": "are",
+        "speaker": "A"
+      },
+      "confidence": 0.988,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6240,
+      "end_ms": 6560,
+      "type": "word",
+      "payload": {
+        "text": "my",
+        "raw": "my",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6560,
+      "end_ms": 7360,
+      "type": "word",
+      "payload": {
+        "text": "He-Man",
+        "raw": "He-Man.",
+        "speaker": "B"
+      },
+      "confidence": 0.95,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7860,
+      "end_ms": 8000,
+      "type": "word",
+      "payload": {
+        "text": "You're",
+        "raw": "You're",
+        "speaker": "B"
+      },
+      "confidence": 0.968,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8000,
+      "end_ms": 8100,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8100,
+      "end_ms": 8500,
+      "type": "word",
+      "payload": {
+        "text": "he",
+        "raw": "he,",
+        "speaker": "B"
+      },
+      "confidence": 0.743,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8500,
+      "end_ms": 8740,
+      "type": "word",
+      "payload": {
+        "text": "you're",
+        "raw": "you're",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8740,
+      "end_ms": 8960,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8960,
+      "end_ms": 9520,
+      "type": "word",
+      "payload": {
+        "text": "man",
+        "raw": "man.",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9520,
+      "end_ms": 9960,
+      "type": "word",
+      "payload": {
+        "text": "Skeletor",
+        "raw": "Skeletor",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9960,
+      "end_ms": 10320,
+      "type": "word",
+      "payload": {
+        "text": "laughs",
+        "raw": "laughs",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10320,
+      "end_ms": 10920,
+      "type": "word",
+      "payload": {
+        "text": "exactly",
+        "raw": "exactly",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10920,
+      "end_ms": 11180,
+      "type": "word",
+      "payload": {
+        "text": "like",
+        "raw": "like",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11180,
+      "end_ms": 12280,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you.",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 12840,
+      "end_ms": 12840,
+      "type": "word",
+      "payload": {
+        "text": "I",
+        "raw": "I",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 12840,
+      "end_ms": 13060,
+      "type": "word",
+      "payload": {
+        "text": "don't",
+        "raw": "don't",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13060,
+      "end_ms": 13320,
+      "type": "word",
+      "payload": {
+        "text": "laugh",
+        "raw": "laugh",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13320,
+      "end_ms": 13500,
+      "type": "word",
+      "payload": {
+        "text": "like",
+        "raw": "like",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13500,
+      "end_ms": 14050,
+      "type": "word",
+      "payload": {
+        "text": "that",
+        "raw": "that.",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14680,
+      "end_ms": 14680,
+      "type": "word",
+      "payload": {
+        "text": "चुप",
+        "raw": "चुप",
+        "speaker": "B"
+      },
+      "confidence": 0.676,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14680,
+      "end_ms": 14980,
+      "type": "word",
+      "payload": {
+        "text": "कर",
+        "raw": "कर,",
+        "speaker": "B"
+      },
+      "confidence": 0.957,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14980,
+      "end_ms": 15280,
+      "type": "word",
+      "payload": {
+        "text": "चुप",
+        "raw": "चुप",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15280,
+      "end_ms": 15840,
+      "type": "word",
+      "payload": {
+        "text": "कर",
+        "raw": "कर,",
+        "speaker": "B"
+      },
+      "confidence": 0.792,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15840,
+      "end_ms": 16000,
+      "type": "word",
+      "payload": {
+        "text": "ये",
+        "raw": "ये",
+        "speaker": "B"
+      },
+      "confidence": 0.977,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16000,
+      "end_ms": 16079,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "B"
+      },
+      "confidence": 0.981,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16079,
+      "end_ms": 16460,
+      "type": "word",
+      "payload": {
+        "text": "कर",
+        "raw": "कर,",
+        "speaker": "B"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16460,
+      "end_ms": 16640,
+      "type": "word",
+      "payload": {
+        "text": "वो",
+        "raw": "वो",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16640,
+      "end_ms": 16800,
+      "type": "word",
+      "payload": {
+        "text": "मत",
+        "raw": "मत",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16800,
+      "end_ms": 17180,
+      "type": "word",
+      "payload": {
+        "text": "कर",
+        "raw": "कर.",
+        "speaker": "B"
+      },
+      "confidence": 0.938,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17180,
+      "end_ms": 17400,
+      "type": "word",
+      "payload": {
+        "text": "Don't",
+        "raw": "Don't",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17400,
+      "end_ms": 17540,
+      "type": "word",
+      "payload": {
+        "text": "be",
+        "raw": "be",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17540,
+      "end_ms": 17880,
+      "type": "word",
+      "payload": {
+        "text": "lame",
+        "raw": "lame.",
+        "speaker": "B"
+      },
+      "confidence": 0.773,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17880,
+      "end_ms": 18060,
+      "type": "word",
+      "payload": {
+        "text": "Don't",
+        "raw": "Don't",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18060,
+      "end_ms": 18320,
+      "type": "word",
+      "payload": {
+        "text": "be",
+        "raw": "be",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18320,
+      "end_ms": 18660,
+      "type": "word",
+      "payload": {
+        "text": "this",
+        "raw": "this.",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18660,
+      "end_ms": 18800,
+      "type": "word",
+      "payload": {
+        "text": "Why",
+        "raw": "Why",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18800,
+      "end_ms": 18960,
+      "type": "word",
+      "payload": {
+        "text": "don't",
+        "raw": "don't",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18960,
+      "end_ms": 19080,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19080,
+      "end_ms": 19140,
+      "type": "word",
+      "payload": {
+        "text": "do",
+        "raw": "do",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19140,
+      "end_ms": 19320,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the",
+        "speaker": "B"
+      },
+      "confidence": 0.55,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19320,
+      "end_ms": 19560,
+      "type": "word",
+      "payload": {
+        "text": "spot",
+        "raw": "spot",
+        "speaker": "B"
+      },
+      "confidence": 0.912,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19560,
+      "end_ms": 19960,
+      "type": "word",
+      "payload": {
+        "text": "alone",
+        "raw": "alone?",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20840,
+      "end_ms": 20900,
+      "type": "word",
+      "payload": {
+        "text": "I",
+        "raw": "I",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20900,
+      "end_ms": 21040,
+      "type": "word",
+      "payload": {
+        "text": "don't",
+        "raw": "don't",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21040,
+      "end_ms": 21300,
+      "type": "word",
+      "payload": {
+        "text": "know",
+        "raw": "know",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21300,
+      "end_ms": 21380,
+      "type": "word",
+      "payload": {
+        "text": "something",
+        "raw": "something",
+        "speaker": "B"
+      },
+      "confidence": 0.719,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21380,
+      "end_ms": 21640,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21640,
+      "end_ms": 21920,
+      "type": "word",
+      "payload": {
+        "text": "happening",
+        "raw": "happening",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21920,
+      "end_ms": 22200,
+      "type": "word",
+      "payload": {
+        "text": "to",
+        "raw": "to",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 22200,
+      "end_ms": 22700,
+      "type": "word",
+      "payload": {
+        "text": "me",
+        "raw": "me.",
+        "speaker": "B"
+      },
+      "confidence": 0.881,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 22700,
+      "end_ms": 22820,
+      "type": "word",
+      "payload": {
+        "text": "I",
+        "raw": "I",
+        "speaker": "B"
+      },
+      "confidence": 0.527,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 22820,
+      "end_ms": 23200,
+      "type": "word",
+      "payload": {
+        "text": "feel",
+        "raw": "feel",
+        "speaker": "B"
+      },
+      "confidence": 0.986,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23200,
+      "end_ms": 23400,
+      "type": "word",
+      "payload": {
+        "text": "like",
+        "raw": "like",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23400,
+      "end_ms": 23400,
+      "type": "word",
+      "payload": {
+        "text": "I'm",
+        "raw": "I'm",
+        "speaker": "B"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23400,
+      "end_ms": 23860,
+      "type": "word",
+      "payload": {
+        "text": "possessed",
+        "raw": "possessed",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23860,
+      "end_ms": 24060,
+      "type": "word",
+      "payload": {
+        "text": "by",
+        "raw": "by",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 24060,
+      "end_ms": 24560,
+      "type": "word",
+      "payload": {
+        "text": "Nikki",
+        "raw": "Nikki.",
+        "speaker": "B"
+      },
+      "confidence": 0.92,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 24620,
+      "end_ms": 25940,
+      "type": "word",
+      "payload": {
+        "text": "Nice",
+        "raw": "Nice",
+        "speaker": "B"
+      },
+      "confidence": 0.937,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 25940,
+      "end_ms": 27640,
+      "type": "word",
+      "payload": {
+        "text": "transition",
+        "raw": "transition.",
+        "speaker": "B"
+      },
+      "confidence": 0.96,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27640,
+      "end_ms": 27640,
+      "type": "word",
+      "payload": {
+        "text": "Yeah",
+        "raw": "Yeah,",
+        "speaker": "A"
+      },
+      "confidence": 0.739,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27640,
+      "end_ms": 27900,
+      "type": "word",
+      "payload": {
+        "text": "but",
+        "raw": "but",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27900,
+      "end_ms": 28280,
+      "type": "word",
+      "payload": {
+        "text": "मेरे",
+        "raw": "मेरे",
+        "speaker": "A"
+      },
+      "confidence": 0.94,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28280,
+      "end_ms": 28380,
+      "type": "word",
+      "payload": {
+        "text": "को",
+        "raw": "को",
+        "speaker": "A"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28380,
+      "end_ms": 28620,
+      "type": "word",
+      "payload": {
+        "text": "अगर",
+        "raw": "अगर",
+        "speaker": "A"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28620,
+      "end_ms": 28760,
+      "type": "word",
+      "payload": {
+        "text": "वो",
+        "raw": "वो",
+        "speaker": "A"
+      },
+      "confidence": 0.969,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28760,
+      "end_ms": 29100,
+      "type": "word",
+      "payload": {
+        "text": "veins",
+        "raw": "veins",
+        "speaker": "A"
+      },
+      "confidence": 0.989,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29100,
+      "end_ms": 29280,
+      "type": "word",
+      "payload": {
+        "text": "में",
+        "raw": "में",
+        "speaker": "A"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29280,
+      "end_ms": 29680,
+      "type": "word",
+      "payload": {
+        "text": "splits",
+        "raw": "splits",
+        "speaker": "A"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29680,
+      "end_ms": 29980,
+      "type": "word",
+      "payload": {
+        "text": "विला",
+        "raw": "विला",
+        "speaker": "A"
+      },
+      "confidence": 0.668,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29980,
+      "end_ms": 29980,
+      "type": "word",
+      "payload": {
+        "text": "उन्नीस",
+        "raw": "उन्नीस",
+        "speaker": "A"
+      },
+      "confidence": 0.809,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29980,
+      "end_ms": 29980,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29980,
+      "end_ms": 29980,
+      "type": "word",
+      "payload": {
+        "text": "जाए",
+        "raw": "जाए,",
+        "speaker": "A"
+      },
+      "confidence": 0.774,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29980,
+      "end_ms": 29980,
+      "type": "word",
+      "payload": {
+        "text": "बीस",
+        "raw": "बीस",
+        "speaker": "A"
+      },
+      "confidence": 0.892,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29980,
+      "end_ms": 29980,
+      "type": "word",
+      "payload": {
+        "text": "मिनट",
+        "raw": "मिनट.",
+        "speaker": "A"
+      },
+      "confidence": 0.704,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32310,
+      "end_ms": 32860,
+      "type": "word",
+      "payload": {
+        "text": "हाँ",
+        "raw": "हाँ",
+        "speaker": "B"
+      },
+      "confidence": 0.978,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32860,
+      "end_ms": 33080,
+      "type": "word",
+      "payload": {
+        "text": "मतलब",
+        "raw": "मतलब",
+        "speaker": "B"
+      },
+      "confidence": 0.992,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33080,
+      "end_ms": 33660,
+      "type": "word",
+      "payload": {
+        "text": "कचरा",
+        "raw": "कचरा",
+        "speaker": "A"
+      },
+      "confidence": 0.977,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33660,
+      "end_ms": 33860,
+      "type": "word",
+      "payload": {
+        "text": "कुछ",
+        "raw": "कुछ",
+        "speaker": "A"
+      },
+      "confidence": 0.858,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33860,
+      "end_ms": 34000,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34000,
+      "end_ms": 34440,
+      "type": "word",
+      "payload": {
+        "text": "कचरा",
+        "raw": "कचरा",
+        "speaker": "A"
+      },
+      "confidence": 0.975,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34440,
+      "end_ms": 34740,
+      "type": "word",
+      "payload": {
+        "text": "चाहिए",
+        "raw": "चाहिए",
+        "speaker": "A"
+      },
+      "confidence": 0.986,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34740,
+      "end_ms": 35420,
+      "type": "word",
+      "payload": {
+        "text": "ना",
+        "raw": "ना",
+        "speaker": "A"
+      },
+      "confidence": 0.864,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35420,
+      "end_ms": 35760,
+      "type": "word",
+      "payload": {
+        "text": "ऐसा",
+        "raw": "ऐसा",
+        "speaker": "B"
+      },
+      "confidence": 0.95,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35760,
+      "end_ms": 35840,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35840,
+      "end_ms": 35980,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं",
+        "speaker": "B"
+      },
+      "confidence": 0.964,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35980,
+      "end_ms": 36220,
+      "type": "word",
+      "payload": {
+        "text": "किसी",
+        "raw": "किसी",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36220,
+      "end_ms": 36420,
+      "type": "word",
+      "payload": {
+        "text": "और",
+        "raw": "और",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36420,
+      "end_ms": 36540,
+      "type": "word",
+      "payload": {
+        "text": "का",
+        "raw": "का",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36540,
+      "end_ms": 36740,
+      "type": "word",
+      "payload": {
+        "text": "हाथ",
+        "raw": "हाथ",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36740,
+      "end_ms": 37080,
+      "type": "word",
+      "payload": {
+        "text": "पकड़",
+        "raw": "पकड़",
+        "speaker": "B"
+      },
+      "confidence": 0.986,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37080,
+      "end_ms": 37180,
+      "type": "word",
+      "payload": {
+        "text": "रही",
+        "raw": "रही",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37180,
+      "end_ms": 37260,
+      "type": "word",
+      "payload": {
+        "text": "थी",
+        "raw": "थी",
+        "speaker": "B"
+      },
+      "confidence": 0.988,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37260,
+      "end_ms": 37380,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37380,
+      "end_ms": 37740,
+      "type": "word",
+      "payload": {
+        "text": "तेरा",
+        "raw": "तेरा",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37740,
+      "end_ms": 37920,
+      "type": "word",
+      "payload": {
+        "text": "हाथ",
+        "raw": "हाथ",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37920,
+      "end_ms": 38180,
+      "type": "word",
+      "payload": {
+        "text": "पकड़",
+        "raw": "पकड़",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38180,
+      "end_ms": 38320,
+      "type": "word",
+      "payload": {
+        "text": "रही",
+        "raw": "रही",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38320,
+      "end_ms": 38480,
+      "type": "word",
+      "payload": {
+        "text": "थी",
+        "raw": "थी",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38480,
+      "end_ms": 38620,
+      "type": "word",
+      "payload": {
+        "text": "और",
+        "raw": "और",
+        "speaker": "B"
+      },
+      "confidence": 0.969,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38620,
+      "end_ms": 38720,
+      "type": "word",
+      "payload": {
+        "text": "इसने",
+        "raw": "इसने",
+        "speaker": "B"
+      },
+      "confidence": 0.933,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38720,
+      "end_ms": 38960,
+      "type": "word",
+      "payload": {
+        "text": "बोला",
+        "raw": "बोला",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38960,
+      "end_ms": 39100,
+      "type": "word",
+      "payload": {
+        "text": "no",
+        "raw": "no",
+        "speaker": "B"
+      },
+      "confidence": 0.635,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39100,
+      "end_ms": 39360,
+      "type": "word",
+      "payload": {
+        "text": "no",
+        "raw": "no",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39360,
+      "end_ms": 39600,
+      "type": "word",
+      "payload": {
+        "text": "no",
+        "raw": "no",
+        "speaker": "B"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39600,
+      "end_ms": 39640,
+      "type": "word",
+      "payload": {
+        "text": "don't",
+        "raw": "don't",
+        "speaker": "B"
+      },
+      "confidence": 0.754,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39640,
+      "end_ms": 39700,
+      "type": "word",
+      "payload": {
+        "text": "hold",
+        "raw": "hold",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39700,
+      "end_ms": 39880,
+      "type": "word",
+      "payload": {
+        "text": "my",
+        "raw": "my",
+        "speaker": "B"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39880,
+      "end_ms": 40100,
+      "type": "word",
+      "payload": {
+        "text": "hand",
+        "raw": "hand",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40100,
+      "end_ms": 40760,
+      "type": "word",
+      "payload": {
+        "text": "ऐसे",
+        "raw": "ऐसे",
+        "speaker": "B"
+      },
+      "confidence": 0.834,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40760,
+      "end_ms": 41160,
+      "type": "word",
+      "payload": {
+        "text": "मारा",
+        "raw": "मारा",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41160,
+      "end_ms": 41500,
+      "type": "word",
+      "payload": {
+        "text": "मुझे",
+        "raw": "मुझे",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41500,
+      "end_ms": 41880,
+      "type": "word",
+      "payload": {
+        "text": "people",
+        "raw": "people",
+        "speaker": "B"
+      },
+      "confidence": 0.976,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41880,
+      "end_ms": 42120,
+      "type": "word",
+      "payload": {
+        "text": "who",
+        "raw": "who",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42120,
+      "end_ms": 42380,
+      "type": "word",
+      "payload": {
+        "text": "watch",
+        "raw": "watch",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42380,
+      "end_ms": 42660,
+      "type": "word",
+      "payload": {
+        "text": "horror",
+        "raw": "horror",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 42660,
+      "end_ms": 43000,
+      "type": "word",
+      "payload": {
+        "text": "movies",
+        "raw": "movies",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 43000,
+      "end_ms": 43300,
+      "type": "word",
+      "payload": {
+        "text": "dealt",
+        "raw": "dealt",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 43300,
+      "end_ms": 43540,
+      "type": "word",
+      "payload": {
+        "text": "with",
+        "raw": "with",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 43540,
+      "end_ms": 43860,
+      "type": "word",
+      "payload": {
+        "text": "covid",
+        "raw": "covid",
+        "speaker": "B"
+      },
+      "confidence": 0.705,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 43860,
+      "end_ms": 44500,
+      "type": "word",
+      "payload": {
+        "text": "better",
+        "raw": "better",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 44500,
+      "end_ms": 45400,
+      "type": "word",
+      "payload": {
+        "text": "what",
+        "raw": "what",
+        "speaker": "A"
+      },
+      "confidence": 0.939,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45400,
+      "end_ms": 46100,
+      "type": "word",
+      "payload": {
+        "text": "what",
+        "raw": "what",
+        "speaker": "A"
+      },
+      "confidence": 0.951,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46100,
+      "end_ms": 46340,
+      "type": "word",
+      "payload": {
+        "text": "would",
+        "raw": "would",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46340,
+      "end_ms": 46580,
+      "type": "word",
+      "payload": {
+        "text": "you",
+        "raw": "you",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46580,
+      "end_ms": 46820,
+      "type": "word",
+      "payload": {
+        "text": "wish",
+        "raw": "wish",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 46820,
+      "end_ms": 47440,
+      "type": "word",
+      "payload": {
+        "text": "for",
+        "raw": "for",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47440,
+      "end_ms": 47900,
+      "type": "word",
+      "payload": {
+        "text": "I",
+        "raw": "I",
+        "speaker": "A"
+      },
+      "confidence": 0.628,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 47900,
+      "end_ms": 48240,
+      "type": "word",
+      "payload": {
+        "text": "would",
+        "raw": "would",
+        "speaker": "A"
+      },
+      "confidence": 0.842,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 48240,
+      "end_ms": 48760,
+      "type": "word",
+      "payload": {
+        "text": "want",
+        "raw": "want",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 48760,
+      "end_ms": 49040,
+      "type": "word",
+      "payload": {
+        "text": "the",
+        "raw": "the",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49040,
+      "end_ms": 49260,
+      "type": "word",
+      "payload": {
+        "text": "end",
+        "raw": "end",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49260,
+      "end_ms": 49580,
+      "type": "word",
+      "payload": {
+        "text": "of",
+        "raw": "of",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49580,
+      "end_ms": 50280,
+      "type": "word",
+      "payload": {
+        "text": "capitalism",
+        "raw": "capitalism",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 50280,
+      "end_ms": 51960,
+      "type": "word",
+      "payload": {
+        "text": "is",
+        "raw": "is",
+        "speaker": "A"
+      },
+      "confidence": 0.983,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 51960,
+      "end_ms": 52200,
+      "type": "word",
+      "payload": {
+        "text": "there",
+        "raw": "there",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 52200,
+      "end_ms": 52360,
+      "type": "word",
+      "payload": {
+        "text": "a",
+        "raw": "a",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 52360,
+      "end_ms": 52540,
+      "type": "word",
+      "payload": {
+        "text": "fear",
+        "raw": "fear",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 52540,
+      "end_ms": 52800,
+      "type": "word",
+      "payload": {
+        "text": "you've",
+        "raw": "you've",
+        "speaker": "A"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 52800,
+      "end_ms": 53020,
+      "type": "word",
+      "payload": {
+        "text": "never",
+        "raw": "never",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 53020,
+      "end_ms": 53260,
+      "type": "word",
+      "payload": {
+        "text": "fully",
+        "raw": "fully",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 53260,
+      "end_ms": 53840,
+      "type": "word",
+      "payload": {
+        "text": "outgrown",
+        "raw": "outgrown",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 55360,
+      "end_ms": 56060,
+      "type": "word",
+      "payload": {
+        "text": "abandonment",
+        "raw": "abandonment",
+        "speaker": "B"
+      },
+      "confidence": 0.991,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 56060,
+      "end_ms": 56340,
+      "type": "word",
+      "payload": {
+        "text": "oh",
+        "raw": "oh",
+        "speaker": "B"
+      },
+      "confidence": 0.975,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 56340,
+      "end_ms": 56720,
+      "type": "word",
+      "payload": {
+        "text": "shit",
+        "raw": "shit",
+        "speaker": "A"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 56720,
+      "end_ms": 57280,
+      "type": "word",
+      "payload": {
+        "text": "deep",
+        "raw": "deep",
+        "speaker": "A"
+      },
+      "confidence": 0.978,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 57280,
+      "end_ms": 57560,
+      "type": "word",
+      "payload": {
+        "text": "मार",
+        "raw": "मार",
+        "speaker": "A"
+      },
+      "confidence": 0.986,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 57560,
+      "end_ms": 57680,
+      "type": "word",
+      "payload": {
+        "text": "दिया",
+        "raw": "दिया",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 57680,
+      "end_ms": 57840,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "A"
+      },
+      "confidence": 0.964,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 57840,
+      "end_ms": 58260,
+      "type": "word",
+      "payload": {
+        "text": "कठम",
+        "raw": "कठम",
+        "speaker": "A"
+      },
+      "confidence": 0.453,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 58260,
+      "end_ms": 58520,
+      "type": "word",
+      "payload": {
+        "text": "कुछ",
+        "raw": "कुछ",
+        "speaker": "B"
+      },
+      "confidence": 0.564,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 58520,
+      "end_ms": 59020,
+      "type": "word",
+      "payload": {
+        "text": "कुछ",
+        "raw": "कुछ",
+        "speaker": "B"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59020,
+      "end_ms": 59260,
+      "type": "word",
+      "payload": {
+        "text": "होता",
+        "raw": "होता",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59260,
+      "end_ms": 59340,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59340,
+      "end_ms": 59920,
+      "type": "word",
+      "payload": {
+        "text": "राहुल",
+        "raw": "राहुल",
+        "speaker": "B"
+      },
+      "confidence": 0.906,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59950,
+      "end_ms": 60570,
+      "type": "word",
+      "payload": {
+        "text": "तुम",
+        "raw": "तुम",
+        "speaker": "B"
+      },
+      "confidence": 0.695,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 60570,
+      "end_ms": 60710,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "B"
+      },
+      "confidence": 0.975,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 60710,
+      "end_ms": 62970,
+      "type": "word",
+      "payload": {
+        "text": "समझोगे",
+        "raw": "समझोगे।",
+        "speaker": "B"
+      },
+      "confidence": 0.754,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 62970,
+      "end_ms": 63490,
+      "type": "word",
+      "payload": {
+        "text": "पिक्चर",
+        "raw": "पिक्चर",
+        "speaker": "A"
+      },
+      "confidence": 0.993,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 63490,
+      "end_ms": 63870,
+      "type": "word",
+      "payload": {
+        "text": "खत्म",
+        "raw": "खत्म",
+        "speaker": "A"
+      },
+      "confidence": 0.901,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 63870,
+      "end_ms": 64690,
+      "type": "word",
+      "payload": {
+        "text": "हुई",
+        "raw": "हुई,",
+        "speaker": "A"
+      },
+      "confidence": 0.936,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 64690,
+      "end_ms": 65010,
+      "type": "word",
+      "payload": {
+        "text": "हमने",
+        "raw": "हमने",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 65010,
+      "end_ms": 65330,
+      "type": "word",
+      "payload": {
+        "text": "देखा",
+        "raw": "देखा",
+        "speaker": "A"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 65330,
+      "end_ms": 65870,
+      "type": "word",
+      "payload": {
+        "text": "राइट",
+        "raw": "राइट",
+        "speaker": "A"
+      },
+      "confidence": 0.973,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 65870,
+      "end_ms": 67090,
+      "type": "word",
+      "payload": {
+        "text": "और",
+        "raw": "और",
+        "speaker": "A"
+      },
+      "confidence": 0.845,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 67090,
+      "end_ms": 67570,
+      "type": "word",
+      "payload": {
+        "text": "मैडम",
+        "raw": "मैडम",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 67570,
+      "end_ms": 68110,
+      "type": "word",
+      "payload": {
+        "text": "इस",
+        "raw": "इस",
+        "speaker": "A"
+      },
+      "confidence": 0.555,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 68110,
+      "end_ms": 68750,
+      "type": "word",
+      "payload": {
+        "text": "गोन",
+        "raw": "गोन।",
+        "speaker": "A"
+      },
+      "confidence": 0.89,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 68750,
+      "end_ms": 69090,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 69090,
+      "end_ms": 69330,
+      "type": "word",
+      "payload": {
+        "text": "चली",
+        "raw": "चली",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 69330,
+      "end_ms": 69470,
+      "type": "word",
+      "payload": {
+        "text": "गई",
+        "raw": "गई",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 69470,
+      "end_ms": 69870,
+      "type": "word",
+      "payload": {
+        "text": "हीमैन",
+        "raw": "हीमैन",
+        "speaker": "B"
+      },
+      "confidence": 0.989,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 69870,
+      "end_ms": 70030,
+      "type": "word",
+      "payload": {
+        "text": "के",
+        "raw": "के",
+        "speaker": "B"
+      },
+      "confidence": 0.97,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 70030,
+      "end_ms": 70430,
+      "type": "word",
+      "payload": {
+        "text": "यूनिवर्स",
+        "raw": "यूनिवर्स",
+        "speaker": "B"
+      },
+      "confidence": 0.992,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 70430,
+      "end_ms": 71430,
+      "type": "word",
+      "payload": {
+        "text": "में",
+        "raw": "में।",
+        "speaker": "B"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 0,
+      "end_ms": 6240,
+      "type": "utterance",
+      "payload": {
+        "text": "One of the films that I was waiting to watch for the last forty years has released called He-Man. You are",
+        "speaker": "A"
+      },
+      "confidence": 0.965,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6240,
+      "end_ms": 9520,
+      "type": "utterance",
+      "payload": {
+        "text": "my He-Man. You're a he, you're a man.",
+        "speaker": "B"
+      },
+      "confidence": 0.957,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9520,
+      "end_ms": 12280,
+      "type": "utterance",
+      "payload": {
+        "text": "Skeletor laughs exactly like you.",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 12840,
+      "end_ms": 13060,
+      "type": "utterance",
+      "payload": {
+        "text": "I don't",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13060,
+      "end_ms": 13320,
+      "type": "utterance",
+      "payload": {
+        "text": "laugh",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13320,
+      "end_ms": 27640,
+      "type": "utterance",
+      "payload": {
+        "text": "like that. चुप कर, चुप कर, ये नहीं कर, वो मत कर. Don't be lame. Don't be this. Why don't you do the spot alone? I don't know something is happening to me. I feel like I'm possessed by Nikki. Nice transition.",
+        "speaker": "B"
+      },
+      "confidence": 0.939,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27640,
+      "end_ms": 29980,
+      "type": "utterance",
+      "payload": {
+        "text": "Yeah, but मेरे को अगर वो veins में splits विला उन्नीस नहीं जाए, बीस मिनट.",
+        "speaker": "A"
+      },
+      "confidence": 0.898,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32310,
+      "end_ms": 33080,
+      "type": "utterance",
+      "payload": {
+        "text": "हाँ मतलब",
+        "speaker": "B"
+      },
+      "confidence": 0.985,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33080,
+      "end_ms": 35420,
+      "type": "utterance",
+      "payload": {
+        "text": "कचरा कुछ तो कचरा चाहिए ना",
+        "speaker": "A"
+      },
+      "confidence": 0.943,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35420,
+      "end_ms": 44500,
+      "type": "utterance",
+      "payload": {
+        "text": "ऐसा नहीं मैं किसी और का हाथ पकड़ रही थी मैं तेरा हाथ पकड़ रही थी और इसने बोला no no no don't hold my hand ऐसे मारा मुझे people who watch horror movies dealt with covid better",
+        "speaker": "B"
+      },
+      "confidence": 0.965,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 44500,
+      "end_ms": 48240,
+      "type": "utterance",
+      "payload": {
+        "text": "what what would you wish for I would",
+        "speaker": "A"
+      },
+      "confidence": 0.92,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 48240,
+      "end_ms": 50280,
+      "type": "utterance",
+      "payload": {
+        "text": "want the end of capitalism",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 50280,
+      "end_ms": 53840,
+      "type": "utterance",
+      "payload": {
+        "text": "is there a fear you've never fully outgrown",
+        "speaker": "A"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 55360,
+      "end_ms": 56340,
+      "type": "utterance",
+      "payload": {
+        "text": "abandonment oh",
+        "speaker": "B"
+      },
+      "confidence": 0.983,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 56340,
+      "end_ms": 58260,
+      "type": "utterance",
+      "payload": {
+        "text": "shit deep मार दिया तो कठम",
+        "speaker": "A"
+      },
+      "confidence": 0.896,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 58260,
+      "end_ms": 62970,
+      "type": "utterance",
+      "payload": {
+        "text": "कुछ कुछ होता है राहुल तुम नहीं समझोगे।",
+        "speaker": "B"
+      },
+      "confidence": 0.861,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 62970,
+      "end_ms": 68750,
+      "type": "utterance",
+      "payload": {
+        "text": "पिक्चर खत्म हुई, हमने देखा राइट और मैडम इस गोन।",
+        "speaker": "A"
+      },
+      "confidence": 0.909,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 68750,
+      "end_ms": 71430,
+      "type": "utterance",
+      "payload": {
+        "text": "मैं चली गई हीमैन के यूनिवर्स में।",
+        "speaker": "B"
+      },
+      "confidence": 0.992,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "transcript_id": "c2bda5e0-4449-4863-b0b0-c06e82f35a93",
+    "text": "One of the films that I was waiting to watch for the last forty years has released called He-Man. You are my He-Man. You're a he, you're a man. Skeletor laughs exactly like you. I don't laugh like that. चुप कर, चुप कर, ये नहीं कर, वो मत कर. Don't be lame. Don't be this. Why don't you do the spot alone? I don't know something is happening to me. I feel like I'm possessed by Nikki. Nice transition. Yeah, but मेरे को अगर वो veins में splits विला उन्नीस नहीं जाए, बीस मिनट. हाँ मतलब कचरा कुछ तो कचरा चाहिए ना ऐसा नहीं मैं किसी और का हाथ पकड़ रही थी मैं तेरा हाथ पकड़ रही थी और इसने बोला no no no don't hold my hand ऐसे मारा मुझे people who watch horror movies dealt with covid better what what would you wish for I would want the end of capitalism is there a fear you've never fully outgrown abandonment oh shit deep मार दिया तो कठम कुछ कुछ होता है राहुल तुम नहीं समझोगे। पिक्चर खत्म हुई, हमने देखा राइट और मैडम इस गोन। मैं चली गई हीमैन के यूनिवर्स में।",
+    "raw_text": "One of the films that I was waiting to watch for the last forty years has released called He-Man. You are my He-Man. You're a he, you're a man. Skeletor laughs exactly like you. I don't laugh like that. चुप कर, चुप कर, ये नहीं कर, वो मत कर. Don't be lame. Don't be this. Why don't you do the spot alone? I don't know something is happening to me. I feel like I'm possessed by Nikki. Nice transition. Yeah, but मेरे को अगर वो veins में splits विला उन्नीस नहीं जाए, बीस मिनट. हाँ मतलब कचरा कुछ तो कचरा चाहिए ना ऐसा नहीं मैं किसी और का हाथ पकड़ रही थी मैं तेरा हाथ पकड़ रही थी और इसने बोला no no no don't hold my hand ऐसे मारा मुझे people who watch horror movies dealt with covid better what what would you wish for I would want the end of capitalism is there a fear you've never fully outgrown abandonment oh shit deep मार दिया तो कठम कुछ कुछ होता है राहुल तुम नहीं समझोगे। पिक्चर खत्म हुई, हमने देखा राइट और मैडम इस गोन। मैं चली गई हीमैन के यूनिवर्स में।",
+    "status": "TranscriptStatus.completed",
+    "words_count": 194
+  },
+  "metadata": {
+    "audio_path": "data/reels/DZ7fzRos4Hb/audio.wav",
+    "language_code": null
+  }
+}

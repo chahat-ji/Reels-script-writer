@@ -1,0 +1,813 @@
+{
+  "capability": "shots",
+  "provider_name": "pyscenedetect",
+  "provider_version": "1.0.0",
+  "events": [
+    {
+      "track": "shot",
+      "start_ms": 0,
+      "end_ms": 5840,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 0,
+        "duration_ms": 5840,
+        "duration_sec": 5.84,
+        "start_frame": 0,
+        "end_frame": 146
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 5840,
+      "end_ms": 7240,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 1,
+        "duration_ms": 1400,
+        "duration_sec": 1.4,
+        "start_frame": 146,
+        "end_frame": 181
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 7240,
+      "end_ms": 8440,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 2,
+        "duration_ms": 1200,
+        "duration_sec": 1.2,
+        "start_frame": 181,
+        "end_frame": 211
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 8440,
+      "end_ms": 9640,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 3,
+        "duration_ms": 1200,
+        "duration_sec": 1.2,
+        "start_frame": 211,
+        "end_frame": 241
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 9640,
+      "end_ms": 11520,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 4,
+        "duration_ms": 1880,
+        "duration_sec": 1.88,
+        "start_frame": 241,
+        "end_frame": 288
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 11520,
+      "end_ms": 13000,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 5,
+        "duration_ms": 1480,
+        "duration_sec": 1.48,
+        "start_frame": 288,
+        "end_frame": 325
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 13000,
+      "end_ms": 15760,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 6,
+        "duration_ms": 2760,
+        "duration_sec": 2.76,
+        "start_frame": 325,
+        "end_frame": 394
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 15760,
+      "end_ms": 17160,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 7,
+        "duration_ms": 1400,
+        "duration_sec": 1.4,
+        "start_frame": 394,
+        "end_frame": 429
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 17160,
+      "end_ms": 24560,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 8,
+        "duration_ms": 7400,
+        "duration_sec": 7.4,
+        "start_frame": 429,
+        "end_frame": 614
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 24560,
+      "end_ms": 25920,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 9,
+        "duration_ms": 1360,
+        "duration_sec": 1.36,
+        "start_frame": 614,
+        "end_frame": 648
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 25920,
+      "end_ms": 27560,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 10,
+        "duration_ms": 1640,
+        "duration_sec": 1.64,
+        "start_frame": 648,
+        "end_frame": 689
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 27560,
+      "end_ms": 31360,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 11,
+        "duration_ms": 3800,
+        "duration_sec": 3.8,
+        "start_frame": 689,
+        "end_frame": 784
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 31360,
+      "end_ms": 33720,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 12,
+        "duration_ms": 2360,
+        "duration_sec": 2.36,
+        "start_frame": 784,
+        "end_frame": 843
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 33720,
+      "end_ms": 34680,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 13,
+        "duration_ms": 960,
+        "duration_sec": 0.96,
+        "start_frame": 843,
+        "end_frame": 867
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 34680,
+      "end_ms": 44560,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 14,
+        "duration_ms": 9880,
+        "duration_sec": 9.88,
+        "start_frame": 867,
+        "end_frame": 1114
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 44560,
+      "end_ms": 45320,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 15,
+        "duration_ms": 760,
+        "duration_sec": 0.76,
+        "start_frame": 1114,
+        "end_frame": 1133
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 45320,
+      "end_ms": 45960,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 16,
+        "duration_ms": 640,
+        "duration_sec": 0.64,
+        "start_frame": 1133,
+        "end_frame": 1149
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 45960,
+      "end_ms": 47480,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 17,
+        "duration_ms": 1520,
+        "duration_sec": 1.52,
+        "start_frame": 1149,
+        "end_frame": 1187
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 47480,
+      "end_ms": 50240,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 18,
+        "duration_ms": 2760,
+        "duration_sec": 2.76,
+        "start_frame": 1187,
+        "end_frame": 1256
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 50240,
+      "end_ms": 51160,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 19,
+        "duration_ms": 920,
+        "duration_sec": 0.92,
+        "start_frame": 1256,
+        "end_frame": 1279
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 51160,
+      "end_ms": 51800,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 20,
+        "duration_ms": 640,
+        "duration_sec": 0.64,
+        "start_frame": 1279,
+        "end_frame": 1295
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 51800,
+      "end_ms": 54000,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 21,
+        "duration_ms": 2200,
+        "duration_sec": 2.2,
+        "start_frame": 1295,
+        "end_frame": 1350
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 54000,
+      "end_ms": 55840,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 22,
+        "duration_ms": 1840,
+        "duration_sec": 1.84,
+        "start_frame": 1350,
+        "end_frame": 1396
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 55840,
+      "end_ms": 58600,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 23,
+        "duration_ms": 2760,
+        "duration_sec": 2.76,
+        "start_frame": 1396,
+        "end_frame": 1465
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 58600,
+      "end_ms": 61400,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 24,
+        "duration_ms": 2800,
+        "duration_sec": 2.8,
+        "start_frame": 1465,
+        "end_frame": 1535
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 61400,
+      "end_ms": 62440,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 25,
+        "duration_ms": 1040,
+        "duration_sec": 1.04,
+        "start_frame": 1535,
+        "end_frame": 1561
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 62440,
+      "end_ms": 65760,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 26,
+        "duration_ms": 3320,
+        "duration_sec": 3.32,
+        "start_frame": 1561,
+        "end_frame": 1644
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 65760,
+      "end_ms": 67000,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 27,
+        "duration_ms": 1240,
+        "duration_sec": 1.24,
+        "start_frame": 1644,
+        "end_frame": 1675
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 67000,
+      "end_ms": 68680,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 28,
+        "duration_ms": 1680,
+        "duration_sec": 1.68,
+        "start_frame": 1675,
+        "end_frame": 1717
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 68680,
+      "end_ms": 70480,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 29,
+        "duration_ms": 1800,
+        "duration_sec": 1.8,
+        "start_frame": 1717,
+        "end_frame": 1762
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 70480,
+      "end_ms": 71600,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 30,
+        "duration_ms": 1120,
+        "duration_sec": 1.12,
+        "start_frame": 1762,
+        "end_frame": 1790
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 71600,
+      "end_ms": 79560,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 31,
+        "duration_ms": 7960,
+        "duration_sec": 7.96,
+        "start_frame": 1790,
+        "end_frame": 1989
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "shot",
+      "start_ms": 79560,
+      "end_ms": 80080,
+      "type": "scene_cut",
+      "payload": {
+        "scene_index": 32,
+        "duration_ms": 520,
+        "duration_sec": 0.52,
+        "start_frame": 1989,
+        "end_frame": 2002
+      },
+      "confidence": 1.0,
+      "provider": "pyscenedetect",
+      "provider_version": "1.0.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "metrics": {
+      "total_shots": 33,
+      "total_duration_sec": 80.08,
+      "avg_shot_duration_sec": 2.43,
+      "hook_shot_duration_sec": 5.84
+    },
+    "scenes": [
+      {
+        "scene_index": 0,
+        "duration_ms": 5840,
+        "duration_sec": 5.84,
+        "start_frame": 0,
+        "end_frame": 146
+      },
+      {
+        "scene_index": 1,
+        "duration_ms": 1400,
+        "duration_sec": 1.4,
+        "start_frame": 146,
+        "end_frame": 181
+      },
+      {
+        "scene_index": 2,
+        "duration_ms": 1200,
+        "duration_sec": 1.2,
+        "start_frame": 181,
+        "end_frame": 211
+      },
+      {
+        "scene_index": 3,
+        "duration_ms": 1200,
+        "duration_sec": 1.2,
+        "start_frame": 211,
+        "end_frame": 241
+      },
+      {
+        "scene_index": 4,
+        "duration_ms": 1880,
+        "duration_sec": 1.88,
+        "start_frame": 241,
+        "end_frame": 288
+      },
+      {
+        "scene_index": 5,
+        "duration_ms": 1480,
+        "duration_sec": 1.48,
+        "start_frame": 288,
+        "end_frame": 325
+      },
+      {
+        "scene_index": 6,
+        "duration_ms": 2760,
+        "duration_sec": 2.76,
+        "start_frame": 325,
+        "end_frame": 394
+      },
+      {
+        "scene_index": 7,
+        "duration_ms": 1400,
+        "duration_sec": 1.4,
+        "start_frame": 394,
+        "end_frame": 429
+      },
+      {
+        "scene_index": 8,
+        "duration_ms": 7400,
+        "duration_sec": 7.4,
+        "start_frame": 429,
+        "end_frame": 614
+      },
+      {
+        "scene_index": 9,
+        "duration_ms": 1360,
+        "duration_sec": 1.36,
+        "start_frame": 614,
+        "end_frame": 648
+      },
+      {
+        "scene_index": 10,
+        "duration_ms": 1640,
+        "duration_sec": 1.64,
+        "start_frame": 648,
+        "end_frame": 689
+      },
+      {
+        "scene_index": 11,
+        "duration_ms": 3800,
+        "duration_sec": 3.8,
+        "start_frame": 689,
+        "end_frame": 784
+      },
+      {
+        "scene_index": 12,
+        "duration_ms": 2360,
+        "duration_sec": 2.36,
+        "start_frame": 784,
+        "end_frame": 843
+      },
+      {
+        "scene_index": 13,
+        "duration_ms": 960,
+        "duration_sec": 0.96,
+        "start_frame": 843,
+        "end_frame": 867
+      },
+      {
+        "scene_index": 14,
+        "duration_ms": 9880,
+        "duration_sec": 9.88,
+        "start_frame": 867,
+        "end_frame": 1114
+      },
+      {
+        "scene_index": 15,
+        "duration_ms": 760,
+        "duration_sec": 0.76,
+        "start_frame": 1114,
+        "end_frame": 1133
+      },
+      {
+        "scene_index": 16,
+        "duration_ms": 640,
+        "duration_sec": 0.64,
+        "start_frame": 1133,
+        "end_frame": 1149
+      },
+      {
+        "scene_index": 17,
+        "duration_ms": 1520,
+        "duration_sec": 1.52,
+        "start_frame": 1149,
+        "end_frame": 1187
+      },
+      {
+        "scene_index": 18,
+        "duration_ms": 2760,
+        "duration_sec": 2.76,
+        "start_frame": 1187,
+        "end_frame": 1256
+      },
+      {
+        "scene_index": 19,
+        "duration_ms": 920,
+        "duration_sec": 0.92,
+        "start_frame": 1256,
+        "end_frame": 1279
+      },
+      {
+        "scene_index": 20,
+        "duration_ms": 640,
+        "duration_sec": 0.64,
+        "start_frame": 1279,
+        "end_frame": 1295
+      },
+      {
+        "scene_index": 21,
+        "duration_ms": 2200,
+        "duration_sec": 2.2,
+        "start_frame": 1295,
+        "end_frame": 1350
+      },
+      {
+        "scene_index": 22,
+        "duration_ms": 1840,
+        "duration_sec": 1.84,
+        "start_frame": 1350,
+        "end_frame": 1396
+      },
+      {
+        "scene_index": 23,
+        "duration_ms": 2760,
+        "duration_sec": 2.76,
+        "start_frame": 1396,
+        "end_frame": 1465
+      },
+      {
+        "scene_index": 24,
+        "duration_ms": 2800,
+        "duration_sec": 2.8,
+        "start_frame": 1465,
+        "end_frame": 1535
+      },
+      {
+        "scene_index": 25,
+        "duration_ms": 1040,
+        "duration_sec": 1.04,
+        "start_frame": 1535,
+        "end_frame": 1561
+      },
+      {
+        "scene_index": 26,
+        "duration_ms": 3320,
+        "duration_sec": 3.32,
+        "start_frame": 1561,
+        "end_frame": 1644
+      },
+      {
+        "scene_index": 27,
+        "duration_ms": 1240,
+        "duration_sec": 1.24,
+        "start_frame": 1644,
+        "end_frame": 1675
+      },
+      {
+        "scene_index": 28,
+        "duration_ms": 1680,
+        "duration_sec": 1.68,
+        "start_frame": 1675,
+        "end_frame": 1717
+      },
+      {
+        "scene_index": 29,
+        "duration_ms": 1800,
+        "duration_sec": 1.8,
+        "start_frame": 1717,
+        "end_frame": 1762
+      },
+      {
+        "scene_index": 30,
+        "duration_ms": 1120,
+        "duration_sec": 1.12,
+        "start_frame": 1762,
+        "end_frame": 1790
+      },
+      {
+        "scene_index": 31,
+        "duration_ms": 7960,
+        "duration_sec": 7.96,
+        "start_frame": 1790,
+        "end_frame": 1989
+      },
+      {
+        "scene_index": 32,
+        "duration_ms": 520,
+        "duration_sec": 0.52,
+        "start_frame": 1989,
+        "end_frame": 2002
+      }
+    ]
+  },
+  "metadata": {
+    "video_path": "data/reels/DZ7fzRos4Hb/video.mp4",
+    "threshold": 27.0
+  }
+}

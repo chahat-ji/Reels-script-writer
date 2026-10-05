@@ -1,0 +1,12 @@
+{
+  "reel_id": "DZ7fzRos4Hb",
+  "audio_condition": {
+    "has_heavy_music": false,
+    "music_energy_ratio": 0.0,
+    "silence_ratio": 0.0,
+    "average_db": -18.4,
+    "needs_stem_separation": false
+  },
+  "duration_seconds": 80.08,
+  "flags": []
+}

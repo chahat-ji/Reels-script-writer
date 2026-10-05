@@ -1,0 +1,1934 @@
+{
+  "capability": "ocr",
+  "provider_name": "rapidocr",
+  "provider_version": "1.0.0",
+  "events": [
+    {
+      "track": "ocr",
+      "start_ms": 3520,
+      "end_ms": 4800,
+      "type": "text_overlay",
+      "payload": {
+        "text": "和",
+        "bbox": [
+          0.4953,
+          0.2153,
+          0.6594,
+          0.4722
+        ],
+        "frame_count": 3,
+        "span_index": 0
+      },
+      "confidence": 0.891,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 13440,
+      "end_ms": 21120,
+      "type": "text_overlay",
+      "payload": {
+        "text": "雪",
+        "bbox": [
+          0.1984,
+          0.3917,
+          0.3578,
+          0.6125
+        ],
+        "frame_count": 2,
+        "span_index": 1
+      },
+      "confidence": 0.8531,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 23360,
+      "end_ms": 23680,
+      "type": "text_overlay",
+      "payload": {
+        "text": "6",
+        "bbox": [
+          0.1641,
+          0.4181,
+          0.3391,
+          0.6236
+        ],
+        "frame_count": 1,
+        "span_index": 2
+      },
+      "confidence": 0.8684,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 23360,
+      "end_ms": 23680,
+      "type": "text_overlay",
+      "payload": {
+        "text": "H",
+        "bbox": [
+          0.5938,
+          0.4361,
+          0.7211,
+          0.6403
+        ],
+        "frame_count": 1,
+        "span_index": 3
+      },
+      "confidence": 0.8299,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 23680,
+      "end_ms": 24000,
+      "type": "text_overlay",
+      "payload": {
+        "text": "雪",
+        "bbox": [
+          0.1664,
+          0.3889,
+          0.3453,
+          0.6125
+        ],
+        "frame_count": 1,
+        "span_index": 4
+      },
+      "confidence": 0.6456,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 31360,
+      "end_ms": 31680,
+      "type": "text_overlay",
+      "payload": {
+        "text": "P",
+        "bbox": [
+          0.5188,
+          0.5889,
+          0.6977,
+          0.8333
+        ],
+        "frame_count": 1,
+        "span_index": 5
+      },
+      "confidence": 0.6909,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 34880,
+      "end_ms": 35200,
+      "type": "text_overlay",
+      "payload": {
+        "text": "S",
+        "bbox": [
+          0.2742,
+          0.6903,
+          0.4336,
+          0.9486
+        ],
+        "frame_count": 1,
+        "span_index": 6
+      },
+      "confidence": 0.8996,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 41600,
+      "end_ms": 41920,
+      "type": "text_overlay",
+      "payload": {
+        "text": "二",
+        "bbox": [
+          0.307,
+          0.1514,
+          0.3656,
+          0.2319
+        ],
+        "frame_count": 1,
+        "span_index": 7
+      },
+      "confidence": 0.8782,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 42240,
+      "end_ms": 42560,
+      "type": "text_overlay",
+      "payload": {
+        "text": "8",
+        "bbox": [
+          0.2953,
+          0.4847,
+          0.3594,
+          0.5722
+        ],
+        "frame_count": 1,
+        "span_index": 8
+      },
+      "confidence": 0.9033,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 48000,
+      "end_ms": 48320,
+      "type": "text_overlay",
+      "payload": {
+        "text": "价",
+        "bbox": [
+          0.5461,
+          0.6222,
+          0.6766,
+          0.825
+        ],
+        "frame_count": 1,
+        "span_index": 9
+      },
+      "confidence": 0.646,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 52480,
+      "end_ms": 52800,
+      "type": "text_overlay",
+      "payload": {
+        "text": "6",
+        "bbox": [
+          0.2305,
+          0.3472,
+          0.3609,
+          0.6153
+        ],
+        "frame_count": 1,
+        "span_index": 10
+      },
+      "confidence": 0.674,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 56000,
+      "end_ms": 56320,
+      "type": "text_overlay",
+      "payload": {
+        "text": "S",
+        "bbox": [
+          0.3141,
+          0.4153,
+          0.3922,
+          0.5736
+        ],
+        "frame_count": 1,
+        "span_index": 11
+      },
+      "confidence": 0.6992,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 64000,
+      "end_ms": 64320,
+      "type": "text_overlay",
+      "payload": {
+        "text": "中",
+        "bbox": [
+          0.7352,
+          0.7486,
+          0.8727,
+          0.9556
+        ],
+        "frame_count": 1,
+        "span_index": 12
+      },
+      "confidence": 0.6039,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 73600,
+      "end_ms": 73920,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S",
+        "bbox": [
+          0.575,
+          0.2736,
+          0.6297,
+          0.5222
+        ],
+        "frame_count": 1,
+        "span_index": 13
+      },
+      "confidence": 0.9749,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 73920,
+      "end_ms": 74240,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5891,
+          0.2778,
+          0.6344,
+          0.6833
+        ],
+        "frame_count": 1,
+        "span_index": 14
+      },
+      "confidence": 0.9664,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 73920,
+      "end_ms": 74240,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWE",
+        "bbox": [
+          0.6258,
+          0.1264,
+          0.6875,
+          0.5472
+        ],
+        "frame_count": 1,
+        "span_index": 15
+      },
+      "confidence": 0.9896,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 74240,
+      "end_ms": 74560,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5977,
+          0.2792,
+          0.6336,
+          0.6833
+        ],
+        "frame_count": 1,
+        "span_index": 16
+      },
+      "confidence": 0.955,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 74240,
+      "end_ms": 74560,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOW WE TALK",
+        "bbox": [
+          0.6328,
+          0.125,
+          0.6961,
+          0.8292
+        ],
+        "frame_count": 1,
+        "span_index": 17
+      },
+      "confidence": 0.929,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 74560,
+      "end_ms": 74880,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5945,
+          0.2806,
+          0.6328,
+          0.6833
+        ],
+        "frame_count": 1,
+        "span_index": 18
+      },
+      "confidence": 0.9593,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 74560,
+      "end_ms": 74880,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOW WETALK",
+        "bbox": [
+          0.6391,
+          0.1292,
+          0.6945,
+          0.8319
+        ],
+        "frame_count": 1,
+        "span_index": 19
+      },
+      "confidence": 0.9475,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 74880,
+      "end_ms": 75200,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5953,
+          0.2819,
+          0.6336,
+          0.6875
+        ],
+        "frame_count": 1,
+        "span_index": 20
+      },
+      "confidence": 0.9591,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 74880,
+      "end_ms": 75200,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.643,
+          0.1333,
+          0.6945,
+          0.8333
+        ],
+        "frame_count": 1,
+        "span_index": 21
+      },
+      "confidence": 0.9958,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 75200,
+      "end_ms": 75520,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5945,
+          0.2806,
+          0.6328,
+          0.6847
+        ],
+        "frame_count": 1,
+        "span_index": 22
+      },
+      "confidence": 0.9494,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 75200,
+      "end_ms": 75520,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6422,
+          0.1319,
+          0.6937,
+          0.8319
+        ],
+        "frame_count": 1,
+        "span_index": 23
+      },
+      "confidence": 0.9956,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 75520,
+      "end_ms": 75840,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5969,
+          0.2806,
+          0.6352,
+          0.6847
+        ],
+        "frame_count": 1,
+        "span_index": 24
+      },
+      "confidence": 0.9529,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 75520,
+      "end_ms": 75840,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6445,
+          0.1319,
+          0.6961,
+          0.8319
+        ],
+        "frame_count": 1,
+        "span_index": 25
+      },
+      "confidence": 0.9955,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 75840,
+      "end_ms": 76160,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5953,
+          0.2806,
+          0.6336,
+          0.6847
+        ],
+        "frame_count": 1,
+        "span_index": 26
+      },
+      "confidence": 0.9525,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 75840,
+      "end_ms": 76160,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.643,
+          0.1306,
+          0.6945,
+          0.8292
+        ],
+        "frame_count": 1,
+        "span_index": 27
+      },
+      "confidence": 0.9956,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 76160,
+      "end_ms": 76480,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5969,
+          0.2806,
+          0.6352,
+          0.6861
+        ],
+        "frame_count": 1,
+        "span_index": 28
+      },
+      "confidence": 0.9597,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 76160,
+      "end_ms": 76480,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6445,
+          0.1319,
+          0.6961,
+          0.8319
+        ],
+        "frame_count": 1,
+        "span_index": 29
+      },
+      "confidence": 0.9952,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 76480,
+      "end_ms": 76800,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5945,
+          0.2806,
+          0.6328,
+          0.6847
+        ],
+        "frame_count": 1,
+        "span_index": 30
+      },
+      "confidence": 0.954,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 76480,
+      "end_ms": 76800,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6422,
+          0.1306,
+          0.6937,
+          0.8306
+        ],
+        "frame_count": 1,
+        "span_index": 31
+      },
+      "confidence": 0.9958,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 76800,
+      "end_ms": 77120,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5953,
+          0.2806,
+          0.6336,
+          0.6847
+        ],
+        "frame_count": 1,
+        "span_index": 32
+      },
+      "confidence": 0.9567,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 76800,
+      "end_ms": 77120,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.643,
+          0.1319,
+          0.6945,
+          0.8306
+        ],
+        "frame_count": 1,
+        "span_index": 33
+      },
+      "confidence": 0.9957,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77120,
+      "end_ms": 77440,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5961,
+          0.2806,
+          0.6344,
+          0.6861
+        ],
+        "frame_count": 1,
+        "span_index": 34
+      },
+      "confidence": 0.9614,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77120,
+      "end_ms": 77440,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6438,
+          0.1319,
+          0.6953,
+          0.8319
+        ],
+        "frame_count": 1,
+        "span_index": 35
+      },
+      "confidence": 0.9954,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77440,
+      "end_ms": 77760,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5961,
+          0.2819,
+          0.632,
+          0.6833
+        ],
+        "frame_count": 1,
+        "span_index": 36
+      },
+      "confidence": 0.9586,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77440,
+      "end_ms": 77760,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6414,
+          0.1306,
+          0.6953,
+          0.8319
+        ],
+        "frame_count": 1,
+        "span_index": 37
+      },
+      "confidence": 0.9959,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77760,
+      "end_ms": 78080,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5938,
+          0.2806,
+          0.6336,
+          0.6875
+        ],
+        "frame_count": 1,
+        "span_index": 38
+      },
+      "confidence": 0.9588,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77760,
+      "end_ms": 78080,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6414,
+          0.1319,
+          0.6953,
+          0.8347
+        ],
+        "frame_count": 1,
+        "span_index": 39
+      },
+      "confidence": 0.9661,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 78080,
+      "end_ms": 78400,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5938,
+          0.2792,
+          0.6336,
+          0.6861
+        ],
+        "frame_count": 1,
+        "span_index": 40
+      },
+      "confidence": 0.9611,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 78080,
+      "end_ms": 78400,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6414,
+          0.1306,
+          0.6953,
+          0.8333
+        ],
+        "frame_count": 1,
+        "span_index": 41
+      },
+      "confidence": 0.9962,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 78400,
+      "end_ms": 78720,
+      "type": "text_overlay",
+      "payload": {
+        "text": "00",
+        "bbox": [
+          0.3734,
+          0.5278,
+          0.4523,
+          0.7625
+        ],
+        "frame_count": 1,
+        "span_index": 42
+      },
+      "confidence": 0.6303,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 78400,
+      "end_ms": 78720,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5969,
+          0.2806,
+          0.6328,
+          0.6833
+        ],
+        "frame_count": 1,
+        "span_index": 43
+      },
+      "confidence": 0.9595,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 78400,
+      "end_ms": 78720,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOW WE TALK",
+        "bbox": [
+          0.6406,
+          0.1264,
+          0.6961,
+          0.8306
+        ],
+        "frame_count": 1,
+        "span_index": 44
+      },
+      "confidence": 0.91,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 78720,
+      "end_ms": 79040,
+      "type": "text_overlay",
+      "payload": {
+        "text": "0",
+        "bbox": [
+          0.368,
+          0.5181,
+          0.4562,
+          0.7681
+        ],
+        "frame_count": 1,
+        "span_index": 45
+      },
+      "confidence": 0.6165,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 78720,
+      "end_ms": 79040,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5969,
+          0.2819,
+          0.6328,
+          0.6861
+        ],
+        "frame_count": 1,
+        "span_index": 46
+      },
+      "confidence": 0.9558,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 78720,
+      "end_ms": 79040,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6422,
+          0.1306,
+          0.6961,
+          0.8333
+        ],
+        "frame_count": 1,
+        "span_index": 47
+      },
+      "confidence": 0.9961,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 79040,
+      "end_ms": 79360,
+      "type": "text_overlay",
+      "payload": {
+        "text": "0",
+        "bbox": [
+          0.3672,
+          0.5278,
+          0.4555,
+          0.7653
+        ],
+        "frame_count": 1,
+        "span_index": 48
+      },
+      "confidence": 0.6087,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 79040,
+      "end_ms": 79360,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5977,
+          0.2806,
+          0.6336,
+          0.6819
+        ],
+        "frame_count": 1,
+        "span_index": 49
+      },
+      "confidence": 0.9503,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 79040,
+      "end_ms": 79360,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6438,
+          0.1306,
+          0.6953,
+          0.8306
+        ],
+        "frame_count": 1,
+        "span_index": 50
+      },
+      "confidence": 0.9956,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 79360,
+      "end_ms": 79680,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THAT'S JUST",
+        "bbox": [
+          0.5945,
+          0.2806,
+          0.6328,
+          0.6847
+        ],
+        "frame_count": 1,
+        "span_index": 51
+      },
+      "confidence": 0.9589,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 79360,
+      "end_ms": 80000,
+      "type": "text_overlay",
+      "payload": {
+        "text": "HOWWETALK",
+        "bbox": [
+          0.6422,
+          0.1306,
+          0.6937,
+          0.8292
+        ],
+        "frame_count": 2,
+        "span_index": 52
+      },
+      "confidence": 0.9956,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "metrics": {
+      "total_text_spans": 53,
+      "total_raw_detections": 57,
+      "frames_sampled": 251,
+      "video_duration_ms": 80080,
+      "text_coverage_ms": 25600,
+      "text_coverage_pct": 32.0,
+      "sample_fps": 3.0
+    },
+    "spans": [
+      {
+        "span_index": 0,
+        "text": "和",
+        "start_ms": 3520,
+        "end_ms": 4800,
+        "duration_ms": 1280,
+        "confidence": 0.891,
+        "bbox": [
+          0.4953,
+          0.2153,
+          0.6594,
+          0.4722
+        ],
+        "frame_count": 3
+      },
+      {
+        "span_index": 1,
+        "text": "雪",
+        "start_ms": 13440,
+        "end_ms": 21120,
+        "duration_ms": 7680,
+        "confidence": 0.8531,
+        "bbox": [
+          0.1984,
+          0.3917,
+          0.3578,
+          0.6125
+        ],
+        "frame_count": 2
+      },
+      {
+        "span_index": 2,
+        "text": "6",
+        "start_ms": 23360,
+        "end_ms": 23680,
+        "duration_ms": 320,
+        "confidence": 0.8684,
+        "bbox": [
+          0.1641,
+          0.4181,
+          0.3391,
+          0.6236
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 3,
+        "text": "H",
+        "start_ms": 23360,
+        "end_ms": 23680,
+        "duration_ms": 320,
+        "confidence": 0.8299,
+        "bbox": [
+          0.5938,
+          0.4361,
+          0.7211,
+          0.6403
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 4,
+        "text": "雪",
+        "start_ms": 23680,
+        "end_ms": 24000,
+        "duration_ms": 320,
+        "confidence": 0.6456,
+        "bbox": [
+          0.1664,
+          0.3889,
+          0.3453,
+          0.6125
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 5,
+        "text": "P",
+        "start_ms": 31360,
+        "end_ms": 31680,
+        "duration_ms": 320,
+        "confidence": 0.6909,
+        "bbox": [
+          0.5188,
+          0.5889,
+          0.6977,
+          0.8333
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 6,
+        "text": "S",
+        "start_ms": 34880,
+        "end_ms": 35200,
+        "duration_ms": 320,
+        "confidence": 0.8996,
+        "bbox": [
+          0.2742,
+          0.6903,
+          0.4336,
+          0.9486
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 7,
+        "text": "二",
+        "start_ms": 41600,
+        "end_ms": 41920,
+        "duration_ms": 320,
+        "confidence": 0.8782,
+        "bbox": [
+          0.307,
+          0.1514,
+          0.3656,
+          0.2319
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 8,
+        "text": "8",
+        "start_ms": 42240,
+        "end_ms": 42560,
+        "duration_ms": 320,
+        "confidence": 0.9033,
+        "bbox": [
+          0.2953,
+          0.4847,
+          0.3594,
+          0.5722
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 9,
+        "text": "价",
+        "start_ms": 48000,
+        "end_ms": 48320,
+        "duration_ms": 320,
+        "confidence": 0.646,
+        "bbox": [
+          0.5461,
+          0.6222,
+          0.6766,
+          0.825
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 10,
+        "text": "6",
+        "start_ms": 52480,
+        "end_ms": 52800,
+        "duration_ms": 320,
+        "confidence": 0.674,
+        "bbox": [
+          0.2305,
+          0.3472,
+          0.3609,
+          0.6153
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 11,
+        "text": "S",
+        "start_ms": 56000,
+        "end_ms": 56320,
+        "duration_ms": 320,
+        "confidence": 0.6992,
+        "bbox": [
+          0.3141,
+          0.4153,
+          0.3922,
+          0.5736
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 12,
+        "text": "中",
+        "start_ms": 64000,
+        "end_ms": 64320,
+        "duration_ms": 320,
+        "confidence": 0.6039,
+        "bbox": [
+          0.7352,
+          0.7486,
+          0.8727,
+          0.9556
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 13,
+        "text": "THAT'S",
+        "start_ms": 73600,
+        "end_ms": 73920,
+        "duration_ms": 320,
+        "confidence": 0.9749,
+        "bbox": [
+          0.575,
+          0.2736,
+          0.6297,
+          0.5222
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 14,
+        "text": "THAT'S JUST",
+        "start_ms": 73920,
+        "end_ms": 74240,
+        "duration_ms": 320,
+        "confidence": 0.9664,
+        "bbox": [
+          0.5891,
+          0.2778,
+          0.6344,
+          0.6833
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 15,
+        "text": "HOWWE",
+        "start_ms": 73920,
+        "end_ms": 74240,
+        "duration_ms": 320,
+        "confidence": 0.9896,
+        "bbox": [
+          0.6258,
+          0.1264,
+          0.6875,
+          0.5472
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 16,
+        "text": "THAT'S JUST",
+        "start_ms": 74240,
+        "end_ms": 74560,
+        "duration_ms": 320,
+        "confidence": 0.955,
+        "bbox": [
+          0.5977,
+          0.2792,
+          0.6336,
+          0.6833
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 17,
+        "text": "HOW WE TALK",
+        "start_ms": 74240,
+        "end_ms": 74560,
+        "duration_ms": 320,
+        "confidence": 0.929,
+        "bbox": [
+          0.6328,
+          0.125,
+          0.6961,
+          0.8292
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 18,
+        "text": "THAT'S JUST",
+        "start_ms": 74560,
+        "end_ms": 74880,
+        "duration_ms": 320,
+        "confidence": 0.9593,
+        "bbox": [
+          0.5945,
+          0.2806,
+          0.6328,
+          0.6833
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 19,
+        "text": "HOW WETALK",
+        "start_ms": 74560,
+        "end_ms": 74880,
+        "duration_ms": 320,
+        "confidence": 0.9475,
+        "bbox": [
+          0.6391,
+          0.1292,
+          0.6945,
+          0.8319
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 20,
+        "text": "THAT'S JUST",
+        "start_ms": 74880,
+        "end_ms": 75200,
+        "duration_ms": 320,
+        "confidence": 0.9591,
+        "bbox": [
+          0.5953,
+          0.2819,
+          0.6336,
+          0.6875
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 21,
+        "text": "HOWWETALK",
+        "start_ms": 74880,
+        "end_ms": 75200,
+        "duration_ms": 320,
+        "confidence": 0.9958,
+        "bbox": [
+          0.643,
+          0.1333,
+          0.6945,
+          0.8333
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 22,
+        "text": "THAT'S JUST",
+        "start_ms": 75200,
+        "end_ms": 75520,
+        "duration_ms": 320,
+        "confidence": 0.9494,
+        "bbox": [
+          0.5945,
+          0.2806,
+          0.6328,
+          0.6847
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 23,
+        "text": "HOWWETALK",
+        "start_ms": 75200,
+        "end_ms": 75520,
+        "duration_ms": 320,
+        "confidence": 0.9956,
+        "bbox": [
+          0.6422,
+          0.1319,
+          0.6937,
+          0.8319
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 24,
+        "text": "THAT'S JUST",
+        "start_ms": 75520,
+        "end_ms": 75840,
+        "duration_ms": 320,
+        "confidence": 0.9529,
+        "bbox": [
+          0.5969,
+          0.2806,
+          0.6352,
+          0.6847
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 25,
+        "text": "HOWWETALK",
+        "start_ms": 75520,
+        "end_ms": 75840,
+        "duration_ms": 320,
+        "confidence": 0.9955,
+        "bbox": [
+          0.6445,
+          0.1319,
+          0.6961,
+          0.8319
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 26,
+        "text": "THAT'S JUST",
+        "start_ms": 75840,
+        "end_ms": 76160,
+        "duration_ms": 320,
+        "confidence": 0.9525,
+        "bbox": [
+          0.5953,
+          0.2806,
+          0.6336,
+          0.6847
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 27,
+        "text": "HOWWETALK",
+        "start_ms": 75840,
+        "end_ms": 76160,
+        "duration_ms": 320,
+        "confidence": 0.9956,
+        "bbox": [
+          0.643,
+          0.1306,
+          0.6945,
+          0.8292
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 28,
+        "text": "THAT'S JUST",
+        "start_ms": 76160,
+        "end_ms": 76480,
+        "duration_ms": 320,
+        "confidence": 0.9597,
+        "bbox": [
+          0.5969,
+          0.2806,
+          0.6352,
+          0.6861
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 29,
+        "text": "HOWWETALK",
+        "start_ms": 76160,
+        "end_ms": 76480,
+        "duration_ms": 320,
+        "confidence": 0.9952,
+        "bbox": [
+          0.6445,
+          0.1319,
+          0.6961,
+          0.8319
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 30,
+        "text": "THAT'S JUST",
+        "start_ms": 76480,
+        "end_ms": 76800,
+        "duration_ms": 320,
+        "confidence": 0.954,
+        "bbox": [
+          0.5945,
+          0.2806,
+          0.6328,
+          0.6847
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 31,
+        "text": "HOWWETALK",
+        "start_ms": 76480,
+        "end_ms": 76800,
+        "duration_ms": 320,
+        "confidence": 0.9958,
+        "bbox": [
+          0.6422,
+          0.1306,
+          0.6937,
+          0.8306
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 32,
+        "text": "THAT'S JUST",
+        "start_ms": 76800,
+        "end_ms": 77120,
+        "duration_ms": 320,
+        "confidence": 0.9567,
+        "bbox": [
+          0.5953,
+          0.2806,
+          0.6336,
+          0.6847
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 33,
+        "text": "HOWWETALK",
+        "start_ms": 76800,
+        "end_ms": 77120,
+        "duration_ms": 320,
+        "confidence": 0.9957,
+        "bbox": [
+          0.643,
+          0.1319,
+          0.6945,
+          0.8306
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 34,
+        "text": "THAT'S JUST",
+        "start_ms": 77120,
+        "end_ms": 77440,
+        "duration_ms": 320,
+        "confidence": 0.9614,
+        "bbox": [
+          0.5961,
+          0.2806,
+          0.6344,
+          0.6861
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 35,
+        "text": "HOWWETALK",
+        "start_ms": 77120,
+        "end_ms": 77440,
+        "duration_ms": 320,
+        "confidence": 0.9954,
+        "bbox": [
+          0.6438,
+          0.1319,
+          0.6953,
+          0.8319
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 36,
+        "text": "THAT'S JUST",
+        "start_ms": 77440,
+        "end_ms": 77760,
+        "duration_ms": 320,
+        "confidence": 0.9586,
+        "bbox": [
+          0.5961,
+          0.2819,
+          0.632,
+          0.6833
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 37,
+        "text": "HOWWETALK",
+        "start_ms": 77440,
+        "end_ms": 77760,
+        "duration_ms": 320,
+        "confidence": 0.9959,
+        "bbox": [
+          0.6414,
+          0.1306,
+          0.6953,
+          0.8319
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 38,
+        "text": "THAT'S JUST",
+        "start_ms": 77760,
+        "end_ms": 78080,
+        "duration_ms": 320,
+        "confidence": 0.9588,
+        "bbox": [
+          0.5938,
+          0.2806,
+          0.6336,
+          0.6875
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 39,
+        "text": "HOWWETALK",
+        "start_ms": 77760,
+        "end_ms": 78080,
+        "duration_ms": 320,
+        "confidence": 0.9661,
+        "bbox": [
+          0.6414,
+          0.1319,
+          0.6953,
+          0.8347
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 40,
+        "text": "THAT'S JUST",
+        "start_ms": 78080,
+        "end_ms": 78400,
+        "duration_ms": 320,
+        "confidence": 0.9611,
+        "bbox": [
+          0.5938,
+          0.2792,
+          0.6336,
+          0.6861
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 41,
+        "text": "HOWWETALK",
+        "start_ms": 78080,
+        "end_ms": 78400,
+        "duration_ms": 320,
+        "confidence": 0.9962,
+        "bbox": [
+          0.6414,
+          0.1306,
+          0.6953,
+          0.8333
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 42,
+        "text": "00",
+        "start_ms": 78400,
+        "end_ms": 78720,
+        "duration_ms": 320,
+        "confidence": 0.6303,
+        "bbox": [
+          0.3734,
+          0.5278,
+          0.4523,
+          0.7625
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 43,
+        "text": "THAT'S JUST",
+        "start_ms": 78400,
+        "end_ms": 78720,
+        "duration_ms": 320,
+        "confidence": 0.9595,
+        "bbox": [
+          0.5969,
+          0.2806,
+          0.6328,
+          0.6833
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 44,
+        "text": "HOW WE TALK",
+        "start_ms": 78400,
+        "end_ms": 78720,
+        "duration_ms": 320,
+        "confidence": 0.91,
+        "bbox": [
+          0.6406,
+          0.1264,
+          0.6961,
+          0.8306
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 45,
+        "text": "0",
+        "start_ms": 78720,
+        "end_ms": 79040,
+        "duration_ms": 320,
+        "confidence": 0.6165,
+        "bbox": [
+          0.368,
+          0.5181,
+          0.4562,
+          0.7681
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 46,
+        "text": "THAT'S JUST",
+        "start_ms": 78720,
+        "end_ms": 79040,
+        "duration_ms": 320,
+        "confidence": 0.9558,
+        "bbox": [
+          0.5969,
+          0.2819,
+          0.6328,
+          0.6861
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 47,
+        "text": "HOWWETALK",
+        "start_ms": 78720,
+        "end_ms": 79040,
+        "duration_ms": 320,
+        "confidence": 0.9961,
+        "bbox": [
+          0.6422,
+          0.1306,
+          0.6961,
+          0.8333
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 48,
+        "text": "0",
+        "start_ms": 79040,
+        "end_ms": 79360,
+        "duration_ms": 320,
+        "confidence": 0.6087,
+        "bbox": [
+          0.3672,
+          0.5278,
+          0.4555,
+          0.7653
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 49,
+        "text": "THAT'S JUST",
+        "start_ms": 79040,
+        "end_ms": 79360,
+        "duration_ms": 320,
+        "confidence": 0.9503,
+        "bbox": [
+          0.5977,
+          0.2806,
+          0.6336,
+          0.6819
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 50,
+        "text": "HOWWETALK",
+        "start_ms": 79040,
+        "end_ms": 79360,
+        "duration_ms": 320,
+        "confidence": 0.9956,
+        "bbox": [
+          0.6438,
+          0.1306,
+          0.6953,
+          0.8306
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 51,
+        "text": "THAT'S JUST",
+        "start_ms": 79360,
+        "end_ms": 79680,
+        "duration_ms": 320,
+        "confidence": 0.9589,
+        "bbox": [
+          0.5945,
+          0.2806,
+          0.6328,
+          0.6847
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 52,
+        "text": "HOWWETALK",
+        "start_ms": 79360,
+        "end_ms": 80000,
+        "duration_ms": 640,
+        "confidence": 0.9956,
+        "bbox": [
+          0.6422,
+          0.1306,
+          0.6937,
+          0.8292
+        ],
+        "frame_count": 2
+      }
+    ]
+  },
+  "metadata": {
+    "video_path": "data/reels/DZ7fzRos4Hb/video.mp4",
+    "sample_fps": 3.0,
+    "min_confidence": 0.6,
+    "similarity_threshold": 0.75
+  }
+}

@@ -1,0 +1,567 @@
+{
+  "capability": "diarization",
+  "provider_name": "assemblyai",
+  "provider_version": "1.0.0",
+  "events": [
+    {
+      "track": "diarization",
+      "start_ms": 0,
+      "end_ms": 6240,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 0,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 0,
+        "end_ms": 6240,
+        "duration_ms": 6240,
+        "duration_sec": 6.24,
+        "text": "One of the films that I was waiting to watch for the last forty years has released called He-Man. You are"
+      },
+      "confidence": 0.965,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 6240,
+      "end_ms": 9520,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 1,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 6240,
+        "end_ms": 9520,
+        "duration_ms": 3280,
+        "duration_sec": 3.28,
+        "text": "my He-Man. You're a he, you're a man."
+      },
+      "confidence": 0.957,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 9520,
+      "end_ms": 12280,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 2,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 9520,
+        "end_ms": 12280,
+        "duration_ms": 2760,
+        "duration_sec": 2.76,
+        "text": "Skeletor laughs exactly like you."
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 12840,
+      "end_ms": 13060,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 3,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 12840,
+        "end_ms": 13060,
+        "duration_ms": 220,
+        "duration_sec": 0.22,
+        "text": "I don't"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 13060,
+      "end_ms": 13320,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 4,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 13060,
+        "end_ms": 13320,
+        "duration_ms": 260,
+        "duration_sec": 0.26,
+        "text": "laugh"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 13320,
+      "end_ms": 27640,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 5,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 13320,
+        "end_ms": 27640,
+        "duration_ms": 14320,
+        "duration_sec": 14.32,
+        "text": "like that. चुप कर, चुप कर, ये नहीं कर, वो मत कर. Don't be lame. Don't be this. Why don't you do the spot alone? I don't know something is happening to me. I feel like I'm possessed by Nikki. Nice transition."
+      },
+      "confidence": 0.939,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 27640,
+      "end_ms": 29980,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 6,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 27640,
+        "end_ms": 29980,
+        "duration_ms": 2340,
+        "duration_sec": 2.34,
+        "text": "Yeah, but मेरे को अगर वो veins में splits विला उन्नीस नहीं जाए, बीस मिनट."
+      },
+      "confidence": 0.898,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 32310,
+      "end_ms": 33080,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 7,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 32310,
+        "end_ms": 33080,
+        "duration_ms": 770,
+        "duration_sec": 0.77,
+        "text": "हाँ मतलब"
+      },
+      "confidence": 0.985,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 33080,
+      "end_ms": 35420,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 8,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 33080,
+        "end_ms": 35420,
+        "duration_ms": 2340,
+        "duration_sec": 2.34,
+        "text": "कचरा कुछ तो कचरा चाहिए ना"
+      },
+      "confidence": 0.943,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 35420,
+      "end_ms": 44500,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 9,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 35420,
+        "end_ms": 44500,
+        "duration_ms": 9080,
+        "duration_sec": 9.08,
+        "text": "ऐसा नहीं मैं किसी और का हाथ पकड़ रही थी मैं तेरा हाथ पकड़ रही थी और इसने बोला no no no don't hold my hand ऐसे मारा मुझे people who watch horror movies dealt with covid better"
+      },
+      "confidence": 0.965,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 44500,
+      "end_ms": 48240,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 10,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 44500,
+        "end_ms": 48240,
+        "duration_ms": 3740,
+        "duration_sec": 3.74,
+        "text": "what what would you wish for I would"
+      },
+      "confidence": 0.92,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 48240,
+      "end_ms": 50280,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 11,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 48240,
+        "end_ms": 50280,
+        "duration_ms": 2040,
+        "duration_sec": 2.04,
+        "text": "want the end of capitalism"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 50280,
+      "end_ms": 53840,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 12,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 50280,
+        "end_ms": 53840,
+        "duration_ms": 3560,
+        "duration_sec": 3.56,
+        "text": "is there a fear you've never fully outgrown"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 55360,
+      "end_ms": 56340,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 13,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 55360,
+        "end_ms": 56340,
+        "duration_ms": 980,
+        "duration_sec": 0.98,
+        "text": "abandonment oh"
+      },
+      "confidence": 0.983,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 56340,
+      "end_ms": 58260,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 14,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 56340,
+        "end_ms": 58260,
+        "duration_ms": 1920,
+        "duration_sec": 1.92,
+        "text": "shit deep मार दिया तो कठम"
+      },
+      "confidence": 0.896,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 58260,
+      "end_ms": 62970,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 15,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 58260,
+        "end_ms": 62970,
+        "duration_ms": 4710,
+        "duration_sec": 4.71,
+        "text": "कुछ कुछ होता है राहुल तुम नहीं समझोगे।"
+      },
+      "confidence": 0.861,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 62970,
+      "end_ms": 68750,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 16,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 62970,
+        "end_ms": 68750,
+        "duration_ms": 5780,
+        "duration_sec": 5.78,
+        "text": "पिक्चर खत्म हुई, हमने देखा राइट और मैडम इस गोन।"
+      },
+      "confidence": 0.909,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 68750,
+      "end_ms": 71430,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 17,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 68750,
+        "end_ms": 71430,
+        "duration_ms": 2680,
+        "duration_sec": 2.68,
+        "text": "मैं चली गई हीमैन के यूनिवर्स में।"
+      },
+      "confidence": 0.992,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "metrics": {
+      "total_speaker_turns": 18,
+      "unique_speakers": [
+        "SPEAKER_00",
+        "SPEAKER_01"
+      ],
+      "speaker_count": 2,
+      "total_speech_duration_ms": 67020,
+      "speaker_mapping": {
+        "A": "SPEAKER_00",
+        "B": "SPEAKER_01"
+      }
+    },
+    "turns": [
+      {
+        "turn_index": 0,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 0,
+        "end_ms": 6240,
+        "duration_ms": 6240,
+        "duration_sec": 6.24,
+        "text": "One of the films that I was waiting to watch for the last forty years has released called He-Man. You are"
+      },
+      {
+        "turn_index": 1,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 6240,
+        "end_ms": 9520,
+        "duration_ms": 3280,
+        "duration_sec": 3.28,
+        "text": "my He-Man. You're a he, you're a man."
+      },
+      {
+        "turn_index": 2,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 9520,
+        "end_ms": 12280,
+        "duration_ms": 2760,
+        "duration_sec": 2.76,
+        "text": "Skeletor laughs exactly like you."
+      },
+      {
+        "turn_index": 3,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 12840,
+        "end_ms": 13060,
+        "duration_ms": 220,
+        "duration_sec": 0.22,
+        "text": "I don't"
+      },
+      {
+        "turn_index": 4,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 13060,
+        "end_ms": 13320,
+        "duration_ms": 260,
+        "duration_sec": 0.26,
+        "text": "laugh"
+      },
+      {
+        "turn_index": 5,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 13320,
+        "end_ms": 27640,
+        "duration_ms": 14320,
+        "duration_sec": 14.32,
+        "text": "like that. चुप कर, चुप कर, ये नहीं कर, वो मत कर. Don't be lame. Don't be this. Why don't you do the spot alone? I don't know something is happening to me. I feel like I'm possessed by Nikki. Nice transition."
+      },
+      {
+        "turn_index": 6,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 27640,
+        "end_ms": 29980,
+        "duration_ms": 2340,
+        "duration_sec": 2.34,
+        "text": "Yeah, but मेरे को अगर वो veins में splits विला उन्नीस नहीं जाए, बीस मिनट."
+      },
+      {
+        "turn_index": 7,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 32310,
+        "end_ms": 33080,
+        "duration_ms": 770,
+        "duration_sec": 0.77,
+        "text": "हाँ मतलब"
+      },
+      {
+        "turn_index": 8,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 33080,
+        "end_ms": 35420,
+        "duration_ms": 2340,
+        "duration_sec": 2.34,
+        "text": "कचरा कुछ तो कचरा चाहिए ना"
+      },
+      {
+        "turn_index": 9,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 35420,
+        "end_ms": 44500,
+        "duration_ms": 9080,
+        "duration_sec": 9.08,
+        "text": "ऐसा नहीं मैं किसी और का हाथ पकड़ रही थी मैं तेरा हाथ पकड़ रही थी और इसने बोला no no no don't hold my hand ऐसे मारा मुझे people who watch horror movies dealt with covid better"
+      },
+      {
+        "turn_index": 10,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 44500,
+        "end_ms": 48240,
+        "duration_ms": 3740,
+        "duration_sec": 3.74,
+        "text": "what what would you wish for I would"
+      },
+      {
+        "turn_index": 11,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 48240,
+        "end_ms": 50280,
+        "duration_ms": 2040,
+        "duration_sec": 2.04,
+        "text": "want the end of capitalism"
+      },
+      {
+        "turn_index": 12,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 50280,
+        "end_ms": 53840,
+        "duration_ms": 3560,
+        "duration_sec": 3.56,
+        "text": "is there a fear you've never fully outgrown"
+      },
+      {
+        "turn_index": 13,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 55360,
+        "end_ms": 56340,
+        "duration_ms": 980,
+        "duration_sec": 0.98,
+        "text": "abandonment oh"
+      },
+      {
+        "turn_index": 14,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 56340,
+        "end_ms": 58260,
+        "duration_ms": 1920,
+        "duration_sec": 1.92,
+        "text": "shit deep मार दिया तो कठम"
+      },
+      {
+        "turn_index": 15,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 58260,
+        "end_ms": 62970,
+        "duration_ms": 4710,
+        "duration_sec": 4.71,
+        "text": "कुछ कुछ होता है राहुल तुम नहीं समझोगे।"
+      },
+      {
+        "turn_index": 16,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 62970,
+        "end_ms": 68750,
+        "duration_ms": 5780,
+        "duration_sec": 5.78,
+        "text": "पिक्चर खत्म हुई, हमने देखा राइट और मैडम इस गोन।"
+      },
+      {
+        "turn_index": 17,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 68750,
+        "end_ms": 71430,
+        "duration_ms": 2680,
+        "duration_sec": 2.68,
+        "text": "मैं चली गई हीमैन के यूनिवर्स में।"
+      }
+    ]
+  },
+  "metadata": {
+    "audio_path": "data/reels/DZ7fzRos4Hb/audio.wav"
+  }
+}

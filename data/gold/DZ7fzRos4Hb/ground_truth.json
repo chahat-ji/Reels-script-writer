@@ -1,0 +1,567 @@
+{
+  "reel_id": "DZ7fzRos4Hb",
+  "duration_seconds": 79.0,
+  "cast_profile": [
+    {
+      "speaker_id": "SPEAKER_01",
+      "name_or_role": "Man / Rahul[cite: 4]",
+      "visual_description": "Male, wearing glasses and a dark plaid shirt over a black t-shirt, sitting with a plush cushion in his lap.[cite: 4]"
+    },
+    {
+      "speaker_id": "SPEAKER_02",
+      "name_or_role": "Woman / Niki[cite: 4]",
+      "visual_description": "Female, short curly hair, wearing a red spaghetti-strap dress, sitting with a notebook and pen.[cite: 4]"
+    },
+    {
+      "speaker_id": "SPEAKER_03",
+      "name_or_role": "Phone Audio[cite: 4]",
+      "visual_description": "Audio playing from the man's phone.[cite: 4]"
+    }
+  ],
+  "speech_utterances": [
+    {
+      "start_time": "00:00.00",
+      "end_time": "00:05.50",
+      "start_ms": 0,
+      "end_ms": 5500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Man",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "One of the films that I was waiting to watch for the last 40 years has released, called He-Man.[cite: 4]"
+    },
+    {
+      "start_time": "00:05.50",
+      "end_time": "00:06.50",
+      "start_ms": 5500,
+      "end_ms": 6500,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "You are my He-Man.[cite: 4]"
+    },
+    {
+      "start_time": "00:06.50",
+      "end_time": "00:07.50",
+      "start_ms": 6500,
+      "end_ms": 7500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Man",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "You're a he, you're a man.[cite: 4]"
+    },
+    {
+      "start_time": "00:09.50",
+      "end_time": "00:11.40",
+      "start_ms": 9500,
+      "end_ms": 11400,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Man",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Skeletor laughs exactly like you.[cite: 4]"
+    },
+    {
+      "start_time": "00:11.40",
+      "end_time": "00:12.60",
+      "start_ms": 11400,
+      "end_ms": 12600,
+      "speaker_id": "SPEAKER_03",
+      "speaker_name": "Phone Audio",
+      "is_on_screen": false,
+      "edit_type": "J-cut",
+      "text": "(High-pitched cackling laugh)[cite: 4]"
+    },
+    {
+      "start_time": "00:12.60",
+      "end_time": "00:14.20",
+      "start_ms": 12600,
+      "end_ms": 14200,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "I don't laugh like that.[cite: 4]"
+    },
+    {
+      "start_time": "00:14.50",
+      "end_time": "00:15.60",
+      "start_ms": 14500,
+      "end_ms": 15600,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "चुप कर, चुप कर।[cite: 4]"
+    },
+    {
+      "start_time": "00:15.60",
+      "end_time": "00:16.80",
+      "start_ms": 15600,
+      "end_ms": 16800,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": false,
+      "edit_type": "L-cut",
+      "text": "ये नहीं कर, वो मत कर...[cite: 4]"
+    },
+    {
+      "start_time": "00:16.80",
+      "end_time": "00:19.80",
+      "start_ms": 16800,
+      "end_ms": 19800,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Don't be lame, don't be this. Why don't you do this pod alone?[cite: 4]"
+    },
+    {
+      "start_time": "00:20.50",
+      "end_time": "00:24.40",
+      "start_ms": 20500,
+      "end_ms": 24400,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "I don't know, something is happening to me. Sometimes I feel like I'm possessed by Niki.[cite: 4]"
+    },
+    {
+      "start_time": "00:25.50",
+      "end_time": "00:27.00",
+      "start_ms": 25500,
+      "end_ms": 27000,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Nice transition![cite: 4]"
+    },
+    {
+      "start_time": "00:27.00",
+      "end_time": "00:30.90",
+      "start_ms": 27000,
+      "end_ms": 30900,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Man",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "But, मेरे को अगर वो vines में splits मिला और उन्नीस नहीं जाए, बीस मिनट...[cite: 4]"
+    },
+    {
+      "start_time": "00:30.90",
+      "end_time": "00:31.70",
+      "start_ms": 30900,
+      "end_ms": 31700,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "नींद नहीं आती।[cite: 4]"
+    },
+    {
+      "start_time": "00:31.70",
+      "end_time": "00:33.20",
+      "start_ms": 31700,
+      "end_ms": 33200,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Man",
+      "is_on_screen": false,
+      "edit_type": "J-cut",
+      "text": "हाँ, मतलब कचरा,[cite: 4]"
+    },
+    {
+      "start_time": "00:33.20",
+      "end_time": "00:35.00",
+      "start_ms": 33200,
+      "end_ms": 35000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Man",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "कुछ तो कचरा चाहिए ना।[cite: 4]"
+    },
+    {
+      "start_time": "00:35.00",
+      "end_time": "00:41.00",
+      "start_ms": 35000,
+      "end_ms": 41000,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "ऐसा नहीं है मैं किसी और का हाथ पकड़ रही थी, मैं तेरा हाथ पकड़ रही थी, और इसने बोला no, no, no, don't hold my hand. ऐसे मारा मुझे।[cite: 4]"
+    },
+    {
+      "start_time": "00:41.50",
+      "end_time": "00:44.80",
+      "start_ms": 41500,
+      "end_ms": 44800,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "People who watch horror movies dealt with Covid better.[cite: 4]"
+    },
+    {
+      "start_time": "00:45.30",
+      "end_time": "00:47.00",
+      "start_ms": 45300,
+      "end_ms": 47000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Man",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "What? What would you wish for?[cite: 4]"
+    },
+    {
+      "start_time": "00:47.00",
+      "end_time": "00:49.80",
+      "start_ms": 47000,
+      "end_ms": 49800,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "I would want the end of capitalism.[cite: 4]"
+    },
+    {
+      "start_time": "00:51.50",
+      "end_time": "00:54.00",
+      "start_ms": 51500,
+      "end_ms": 54000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Man",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Is there a fear you've never fully outgrown?[cite: 4]"
+    },
+    {
+      "start_time": "00:54.00",
+      "end_time": "00:55.70",
+      "start_ms": 54000,
+      "end_ms": 55700,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Abandonment.[cite: 4]"
+    },
+    {
+      "start_time": "00:55.70",
+      "end_time": "00:58.50",
+      "start_ms": 55700,
+      "end_ms": 58500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Man",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "Oh shit, deep मार दिया, ये तो cut समझो।[cite: 4]"
+    },
+    {
+      "start_time": "00:58.50",
+      "end_time": "01:00.50",
+      "start_ms": 58500,
+      "end_ms": 60500,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "कुछ-कुछ होता है राहुल। तुम नहीं समझोगे।[cite: 4]"
+    },
+    {
+      "start_time": "01:02.50",
+      "end_time": "01:08.50",
+      "start_ms": 62500,
+      "end_ms": 68500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Man",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "पिक्चर ख़तम हुई, हमने देखा right. और madam is gone.[cite: 4]"
+    },
+    {
+      "start_time": "01:08.50",
+      "end_time": "01:11.80",
+      "start_ms": 68500,
+      "end_ms": 71800,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Woman",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "मैं चली गयी He-Man की universe में।[cite: 4]"
+    }
+  ],
+  "shots": [
+    {
+      "shot_index": 1,
+      "start_time": "00:00.00",
+      "end_time": "00:05.50",
+      "start_ms": 0,
+      "end_ms": 5500,
+      "visual_description": "Man talking on microphone.[cite: 4]"
+    },
+    {
+      "shot_index": 2,
+      "start_time": "00:05.50",
+      "end_time": "00:06.50",
+      "start_ms": 5500,
+      "end_ms": 6500,
+      "visual_description": "Woman responding.[cite: 4]"
+    },
+    {
+      "shot_index": 3,
+      "start_time": "00:06.50",
+      "end_time": "00:07.50",
+      "start_ms": 6500,
+      "end_ms": 7500,
+      "visual_description": "Man smiling and replying.[cite: 4]"
+    },
+    {
+      "shot_index": 4,
+      "start_time": "00:07.50",
+      "end_time": "00:09.50",
+      "start_ms": 7500,
+      "end_ms": 9500,
+      "visual_description": "Split screen showing both the man and the woman.[cite: 4]"
+    },
+    {
+      "shot_index": 5,
+      "start_time": "00:09.50",
+      "end_time": "00:12.60",
+      "start_ms": 9500,
+      "end_ms": 12600,
+      "visual_description": "Man holding up his phone to play an audio clip.[cite: 4]"
+    },
+    {
+      "shot_index": 6,
+      "start_time": "00:12.60",
+      "end_time": "00:14.20",
+      "start_ms": 12600,
+      "end_ms": 14200,
+      "visual_description": "Woman reacting defensively.[cite: 4]"
+    },
+    {
+      "shot_index": 7,
+      "start_time": "00:14.20",
+      "end_time": "00:14.50",
+      "start_ms": 14200,
+      "end_ms": 14500,
+      "visual_description": "Brief split screen.[cite: 4]"
+    },
+    {
+      "shot_index": 8,
+      "start_time": "00:14.50",
+      "end_time": "00:15.60",
+      "start_ms": 14500,
+      "end_ms": 15600,
+      "visual_description": "Woman telling the man to shut up.[cite: 4]"
+    },
+    {
+      "shot_index": 9,
+      "start_time": "00:15.60",
+      "end_time": "00:16.80",
+      "start_ms": 15600,
+      "end_ms": 16800,
+      "visual_description": "Man on screen pointing his finger upward while the woman continues speaking off screen.[cite: 4]"
+    },
+    {
+      "shot_index": 10,
+      "start_time": "00:16.80",
+      "end_time": "00:19.80",
+      "start_ms": 16800,
+      "end_ms": 19800,
+      "visual_description": "Woman on screen finishing her sentence.[cite: 4]"
+    },
+    {
+      "shot_index": 11,
+      "start_time": "00:19.80",
+      "end_time": "00:20.50",
+      "start_ms": 19800,
+      "end_ms": 20500,
+      "visual_description": "Split screen.[cite: 4]"
+    },
+    {
+      "shot_index": 12,
+      "start_time": "00:20.50",
+      "end_time": "00:24.40",
+      "start_ms": 20500,
+      "end_ms": 24400,
+      "visual_description": "Woman talking about being possessed.[cite: 4]"
+    },
+    {
+      "shot_index": 13,
+      "start_time": "00:24.40",
+      "end_time": "00:25.50",
+      "start_ms": 24400,
+      "end_ms": 25500,
+      "visual_description": "Man laughing on screen.[cite: 4]"
+    },
+    {
+      "shot_index": 14,
+      "start_time": "00:25.50",
+      "end_time": "00:27.00",
+      "start_ms": 25500,
+      "end_ms": 27000,
+      "visual_description": "Woman on screen.[cite: 4]"
+    },
+    {
+      "shot_index": 15,
+      "start_time": "00:27.00",
+      "end_time": "00:30.90",
+      "start_ms": 27000,
+      "end_ms": 30900,
+      "visual_description": "Man talking about watching clips for twenty minutes.[cite: 4]"
+    },
+    {
+      "shot_index": 16,
+      "start_time": "00:30.90",
+      "end_time": "00:33.20",
+      "start_ms": 30900,
+      "end_ms": 33200,
+      "visual_description": "Woman talking, followed by man's voiceover beginning.[cite: 4]"
+    },
+    {
+      "shot_index": 17,
+      "start_time": "00:33.20",
+      "end_time": "00:35.00",
+      "start_ms": 33200,
+      "end_ms": 35000,
+      "visual_description": "Man on screen completing his sentence.[cite: 4]"
+    },
+    {
+      "shot_index": 18,
+      "start_time": "00:35.00",
+      "end_time": "00:41.00",
+      "start_ms": 35000,
+      "end_ms": 41000,
+      "visual_description": "Woman narrating a physical reaction story.[cite: 4]"
+    },
+    {
+      "shot_index": 19,
+      "start_time": "00:41.00",
+      "end_time": "00:41.50",
+      "start_ms": 41000,
+      "end_ms": 41500,
+      "visual_description": "Split screen.[cite: 4]"
+    },
+    {
+      "shot_index": 20,
+      "start_time": "00:41.50",
+      "end_time": "00:44.80",
+      "start_ms": 41500,
+      "end_ms": 44800,
+      "visual_description": "Woman making a point about horror movies.[cite: 4]"
+    },
+    {
+      "shot_index": 21,
+      "start_time": "00:44.80",
+      "end_time": "00:45.30",
+      "start_ms": 44800,
+      "end_ms": 45300,
+      "visual_description": "Split screen.[cite: 4]"
+    },
+    {
+      "shot_index": 22,
+      "start_time": "00:45.30",
+      "end_time": "00:47.00",
+      "start_ms": 45300,
+      "end_ms": 47000,
+      "visual_description": "Man asking a question.[cite: 4]"
+    },
+    {
+      "shot_index": 23,
+      "start_time": "00:47.00",
+      "end_time": "00:49.80",
+      "start_ms": 47000,
+      "end_ms": 49800,
+      "visual_description": "Woman answering the question.[cite: 4]"
+    },
+    {
+      "shot_index": 24,
+      "start_time": "00:49.80",
+      "end_time": "00:54.00",
+      "start_ms": 49800,
+      "end_ms": 54000,
+      "visual_description": "Man reacting silently, then asking another question.[cite: 4]"
+    },
+    {
+      "shot_index": 25,
+      "start_time": "00:54.00",
+      "end_time": "00:55.70",
+      "start_ms": 54000,
+      "end_ms": 55700,
+      "visual_description": "Woman giving a serious answer.[cite: 4]"
+    },
+    {
+      "shot_index": 26,
+      "start_time": "00:55.70",
+      "end_time": "00:58.50",
+      "start_ms": 55700,
+      "end_ms": 58500,
+      "visual_description": "Man reacting to the deep answer.[cite: 4]"
+    },
+    {
+      "shot_index": 27,
+      "start_time": "00:58.50",
+      "end_time": "01:00.50",
+      "start_ms": 58500,
+      "end_ms": 60500,
+      "visual_description": "Woman saying a movie line.[cite: 4]"
+    },
+    {
+      "shot_index": 28,
+      "start_time": "01:00.50",
+      "end_time": "01:01.50",
+      "start_ms": 60500,
+      "end_ms": 61500,
+      "visual_description": "Man listening on screen.[cite: 4]"
+    },
+    {
+      "shot_index": 29,
+      "start_time": "01:01.50",
+      "end_time": "01:02.50",
+      "start_ms": 61500,
+      "end_ms": 62500,
+      "visual_description": "Split screen.[cite: 4]"
+    },
+    {
+      "shot_index": 30,
+      "start_time": "01:02.50",
+      "end_time": "01:08.50",
+      "start_ms": 62500,
+      "end_ms": 68500,
+      "visual_description": "Man describing a movie experience.[cite: 4]"
+    },
+    {
+      "shot_index": 31,
+      "start_time": "01:08.50",
+      "end_time": "01:11.80",
+      "start_ms": 68500,
+      "end_ms": 71800,
+      "visual_description": "Woman explaining her distraction.[cite: 4]"
+    },
+    {
+      "shot_index": 32,
+      "start_time": "01:11.80",
+      "end_time": "01:19.00",
+      "start_ms": 71800,
+      "end_ms": 79000,
+      "visual_description": "Outro animation sequence with cartoon avatars.[cite: 4]"
+    }
+  ],
+  "on_screen_text": [
+    {
+      "start_time": "01:13.00",
+      "end_time": "01:19.00",
+      "start_ms": 73000,
+      "end_ms": 79000,
+      "text": "THAT'S JUST HOW WE TALK[cite: 4]",
+      "category": "outro_title",
+      "position": "center"
+    }
+  ]
+}

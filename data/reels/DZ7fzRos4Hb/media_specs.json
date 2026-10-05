@@ -1,0 +1,18 @@
+{
+  "reel_id": "DZ7fzRos4Hb",
+  "video_specs": {
+    "width": 720,
+    "height": 1280,
+    "fps": 25.0,
+    "duration_seconds": 80.08,
+    "codec": "h264"
+  },
+  "audio_specs": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "duration_seconds": 80.084187
+  },
+  "speech_audio_file": "audio.wav",
+  "stems_isolated": false
+}
