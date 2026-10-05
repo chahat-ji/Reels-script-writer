@@ -396,10 +396,9 @@ Synthesized by `app.fusion.timeline_aligner`, synchronizing all 5 evidence lanes
 13. **Inspection & Debugging Tools (Phase 3 Verification)**:
     - **Option 1: Interactive HTML Multimodal Timeline Dashboard** (`tools/generate_timeline_report.py`): Standalone, zero-dependency browser report with synced HTML5 video player, live visual playhead scrubbing, interactive swimlane track filters (shots, speech, OCR, faces), speaker stat badges, and instant search.
     - **Option 2: Annotated Debug Video Exporter** (`tools/export_annotated_video.py`): Burn-in visual debug video (.mp4) with real-time HUD header (shot index, pacing ASD, cut flash indicator, timecode), face bounding boxes colored by speaking status (Green = TALKING, Gray = SILENT) with live MAR metrics, OCR bounding boxes, lower-third speech subtitles with speaker badges and native Unicode/Devanagari font rendering, and original audio re-muxed via `ffmpeg`.
-14. **Unified Service Entrypoint (`process_reel.py`)**:
-    - Single end-to-end CLI command accepting an Instagram URL, a local video path, or an existing reel ID.
-    - Dynamic profile routing (`--profile default` for cloud AssemblyAI + PyAnnote fallback vs. `--local` / `--profile local_only` for 100% free Apple Silicon local MLX Whisper + PyAnnote).
-    - Idempotent execution via cached manifests with `--force` override, preflight health profiling, multi-lane execution (shots, OCR, faces, speech, diarization), master `timeline.json` fusion, and auto-reporting (`--open`, `--export-video`).
+14. **Service Entrypoints (`analyze_reel.py` & `batch_process.py`)**:
+    - **`analyze_reel.py`**: Primary single-reel entrypoint taking an Instagram URL, local video file, or reel ID. Automatically executes ingestion, preflight, all multi-lane capabilities, and multimodal fusion to `timeline.json` and `timeline_report.html`, with profile selection (`default` vs `--local` / `local_only`).
+    - **`batch_process.py`**: Batch processing service that scans `data/reels/`, inspects phase status per reel, and automatically brings older reels up to date with missing pipeline phases.
 
 ---
 

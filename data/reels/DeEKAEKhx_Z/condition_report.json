@@ -1,0 +1,12 @@
+{
+  "reel_id": "DeEKAEKhx_Z",
+  "audio_condition": {
+    "has_heavy_music": false,
+    "music_energy_ratio": 0.0,
+    "silence_ratio": 0.0,
+    "average_db": -17.4,
+    "needs_stem_separation": false
+  },
+  "duration_seconds": 96.22,
+  "flags": []
+}

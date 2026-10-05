@@ -1,0 +1,26 @@
+{
+  "reel_id": "DeEKAEKhx_Z",
+  "profile": "default",
+  "preflight": {
+    "reel_id": "DeEKAEKhx_Z",
+    "audio_condition": {
+      "has_heavy_music": false,
+      "music_energy_ratio": 0.0,
+      "silence_ratio": 0.0,
+      "average_db": -17.4,
+      "needs_stem_separation": false
+    },
+    "duration_seconds": 96.22,
+    "flags": []
+  },
+  "plans": {
+    "speech": {
+      "capability": "speech",
+      "provider_chain": [
+        "assemblyai"
+      ],
+      "estimated_cost_usd": 0.0241,
+      "estimated_seconds": 24.1
+    }
+  }
+}
