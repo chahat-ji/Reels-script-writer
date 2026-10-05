@@ -1,0 +1,650 @@
+{
+  "reel_id": "DeEKAEKhx_Z",
+  "duration_seconds": 96.0,
+  "cast_profile": [
+    {
+      "speaker_id": "SPEAKER_01",
+      "name_or_role": "Nani",
+      "visual_description": "Elderly female, white/floral kurta."
+    },
+    {
+      "speaker_id": "SPEAKER_02",
+      "name_or_role": "Granddaughter",
+      "visual_description": "Young female, peach top."
+    },
+    {
+      "speaker_id": "SPEAKER_03",
+      "name_or_role": "Mother",
+      "visual_description": "Female, blue kurta, glasses."
+    }
+  ],
+  "speech_utterances": [
+    {
+      "start_time": "00:01.60",
+      "end_time": "00:02.10",
+      "start_ms": 1600,
+      "end_ms": 2100,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "ओए,"
+    },
+    {
+      "start_time": "00:02.20",
+      "end_time": "00:02.60",
+      "start_ms": 2200,
+      "end_ms": 2600,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": false,
+      "edit_type": "L-cut",
+      "text": "देख"
+    },
+    {
+      "start_time": "00:03.00",
+      "end_time": "00:04.20",
+      "start_ms": 3000,
+      "end_ms": 4200,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "तेरे डब्बे में खाना खा गया।"
+    },
+    {
+      "start_time": "00:06.60",
+      "end_time": "00:08.00",
+      "start_ms": 6600,
+      "end_ms": 8000,
+      "speaker_id": "SPEAKER_03",
+      "speaker_name": "Mother",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "ओए, राशन की लिस्ट बना रही हूँ।"
+    },
+    {
+      "start_time": "00:08.00",
+      "end_time": "00:09.50",
+      "start_ms": 8000,
+      "end_ms": 9500,
+      "speaker_id": "SPEAKER_03",
+      "speaker_name": "Mother",
+      "is_on_screen": false,
+      "edit_type": "J-cut",
+      "text": "तुम दोनों को कुछ मंगाना है तो अभी बता दो,"
+    },
+    {
+      "start_time": "00:09.50",
+      "end_time": "00:10.50",
+      "start_ms": 9500,
+      "end_ms": 10500,
+      "speaker_id": "SPEAKER_03",
+      "speaker_name": "Mother",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "मॉल चलेंगे।"
+    },
+    {
+      "start_time": "00:11.70",
+      "end_time": "00:13.20",
+      "start_ms": 11700,
+      "end_ms": 13200,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "हाँ, लिखना। हम बताते हैं।"
+    },
+    {
+      "start_time": "00:13.40",
+      "end_time": "00:14.30",
+      "start_ms": 13400,
+      "end_ms": 14300,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "एक chocolate का पैकेट।"
+    },
+    {
+      "start_time": "00:15.10",
+      "end_time": "00:16.10",
+      "start_ms": 15100,
+      "end_ms": 16100,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "दो पैकेट cheese balls।"
+    },
+    {
+      "start_time": "00:16.40",
+      "end_time": "00:17.30",
+      "start_ms": 16400,
+      "end_ms": 17300,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "दस पैकेट Lays।"
+    },
+    {
+      "start_time": "00:18.40",
+      "end_time": "00:19.40",
+      "start_ms": 18400,
+      "end_ms": 19400,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "दो पैकेट Lotte Choco Pie।"
+    },
+    {
+      "start_time": "00:19.70",
+      "end_time": "00:20.50",
+      "start_ms": 19700,
+      "end_ms": 20500,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "एक डब्बा Fanta।"
+    },
+    {
+      "start_time": "00:20.90",
+      "end_time": "00:22.00",
+      "start_ms": 20900,
+      "end_ms": 22000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "एक पैकेट नटखट।"
+    },
+    {
+      "start_time": "00:22.40",
+      "end_time": "00:23.20",
+      "start_ms": 22400,
+      "end_ms": 23200,
+      "speaker_id": "SPEAKER_03",
+      "speaker_name": "Mother",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "ये क्या होता है?"
+    },
+    {
+      "start_time": "00:23.60",
+      "end_time": "00:24.20",
+      "start_ms": 23600,
+      "end_ms": 24200,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "चकना।"
+    },
+    {
+      "start_time": "00:25.60",
+      "end_time": "00:27.20",
+      "start_ms": 25600,
+      "end_ms": 27200,
+      "speaker_id": "SPEAKER_03",
+      "speaker_name": "Mother",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "ओ टुनटुन मौसी, माफ़ कर दो मुझे।"
+    },
+    {
+      "start_time": "00:27.50",
+      "end_time": "00:29.20",
+      "start_ms": 27500,
+      "end_ms": 29200,
+      "speaker_id": "SPEAKER_03",
+      "speaker_name": "Mother",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "ए भाई, तू यहीं से घी ला दे ज़रा दुकान से।"
+    },
+    {
+      "start_time": "00:29.60",
+      "end_time": "00:30.30",
+      "start_ms": 29600,
+      "end_ms": 30300,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "एक कनस्तर।"
+    },
+    {
+      "start_time": "00:30.50",
+      "end_time": "00:31.20",
+      "start_ms": 30500,
+      "end_ms": 31200,
+      "speaker_id": "SPEAKER_03",
+      "speaker_name": "Mother",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "पचास रुपये का।"
+    },
+    {
+      "start_time": "00:32.00",
+      "end_time": "00:32.70",
+      "start_ms": 32000,
+      "end_ms": 32700,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "हें, ग़रीब।"
+    },
+    {
+      "start_time": "00:33.20",
+      "end_time": "00:33.70",
+      "start_ms": 33200,
+      "end_ms": 33700,
+      "speaker_id": "SPEAKER_03",
+      "speaker_name": "Mother",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "पैसे!"
+    },
+    {
+      "start_time": "00:34.20",
+      "end_time": "00:35.00",
+      "start_ms": 34200,
+      "end_ms": 35000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "आके ले लेना।"
+    },
+    {
+      "start_time": "00:37.50",
+      "end_time": "00:38.70",
+      "start_ms": 37500,
+      "end_ms": 38700,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": false,
+      "edit_type": "J-cut",
+      "text": "ये लो मम्मी, काट के दे दो।"
+    },
+    {
+      "start_time": "00:43.70",
+      "end_time": "00:44.70",
+      "start_ms": 43700,
+      "end_ms": 44700,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "नानी, ये देखो।"
+    },
+    {
+      "start_time": "00:44.80",
+      "end_time": "00:46.40",
+      "start_ms": 44800,
+      "end_ms": 46400,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "मैंने मम्मी को सौ का नोट दिया,"
+    },
+    {
+      "start_time": "00:46.50",
+      "end_time": "00:49.20",
+      "start_ms": 46500,
+      "end_ms": 49200,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "मम्मी ने सौ में से पचास रुपये काट के मेरे को डेढ़ सौ रुपये वापस दिए।"
+    },
+    {
+      "start_time": "00:49.50",
+      "end_time": "00:51.50",
+      "start_ms": 49500,
+      "end_ms": 51500,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "मम्मी को लगा मैंने दो सौ का नोट दिया है।"
+    },
+    {
+      "start_time": "00:52.60",
+      "end_time": "00:53.60",
+      "start_ms": 52600,
+      "end_ms": 53600,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "भिखारी है तू।"
+    },
+    {
+      "start_time": "00:53.70",
+      "end_time": "00:56.20",
+      "start_ms": 53700,
+      "end_ms": 56200,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "ग़रीब आदमी के पैसे मार लिए, शर्म नहीं आती?"
+    },
+    {
+      "start_time": "00:56.50",
+      "end_time": "00:58.50",
+      "start_ms": 56500,
+      "end_ms": 58500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "इज़्ज़तदार लोग हैं हम लोग, इज़्ज़तदार।"
+    },
+    {
+      "start_time": "00:58.70",
+      "end_time": "01:00.00",
+      "start_ms": 58700,
+      "end_ms": 60000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "हम लोगों को ये शोभा नहीं देता।"
+    },
+    {
+      "start_time": "01:00.10",
+      "end_time": "01:01.80",
+      "start_ms": 60100,
+      "end_ms": 61800,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "चल मेरे साथ, उसके पैसे वापस दे।"
+    },
+    {
+      "start_time": "01:02.10",
+      "end_time": "01:03.20",
+      "start_ms": 62100,
+      "end_ms": 63200,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "छोड़ो ना नानी।"
+    },
+    {
+      "start_time": "01:03.50",
+      "end_time": "01:06.00",
+      "start_ms": 63500,
+      "end_ms": 66000,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "आधे आधे कर लेंगे। आधे आपके आधे मेरे।"
+    },
+    {
+      "start_time": "01:06.10",
+      "end_time": "01:08.00",
+      "start_ms": 66100,
+      "end_ms": 68000,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "please ना नानी मान जाओ।"
+    },
+    {
+      "start_time": "01:08.80",
+      "end_time": "01:10.50",
+      "start_ms": 68800,
+      "end_ms": 70500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": false,
+      "edit_type": "L-cut",
+      "text": "ओए, एक ग़लती करी है तूने।"
+    },
+    {
+      "start_time": "01:10.80",
+      "end_time": "01:12.40",
+      "start_ms": 70800,
+      "end_ms": 72400,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "अभी भी कह रही हूँ नानी, मान जाओ।"
+    },
+    {
+      "start_time": "01:12.70",
+      "end_time": "01:13.40",
+      "start_ms": 72700,
+      "end_ms": 73400,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "चुप कर।"
+    },
+    {
+      "start_time": "01:13.50",
+      "end_time": "01:15.30",
+      "start_ms": 73500,
+      "end_ms": 75300,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "ओए, इसने तुझे पांच सौ रुपये दिए थे,"
+    },
+    {
+      "start_time": "01:15.50",
+      "end_time": "01:17.00",
+      "start_ms": 75500,
+      "end_ms": 77000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "तूने सिर्फ़ डेढ़ सौ वापस करे।"
+    },
+    {
+      "start_time": "01:17.20",
+      "end_time": "01:18.50",
+      "start_ms": 77200,
+      "end_ms": 78500,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "ला, तीन सौ और दे।"
+    },
+    {
+      "start_time": "01:19.40",
+      "end_time": "01:20.50",
+      "start_ms": 79400,
+      "end_ms": 80500,
+      "speaker_id": "SPEAKER_03",
+      "speaker_name": "Mother",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "sorry, sorry।"
+    },
+    {
+      "start_time": "01:21.20",
+      "end_time": "01:23.00",
+      "start_ms": 81200,
+      "end_ms": 83000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "sorry worry सुनने की आदत नहीं है हमें।"
+    },
+    {
+      "start_time": "01:23.20",
+      "end_time": "01:25.00",
+      "start_ms": 83200,
+      "end_ms": 85000,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "पागल ही बना दिया बच्ची को।"
+    },
+    {
+      "start_time": "01:26.00",
+      "end_time": "01:27.20",
+      "start_ms": 86000,
+      "end_ms": 87200,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "अब करेंगे आधे-आधे।"
+    },
+    {
+      "start_time": "01:27.80",
+      "end_time": "01:29.80",
+      "start_ms": 87800,
+      "end_ms": 89800,
+      "speaker_id": "SPEAKER_01",
+      "speaker_name": "Nani",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "देख ले, कहीं दो हज़ार का तो नहीं दे दिया था?"
+    },
+    {
+      "start_time": "01:30.10",
+      "end_time": "01:31.70",
+      "start_ms": 90100,
+      "end_ms": 91700,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "अरे चुप करो, दो हज़ार का बंद हो गया है।"
+    },
+    {
+      "start_time": "01:31.70",
+      "end_time": "01:33.80",
+      "start_ms": 91700,
+      "end_ms": 93800,
+      "speaker_id": "SPEAKER_02",
+      "speaker_name": "Granddaughter",
+      "is_on_screen": true,
+      "edit_type": "synced",
+      "text": "overacting बंद करो। चलो जल्दी जल्दी यहाँ से।"
+    }
+  ],
+  "shots": [
+    {
+      "shot_index": 1,
+      "start_time": "00:00.00",
+      "end_time": "00:01.36",
+      "start_ms": 0,
+      "end_ms": 1360,
+      "visual_description": "Nani looks down, cut to dog eating."
+    },
+    {
+      "shot_index": 2,
+      "start_time": "00:01.36",
+      "end_time": "00:04.10",
+      "start_ms": 1360,
+      "end_ms": 4100,
+      "visual_description": "Nani speaks, quick cut to granddaughter reacting, back to Nani."
+    },
+    {
+      "shot_index": 3,
+      "start_time": "00:04.10",
+      "end_time": "00:06.40",
+      "start_ms": 4100,
+      "end_ms": 6400,
+      "visual_description": "Dog eating, then Nani smiling."
+    },
+    {
+      "shot_index": 4,
+      "start_time": "00:06.40",
+      "end_time": "00:08.70",
+      "start_ms": 6400,
+      "end_ms": 8700,
+      "visual_description": "Mother holding pen, cuts to Nani and granddaughter."
+    },
+    {
+      "shot_index": 5,
+      "start_time": "00:08.70",
+      "end_time": "00:11.20",
+      "start_ms": 8700,
+      "end_ms": 11200,
+      "visual_description": "Mother speaks on screen."
+    },
+    {
+      "shot_index": 6,
+      "start_time": "00:11.20",
+      "end_time": "00:25.40",
+      "start_ms": 11200,
+      "end_ms": 25400,
+      "visual_description": "Rapid cuts between Nani, Granddaughter, and Mother listing items."
+    },
+    {
+      "shot_index": 7,
+      "start_time": "00:25.40",
+      "end_time": "00:36.50",
+      "start_ms": 25400,
+      "end_ms": 36500,
+      "visual_description": "Mother asks for ghee, Nani scoffs, Mother walks away."
+    },
+    {
+      "shot_index": 8,
+      "start_time": "00:36.50",
+      "end_time": "00:44.00",
+      "start_ms": 36500,
+      "end_ms": 44000,
+      "visual_description": "Kitchen: Granddaughter hands money, receives change, walks away happy."
+    },
+    {
+      "shot_index": 9,
+      "start_time": "00:44.00",
+      "end_time": "01:00.60",
+      "start_ms": 44000,
+      "end_ms": 60600,
+      "visual_description": "Granddaughter explains scam, Nani scolds her."
+    },
+    {
+      "shot_index": 10,
+      "start_time": "01:00.60",
+      "end_time": "01:08.50",
+      "start_ms": 60600,
+      "end_ms": 68500,
+      "visual_description": "Nani gets up, Granddaughter follows pleading."
+    },
+    {
+      "shot_index": 11,
+      "start_time": "01:08.50",
+      "end_time": "01:21.00",
+      "start_ms": 68500,
+      "end_ms": 81000,
+      "visual_description": "Kitchen: Nani scolds Mother and recovers more money."
+    },
+    {
+      "shot_index": 12,
+      "start_time": "01:21.00",
+      "end_time": "01:36.00",
+      "start_ms": 81000,
+      "end_ms": 96000,
+      "visual_description": "Nani plans 50-50 split, Granddaughter drags her away, Mother confused."
+    }
+  ],
+  "on_screen_text": []
+}
