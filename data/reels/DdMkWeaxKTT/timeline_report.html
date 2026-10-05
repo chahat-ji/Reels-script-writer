@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reel AI Inspector: DdMkWeaxKTT</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card-bg: rgba(18, 24, 38, 0.85);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent-cyan: #06b6d4;
+      --accent-green: #10b981;
+      --accent-purple: #8b5cf6;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --accent-blue: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      padding: 24px;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .title-group h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-primary {
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .badge-pacing {
+      background: #10b98122;
+      color: #10b981;
+      border: 1px solid #10b98155;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      backdrop-filter: blur(12px);
+    }
+
+    .card-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-value {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .card-subtext {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Main Layout: Video + Screenplay */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Video Player Column */
+    .video-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      background: #000;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      aspect-ratio: 9 / 16;
+      max-height: 560px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .video-hud {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .hud-chip {
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    /* Timeline & Screenplay Column */
+    .content-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Multi-Track Container */
+    .tracks-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .tracks-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .tracks-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .scrubber-timer {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-cyan);
+    }
+
+    .tracks-viewport {
+      position: relative;
+      background: #06090e;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 12px 0;
+      overflow-x: hidden;
+      user-select: none;
+      cursor: crosshair;
+    }
+
+    .playhead {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #f43f5e;
+      box-shadow: 0 0 8px #f43f5e;
+      z-index: 20;
+      pointer-events: none;
+      transform: translateX(-50%);
+      left: 0%;
+      transition: left 0.05s linear;
+    }
+
+    .playhead-handle {
+      position: absolute;
+      top: -6px;
+      left: -5px;
+      width: 12px;
+      height: 12px;
+      background: #f43f5e;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .track-lane {
+      position: relative;
+      height: 36px;
+      margin-bottom: 8px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    }
+
+    .track-lane:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    .lane-label {
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .block {
+      position: absolute;
+      height: 28px;
+      top: 4px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      padding: 0 6px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      transition: transform 0.1s, filter 0.1s;
+      z-index: 10;
+    }
+
+    .block:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.2);
+      z-index: 15;
+    }
+
+    /* Track Block Styles */
+    .block-shot {
+      background: rgba(59, 130, 246, 0.35);
+      border: 1px solid rgba(59, 130, 246, 0.7);
+      color: #93c5fd;
+    }
+
+    .block-face-speaking {
+      background: rgba(16, 185, 129, 0.35);
+      border: 1px solid #10b981;
+      color: #a7f3d0;
+      box-shadow: 0 0 6px rgba(16, 185, 129, 0.25);
+    }
+
+    .block-face-silent {
+      background: rgba(148, 163, 184, 0.2);
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+      color: #cbd5e1;
+    }
+
+    .block-ocr {
+      background: rgba(236, 72, 153, 0.3);
+      border: 1px solid rgba(236, 72, 153, 0.7);
+      color: #fbcfe8;
+    }
+
+    /* Resolution Matrix */
+    .resolver-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .resolver-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .resolver-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .resolver-card.matched {
+      border-left: 4px solid var(--accent-green);
+    }
+
+    .resolver-card.off-screen {
+      border-left: 4px solid var(--accent-amber);
+    }
+
+    .resolver-pair {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .arrow-icon {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* Screenplay / Utterance Feed */
+    .screenplay-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 20px;
+      max-height: 480px;
+      overflow-y: auto;
+    }
+
+    .dialogue-item {
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .dialogue-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .dialogue-item.active {
+      background: rgba(6, 182, 212, 0.12);
+      border-color: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 0 12px rgba(6, 182, 212, 0.15);
+    }
+
+    .dialogue-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .speaker-pill {
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .time-chip {
+      font-family: ui-monospace, monospace;
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    .dialogue-text {
+      font-size: 15px;
+      line-height: 1.4;
+      color: #fff;
+    }
+
+    /* Tooltip */
+    #tooltip {
+      position: fixed;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      color: #fff;
+      pointer-events: none;
+      z-index: 1000;
+      display: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+<div id="tooltip"></div>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="title-group">
+      <h1>
+        🎬 Reel Multimodal AI Inspector
+        <span class="badge badge-primary">DdMkWeaxKTT</span>
+        <span class="badge badge-pacing">Cinematic / Relaxed</span>
+      </h1>
+    </div>
+    <div style="font-size: 13px; color: var(--text-muted);">
+      Duration: <strong style="color:#fff;">52.47s</strong> (52469 ms)
+    </div>
+  </div>
+
+  <!-- KPI Grid -->
+  <div class="kpi-grid">
+    <div class="card">
+      <div class="card-label">⚡ Visual Cuts (ASD)</div>
+      <div class="card-value" style="color: var(--accent-blue);">8 cuts</div>
+      <div class="card-subtext">Avg Shot Duration: <strong>6.56s</strong> (Hook: 3.42s)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">🎙️ Speech Delivery</div>
+      <div class="card-value" style="color: var(--accent-cyan);">171 words</div>
+      <div class="card-subtext">Speed: <strong>195.5 WPM</strong> (mlx_whisper)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">📺 On-Screen Text (OCR)</div>
+      <div class="card-value" style="color: var(--accent-rose);">37 spans</div>
+      <div class="card-subtext">Screen coverage: <strong>29.0%</strong></div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">👤 Face Tracking & MAR</div>
+      <div class="card-value" style="color: var(--accent-green);">8 tracks</div>
+      <div class="card-subtext">Face on-screen: <strong>21.6%</strong> | Speech: <strong>5.4%</strong></div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">👥 Speaker Diarization</div>
+      <div class="card-value" style="color: var(--accent-purple);">1 speakers</div>
+      <div class="card-subtext">Resolved: <strong>1</strong> acoustic clusters</div>
+    </div>
+  </div>
+
+  <!-- Main Grid: Video + Content -->
+  <div class="main-grid">
+
+    <!-- Video Player Column -->
+    <div class="video-panel">
+      <div class="video-wrapper">
+        <div class="video-hud">
+          <div class="hud-chip" id="hud-shot">Shot 1</div>
+          <div class="hud-chip" id="hud-speaker">SPEAKER_00</div>
+        </div>
+        <video id="video-player" controls preload="metadata">
+          <source src="video.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+      </div>
+
+      <!-- Speaker Resolution Cards -->
+      <div class="resolver-section">
+        <div class="section-title">🔗 Acoustic Voice ⟷ Visual Face Resolver</div>
+        <div class="resolver-grid" id="resolver-container">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-Track Timeline & Screenplay Column -->
+    <div class="content-panel">
+
+      <!-- Multi-Track Scroller -->
+      <div class="tracks-container">
+        <div class="tracks-header">
+          <div class="tracks-title">⏱️ Multimodal Synchronized Timeline (Click to Seek)</div>
+          <div class="scrubber-timer" id="time-display">00:00.00 / 52.47s</div>
+        </div>
+
+        <div class="tracks-viewport" id="timeline-viewport">
+          <div class="playhead" id="playhead">
+            <div class="playhead-handle"></div>
+          </div>
+
+          <!-- Track 1: Shots -->
+          <div class="track-lane" id="lane-shots">
+            <div class="lane-label">Shots</div>
+          </div>
+
+          <!-- Track 2: Speech Utterances -->
+          <div class="track-lane" id="lane-speech">
+            <div class="lane-label">Dialogue</div>
+          </div>
+
+          <!-- Track 3: Faces & Speaking MAR -->
+          <div class="track-lane" id="lane-faces">
+            <div class="lane-label">Faces (MAR)</div>
+          </div>
+
+          <!-- Track 4: On-Screen OCR -->
+          <div class="track-lane" id="lane-ocr">
+            <div class="lane-label">On-Screen Text</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Synchronized Screenplay Feed -->
+      <div class="screenplay-container">
+        <div class="section-title">📜 Chronological Dialogue & Screenplay Feed</div>
+        <div id="dialogue-feed">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const timelineData = {"reel_id": "DdMkWeaxKTT", "version": "1.0.0", "duration_ms": 52469, "duration_sec": 52.47, "pacing_dna": {"duration_ms": 52469, "duration_sec": 52.47, "pacing": {"total_shots": 8, "avg_shot_duration_sec": 6.56, "hook_shot_duration_sec": 3.42}, "speech": {"total_words": 171, "words_per_minute": 195.5, "primary_asr": "mlx_whisper", "total_utterances": 16}, "visuals": {"ocr_coverage_pct": 29.0, "total_text_overlays": 37, "face_on_screen_pct": 21.6, "visual_speech_pct": 5.4, "total_face_tracks": 8}, "speakers": {"unique_speakers_detected": 1, "speaker_resolution": {"SPEAKER_00": {"face_id": "face_17", "status": "matched", "overlap_ms": 1668, "speaking_overlap_ms": 1668, "confidence": 0.52}}}}, "resolved_speakers": {"speaker_to_face": {"SPEAKER_00": "face_17"}, "face_to_speaker": {"face_17": "SPEAKER_00"}, "details": {"SPEAKER_00": {"face_id": "face_17", "status": "matched", "overlap_ms": 1668, "speaking_overlap_ms": 1668, "confidence": 0.52}}}, "tracks": {"speech_words": [{"track": "speech", "start_ms": 0, "end_ms": 140, "type": "word", "payload": {"text": "The", "raw": "The"}, "confidence": 0.845, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 140, "end_ms": 300, "type": "word", "payload": {"text": "biggest", "raw": "biggest"}, "confidence": 0.992, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 300, "end_ms": 540, "type": "word", "payload": {"text": "status", "raw": "status"}, "confidence": 0.993, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 540, "end_ms": 880, "type": "word", "payload": {"text": "symbol", "raw": "symbol"}, "confidence": 0.987, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 880, "end_ms": 1160, "type": "word", "payload": {"text": "for", "raw": "for"}, "confidence": 0.95, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 1160, "end_ms": 1380, "type": "word", "payload": {"text": "Gen", "raw": "Gen"}, "confidence": 0.912, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 1380, "end_ms": 1460, "type": "word", "payload": {"text": "Z", "raw": "Z"}, "confidence": 0.916, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 1460, "end_ms": 1760, "type": "word", "payload": {"text": "is", "raw": "is"}, "confidence": 0.938, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 1760, "end_ms": 2180, "type": "word", "payload": {"text": "something", "raw": "something"}, "confidence": 0.979, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 2180, "end_ms": 2380, "type": "word", "payload": {"text": "you", "raw": "you"}, "confidence": 0.981, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 2380, "end_ms": 2580, "type": "word", "payload": {"text": "can't", "raw": "can't"}, "confidence": 0.957, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 2580, "end_ms": 2740, "type": "word", "payload": {"text": "buy", "raw": "buy."}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 3260, "end_ms": 3740, "type": "word", "payload": {"text": "Taste", "raw": "Taste."}, "confidence": 0.82, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 4100, "end_ms": 4580, "type": "word", "payload": {"text": "Think", "raw": "Think"}, "confidence": 0.984, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 4580, "end_ms": 4760, "type": "word", "payload": {"text": "about", "raw": "about"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 4760, "end_ms": 4940, "type": "word", "payload": {"text": "it", "raw": "it."}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 5100, "end_ms": 5580, "type": "word", "payload": {"text": "Everyone", "raw": "Everyone"}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 5580, "end_ms": 5780, "type": "word", "payload": {"text": "has", "raw": "has"}, "confidence": 0.995, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 5780, "end_ms": 6000, "type": "word", "payload": {"text": "started", "raw": "started"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 6000, "end_ms": 6260, "type": "word", "payload": {"text": "doing", "raw": "doing"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 6260, "end_ms": 6440, "type": "word", "payload": {"text": "the", "raw": "the"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 6440, "end_ms": 6640, "type": "word", "payload": {"text": "same", "raw": "same"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 6640, "end_ms": 6940, "type": "word", "payload": {"text": "things", "raw": "things."}, "confidence": 0.988, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 7080, "end_ms": 7540, "type": "word", "payload": {"text": "The", "raw": "The"}, "confidence": 0.995, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 7540, "end_ms": 7760, "type": "word", "payload": {"text": "books", "raw": "books"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 7760, "end_ms": 7900, "type": "word", "payload": {"text": "you're", "raw": "you're"}, "confidence": 0.829, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 7900, "end_ms": 8240, "type": "word", "payload": {"text": "reading", "raw": "reading,"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 8520, "end_ms": 8740, "type": "word", "payload": {"text": "the", "raw": "the"}, "confidence": 0.992, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 8740, "end_ms": 8980, "type": "word", "payload": {"text": "logos", "raw": "logos"}, "confidence": 0.992, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 8980, "end_ms": 9200, "type": "word", "payload": {"text": "you're", "raw": "you're"}, "confidence": 0.995, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 9200, "end_ms": 9540, "type": "word", "payload": {"text": "wearing", "raw": "wearing,"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 9740, "end_ms": 9980, "type": "word", "payload": {"text": "things", "raw": "things"}, "confidence": 0.986, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 9980, "end_ms": 10160, "type": "word", "payload": {"text": "you're", "raw": "you're"}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 10160, "end_ms": 10400, "type": "word", "payload": {"text": "talking", "raw": "talking"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 10400, "end_ms": 10740, "type": "word", "payload": {"text": "about", "raw": "about,"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 10940, "end_ms": 11140, "type": "word", "payload": {"text": "and", "raw": "and"}, "confidence": 0.995, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 11140, "end_ms": 11460, "type": "word", "payload": {"text": "even", "raw": "even"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 11460, "end_ms": 11740, "type": "word", "payload": {"text": "how", "raw": "how"}, "confidence": 0.997, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 11740, "end_ms": 11860, "type": "word", "payload": {"text": "you", "raw": "you"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 11860, "end_ms": 12080, "type": "word", "payload": {"text": "style", "raw": "style"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 12080, "end_ms": 12360, "type": "word", "payload": {"text": "yourself", "raw": "yourself."}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 12740, "end_ms": 13020, "type": "word", "payload": {"text": "But", "raw": "But"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 13020, "end_ms": 13600, "type": "word", "payload": {"text": "rich", "raw": "rich"}, "confidence": 0.974, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 13600, "end_ms": 13920, "type": "word", "payload": {"text": "are", "raw": "are"}, "confidence": 0.991, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 13920, "end_ms": 14240, "type": "word", "payload": {"text": "doing", "raw": "doing"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 14240, "end_ms": 14420, "type": "word", "payload": {"text": "it", "raw": "it"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 14420, "end_ms": 14580, "type": "word", "payload": {"text": "very", "raw": "very"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 14580, "end_ms": 14960, "type": "word", "payload": {"text": "differently", "raw": "differently."}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 15420, "end_ms": 15660, "type": "word", "payload": {"text": "Their", "raw": "Their"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 15660, "end_ms": 15960, "type": "word", "payload": {"text": "interest", "raw": "interest"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 15960, "end_ms": 16180, "type": "word", "payload": {"text": "lies", "raw": "lies"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 16180, "end_ms": 16500, "type": "word", "payload": {"text": "in", "raw": "in"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 16500, "end_ms": 16900, "type": "word", "payload": {"text": "architecture", "raw": "architecture,"}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 17280, "end_ms": 17860, "type": "word", "payload": {"text": "culture", "raw": "culture,"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 18120, "end_ms": 18580, "type": "word", "payload": {"text": "arts", "raw": "arts,"}, "confidence": 0.997, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 18800, "end_ms": 19080, "type": "word", "payload": {"text": "books", "raw": "books,"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 19280, "end_ms": 19600, "type": "word", "payload": {"text": "vintage", "raw": "vintage"}, "confidence": 0.997, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 19600, "end_ms": 20000, "type": "word", "payload": {"text": "items", "raw": "items."}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 20260, "end_ms": 20720, "type": "word", "payload": {"text": "And", "raw": "And"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 20720, "end_ms": 20920, "type": "word", "payload": {"text": "Gen", "raw": "Gen"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 20920, "end_ms": 21040, "type": "word", "payload": {"text": "Z", "raw": "Z"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 21040, "end_ms": 21160, "type": "word", "payload": {"text": "is", "raw": "is"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 21160, "end_ms": 21320, "type": "word", "payload": {"text": "also", "raw": "also"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 21320, "end_ms": 21560, "type": "word", "payload": {"text": "going", "raw": "going"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 21560, "end_ms": 21740, "type": "word", "payload": {"text": "in", "raw": "in"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 21740, "end_ms": 21840, "type": "word", "payload": {"text": "the", "raw": "the"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 21840, "end_ms": 21980, "type": "word", "payload": {"text": "same", "raw": "same"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 21980, "end_ms": 22320, "type": "word", "payload": {"text": "direction", "raw": "direction."}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 22560, "end_ms": 22920, "type": "word", "payload": {"text": "Because", "raw": "Because"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 22920, "end_ms": 23080, "type": "word", "payload": {"text": "when", "raw": "when"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 23080, "end_ms": 23400, "type": "word", "payload": {"text": "everyone", "raw": "everyone"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 23400, "end_ms": 23700, "type": "word", "payload": {"text": "starts", "raw": "starts"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 23700, "end_ms": 24020, "type": "word", "payload": {"text": "looking", "raw": "looking"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 24020, "end_ms": 24620, "type": "word", "payload": {"text": "expensive", "raw": "expensive,"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 24860, "end_ms": 25460, "type": "word", "payload": {"text": "expensive", "raw": "expensive"}, "confidence": 0.997, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 25460, "end_ms": 25900, "type": "word", "payload": {"text": "stops", "raw": "stops"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 25900, "end_ms": 26320, "type": "word", "payload": {"text": "feeling", "raw": "feeling"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 26320, "end_ms": 26720, "type": "word", "payload": {"text": "special", "raw": "special."}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 26720, "end_ms": 27560, "type": "word", "payload": {"text": "So", "raw": "So"}, "confidence": 0.282, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 27560, "end_ms": 27740, "type": "word", "payload": {"text": "the", "raw": "the"}, "confidence": 0.678, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 27740, "end_ms": 27880, "type": "word", "payload": {"text": "new", "raw": "new"}, "confidence": 0.978, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 27880, "end_ms": 28140, "type": "word", "payload": {"text": "flex", "raw": "flex"}, "confidence": 0.951, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 28140, "end_ms": 28320, "type": "word", "payload": {"text": "is", "raw": "is"}, "confidence": 0.667, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 28320, "end_ms": 28660, "type": "word", "payload": {"text": "knowing", "raw": "knowing"}, "confidence": 0.845, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 28660, "end_ms": 29120, "type": "word", "payload": {"text": "something", "raw": "something"}, "confidence": 0.994, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 29120, "end_ms": 29560, "type": "word", "payload": {"text": "and", "raw": "and"}, "confidence": 0.806, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 29560, "end_ms": 29840, "type": "word", "payload": {"text": "being", "raw": "being"}, "confidence": 0.99, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 29840, "end_ms": 29940, "type": "word", "payload": {"text": "a", "raw": "a"}, "confidence": 0.935, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 29940, "end_ms": 30120, "type": "word", "payload": {"text": "part", "raw": "part"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 30120, "end_ms": 30240, "type": "word", "payload": {"text": "of", "raw": "of"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 30240, "end_ms": 30300, "type": "word", "payload": {"text": "the", "raw": "the"}, "confidence": 0.948, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 30300, "end_ms": 30540, "type": "word", "payload": {"text": "tribe", "raw": "tribe"}, "confidence": 0.983, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 30540, "end_ms": 30760, "type": "word", "payload": {"text": "not", "raw": "not"}, "confidence": 0.809, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 30760, "end_ms": 31080, "type": "word", "payload": {"text": "everyone", "raw": "everyone"}, "confidence": 0.988, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 31080, "end_ms": 31360, "type": "word", "payload": {"text": "else", "raw": "else"}, "confidence": 0.982, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 31360, "end_ms": 31520, "type": "word", "payload": {"text": "can", "raw": "can"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 31520, "end_ms": 31720, "type": "word", "payload": {"text": "reach", "raw": "reach"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 31720, "end_ms": 31920, "type": "word", "payload": {"text": "to", "raw": "to."}, "confidence": 0.849, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 32000, "end_ms": 32420, "type": "word", "payload": {"text": "Basically", "raw": "Basically"}, "confidence": 0.955, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 32420, "end_ms": 32720, "type": "word", "payload": {"text": "something", "raw": "something"}, "confidence": 0.841, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 32720, "end_ms": 33040, "type": "word", "payload": {"text": "that", "raw": "that"}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 33040, "end_ms": 33220, "type": "word", "payload": {"text": "shows", "raw": "shows"}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 33220, "end_ms": 33480, "type": "word", "payload": {"text": "that", "raw": "that"}, "confidence": 0.916, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 33480, "end_ms": 33600, "type": "word", "payload": {"text": "you", "raw": "you"}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 33600, "end_ms": 33760, "type": "word", "payload": {"text": "got", "raw": "got"}, "confidence": 0.829, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 33760, "end_ms": 34080, "type": "word", "payload": {"text": "taste", "raw": "taste"}, "confidence": 0.981, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 34080, "end_ms": 34440, "type": "word", "payload": {"text": "because", "raw": "because"}, "confidence": 0.601, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 34440, "end_ms": 34660, "type": "word", "payload": {"text": "your", "raw": "your"}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 34660, "end_ms": 35120, "type": "word", "payload": {"text": "personality", "raw": "personality"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 35120, "end_ms": 35360, "type": "word", "payload": {"text": "and", "raw": "and"}, "confidence": 0.994, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 35360, "end_ms": 35720, "type": "word", "payload": {"text": "thinking", "raw": "thinking"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 35720, "end_ms": 36060, "type": "word", "payload": {"text": "is", "raw": "is"}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 36060, "end_ms": 36140, "type": "word", "payload": {"text": "a", "raw": "a"}, "confidence": 0.985, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 36140, "end_ms": 36380, "type": "word", "payload": {"text": "reflection", "raw": "reflection"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 36380, "end_ms": 36680, "type": "word", "payload": {"text": "of", "raw": "of"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 36680, "end_ms": 36920, "type": "word", "payload": {"text": "that", "raw": "that."}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 37040, "end_ms": 37340, "type": "word", "payload": {"text": "And", "raw": "And"}, "confidence": 0.982, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 37340, "end_ms": 37660, "type": "word", "payload": {"text": "that", "raw": "that"}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 37660, "end_ms": 37860, "type": "word", "payload": {"text": "is", "raw": "is"}, "confidence": 0.995, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 37860, "end_ms": 37980, "type": "word", "payload": {"text": "the", "raw": "the"}, "confidence": 0.989, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 37980, "end_ms": 38120, "type": "word", "payload": {"text": "new", "raw": "new"}, "confidence": 0.997, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 38120, "end_ms": 38320, "type": "word", "payload": {"text": "status", "raw": "status"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 38320, "end_ms": 38720, "type": "word", "payload": {"text": "symbol", "raw": "symbol."}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 38900, "end_ms": 39240, "type": "word", "payload": {"text": "So", "raw": "So"}, "confidence": 0.993, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 39240, "end_ms": 39340, "type": "word", "payload": {"text": "if", "raw": "if"}, "confidence": 0.991, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 39340, "end_ms": 39460, "type": "word", "payload": {"text": "you", "raw": "you"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 39460, "end_ms": 39520, "type": "word", "payload": {"text": "are", "raw": "are"}, "confidence": 0.826, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 39520, "end_ms": 39720, "type": "word", "payload": {"text": "building", "raw": "building"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 39720, "end_ms": 39880, "type": "word", "payload": {"text": "a", "raw": "a"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 39880, "end_ms": 40120, "type": "word", "payload": {"text": "brand", "raw": "brand,"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 40280, "end_ms": 40700, "type": "word", "payload": {"text": "build", "raw": "build"}, "confidence": 0.997, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 40700, "end_ms": 40880, "type": "word", "payload": {"text": "a", "raw": "a"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 40880, "end_ms": 41160, "type": "word", "payload": {"text": "world", "raw": "world"}, "confidence": 0.867, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 41160, "end_ms": 41360, "type": "word", "payload": {"text": "that", "raw": "that"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 41360, "end_ms": 41580, "type": "word", "payload": {"text": "people", "raw": "people"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 41580, "end_ms": 41800, "type": "word", "payload": {"text": "want", "raw": "want"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 41800, "end_ms": 41980, "type": "word", "payload": {"text": "to", "raw": "to"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 41980, "end_ms": 42060, "type": "word", "payload": {"text": "be", "raw": "be"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 42060, "end_ms": 42140, "type": "word", "payload": {"text": "a", "raw": "a"}, "confidence": 0.996, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 42140, "end_ms": 42360, "type": "word", "payload": {"text": "part", "raw": "part"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 42360, "end_ms": 42580, "type": "word", "payload": {"text": "of", "raw": "of."}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 42700, "end_ms": 42980, "type": "word", "payload": {"text": "Build", "raw": "Build"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 42980, "end_ms": 43340, "type": "word", "payload": {"text": "something", "raw": "something"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 43340, "end_ms": 44140, "type": "word", "payload": {"text": "people", "raw": "people"}, "confidence": 0.953, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 44140, "end_ms": 44460, "type": "word", "payload": {"text": "with", "raw": "with"}, "confidence": 0.995, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 44460, "end_ms": 44800, "type": "word", "payload": {"text": "taste", "raw": "taste"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 44800, "end_ms": 45020, "type": "word", "payload": {"text": "would", "raw": "would"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 45020, "end_ms": 45220, "type": "word", "payload": {"text": "like", "raw": "like"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 45220, "end_ms": 45380, "type": "word", "payload": {"text": "to", "raw": "to"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 45380, "end_ms": 45640, "type": "word", "payload": {"text": "carry", "raw": "carry"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 45640, "end_ms": 45840, "type": "word", "payload": {"text": "it", "raw": "it"}, "confidence": 0.991, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 45840, "end_ms": 46060, "type": "word", "payload": {"text": "and", "raw": "and"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 46060, "end_ms": 46260, "type": "word", "payload": {"text": "show", "raw": "show"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 46260, "end_ms": 46400, "type": "word", "payload": {"text": "it", "raw": "it"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 46400, "end_ms": 46580, "type": "word", "payload": {"text": "off", "raw": "off."}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 46720, "end_ms": 46980, "type": "word", "payload": {"text": "Because", "raw": "Because"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 46980, "end_ms": 47240, "type": "word", "payload": {"text": "money", "raw": "money"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 47240, "end_ms": 47400, "type": "word", "payload": {"text": "can", "raw": "can"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 47400, "end_ms": 47700, "type": "word", "payload": {"text": "buy", "raw": "buy"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 47700, "end_ms": 47880, "type": "word", "payload": {"text": "you", "raw": "you"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 47880, "end_ms": 48160, "type": "word", "payload": {"text": "expensive", "raw": "expensive"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 48160, "end_ms": 48700, "type": "word", "payload": {"text": "logos", "raw": "logos"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 48700, "end_ms": 49260, "type": "word", "payload": {"text": "but", "raw": "but"}, "confidence": 0.27, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 49260, "end_ms": 49620, "type": "word", "payload": {"text": "taste", "raw": "taste"}, "confidence": 0.998, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 49620, "end_ms": 50260, "type": "word", "payload": {"text": "differentiates", "raw": "differentiates"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 50260, "end_ms": 50360, "type": "word", "payload": {"text": "on", "raw": "on"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 50360, "end_ms": 50540, "type": "word", "payload": {"text": "another", "raw": "another"}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 50540, "end_ms": 50880, "type": "word", "payload": {"text": "level", "raw": "level."}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 51240, "end_ms": 51680, "type": "word", "payload": {"text": "That's", "raw": "That's"}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 51680, "end_ms": 51780, "type": "word", "payload": {"text": "it", "raw": "it."}, "confidence": 1.0, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 51940, "end_ms": 52220, "type": "word", "payload": {"text": "Bye", "raw": "Bye."}, "confidence": 0.999, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}], "speech_utterances": [{"track": "speech", "start_ms": 0, "end_ms": 2740, "type": "utterance", "payload": {"text": "The biggest status symbol for Gen Z is something you can't buy.", "raw_text": "The biggest status symbol for Gen Z is something you can't buy.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.921, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 3260, "end_ms": 3740, "type": "utterance", "payload": {"text": "Taste.", "raw_text": "Taste.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.921, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 4100, "end_ms": 4940, "type": "utterance", "payload": {"text": "Think about it.", "raw_text": "Think about it.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.921, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 5100, "end_ms": 6940, "type": "utterance", "payload": {"text": "Everyone has started doing the same things.", "raw_text": "Everyone has started doing the same things.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.921, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 7080, "end_ms": 12360, "type": "utterance", "payload": {"text": "The books you're reading, the logos you're wearing, things you're talking about, and even how you style yourself.", "raw_text": "The books you're reading, the logos you're wearing, things you're talking about, and even how you style yourself.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.921, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 12740, "end_ms": 14960, "type": "utterance", "payload": {"text": "But rich are doing it very differently.", "raw_text": "But rich are doing it very differently.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.921, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 15420, "end_ms": 20000, "type": "utterance", "payload": {"text": "Their interest lies in architecture, culture, arts, books, vintage items.", "raw_text": "Their interest lies in architecture, culture, arts, books, vintage items.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.921, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 20260, "end_ms": 22320, "type": "utterance", "payload": {"text": "And Gen Z is also going in the same direction.", "raw_text": "And Gen Z is also going in the same direction.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.921, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 22560, "end_ms": 26720, "type": "utterance", "payload": {"text": "Because when everyone starts looking expensive, expensive stops feeling special.", "raw_text": "Because when everyone starts looking expensive, expensive stops feeling special.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.921, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 26720, "end_ms": 31920, "type": "utterance", "payload": {"text": "So the new flex is knowing something and being a part of the tribe not everyone else can reach to.", "raw_text": "So the new flex is knowing something and being a part of the tribe not everyone else can reach to.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.835, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 32000, "end_ms": 36920, "type": "utterance", "payload": {"text": "Basically something that shows that you got taste because your personality and thinking is a reflection of that.", "raw_text": "Basically something that shows that you got taste because your personality and thinking is a reflection of that.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.835, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 37040, "end_ms": 38720, "type": "utterance", "payload": {"text": "And that is the new status symbol.", "raw_text": "And that is the new status symbol.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.835, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 38900, "end_ms": 42580, "type": "utterance", "payload": {"text": "So if you are building a brand, build a world that people want to be a part of.", "raw_text": "So if you are building a brand, build a world that people want to be a part of.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.835, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 42700, "end_ms": 46580, "type": "utterance", "payload": {"text": "Build something people with taste would like to carry it and show it off.", "raw_text": "Build something people with taste would like to carry it and show it off.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.835, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 46720, "end_ms": 50880, "type": "utterance", "payload": {"text": "Because money can buy you expensive logos but taste differentiates on another level.", "raw_text": "Because money can buy you expensive logos but taste differentiates on another level.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.835, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 51240, "end_ms": 52220, "type": "utterance", "payload": {"text": "That's it. Bye.", "raw_text": "That's it. Bye.", "language": "en", "resolved_face_id": null, "is_on_screen": false}, "confidence": 0.835, "provider": "mlx_whisper", "provider_version": "1.3.0", "run_id": null}], "shots": [{"track": "shot", "start_ms": 0, "end_ms": 3420, "type": "scene_cut", "payload": {"scene_index": 0, "duration_ms": 3420, "duration_sec": 3.42, "start_frame": 0, "end_frame": 82}, "confidence": 1.0, "provider": "pyscenedetect", "provider_version": "1.0.0", "run_id": null}, {"track": "shot", "start_ms": 3420, "end_ms": 4504, "type": "scene_cut", "payload": {"scene_index": 1, "duration_ms": 1084, "duration_sec": 1.08, "start_frame": 82, "end_frame": 108}, "confidence": 1.0, "provider": "pyscenedetect", "provider_version": "1.0.0", "run_id": null}, {"track": "shot", "start_ms": 4504, "end_ms": 22772, "type": "scene_cut", "payload": {"scene_index": 2, "duration_ms": 18268, "duration_sec": 18.27, "start_frame": 108, "end_frame": 546}, "confidence": 1.0, "provider": "pyscenedetect", "provider_version": "1.0.0", "run_id": null}, {"track": "shot", "start_ms": 22772, "end_ms": 27610, "type": "scene_cut", "payload": {"scene_index": 3, "duration_ms": 4838, "duration_sec": 4.84, "start_frame": 546, "end_frame": 662}, "confidence": 1.0, "provider": "pyscenedetect", "provider_version": "1.0.0", "run_id": null}, {"track": "shot", "start_ms": 27610, "end_ms": 29529, "type": "scene_cut", "payload": {"scene_index": 4, "duration_ms": 1919, "duration_sec": 1.92, "start_frame": 662, "end_frame": 708}, "confidence": 1.0, "provider": "pyscenedetect", "provider_version": "1.0.0", "run_id": null}, {"track": "shot", "start_ms": 29529, "end_ms": 32240, "type": "scene_cut", "payload": {"scene_index": 5, "duration_ms": 2711, "duration_sec": 2.71, "start_frame": 708, "end_frame": 773}, "confidence": 1.0, "provider": "pyscenedetect", "provider_version": "1.0.0", "run_id": null}, {"track": "shot", "start_ms": 32240, "end_ms": 39164, "type": "scene_cut", "payload": {"scene_index": 6, "duration_ms": 6924, "duration_sec": 6.92, "start_frame": 773, "end_frame": 939}, "confidence": 1.0, "provider": "pyscenedetect", "provider_version": "1.0.0", "run_id": null}, {"track": "shot", "start_ms": 39164, "end_ms": 52469, "type": "scene_cut", "payload": {"scene_index": 7, "duration_ms": 13305, "duration_sec": 13.3, "start_frame": 939, "end_frame": 1258}, "confidence": 1.0, "provider": "pyscenedetect", "provider_version": "1.0.0", "run_id": null}], "ocr": [{"track": "ocr", "start_ms": 4671, "end_ms": 5255, "type": "text_overlay", "payload": {"text": "Think about it", "bbox": [0.4734, 0.3194, 0.5039, 0.6847], "frame_count": 3, "span_index": 0}, "confidence": 0.9843, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 5547, "end_ms": 5839, "type": "text_overlay", "payload": {"text": "everyonehas", "bbox": [0.4758, 0.3306, 0.5078, 0.675], "frame_count": 2, "span_index": 1}, "confidence": 0.994, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 6423, "end_ms": 6715, "type": "text_overlay", "payload": {"text": "the same", "bbox": [0.4742, 0.3819, 0.5078, 0.6194], "frame_count": 2, "span_index": 2}, "confidence": 0.9595, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 7007, "end_ms": 7298, "type": "text_overlay", "payload": {"text": "things", "bbox": [0.4727, 0.4194, 0.5109, 0.5806], "frame_count": 2, "span_index": 3}, "confidence": 0.998, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 9342, "end_ms": 9542, "type": "text_overlay", "payload": {"text": "+", "bbox": [0.3609, 0.2097, 0.375, 0.2333], "frame_count": 4, "span_index": 4}, "confidence": 0.9728, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 9634, "end_ms": 9834, "type": "text_overlay", "payload": {"text": "+", "bbox": [0.3617, 0.2111, 0.375, 0.2333], "frame_count": 3, "span_index": 5}, "confidence": 0.9691, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 12554, "end_ms": 12846, "type": "text_overlay", "payload": {"text": "and even howyou styleyourself", "bbox": [0.4789, 0.1972, 0.507, 0.8056], "frame_count": 2, "span_index": 6}, "confidence": 0.9321, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 13138, "end_ms": 13722, "type": "text_overlay", "payload": {"text": "But rich", "bbox": [0.4742, 0.4042, 0.5055, 0.5958], "frame_count": 3, "span_index": 7}, "confidence": 0.9903, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 14014, "end_ms": 14305, "type": "text_overlay", "payload": {"text": "are doing it", "bbox": [0.4766, 0.3625, 0.5078, 0.6417], "frame_count": 2, "span_index": 8}, "confidence": 0.9869, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 14597, "end_ms": 15473, "type": "text_overlay", "payload": {"text": "verydifferently", "bbox": [0.475, 0.3292, 0.5078, 0.6694], "frame_count": 4, "span_index": 9}, "confidence": 0.9917, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 15765, "end_ms": 16057, "type": "text_overlay", "payload": {"text": "their interest", "bbox": [0.4734, 0.3306, 0.507, 0.6583], "frame_count": 2, "span_index": 10}, "confidence": 0.9803, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 16641, "end_ms": 17517, "type": "text_overlay", "payload": {"text": "PARIS", "bbox": [0.0773, 0.5042, 0.1094, 0.6889], "frame_count": 4, "span_index": 11}, "confidence": 0.9792, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 21312, "end_ms": 21604, "type": "text_overlay", "payload": {"text": "also going", "bbox": [0.4727, 0.3625, 0.5102, 0.6361], "frame_count": 2, "span_index": 12}, "confidence": 0.9836, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 22188, "end_ms": 22480, "type": "text_overlay", "payload": {"text": "direction", "bbox": [0.4711, 0.3847, 0.507, 0.6167], "frame_count": 2, "span_index": 13}, "confidence": 0.9968, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 23648, "end_ms": 23940, "type": "text_overlay", "payload": {"text": "starts looking", "bbox": [0.4719, 0.3361, 0.5094, 0.6611], "frame_count": 2, "span_index": 14}, "confidence": 0.9981, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 24232, "end_ms": 25108, "type": "text_overlay", "payload": {"text": "expensive", "bbox": [0.4773, 0.3792, 0.507, 0.6264], "frame_count": 4, "span_index": 15}, "confidence": 0.9959, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 28028, "end_ms": 28319, "type": "text_overlay", "payload": {"text": "flex is", "bbox": [0.4727, 0.4222, 0.5078, 0.5778], "frame_count": 2, "span_index": 16}, "confidence": 0.9861, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 28611, "end_ms": 28903, "type": "text_overlay", "payload": {"text": "knowing", "bbox": [0.4734, 0.2667, 0.5102, 0.475], "frame_count": 2, "span_index": 17}, "confidence": 0.9946, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 30947, "end_ms": 31239, "type": "text_overlay", "payload": {"text": "not everyone else", "bbox": [0.4773, 0.2903, 0.5078, 0.7125], "frame_count": 2, "span_index": 18}, "confidence": 0.9645, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 31531, "end_ms": 32115, "type": "text_overlay", "payload": {"text": "can reach to", "bbox": [0.4781, 0.3514, 0.5047, 0.6514], "frame_count": 3, "span_index": 19}, "confidence": 0.9926, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 32407, "end_ms": 32699, "type": "text_overlay", "payload": {"text": "basically something", "bbox": [0.4727, 0.2681, 0.5094, 0.7375], "frame_count": 2, "span_index": 20}, "confidence": 0.9946, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 33867, "end_ms": 34159, "type": "text_overlay", "payload": {"text": "got taste", "bbox": [0.4727, 0.3889, 0.5094, 0.6125], "frame_count": 2, "span_index": 21}, "confidence": 0.9672, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 34743, "end_ms": 34943, "type": "text_overlay", "payload": {"text": "+", "bbox": [0.2562, 0.3347, 0.2742, 0.3611], "frame_count": 4, "span_index": 22}, "confidence": 0.9124, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 37370, "end_ms": 37662, "type": "text_overlay", "payload": {"text": "and that", "bbox": [0.4711, 0.3944, 0.507, 0.6083], "frame_count": 2, "span_index": 23}, "confidence": 0.9969, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 39706, "end_ms": 39998, "type": "text_overlay", "payload": {"text": "building a", "bbox": [0.4711, 0.3833, 0.5086, 0.6222], "frame_count": 2, "span_index": 24}, "confidence": 0.9827, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 41458, "end_ms": 41750, "type": "text_overlay", "payload": {"text": "that people", "bbox": [0.4734, 0.3597, 0.5086, 0.6389], "frame_count": 2, "span_index": 25}, "confidence": 0.9953, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 42334, "end_ms": 42625, "type": "text_overlay", "payload": {"text": "a part of", "bbox": [0.4688, 0.3944, 0.5109, 0.6125], "frame_count": 2, "span_index": 26}, "confidence": 0.9861, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 42917, "end_ms": 43793, "type": "text_overlay", "payload": {"text": "build something", "bbox": [0.4711, 0.2972, 0.5094, 0.6917], "frame_count": 4, "span_index": 27}, "confidence": 0.9558, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 44085, "end_ms": 44961, "type": "text_overlay", "payload": {"text": "people with taste", "bbox": [0.4727, 0.2944, 0.507, 0.7056], "frame_count": 4, "span_index": 28}, "confidence": 0.9866, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 45545, "end_ms": 45837, "type": "text_overlay", "payload": {"text": "to cary it", "bbox": [0.4734, 0.3861, 0.5078, 0.6167], "frame_count": 2, "span_index": 29}, "confidence": 0.9649, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 46129, "end_ms": 46713, "type": "text_overlay", "payload": {"text": "and show it off", "bbox": [0.4758, 0.3236, 0.5039, 0.6778], "frame_count": 3, "span_index": 30}, "confidence": 0.9229, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 47589, "end_ms": 47881, "type": "text_overlay", "payload": {"text": "buy you", "bbox": [0.4719, 0.3958, 0.5125, 0.6028], "frame_count": 2, "span_index": 31}, "confidence": 0.9903, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 48173, "end_ms": 49049, "type": "text_overlay", "payload": {"text": "expensiveLoGOS", "bbox": [0.4719, 0.2944, 0.5102, 0.7306], "frame_count": 4, "span_index": 32}, "confidence": 0.9433, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 49341, "end_ms": 49632, "type": "text_overlay", "payload": {"text": "but taste", "bbox": [0.4742, 0.3917, 0.5062, 0.6111], "frame_count": 2, "span_index": 33}, "confidence": 0.9842, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 49924, "end_ms": 50216, "type": "text_overlay", "payload": {"text": "differentiates", "bbox": [0.4742, 0.3403, 0.5062, 0.6556], "frame_count": 2, "span_index": 34}, "confidence": 0.9946, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 50508, "end_ms": 50800, "type": "text_overlay", "payload": {"text": "on anotherleve", "bbox": [0.4758, 0.3153, 0.5047, 0.6819], "frame_count": 2, "span_index": 35}, "confidence": 0.9724, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 51092, "end_ms": 51384, "type": "text_overlay", "payload": {"text": "onanotherlevel", "bbox": [0.4758, 0.3181, 0.5031, 0.6819], "frame_count": 2, "span_index": 36}, "confidence": 0.9535, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}], "faces": [{"track": "face", "start_ms": 3503, "end_ms": 4503, "type": "face_track", "payload": {"face_id": "face_1", "bbox": [0.3186, 0.388, 0.4452, 0.5802], "is_speaking": false, "avg_mar": 0.0874, "avg_jaw_open": 0.0344, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 6, "duration_ms": 1000}, "confidence": 1.0, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 22856, "end_ms": 23856, "type": "face_track", "payload": {"face_id": "face_4", "bbox": [0.2985, 0.4086, 0.4331, 0.6197], "is_speaking": false, "avg_mar": 0.0638, "avg_jaw_open": 0.0117, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 6, "duration_ms": 1000}, "confidence": 1.0, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 24024, "end_ms": 27693, "type": "face_track", "payload": {"face_id": "face_5", "bbox": [0.3016, 0.3954, 0.4368, 0.6027], "is_speaking": false, "avg_mar": 0.0884, "avg_jaw_open": 0.05, "speaking_ratio": 0.14, "speaking_frames": 3, "total_frames": 22, "duration_ms": 3669}, "confidence": 1.0, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 29529, "end_ms": 32364, "type": "face_track", "payload": {"face_id": "face_6", "bbox": [0.3063, 0.4008, 0.4469, 0.6076], "is_speaking": false, "avg_mar": 0.0652, "avg_jaw_open": 0.0397, "speaking_ratio": 0.12, "speaking_frames": 2, "total_frames": 17, "duration_ms": 2835}, "confidence": 1.0, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 40373, "end_ms": 40706, "type": "face_track", "payload": {"face_id": "face_10", "bbox": [0.3255, 0.4184, 0.4491, 0.5954], "is_speaking": true, "avg_mar": 0.122, "avg_jaw_open": 0.1932, "speaking_ratio": 0.5, "speaking_frames": 1, "total_frames": 2, "duration_ms": 333}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 41374, "end_ms": 41707, "type": "face_track", "payload": {"face_id": "face_11", "bbox": [0.3212, 0.4147, 0.4511, 0.5953], "is_speaking": true, "avg_mar": 0.1076, "avg_jaw_open": 0.1414, "speaking_ratio": 0.5, "speaking_frames": 1, "total_frames": 2, "duration_ms": 333}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 43877, "end_ms": 44376, "type": "face_track", "payload": {"face_id": "face_15", "bbox": [0.3245, 0.4188, 0.4482, 0.5983], "is_speaking": true, "avg_mar": 0.1174, "avg_jaw_open": 0.2042, "speaking_ratio": 0.33, "speaking_frames": 1, "total_frames": 3, "duration_ms": 499}, "confidence": 0.85, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 45211, "end_ms": 46879, "type": "face_track", "payload": {"face_id": "face_17", "bbox": [0.3321, 0.4112, 0.4588, 0.5916], "is_speaking": true, "avg_mar": 0.1124, "avg_jaw_open": 0.1506, "speaking_ratio": 0.5, "speaking_frames": 5, "total_frames": 10, "duration_ms": 1668}, "confidence": 1.0, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}], "diarization": [{"track": "diarization", "start_ms": 112, "end_ms": 52092, "type": "speaker_turn", "payload": {"turn_index": 0, "speaker": "SPEAKER_00", "speaker_raw": "A", "start_ms": 112, "end_ms": 52092, "duration_ms": 51980, "duration_sec": 51.98, "text": "The biggest status symbol for Gen Z is something you can't buy— taste. Think about it, everyone has started doing the same things. The books you are reading, the logos you're wearing, things you're talking about, and even how you style yourself. But rich are doing it very differently. Their interest lies in architecture, culture, arts, books, vintage items. And Gen Z is also going in the same direction, because when everyone starts looking expensive, expensive stops feeling special. So the new flex is knowing something and being a part of the tribe not everyone else can reach to. Basically something that shows that you got taste, because your personality and thinking is a reflection of that, and that is the new status symbol. So if you are building a brand, build a world that people want to be a part of. Build something people with taste would like to carry it and show it off, because money can buy you expensive logos, but taste differentiates on another level. That's it. Bye."}, "confidence": 0.986, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}]}};
+  const totalDurationMs = timelineData.duration_ms || 1000;
+  const video = document.getElementById("video-player");
+  const playhead = document.getElementById("playhead");
+  const timeDisplay = document.getElementById("time-display");
+  const viewport = document.getElementById("timeline-viewport");
+  const tooltip = document.getElementById("tooltip");
+
+  const hudShot = document.getElementById("hud-shot");
+  const hudSpeaker = document.getElementById("hud-speaker");
+
+  // Speaker Color Palette
+  const speakerColors = [
+    { bg: "rgba(6, 182, 212, 0.25)", border: "#06b6d4", text: "#a5f3fc" },
+    { bg: "rgba(139, 92, 246, 0.25)", border: "#8b5cf6", text: "#ddd6fe" },
+    { bg: "rgba(245, 158, 11, 0.25)", border: "#f59e0b", text: "#fde68a" },
+    { bg: "rgba(236, 72, 153, 0.25)", border: "#ec4899", text: "#fbcfe8" },
+    { bg: "rgba(16, 185, 129, 0.25)", border: "#10b981", text: "#a7f3d0" }
+  ];
+
+  function getSpeakerStyle(spk) {
+    const num = parseInt((spk || "").replace(/\D/g, "")) || 0;
+    return speakerColors[num % speakerColors.length];
+  }
+
+  function formatTime(sec) {
+    const m = Math.floor(sec / 60);
+    const s = (sec % 60).toFixed(2);
+    return m.toString().padStart(2, '0') + ":" + s.padStart(5, '0');
+  }
+
+  // 1. Populate Speaker Resolution Matrix
+  const resolverContainer = document.getElementById("resolver-container");
+  const resolutionDetails = timelineData.resolved_speakers?.details || {};
+  
+  if (Object.keys(resolutionDetails).length === 0) {
+    resolverContainer.innerHTML = '<div style="color:var(--text-muted);font-size:13px;">No speaker clusters detected.</div>';
+  } else {
+    for (const [spk, info] of Object.entries(resolutionDetails)) {
+      const isMatched = info.status === "matched";
+      const card = document.createElement("div");
+      card.className = "resolver-card " + (isMatched ? 'matched' : 'off-screen');
+      
+      const faceDisplay = info.face_id ? info.face_id : "Off-Screen (Voiceover)";
+      const spkOverlapSec = (info.speaking_overlap_ms / 1000).toFixed(1);
+      const confPct = Math.round((info.confidence || 0) * 100);
+
+      card.innerHTML = 
+        '<div class="resolver-pair">' +
+          '<span style="color:var(--accent-cyan);">' + spk + '</span>' +
+          '<span class="arrow-icon">➔</span>' +
+          '<span style="color:' + (isMatched ? 'var(--accent-green)' : 'var(--accent-amber)') + '">' + faceDisplay + '</span>' +
+        '</div>' +
+        '<div style="font-size:11px;color:var(--text-muted);display:flex;justify-content:space-between;">' +
+          '<span>Speaking overlap: <strong>' + spkOverlapSec + 's</strong></span>' +
+          '<span>Match: <strong>' + confPct + '%</strong></span>' +
+        '</div>';
+      resolverContainer.appendChild(card);
+    }
+  }
+
+  // 2. Render Multi-Track Lanes
+  const laneShots = document.getElementById("lane-shots");
+  const laneSpeech = document.getElementById("lane-speech");
+  const laneFaces = document.getElementById("lane-faces");
+  const laneOcr = document.getElementById("lane-ocr");
+
+  // Track 1: Shots
+  (timelineData.tracks.shots || []).forEach((shot, i) => {
+    const leftPct = (shot.start_ms / totalDurationMs) * 100;
+    const widthPct = Math.max(0.5, ((shot.end_ms - shot.start_ms) / totalDurationMs) * 100);
+    const block = document.createElement("div");
+    block.className = "block block-shot";
+    block.style.left = leftPct + "%";
+    block.style.width = widthPct + "%";
+    block.innerText = "S" + (i + 1) + " (" + (shot.payload.duration_sec || 0).toFixed(1) + "s)";
+    block.onclick = () => seekTo(shot.start_ms);
+    block.onmouseenter = (e) => showTooltip(e, "Shot #" + (i + 1) + ": " + (shot.start_ms/1000).toFixed(2) + "s - " + (shot.end_ms/1000).toFixed(2) + "s (" + shot.payload.duration_sec + "s)");
+    block.onmouseleave = hideTooltip;
+    laneShots.appendChild(block);
+  });
+
+  // Track 2: Speech Utterances
+  (timelineData.tracks.speech_utterances || []).forEach((utt, i) => {
+    const leftPct = (utt.start_ms / totalDurationMs) * 100;
+    const widthPct = Math.max(0.5, ((utt.end_ms - utt.start_ms) / totalDurationMs) * 100);
+    const spk = utt.payload.speaker_canonical || utt.payload.speaker || "SPEAKER_00";
+    const style = getSpeakerStyle(spk);
+
+    const block = document.createElement("div");
+    block.className = "block";
+    block.style.left = leftPct + "%";
+    block.style.width = widthPct + "%";
+    block.style.background = style.bg;
+    block.style.borderColor = style.border;
+    block.style.color = style.text;
+    block.innerText = utt.payload.text || spk;
+    block.onclick = () => seekTo(utt.start_ms);
+    block.onmouseenter = (e) => showTooltip(e, "[" + spk + '] "' + utt.payload.text + '"\n' + (utt.start_ms/1000).toFixed(2) + "s → " + (utt.end_ms/1000).toFixed(2) + "s");
+    block.onmouseleave = hideTooltip;
+    laneSpeech.appendChild(block);
+  });
+
+  // Track 3: Faces & MAR
+  (timelineData.tracks.faces || []).forEach((face, i) => {
+    const leftPct = (face.start_ms / totalDurationMs) * 100;
+    const widthPct = Math.max(0.5, ((face.end_ms - face.start_ms) / totalDurationMs) * 100);
+    const isSpeaking = face.payload.is_speaking;
+
+    const block = document.createElement("div");
+    block.className = "block " + (isSpeaking ? 'block-face-speaking' : 'block-face-silent');
+    block.style.left = leftPct + "%";
+    block.style.width = widthPct + "%";
+    block.innerText = face.payload.face_id + " (MAR:" + face.payload.avg_mar + ")";
+    block.onclick = () => seekTo(face.start_ms);
+    block.onmouseenter = (e) => showTooltip(e, face.payload.face_id + ": " + (isSpeaking ? 'SPEAKING' : 'Silent') + " (MAR: " + face.payload.avg_mar + ")\n" + (face.start_ms/1000).toFixed(2) + "s → " + (face.end_ms/1000).toFixed(2) + "s");
+    block.onmouseleave = hideTooltip;
+    laneFaces.appendChild(block);
+  });
+
+  // Track 4: OCR
+  (timelineData.tracks.ocr || []).forEach((ocr, i) => {
+    const leftPct = (ocr.start_ms / totalDurationMs) * 100;
+    const widthPct = Math.max(0.5, ((ocr.end_ms - ocr.start_ms) / totalDurationMs) * 100);
+
+    const block = document.createElement("div");
+    block.className = "block block-ocr";
+    block.style.left = leftPct + "%";
+    block.style.width = widthPct + "%";
+    block.innerText = ocr.payload.text || "Text";
+    block.onclick = () => seekTo(ocr.start_ms);
+    block.onmouseenter = (e) => showTooltip(e, 'OCR: "' + ocr.payload.text + '"\n' + (ocr.start_ms/1000).toFixed(2) + "s → " + (ocr.end_ms/1000).toFixed(2) + "s");
+    block.onmouseleave = hideTooltip;
+    laneOcr.appendChild(block);
+  });
+
+  // 3. Render Screenplay Dialogue Feed
+  const feed = document.getElementById("dialogue-feed");
+  const dialogueElements = [];
+
+  (timelineData.tracks.speech_utterances || []).forEach((utt, idx) => {
+    const spk = utt.payload.speaker_canonical || utt.payload.speaker || "SPEAKER_00";
+    const faceId = utt.payload.resolved_face_id || "Off-Screen";
+    const style = getSpeakerStyle(spk);
+
+    const item = document.createElement("div");
+    item.className = "dialogue-item";
+    item.dataset.start = utt.start_ms;
+    item.dataset.end = utt.end_ms;
+    item.onclick = () => seekTo(utt.start_ms);
+
+    item.innerHTML = 
+      '<div class="dialogue-meta">' +
+        '<span class="speaker-pill" style="background:' + style.bg + ';border:1px solid ' + style.border + ';color:' + style.text + ';">' +
+          spk + ' ➔ ' + faceId +
+        '</span>' +
+        '<span class="time-chip">' + (utt.start_ms/1000).toFixed(2) + 's → ' + (utt.end_ms/1000).toFixed(2) + 's</span>' +
+      '</div>' +
+      '<div class="dialogue-text">' + utt.payload.text + '</div>';
+
+    feed.appendChild(item);
+    dialogueElements.push(item);
+  });
+
+  // 4. Video Sync & Playhead Movement
+  video.ontimeupdate = () => {
+    const currentMs = video.currentTime * 1000;
+    const currentPct = (currentMs / totalDurationMs) * 100;
+    playhead.style.left = Math.min(100, Math.max(0, currentPct)) + "%";
+    timeDisplay.innerText = formatTime(video.currentTime) + " / " + formatTime(totalDurationMs / 1000);
+
+    // Update HUD
+    const activeShot = (timelineData.tracks.shots || []).find(s => currentMs >= s.start_ms && currentMs <= s.end_ms);
+    if (activeShot) {
+      hudShot.innerText = "Shot " + ((timelineData.tracks.shots || []).indexOf(activeShot) + 1);
+    }
+
+    const activeUtt = (timelineData.tracks.speech_utterances || []).find(u => currentMs >= u.start_ms && currentMs <= u.end_ms);
+    if (activeUtt) {
+      hudSpeaker.innerText = (activeUtt.payload.speaker_canonical || activeUtt.payload.speaker) + " (" + (activeUtt.payload.resolved_face_id || 'Off-Screen') + ")";
+    } else {
+      hudSpeaker.innerText = "No active speech";
+    }
+
+    // Highlight Dialogue Feed
+    dialogueElements.forEach(el => {
+      const start = parseFloat(el.dataset.start);
+      const end = parseFloat(el.dataset.end);
+      if (currentMs >= start && currentMs <= end) {
+        if (!el.classList.contains("active")) {
+          el.classList.add("active");
+          el.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      } else {
+        el.classList.remove("active");
+      }
+    });
+  };
+
+  // Click on Timeline Viewport to Seek
+  viewport.onclick = (e) => {
+    const rect = viewport.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const pct = Math.max(0, Math.min(1, clickX / rect.width));
+    video.currentTime = (pct * totalDurationMs) / 1000;
+  };
+
+  function seekTo(ms) {
+    video.currentTime = ms / 1000;
+    video.play();
+  }
+
+  function showTooltip(e, text) {
+    tooltip.innerText = text;
+    tooltip.style.display = "block";
+    tooltip.style.left = (e.clientX + 10) + "px";
+    tooltip.style.top = (e.clientY + 10) + "px";
+  }
+
+  function hideTooltip() {
+    tooltip.style.display = "none";
+  }
+</script>
+
+</body>
+</html>
