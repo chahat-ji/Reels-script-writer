@@ -18,15 +18,15 @@ class TaskRunner:
     def __init__(self, data_root: str = "data"):
         self.data_root = Path(data_root)
 
-    def execute(self, reel_id: str, provider: Provider, job: Dict[str, Any]) -> ProviderResult:
+    def execute(self, reel_id: str, provider: Provider, job: Dict[str, Any], force: bool = False) -> ProviderResult:
         reel_dir = self.data_root / "reels" / reel_id
         reel_dir.mkdir(parents=True, exist_ok=True)
 
         cache_filename = f"manifest_{provider.capability}_{provider.name}_v{provider.version}.json"
         cache_path = reel_dir / cache_filename
 
-        # 1. Return cached results if available
-        if cache_path.exists():
+        # 1. Return cached results if available and not forced
+        if cache_path.exists() and not force:
             console.print(
                 f"[bold cyan][CACHE HIT][/bold cyan] {provider.capability} -> "
                 f"[magenta]{provider.name}[/magenta] for [green]{reel_id}[/green]"
@@ -54,7 +54,14 @@ class TaskRunner:
         console.print(f"[bold blue][SAVED][/bold blue] Manifest saved to {cache_path.name}")
         return result
 
-    def execute_chain(self, reel_id: str, capability: str, provider_names: List[str], job: Dict[str, Any]) -> ProviderResult:
+    def execute_chain(
+        self,
+        reel_id: str,
+        capability: str,
+        provider_names: List[str],
+        job: Dict[str, Any],
+        force: bool = False,
+    ) -> ProviderResult:
         """
         Attempts each provider in order. If one fails, gracefully falls back to the next.
         """
@@ -68,7 +75,7 @@ class TaskRunner:
 
             provider = provider_cls()
             try:
-                return self.execute(reel_id, provider, job)
+                return self.execute(reel_id, provider, job, force=force)
             except Exception as e:
                 console.print(f"[bold red][FALLBACK][/bold red] Provider '{name}' failed: {e}. Trying next provider in chain...")
                 last_error = e
