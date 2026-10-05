@@ -1,0 +1,12 @@
+{
+  "reel_id": "DdrIIFTCWdx",
+  "audio_condition": {
+    "has_heavy_music": false,
+    "music_energy_ratio": 0.0,
+    "silence_ratio": 0.109,
+    "average_db": -18.6,
+    "needs_stem_separation": false
+  },
+  "duration_seconds": 170.08,
+  "flags": []
+}

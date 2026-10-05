@@ -1,0 +1,19 @@
+{
+  "capability": "shots",
+  "provider_name": "pyscenedetect",
+  "provider_version": "1.0.0",
+  "events": [],
+  "raw_payload": {
+    "metrics": {
+      "total_shots": 0,
+      "total_duration_sec": 0.0,
+      "avg_shot_duration_sec": 0.0,
+      "hook_shot_duration_sec": 0.0
+    },
+    "scenes": []
+  },
+  "metadata": {
+    "video_path": "data/reels/DdrIIFTCWdx/video.mp4",
+    "threshold": 27.0
+  }
+}

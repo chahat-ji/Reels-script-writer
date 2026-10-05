@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reel AI Inspector: DdrIIFTCWdx</title>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card-bg: rgba(18, 24, 38, 0.85);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent-cyan: #06b6d4;
+      --accent-green: #10b981;
+      --accent-purple: #8b5cf6;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --accent-blue: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      padding: 24px;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .title-group h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-primary {
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .badge-pacing {
+      background: #f59e0b22;
+      color: #f59e0b;
+      border: 1px solid #f59e0b55;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px;
+      backdrop-filter: blur(12px);
+    }
+
+    .card-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-value {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .card-subtext {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Main Layout: Video + Screenplay */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Video Player Column */
+    .video-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      background: #000;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      aspect-ratio: 9 / 16;
+      max-height: 560px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .video-hud {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .hud-chip {
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    /* Timeline & Screenplay Column */
+    .content-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Multi-Track Container */
+    .tracks-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .tracks-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .tracks-title {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .scrubber-timer {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent-cyan);
+    }
+
+    .tracks-viewport {
+      position: relative;
+      background: #06090e;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 12px 0;
+      overflow-x: hidden;
+      user-select: none;
+      cursor: crosshair;
+    }
+
+    .playhead {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #f43f5e;
+      box-shadow: 0 0 8px #f43f5e;
+      z-index: 20;
+      pointer-events: none;
+      transform: translateX(-50%);
+      left: 0%;
+      transition: left 0.05s linear;
+    }
+
+    .playhead-handle {
+      position: absolute;
+      top: -6px;
+      left: -5px;
+      width: 12px;
+      height: 12px;
+      background: #f43f5e;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .track-lane {
+      position: relative;
+      height: 36px;
+      margin-bottom: 8px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+    }
+
+    .track-lane:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+
+    .lane-label {
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .block {
+      position: absolute;
+      height: 28px;
+      top: 4px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      padding: 0 6px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      transition: transform 0.1s, filter 0.1s;
+      z-index: 10;
+    }
+
+    .block:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.2);
+      z-index: 15;
+    }
+
+    /* Track Block Styles */
+    .block-shot {
+      background: rgba(59, 130, 246, 0.35);
+      border: 1px solid rgba(59, 130, 246, 0.7);
+      color: #93c5fd;
+    }
+
+    .block-face-speaking {
+      background: rgba(16, 185, 129, 0.35);
+      border: 1px solid #10b981;
+      color: #a7f3d0;
+      box-shadow: 0 0 6px rgba(16, 185, 129, 0.25);
+    }
+
+    .block-face-silent {
+      background: rgba(148, 163, 184, 0.2);
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+      color: #cbd5e1;
+    }
+
+    .block-ocr {
+      background: rgba(236, 72, 153, 0.3);
+      border: 1px solid rgba(236, 72, 153, 0.7);
+      color: #fbcfe8;
+    }
+
+    /* Resolution Matrix */
+    .resolver-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .resolver-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .resolver-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .resolver-card.matched {
+      border-left: 4px solid var(--accent-green);
+    }
+
+    .resolver-card.off-screen {
+      border-left: 4px solid var(--accent-amber);
+    }
+
+    .resolver-pair {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .arrow-icon {
+      color: var(--text-muted);
+      font-size: 12px;
+    }
+
+    /* Screenplay / Utterance Feed */
+    .screenplay-container {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 20px;
+      max-height: 480px;
+      overflow-y: auto;
+    }
+
+    .dialogue-item {
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .dialogue-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .dialogue-item.active {
+      background: rgba(6, 182, 212, 0.12);
+      border-color: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 0 12px rgba(6, 182, 212, 0.15);
+    }
+
+    .dialogue-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .speaker-pill {
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .time-chip {
+      font-family: ui-monospace, monospace;
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    .dialogue-text {
+      font-size: 15px;
+      line-height: 1.4;
+      color: #fff;
+    }
+
+    /* Tooltip */
+    #tooltip {
+      position: fixed;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 12px;
+      color: #fff;
+      pointer-events: none;
+      z-index: 1000;
+      display: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+<div id="tooltip"></div>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="title-group">
+      <h1>
+        🎬 Reel Multimodal AI Inspector
+        <span class="badge badge-primary">DdrIIFTCWdx</span>
+        <span class="badge badge-pacing">Dynamic / Conversational</span>
+      </h1>
+    </div>
+    <div style="font-size: 13px; color: var(--text-muted);">
+      Duration: <strong style="color:#fff;">169.81s</strong> (169810 ms)
+    </div>
+  </div>
+
+  <!-- KPI Grid -->
+  <div class="kpi-grid">
+    <div class="card">
+      <div class="card-label">⚡ Visual Cuts (ASD)</div>
+      <div class="card-value" style="color: var(--accent-blue);">0 cuts</div>
+      <div class="card-subtext">Avg Shot Duration: <strong>0.00s</strong> (Hook: 0.0s)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">🎙️ Speech Delivery</div>
+      <div class="card-value" style="color: var(--accent-cyan);">370 words</div>
+      <div class="card-subtext">Speed: <strong>130.7 WPM</strong> (assemblyai)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">📺 On-Screen Text (OCR)</div>
+      <div class="card-value" style="color: var(--accent-rose);">117 spans</div>
+      <div class="card-subtext">Screen coverage: <strong>58.0%</strong></div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">👤 Face Tracking & MAR</div>
+      <div class="card-value" style="color: var(--accent-green);">23 tracks</div>
+      <div class="card-subtext">Face on-screen: <strong>9.9%</strong> | Speech: <strong>1.3%</strong></div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">👥 Speaker Diarization</div>
+      <div class="card-value" style="color: var(--accent-purple);">2 speakers</div>
+      <div class="card-subtext">Resolved: <strong>2</strong> acoustic clusters</div>
+    </div>
+  </div>
+
+  <!-- Main Grid: Video + Content -->
+  <div class="main-grid">
+
+    <!-- Video Player Column -->
+    <div class="video-panel">
+      <div class="video-wrapper">
+        <div class="video-hud">
+          <div class="hud-chip" id="hud-shot">Shot 1</div>
+          <div class="hud-chip" id="hud-speaker">SPEAKER_00</div>
+        </div>
+        <video id="video-player" controls preload="metadata">
+          <source src="video.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+      </div>
+
+      <!-- Speaker Resolution Cards -->
+      <div class="resolver-section">
+        <div class="section-title">🔗 Acoustic Voice ⟷ Visual Face Resolver</div>
+        <div class="resolver-grid" id="resolver-container">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-Track Timeline & Screenplay Column -->
+    <div class="content-panel">
+
+      <!-- Multi-Track Scroller -->
+      <div class="tracks-container">
+        <div class="tracks-header">
+          <div class="tracks-title">⏱️ Multimodal Synchronized Timeline (Click to Seek)</div>
+          <div class="scrubber-timer" id="time-display">00:00.00 / 169.81s</div>
+        </div>
+
+        <div class="tracks-viewport" id="timeline-viewport">
+          <div class="playhead" id="playhead">
+            <div class="playhead-handle"></div>
+          </div>
+
+          <!-- Track 1: Shots -->
+          <div class="track-lane" id="lane-shots">
+            <div class="lane-label">Shots</div>
+          </div>
+
+          <!-- Track 2: Speech Utterances -->
+          <div class="track-lane" id="lane-speech">
+            <div class="lane-label">Dialogue</div>
+          </div>
+
+          <!-- Track 3: Faces & Speaking MAR -->
+          <div class="track-lane" id="lane-faces">
+            <div class="lane-label">Faces (MAR)</div>
+          </div>
+
+          <!-- Track 4: On-Screen OCR -->
+          <div class="track-lane" id="lane-ocr">
+            <div class="lane-label">On-Screen Text</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Synchronized Screenplay Feed -->
+      <div class="screenplay-container">
+        <div class="section-title">📜 Chronological Dialogue & Screenplay Feed</div>
+        <div id="dialogue-feed">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const timelineData = {"reel_id": "DdrIIFTCWdx", "version": "1.0.0", "duration_ms": 169810, "duration_sec": 169.81, "pacing_dna": {"duration_ms": 169810, "duration_sec": 169.81, "pacing": {"total_shots": 0, "avg_shot_duration_sec": 0.0, "hook_shot_duration_sec": 0.0}, "speech": {"total_words": 370, "words_per_minute": 130.7, "primary_asr": "assemblyai", "total_utterances": 13}, "visuals": {"ocr_coverage_pct": 58.0, "total_text_overlays": 117, "face_on_screen_pct": 9.9, "visual_speech_pct": 1.3, "total_face_tracks": 23}, "speakers": {"unique_speakers_detected": 2, "speaker_resolution": {"SPEAKER_00": {"face_id": "face_40", "status": "matched", "overlap_ms": 800, "speaking_overlap_ms": 800, "confidence": 0.51}, "SPEAKER_01": {"face_id": "face_22", "status": "matched", "overlap_ms": 600, "speaking_overlap_ms": 600, "confidence": 0.5}}}}, "resolved_speakers": {"speaker_to_face": {"SPEAKER_00": "face_40", "SPEAKER_01": "face_22"}, "face_to_speaker": {"face_40": "SPEAKER_00", "face_22": "SPEAKER_01"}, "details": {"SPEAKER_00": {"face_id": "face_40", "status": "matched", "overlap_ms": 800, "speaking_overlap_ms": 800, "confidence": 0.51}, "SPEAKER_01": {"face_id": "face_22", "status": "matched", "overlap_ms": 600, "speaking_overlap_ms": 600, "confidence": 0.5}}}, "tracks": {"speech_words": [{"track": "speech", "start_ms": 0, "end_ms": 420, "type": "word", "payload": {"text": "लो", "raw": "लो", "speaker": "A"}, "confidence": 0.827, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 420, "end_ms": 620, "type": "word", "payload": {"text": "जिया", "raw": "जिया", "speaker": "A"}, "confidence": 0.885, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 620, "end_ms": 680, "type": "word", "payload": {"text": "जी", "raw": "जी", "speaker": "A"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 680, "end_ms": 940, "type": "word", "payload": {"text": "गरमा", "raw": "गरमा", "speaker": "A"}, "confidence": 0.773, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 940, "end_ms": 1100, "type": "word", "payload": {"text": "गरम", "raw": "गरम", "speaker": "A"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 1100, "end_ms": 1380, "type": "word", "payload": {"text": "कॉफी", "raw": "कॉफी", "speaker": "A"}, "confidence": 0.978, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 1380, "end_ms": 2520, "type": "word", "payload": {"text": "पियो", "raw": "पियो।", "speaker": "A"}, "confidence": 0.877, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 2520, "end_ms": 2540, "type": "word", "payload": {"text": "हाँ", "raw": "हाँ", "speaker": "B"}, "confidence": 0.688, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 2540, "end_ms": 4860, "type": "word", "payload": {"text": "भाई", "raw": "भाई।", "speaker": "B"}, "confidence": 0.985, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 4860, "end_ms": 5560, "type": "word", "payload": {"text": "हम्म", "raw": "हम्म,", "speaker": "B"}, "confidence": 0.792, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 6600, "end_ms": 7040, "type": "word", "payload": {"text": "अच्छा", "raw": "अच्छा", "speaker": "B"}, "confidence": 0.997, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 7040, "end_ms": 8300, "type": "word", "payload": {"text": "जी", "raw": "जी।", "speaker": "B"}, "confidence": 0.99, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 8300, "end_ms": 8460, "type": "word", "payload": {"text": "कांच", "raw": "कांच", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 8460, "end_ms": 8620, "type": "word", "payload": {"text": "के", "raw": "के", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 8620, "end_ms": 8860, "type": "word", "payload": {"text": "बर्तन", "raw": "बर्तन", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 8860, "end_ms": 9100, "type": "word", "payload": {"text": "आ", "raw": "आ", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 9100, "end_ms": 9200, "type": "word", "payload": {"text": "रहे", "raw": "रहे", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 9200, "end_ms": 9800, "type": "word", "payload": {"text": "हैं", "raw": "हैं?", "speaker": "B"}, "confidence": 0.989, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 9900, "end_ms": 10400, "type": "word", "payload": {"text": "सही", "raw": "सही", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 10400, "end_ms": 10760, "type": "word", "payload": {"text": "है", "raw": "है,", "speaker": "B"}, "confidence": 0.984, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 10760, "end_ms": 11560, "type": "word", "payload": {"text": "बढ़िया", "raw": "बढ़िया।", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 11560, "end_ms": 12520, "type": "word", "payload": {"text": "ओहो", "raw": "ओहो,", "speaker": "B"}, "confidence": 0.899, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 13380, "end_ms": 14080, "type": "word", "payload": {"text": "कॉफी", "raw": "कॉफी", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 14080, "end_ms": 14360, "type": "word", "payload": {"text": "एकदम", "raw": "एकदम", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 14360, "end_ms": 15000, "type": "word", "payload": {"text": "बोरोसिलिकेट", "raw": "बोरोसिलिकेट", "speaker": "B"}, "confidence": 0.904, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 15000, "end_ms": 15580, "type": "word", "payload": {"text": "कप", "raw": "कप", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 15580, "end_ms": 15700, "type": "word", "payload": {"text": "में", "raw": "में", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 15700, "end_ms": 15900, "type": "word", "payload": {"text": "आ", "raw": "आ", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 15900, "end_ms": 15900, "type": "word", "payload": {"text": "रही", "raw": "रही", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 15900, "end_ms": 16020, "type": "word", "payload": {"text": "है", "raw": "है,", "speaker": "B"}, "confidence": 0.979, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 16020, "end_ms": 16300, "type": "word", "payload": {"text": "डंडी", "raw": "डंडी", "speaker": "B"}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 16300, "end_ms": 16520, "type": "word", "payload": {"text": "देखो", "raw": "देखो", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 16520, "end_ms": 16720, "type": "word", "payload": {"text": "अलग", "raw": "अलग", "speaker": "B"}, "confidence": 0.821, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 16720, "end_ms": 16900, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "B"}, "confidence": 0.972, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 16900, "end_ms": 17240, "type": "word", "payload": {"text": "हाँ", "raw": "हाँ?", "speaker": "B"}, "confidence": 0.943, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 17240, "end_ms": 17620, "type": "word", "payload": {"text": "जिया", "raw": "जिया", "speaker": "A"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 17620, "end_ms": 17680, "type": "word", "payload": {"text": "जी", "raw": "जी", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 17680, "end_ms": 17780, "type": "word", "payload": {"text": "हम", "raw": "हम", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 17780, "end_ms": 17880, "type": "word", "payload": {"text": "तो", "raw": "तो", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 17880, "end_ms": 18260, "type": "word", "payload": {"text": "स्टार्टिंग", "raw": "स्टार्टिंग", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 18260, "end_ms": 18380, "type": "word", "payload": {"text": "से", "raw": "से", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 18380, "end_ms": 18540, "type": "word", "payload": {"text": "यही", "raw": "यही", "speaker": "A"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 18540, "end_ms": 18720, "type": "word", "payload": {"text": "बर्तन", "raw": "बर्तन", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 18720, "end_ms": 19080, "type": "word", "payload": {"text": "इस्तेमाल", "raw": "इस्तेमाल", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 19080, "end_ms": 19360, "type": "word", "payload": {"text": "करते", "raw": "करते", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 19360, "end_ms": 19480, "type": "word", "payload": {"text": "हैं", "raw": "हैं,", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 19480, "end_ms": 19840, "type": "word", "payload": {"text": "क्वालिटी", "raw": "क्वालिटी", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 19840, "end_ms": 19920, "type": "word", "payload": {"text": "में", "raw": "में", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 19920, "end_ms": 20460, "type": "word", "payload": {"text": "कॉम्प्रोमाइज़", "raw": "कॉम्प्रोमाइज़", "speaker": "A"}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 20460, "end_ms": 20460, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 0.997, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 20460, "end_ms": 20700, "type": "word", "payload": {"text": "करते", "raw": "करते", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 20700, "end_ms": 20780, "type": "word", "payload": {"text": "हम", "raw": "हम", "speaker": "A"}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 20780, "end_ms": 20980, "type": "word", "payload": {"text": "घर", "raw": "घर", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 20980, "end_ms": 21180, "type": "word", "payload": {"text": "के", "raw": "के", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 21180, "end_ms": 21580, "type": "word", "payload": {"text": "सामान", "raw": "सामान", "speaker": "A"}, "confidence": 0.974, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 26010, "end_ms": 26450, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 26450, "end_ms": 26570, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 26570, "end_ms": 26790, "type": "word", "payload": {"text": "क्यों", "raw": "क्यों", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 26790, "end_ms": 27010, "type": "word", "payload": {"text": "क्या", "raw": "क्या", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 27010, "end_ms": 27230, "type": "word", "payload": {"text": "हुआ", "raw": "हुआ", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 27230, "end_ms": 28130, "type": "word", "payload": {"text": "शादी", "raw": "शादी", "speaker": "B"}, "confidence": 0.95, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 28130, "end_ms": 28230, "type": "word", "payload": {"text": "में", "raw": "में", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 28230, "end_ms": 28490, "type": "word", "payload": {"text": "देने", "raw": "देने", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 28490, "end_ms": 28630, "type": "word", "payload": {"text": "चाहिए", "raw": "चाहिए", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 28630, "end_ms": 28730, "type": "word", "payload": {"text": "थे", "raw": "थे", "speaker": "B"}, "confidence": 0.86, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 28730, "end_ms": 28810, "type": "word", "payload": {"text": "ना", "raw": "ना", "speaker": "B"}, "confidence": 0.993, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 28810, "end_ms": 28990, "type": "word", "payload": {"text": "फिर", "raw": "फिर", "speaker": "B"}, "confidence": 0.963, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 28990, "end_ms": 29130, "type": "word", "payload": {"text": "हमें", "raw": "हमें", "speaker": "B"}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 29130, "end_ms": 29410, "type": "word", "payload": {"text": "भी", "raw": "भी", "speaker": "B"}, "confidence": 0.853, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 29410, "end_ms": 29730, "type": "word", "payload": {"text": "स्टिकली", "raw": "स्टिकली", "speaker": "B"}, "confidence": 0.867, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 29730, "end_ms": 29890, "type": "word", "payload": {"text": "की", "raw": "की", "speaker": "A"}, "confidence": 0.919, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 29890, "end_ms": 30490, "type": "word", "payload": {"text": "जगह", "raw": "जगह", "speaker": "A"}, "confidence": 0.989, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 30490, "end_ms": 31270, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 31270, "end_ms": 31490, "type": "word", "payload": {"text": "हमने", "raw": "हमने", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 31490, "end_ms": 31610, "type": "word", "payload": {"text": "तो", "raw": "तो", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 31610, "end_ms": 31950, "type": "word", "payload": {"text": "सारे", "raw": "सारे", "speaker": "A"}, "confidence": 0.861, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 31950, "end_ms": 32210, "type": "word", "payload": {"text": "अच्छे", "raw": "अच्छे", "speaker": "A"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 32210, "end_ms": 32470, "type": "word", "payload": {"text": "बर्तन", "raw": "बर्तन", "speaker": "A"}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 32470, "end_ms": 32550, "type": "word", "payload": {"text": "ही", "raw": "ही", "speaker": "A"}, "confidence": 0.988, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 32550, "end_ms": 32730, "type": "word", "payload": {"text": "दिए", "raw": "दिए", "speaker": "A"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 32730, "end_ms": 32990, "type": "word", "payload": {"text": "मतलब", "raw": "मतलब", "speaker": "A"}, "confidence": 0.744, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 32990, "end_ms": 33110, "type": "word", "payload": {"text": "वो", "raw": "वो", "speaker": "A"}, "confidence": 0.977, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 33110, "end_ms": 33270, "type": "word", "payload": {"text": "शायद", "raw": "शायद", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 33270, "end_ms": 33610, "type": "word", "payload": {"text": "पुरानी", "raw": "पुरानी", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 33610, "end_ms": 33770, "type": "word", "payload": {"text": "बात", "raw": "बात", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 33770, "end_ms": 33990, "type": "word", "payload": {"text": "होगी", "raw": "होगी", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 33990, "end_ms": 34150, "type": "word", "payload": {"text": "तो", "raw": "तो", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 34150, "end_ms": 34350, "type": "word", "payload": {"text": "आपको", "raw": "आपको", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 34350, "end_ms": 35350, "type": "word", "payload": {"text": "याद", "raw": "याद", "speaker": "A"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 35350, "end_ms": 35490, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 0.995, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 35490, "end_ms": 35730, "type": "word", "payload": {"text": "आ", "raw": "आ", "speaker": "A"}, "confidence": 0.973, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 35730, "end_ms": 35730, "type": "word", "payload": {"text": "रहा", "raw": "रहा", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 35730, "end_ms": 36090, "type": "word", "payload": {"text": "होगा", "raw": "होगा", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 36090, "end_ms": 36370, "type": "word", "payload": {"text": "अरे", "raw": "अरे", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 36370, "end_ms": 36590, "type": "word", "payload": {"text": "वो", "raw": "वो", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 36590, "end_ms": 36970, "type": "word", "payload": {"text": "पुराने", "raw": "पुराने", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 36970, "end_ms": 37070, "type": "word", "payload": {"text": "से", "raw": "से", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 37070, "end_ms": 37290, "type": "word", "payload": {"text": "याद", "raw": "याद", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 37290, "end_ms": 37370, "type": "word", "payload": {"text": "आया", "raw": "आया", "speaker": "B"}, "confidence": 0.995, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 37370, "end_ms": 37570, "type": "word", "payload": {"text": "मेरे", "raw": "मेरे", "speaker": "B"}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 37570, "end_ms": 38120, "type": "word", "payload": {"text": "को", "raw": "को", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 38130, "end_ms": 38490, "type": "word", "payload": {"text": "टोस्टर", "raw": "टोस्टर", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 38490, "end_ms": 38710, "type": "word", "payload": {"text": "खराब", "raw": "खराब", "speaker": "B"}, "confidence": 0.906, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 38710, "end_ms": 38850, "type": "word", "payload": {"text": "हो", "raw": "हो", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 38850, "end_ms": 38890, "type": "word", "payload": {"text": "गया", "raw": "गया", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 38890, "end_ms": 39070, "type": "word", "payload": {"text": "ठीक", "raw": "ठीक", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 39070, "end_ms": 39290, "type": "word", "payload": {"text": "करा", "raw": "करा", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 39290, "end_ms": 39370, "type": "word", "payload": {"text": "दे", "raw": "दे", "speaker": "B"}, "confidence": 0.988, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 39370, "end_ms": 39830, "type": "word", "payload": {"text": "वो", "raw": "वो", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 39830, "end_ms": 40490, "type": "word", "payload": {"text": "मैं", "raw": "मैं", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 40490, "end_ms": 40610, "type": "word", "payload": {"text": "एक", "raw": "एक", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 40610, "end_ms": 40610, "type": "word", "payload": {"text": "बार", "raw": "बार", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 40610, "end_ms": 40730, "type": "word", "payload": {"text": "वो", "raw": "वो", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 40730, "end_ms": 40910, "type": "word", "payload": {"text": "बिल", "raw": "बिल", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 40910, "end_ms": 41150, "type": "word", "payload": {"text": "देख", "raw": "देख", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 41150, "end_ms": 41230, "type": "word", "payload": {"text": "लेता", "raw": "लेता", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 41230, "end_ms": 52370, "type": "word", "payload": {"text": "हूँ", "raw": "हूँ", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 52370, "end_ms": 52370, "type": "word", "payload": {"text": "घर", "raw": "घर", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 52370, "end_ms": 52390, "type": "word", "payload": {"text": "म", "raw": "म", "speaker": "A"}, "confidence": 0.818, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 52620, "end_ms": 53070, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 53070, "end_ms": 53170, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 0.956, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 53170, "end_ms": 53450, "type": "word", "payload": {"text": "ऐसी", "raw": "ऐसी", "speaker": "A"}, "confidence": 0.993, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 53450, "end_ms": 53830, "type": "word", "payload": {"text": "ऐसा", "raw": "ऐसा", "speaker": "A"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 53830, "end_ms": 53950, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 53950, "end_ms": 54150, "type": "word", "payload": {"text": "बोला", "raw": "बोला", "speaker": "A"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 54150, "end_ms": 54490, "type": "word", "payload": {"text": "मैंने", "raw": "मैंने", "speaker": "A"}, "confidence": 0.982, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 54490, "end_ms": 55730, "type": "word", "payload": {"text": "हम्म", "raw": "हम्म", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 55730, "end_ms": 55830, "type": "word", "payload": {"text": "ऐसे", "raw": "ऐसे", "speaker": "B"}, "confidence": 0.945, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 55830, "end_ms": 55870, "type": "word", "payload": {"text": "ही", "raw": "ही", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 55870, "end_ms": 55990, "type": "word", "payload": {"text": "कह", "raw": "कह", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 55990, "end_ms": 56070, "type": "word", "payload": {"text": "रहा", "raw": "रहा", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 56070, "end_ms": 56150, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 56150, "end_ms": 56230, "type": "word", "payload": {"text": "तू", "raw": "तू", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 56230, "end_ms": 56910, "type": "word", "payload": {"text": "तो", "raw": "तो", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 56910, "end_ms": 57270, "type": "word", "payload": {"text": "तू", "raw": "तू", "speaker": "B"}, "confidence": 0.898, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 57270, "end_ms": 57610, "type": "word", "payload": {"text": "पैदा", "raw": "पैदा", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 57610, "end_ms": 57730, "type": "word", "payload": {"text": "भी", "raw": "भी", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 57730, "end_ms": 57790, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "B"}, "confidence": 0.99, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 57790, "end_ms": 57910, "type": "word", "payload": {"text": "हुआ", "raw": "हुआ", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 57910, "end_ms": 58010, "type": "word", "payload": {"text": "ना", "raw": "ना", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 58010, "end_ms": 58590, "type": "word", "payload": {"text": "बेटे", "raw": "बेटे", "speaker": "B"}, "confidence": 0.946, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 58590, "end_ms": 59070, "type": "word", "payload": {"text": "जब", "raw": "जब", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 59070, "end_ms": 59170, "type": "word", "payload": {"text": "से", "raw": "से", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 59170, "end_ms": 59370, "type": "word", "payload": {"text": "ब्रेड", "raw": "ब्रेड", "speaker": "B"}, "confidence": 0.995, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 59370, "end_ms": 59550, "type": "word", "payload": {"text": "जाम", "raw": "जाम", "speaker": "B"}, "confidence": 0.778, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 59550, "end_ms": 59710, "type": "word", "payload": {"text": "खा", "raw": "खा", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 59710, "end_ms": 59870, "type": "word", "payload": {"text": "रहा", "raw": "रहा", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 59870, "end_ms": 59950, "type": "word", "payload": {"text": "हूँ", "raw": "हूँ", "speaker": "A"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 59950, "end_ms": 60670, "type": "word", "payload": {"text": "मैं", "raw": "मैं", "speaker": "A"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 60670, "end_ms": 61210, "type": "word", "payload": {"text": "खा", "raw": "खा", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 61210, "end_ms": 61330, "type": "word", "payload": {"text": "रहे", "raw": "रहे", "speaker": "A"}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 61330, "end_ms": 61550, "type": "word", "payload": {"text": "होंगे", "raw": "होंगे", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 61550, "end_ms": 61730, "type": "word", "payload": {"text": "जिया", "raw": "जिया", "speaker": "A"}, "confidence": 0.804, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 61730, "end_ms": 61870, "type": "word", "payload": {"text": "जी", "raw": "जी", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 61870, "end_ms": 62030, "type": "word", "payload": {"text": "मैं", "raw": "मैं", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 62030, "end_ms": 62230, "type": "word", "payload": {"text": "कुछ", "raw": "कुछ", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 62230, "end_ms": 62430, "type": "word", "payload": {"text": "मजा", "raw": "मजा", "speaker": "A"}, "confidence": 0.725, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 62430, "end_ms": 62670, "type": "word", "payload": {"text": "थोड़ी", "raw": "थोड़ी", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 62670, "end_ms": 62930, "type": "word", "payload": {"text": "कर", "raw": "कर", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 62930, "end_ms": 62970, "type": "word", "payload": {"text": "रहा", "raw": "रहा", "speaker": "A"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 62970, "end_ms": 63110, "type": "word", "payload": {"text": "हूँ", "raw": "हूँ", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 63110, "end_ms": 63690, "type": "word", "payload": {"text": "आपको", "raw": "आपको", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 63690, "end_ms": 63970, "type": "word", "payload": {"text": "मतलब", "raw": "मतलब", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 63970, "end_ms": 64170, "type": "word", "payload": {"text": "हम", "raw": "हम", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 64170, "end_ms": 64270, "type": "word", "payload": {"text": "भी", "raw": "भी", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 64270, "end_ms": 64470, "type": "word", "payload": {"text": "सेम", "raw": "सेम", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 64470, "end_ms": 64910, "type": "word", "payload": {"text": "इस्तेमाल", "raw": "इस्तेमाल", "speaker": "A"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 64910, "end_ms": 65210, "type": "word", "payload": {"text": "करते", "raw": "करते", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 65210, "end_ms": 65330, "type": "word", "payload": {"text": "हैं", "raw": "हैं", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 65330, "end_ms": 65730, "type": "word", "payload": {"text": "ब्रांडेड", "raw": "ब्रांडेड", "speaker": "A"}, "confidence": 0.957, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 65730, "end_ms": 65830, "type": "word", "payload": {"text": "ही", "raw": "ही", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 65830, "end_ms": 65930, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 65930, "end_ms": 66230, "type": "word", "payload": {"text": "आपको", "raw": "आपको", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 66230, "end_ms": 66350, "type": "word", "payload": {"text": "भी", "raw": "भी", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 66350, "end_ms": 66550, "type": "word", "payload": {"text": "वही", "raw": "वही", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 66550, "end_ms": 66710, "type": "word", "payload": {"text": "दिया", "raw": "दिया", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 66710, "end_ms": 67110, "type": "word", "payload": {"text": "था", "raw": "था", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 67110, "end_ms": 77710, "type": "word", "payload": {"text": "सेम", "raw": "सेम", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 77710, "end_ms": 77850, "type": "word", "payload": {"text": "अभी", "raw": "अभी", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 77850, "end_ms": 77850, "type": "word", "payload": {"text": "देख", "raw": "देख", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 77850, "end_ms": 77850, "type": "word", "payload": {"text": "लेता", "raw": "लेता", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 77850, "end_ms": 78250, "type": "word", "payload": {"text": "हू", "raw": "हू", "speaker": "B"}, "confidence": 0.837, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 78900, "end_ms": 79240, "type": "word", "payload": {"text": "इंडक्शन", "raw": "इंडक्शन", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 79240, "end_ms": 79540, "type": "word", "payload": {"text": "दिया", "raw": "दिया", "speaker": "B"}, "confidence": 0.879, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 79540, "end_ms": 80520, "type": "word", "payload": {"text": "हैं", "raw": "हैं", "speaker": "B"}, "confidence": 0.912, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 80520, "end_ms": 80640, "type": "word", "payload": {"text": "घर", "raw": "घर", "speaker": "B"}, "confidence": 0.997, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 80640, "end_ms": 80780, "type": "word", "payload": {"text": "में", "raw": "में", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 80780, "end_ms": 80980, "type": "word", "payload": {"text": "तुम", "raw": "तुम", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 80980, "end_ms": 81200, "type": "word", "payload": {"text": "तीन", "raw": "तीन", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 81200, "end_ms": 81520, "type": "word", "payload": {"text": "बंदे", "raw": "बंदे", "speaker": "B"}, "confidence": 0.977, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 81520, "end_ms": 81600, "type": "word", "payload": {"text": "हो", "raw": "हो", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 81600, "end_ms": 82300, "type": "word", "payload": {"text": "गैस", "raw": "गैस", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 82300, "end_ms": 82660, "type": "word", "payload": {"text": "देखले", "raw": "देखले", "speaker": "B"}, "confidence": 0.9, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 82660, "end_ms": 83040, "type": "word", "payload": {"text": "तुम्हारा", "raw": "तुम्हारा", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 83040, "end_ms": 83260, "type": "word", "payload": {"text": "चार", "raw": "चार", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 83260, "end_ms": 83560, "type": "word", "payload": {"text": "बर्नर", "raw": "बर्नर", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 83560, "end_ms": 83860, "type": "word", "payload": {"text": "वाला", "raw": "वाला", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 83860, "end_ms": 84020, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "B"}, "confidence": 0.479, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 84020, "end_ms": 84500, "type": "word", "payload": {"text": "ये", "raw": "ये", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 84500, "end_ms": 84720, "type": "word", "payload": {"text": "हैवी", "raw": "हैवी", "speaker": "B"}, "confidence": 0.983, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 84720, "end_ms": 85300, "type": "word", "payload": {"text": "मटेरियल", "raw": "मटेरियल", "speaker": "B"}, "confidence": 0.997, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 85300, "end_ms": 86040, "type": "word", "payload": {"text": "कॉमन", "raw": "कॉमन", "speaker": "B"}, "confidence": 0.96, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 86040, "end_ms": 86160, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "B"}, "confidence": 0.995, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 86160, "end_ms": 86460, "type": "word", "payload": {"text": "यार", "raw": "यार", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 86460, "end_ms": 86740, "type": "word", "payload": {"text": "कॉमन", "raw": "कॉमन", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 86740, "end_ms": 86960, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 86960, "end_ms": 87400, "type": "word", "payload": {"text": "ये", "raw": "ये", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 87400, "end_ms": 87720, "type": "word", "payload": {"text": "टिश्यू", "raw": "टिश्यू", "speaker": "B"}, "confidence": 0.967, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 87720, "end_ms": 87960, "type": "word", "payload": {"text": "पेपर", "raw": "पेपर", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 87960, "end_ms": 88100, "type": "word", "payload": {"text": "का", "raw": "का", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 88100, "end_ms": 88240, "type": "word", "payload": {"text": "ये", "raw": "ये", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 88240, "end_ms": 88520, "type": "word", "payload": {"text": "स्टैंड", "raw": "स्टैंड", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 88520, "end_ms": 88840, "type": "word", "payload": {"text": "कॉमन", "raw": "कॉमन", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 88840, "end_ms": 89060, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 89060, "end_ms": 90220, "type": "word", "payload": {"text": "कॉमन", "raw": "कॉमन", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 90220, "end_ms": 90400, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 90400, "end_ms": 90700, "type": "word", "payload": {"text": "ये", "raw": "ये", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 90700, "end_ms": 91600, "type": "word", "payload": {"text": "हैं", "raw": "हैं", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 91600, "end_ms": 91840, "type": "word", "payload": {"text": "ये", "raw": "ये", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 91840, "end_ms": 92440, "type": "word", "payload": {"text": "वाह", "raw": "वाह", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 92440, "end_ms": 92720, "type": "word", "payload": {"text": "कैसा", "raw": "कैसा", "speaker": "B"}, "confidence": 0.802, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 92720, "end_ms": 92900, "type": "word", "payload": {"text": "रोल", "raw": "रोल", "speaker": "B"}, "confidence": 0.967, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 92900, "end_ms": 93160, "type": "word", "payload": {"text": "देखो", "raw": "देखो", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 93160, "end_ms": 93380, "type": "word", "payload": {"text": "भाई", "raw": "भाई", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 93380, "end_ms": 93560, "type": "word", "payload": {"text": "साहब", "raw": "साहब", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 93560, "end_ms": 93860, "type": "word", "payload": {"text": "इसमें", "raw": "इसमें", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 93860, "end_ms": 94120, "type": "word", "payload": {"text": "रोटी", "raw": "रोटी", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 94120, "end_ms": 94300, "type": "word", "payload": {"text": "दिख", "raw": "दिख", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 94300, "end_ms": 94380, "type": "word", "payload": {"text": "रही", "raw": "रही", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 94380, "end_ms": 94580, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "B"}, "confidence": 0.989, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 94580, "end_ms": 95180, "type": "word", "payload": {"text": "हैं", "raw": "हैं", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 95180, "end_ms": 95360, "type": "word", "payload": {"text": "मुझे", "raw": "मुझे", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 95360, "end_ms": 95580, "type": "word", "payload": {"text": "दे", "raw": "दे", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 95580, "end_ms": 95580, "type": "word", "payload": {"text": "दिया", "raw": "दिया", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 95580, "end_ms": 95940, "type": "word", "payload": {"text": "तुमने", "raw": "तुमने", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 95940, "end_ms": 96280, "type": "word", "payload": {"text": "प्लास्टिक", "raw": "प्लास्टिक", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 96280, "end_ms": 96540, "type": "word", "payload": {"text": "वाला", "raw": "वाला", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 96540, "end_ms": 107360, "type": "word", "payload": {"text": "आप", "raw": "आप", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 107360, "end_ms": 107360, "type": "word", "payload": {"text": "ले", "raw": "ले", "speaker": "B"}, "confidence": 0.756, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 107370, "end_ms": 107770, "type": "word", "payload": {"text": "चम्मच", "raw": "चम्मच", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 107770, "end_ms": 108050, "type": "word", "payload": {"text": "तुमने", "raw": "तुमने", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 108050, "end_ms": 108330, "type": "word", "payload": {"text": "एकदम", "raw": "एकदम", "speaker": "B"}, "confidence": 0.979, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 108330, "end_ms": 108830, "type": "word", "payload": {"text": "अम्मानी", "raw": "अम्मानी", "speaker": "B"}, "confidence": 0.967, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 108830, "end_ms": 109030, "type": "word", "payload": {"text": "वाले", "raw": "वाले", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 109030, "end_ms": 109210, "type": "word", "payload": {"text": "ले", "raw": "ले", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 109210, "end_ms": 109450, "type": "word", "payload": {"text": "रखे", "raw": "रखे", "speaker": "B"}, "confidence": 0.951, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 109450, "end_ms": 109530, "type": "word", "payload": {"text": "हैं", "raw": "हैं", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 109530, "end_ms": 109610, "type": "word", "payload": {"text": "ये", "raw": "ये", "speaker": "B"}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 109610, "end_ms": 109790, "type": "word", "payload": {"text": "तो", "raw": "तो", "speaker": "B"}, "confidence": 0.987, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 109790, "end_ms": 110010, "type": "word", "payload": {"text": "तो", "raw": "तो", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 110010, "end_ms": 110230, "type": "word", "payload": {"text": "आप", "raw": "आप", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 110230, "end_ms": 110370, "type": "word", "payload": {"text": "ले", "raw": "ले", "speaker": "B"}, "confidence": 0.988, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 110370, "end_ms": 110470, "type": "word", "payload": {"text": "लो", "raw": "लो", "speaker": "B"}, "confidence": 0.997, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 110470, "end_ms": 110590, "type": "word", "payload": {"text": "आप", "raw": "आप", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 110590, "end_ms": 110710, "type": "word", "payload": {"text": "ले", "raw": "ले", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 110710, "end_ms": 110790, "type": "word", "payload": {"text": "लो", "raw": "लो", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 110790, "end_ms": 111110, "type": "word", "payload": {"text": "मैं", "raw": "मैं", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 111110, "end_ms": 111250, "type": "word", "payload": {"text": "मैं", "raw": "मैं", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 111250, "end_ms": 111410, "type": "word", "payload": {"text": "क्या", "raw": "क्या", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 111410, "end_ms": 111890, "type": "word", "payload": {"text": "करूँ", "raw": "करूँ", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 111890, "end_ms": 112310, "type": "word", "payload": {"text": "आप", "raw": "आप", "speaker": "B"}, "confidence": 0.963, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 112310, "end_ms": 112370, "type": "word", "payload": {"text": "ले", "raw": "ले", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 112370, "end_ms": 112590, "type": "word", "payload": {"text": "लो", "raw": "लो", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 112590, "end_ms": 113190, "type": "word", "payload": {"text": "अम्मानी", "raw": "अम्मानी", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 113190, "end_ms": 113370, "type": "word", "payload": {"text": "वाली", "raw": "वाली", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 113370, "end_ms": 113610, "type": "word", "payload": {"text": "रसोई", "raw": "रसोई", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 113610, "end_ms": 113890, "type": "word", "payload": {"text": "बना", "raw": "बना", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 113890, "end_ms": 114050, "type": "word", "payload": {"text": "रखी", "raw": "रखी", "speaker": "B"}, "confidence": 0.995, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 114050, "end_ms": 114250, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "B"}, "confidence": 0.943, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 114250, "end_ms": 114390, "type": "word", "payload": {"text": "तुमने", "raw": "तुमने", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 114390, "end_ms": 114630, "type": "word", "payload": {"text": "इसमें", "raw": "इसमें", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 114630, "end_ms": 114730, "type": "word", "payload": {"text": "तो", "raw": "तो", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 114730, "end_ms": 114950, "type": "word", "payload": {"text": "खीर", "raw": "खीर", "speaker": "B"}, "confidence": 0.956, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 114950, "end_ms": 115230, "type": "word", "payload": {"text": "खाते", "raw": "खाते", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 115230, "end_ms": 115390, "type": "word", "payload": {"text": "होगे", "raw": "होगे", "speaker": "B"}, "confidence": 0.987, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 115390, "end_ms": 115750, "type": "word", "payload": {"text": "तुम", "raw": "तुम", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 115750, "end_ms": 115990, "type": "word", "payload": {"text": "हमें", "raw": "हमें", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 115990, "end_ms": 116110, "type": "word", "payload": {"text": "तो", "raw": "तो", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 116110, "end_ms": 116290, "type": "word", "payload": {"text": "दे", "raw": "दे", "speaker": "B"}, "confidence": 0.997, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 116290, "end_ms": 116330, "type": "word", "payload": {"text": "दी", "raw": "दी", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 116330, "end_ms": 116550, "type": "word", "payload": {"text": "वो", "raw": "वो", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 116550, "end_ms": 116810, "type": "word", "payload": {"text": "प्लेट", "raw": "प्लेट", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 116810, "end_ms": 117090, "type": "word", "payload": {"text": "बड़ी", "raw": "बड़ी", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 117090, "end_ms": 117650, "type": "word", "payload": {"text": "चार", "raw": "चार", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 117650, "end_ms": 118010, "type": "word", "payload": {"text": "खांचे", "raw": "खांचे", "speaker": "B"}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 118010, "end_ms": 118190, "type": "word", "payload": {"text": "वाली", "raw": "वाली", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 118190, "end_ms": 118490, "type": "word", "payload": {"text": "उसमें", "raw": "उसमें", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 118490, "end_ms": 118650, "type": "word", "payload": {"text": "खीर", "raw": "खीर", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 118650, "end_ms": 118870, "type": "word", "payload": {"text": "खाओ", "raw": "खाओ", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 118870, "end_ms": 119230, "type": "word", "payload": {"text": "सब्जी", "raw": "सब्जी", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 119230, "end_ms": 119750, "type": "word", "payload": {"text": "खाओ", "raw": "खाओ", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 119750, "end_ms": 120150, "type": "word", "payload": {"text": "रायता", "raw": "रायता", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 120150, "end_ms": 120250, "type": "word", "payload": {"text": "भी", "raw": "भी", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 120250, "end_ms": 120430, "type": "word", "payload": {"text": "उसी", "raw": "उसी", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 120430, "end_ms": 120530, "type": "word", "payload": {"text": "में", "raw": "में", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 120530, "end_ms": 120810, "type": "word", "payload": {"text": "पियो", "raw": "पियो", "speaker": "B"}, "confidence": 0.995, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 120810, "end_ms": 136190, "type": "word", "payload": {"text": "अच्छा", "raw": "अच्छा", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 136190, "end_ms": 136190, "type": "word", "payload": {"text": "आप", "raw": "आप", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 136190, "end_ms": 136190, "type": "word", "payload": {"text": "ले", "raw": "ले", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 136190, "end_ms": 136190, "type": "word", "payload": {"text": "ज", "raw": "ज", "speaker": "B"}, "confidence": 0.65, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 136200, "end_ms": 136380, "type": "word", "payload": {"text": "कब", "raw": "कब", "speaker": "B"}, "confidence": 0.959, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 136380, "end_ms": 136660, "type": "word", "payload": {"text": "देता", "raw": "देता", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 136660, "end_ms": 136840, "type": "word", "payload": {"text": "मुझे", "raw": "मुझे", "speaker": "B"}, "confidence": 0.984, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 136840, "end_ms": 137460, "type": "word", "payload": {"text": "और", "raw": "और", "speaker": "B"}, "confidence": 0.932, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 137460, "end_ms": 137520, "type": "word", "payload": {"text": "मैंने", "raw": "मैंने", "speaker": "B"}, "confidence": 0.791, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 137520, "end_ms": 137660, "type": "word", "payload": {"text": "ले", "raw": "ले", "speaker": "B"}, "confidence": 0.562, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 137660, "end_ms": 137800, "type": "word", "payload": {"text": "जाओ", "raw": "जाओ", "speaker": "B"}, "confidence": 0.624, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 137800, "end_ms": 137960, "type": "word", "payload": {"text": "कुछ", "raw": "कुछ", "speaker": "B"}, "confidence": 0.796, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 137960, "end_ms": 138140, "type": "word", "payload": {"text": "जो", "raw": "जो", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 138140, "end_ms": 138160, "type": "word", "payload": {"text": "चाहिए", "raw": "चाहिए", "speaker": "B"}, "confidence": 0.922, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 138160, "end_ms": 138160, "type": "word", "payload": {"text": "ये", "raw": "ये", "speaker": "B"}, "confidence": 0.988, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 138160, "end_ms": 138580, "type": "word", "payload": {"text": "ये", "raw": "ये", "speaker": "B"}, "confidence": 0.983, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 138580, "end_ms": 138800, "type": "word", "payload": {"text": "देख", "raw": "देख", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 138800, "end_ms": 138940, "type": "word", "payload": {"text": "लेना", "raw": "लेना", "speaker": "B"}, "confidence": 0.964, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 138940, "end_ms": 139140, "type": "word", "payload": {"text": "तू", "raw": "तू", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 139140, "end_ms": 139260, "type": "word", "payload": {"text": "ये", "raw": "ये", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 139260, "end_ms": 139500, "type": "word", "payload": {"text": "कितना", "raw": "कितना", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 139500, "end_ms": 139840, "type": "word", "payload": {"text": "मजबूत", "raw": "मजबूत", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 139840, "end_ms": 140200, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "B"}, "confidence": 0.997, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 140200, "end_ms": 140800, "type": "word", "payload": {"text": "हाँ", "raw": "हाँ", "speaker": "B"}, "confidence": 0.419, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 140800, "end_ms": 140920, "type": "word", "payload": {"text": "तुमने", "raw": "तुमने", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 140920, "end_ms": 141440, "type": "word", "payload": {"text": "भाई", "raw": "भाई", "speaker": "B"}, "confidence": 0.942, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 141440, "end_ms": 141680, "type": "word", "payload": {"text": "चीनी", "raw": "चीनी", "speaker": "B"}, "confidence": 0.997, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 141680, "end_ms": 141860, "type": "word", "payload": {"text": "चाय", "raw": "चाय", "speaker": "B"}, "confidence": 0.908, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 141860, "end_ms": 142020, "type": "word", "payload": {"text": "पत्ती", "raw": "पत्ती", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 142020, "end_ms": 142220, "type": "word", "payload": {"text": "रखने", "raw": "रखने", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 142220, "end_ms": 142300, "type": "word", "payload": {"text": "के", "raw": "के", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 142300, "end_ms": 142420, "type": "word", "payload": {"text": "लिए", "raw": "लिए", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 142420, "end_ms": 142620, "type": "word", "payload": {"text": "अलग", "raw": "अलग", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 142620, "end_ms": 142740, "type": "word", "payload": {"text": "से", "raw": "से", "speaker": "B"}, "confidence": 0.889, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 142740, "end_ms": 142980, "type": "word", "payload": {"text": "कांच", "raw": "कांच", "speaker": "B"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 142980, "end_ms": 143100, "type": "word", "payload": {"text": "का", "raw": "का", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 143100, "end_ms": 143380, "type": "word", "payload": {"text": "शटर", "raw": "शटर", "speaker": "B"}, "confidence": 0.896, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 143380, "end_ms": 143600, "type": "word", "payload": {"text": "वाला", "raw": "वाला", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 143600, "end_ms": 143780, "type": "word", "payload": {"text": "बना", "raw": "बना", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 143780, "end_ms": 143940, "type": "word", "payload": {"text": "रखा", "raw": "रखा", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 143940, "end_ms": 145160, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 145160, "end_ms": 145420, "type": "word", "payload": {"text": "ऐसा", "raw": "ऐसा", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 145420, "end_ms": 145660, "type": "word", "payload": {"text": "कुछ", "raw": "कुछ", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 145660, "end_ms": 145800, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 145800, "end_ms": 146100, "type": "word", "payload": {"text": "है", "raw": "है", "speaker": "A"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 146100, "end_ms": 146100, "type": "word", "payload": {"text": "जी", "raw": "जी", "speaker": "A"}, "confidence": 0.895, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 146100, "end_ms": 146100, "type": "word", "payload": {"text": "जी", "raw": "जी", "speaker": "A"}, "confidence": 0.551, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 146100, "end_ms": 146260, "type": "word", "payload": {"text": "आप", "raw": "आप", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 146260, "end_ms": 146300, "type": "word", "payload": {"text": "ही", "raw": "ही", "speaker": "B"}, "confidence": 0.993, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 146300, "end_ms": 146420, "type": "word", "payload": {"text": "अरे", "raw": "अरे", "speaker": "B"}, "confidence": 0.992, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 146420, "end_ms": 146700, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 146700, "end_ms": 147060, "type": "word", "payload": {"text": "भाई", "raw": "भाई", "speaker": "B"}, "confidence": 0.723, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 147060, "end_ms": 147300, "type": "word", "payload": {"text": "चाहिए", "raw": "चाहिए", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 147300, "end_ms": 147460, "type": "word", "payload": {"text": "ही", "raw": "ही", "speaker": "B"}, "confidence": 0.991, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 147460, "end_ms": 147520, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 147520, "end_ms": 147960, "type": "word", "payload": {"text": "मुझे", "raw": "मुझे", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 147960, "end_ms": 148340, "type": "word", "payload": {"text": "चाहिए", "raw": "चाहिए", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 148340, "end_ms": 148500, "type": "word", "payload": {"text": "ही", "raw": "ही", "speaker": "B"}, "confidence": 0.996, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 148500, "end_ms": 148500, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 148500, "end_ms": 148780, "type": "word", "payload": {"text": "भाई", "raw": "भाई", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 148780, "end_ms": 149980, "type": "word", "payload": {"text": "रेंदे", "raw": "रेंदे", "speaker": "B"}, "confidence": 0.461, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 149980, "end_ms": 150260, "type": "word", "payload": {"text": "चाहिए", "raw": "चाहिए", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 150260, "end_ms": 150460, "type": "word", "payload": {"text": "ही", "raw": "ही", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 150460, "end_ms": 150460, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 150460, "end_ms": 150700, "type": "word", "payload": {"text": "मुझे", "raw": "मुझे", "speaker": "B"}, "confidence": 1.0, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 150700, "end_ms": 158620, "type": "word", "payload": {"text": "आप", "raw": "आप", "speaker": "B"}, "confidence": 0.869, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 158620, "end_ms": 161220, "type": "word", "payload": {"text": "तो", "raw": "तो", "speaker": "B"}, "confidence": 0.965, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 161220, "end_ms": 163020, "type": "word", "payload": {"text": "चलो", "raw": "चलो", "speaker": "B"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 163020, "end_ms": 163520, "type": "word", "payload": {"text": "क", "raw": "क", "speaker": "B"}, "confidence": 0.993, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 168350, "end_ms": 168900, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 0.766, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 168900, "end_ms": 169120, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 0.999, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 169120, "end_ms": 169200, "type": "word", "payload": {"text": "नहीं", "raw": "नहीं", "speaker": "A"}, "confidence": 0.965, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 169200, "end_ms": 169260, "type": "word", "payload": {"text": "जी", "raw": "जी", "speaker": "A"}, "confidence": 0.896, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 169260, "end_ms": 169810, "type": "word", "payload": {"text": "अजीब", "raw": "अजीब", "speaker": "A"}, "confidence": 0.966, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}], "speech_utterances": [{"track": "speech", "start_ms": 0, "end_ms": 2520, "type": "utterance", "payload": {"text": "लो जिया जी गरमा गरम कॉफी पियो।", "speaker": "A", "speaker_canonical": "SPEAKER_00", "resolved_face_id": "face_40", "is_on_screen": true}, "confidence": 0.905, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 2520, "end_ms": 17240, "type": "utterance", "payload": {"text": "हाँ भाई। हम्म, अच्छा जी। कांच के बर्तन आ रहे हैं? सही है, बढ़िया। ओहो, कॉफी एकदम बोरोसिलिकेट कप में आ रही है, डंडी देखो अलग है हाँ?", "speaker": "B", "speaker_canonical": "SPEAKER_01", "resolved_face_id": "face_22", "is_on_screen": true}, "confidence": 0.962, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 17240, "end_ms": 26450, "type": "utterance", "payload": {"text": "जिया जी हम तो स्टार्टिंग से यही बर्तन इस्तेमाल करते हैं, क्वालिटी में कॉम्प्रोमाइज़ नहीं करते हम घर के सामान नहीं", "speaker": "A", "speaker_canonical": "SPEAKER_00", "resolved_face_id": "face_40", "is_on_screen": true}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 26450, "end_ms": 29730, "type": "utterance", "payload": {"text": "नहीं क्यों क्या हुआ शादी में देने चाहिए थे ना फिर हमें भी स्टिकली", "speaker": "B", "speaker_canonical": "SPEAKER_01", "resolved_face_id": "face_22", "is_on_screen": true}, "confidence": 0.962, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 29730, "end_ms": 35730, "type": "utterance", "payload": {"text": "की जगह नहीं हमने तो सारे अच्छे बर्तन ही दिए मतलब वो शायद पुरानी बात होगी तो आपको याद नहीं आ", "speaker": "A", "speaker_canonical": "SPEAKER_00", "resolved_face_id": "face_40", "is_on_screen": true}, "confidence": 0.973, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 35730, "end_ms": 40610, "type": "utterance", "payload": {"text": "रहा होगा अरे वो पुराने से याद आया मेरे को टोस्टर खराब हो गया ठीक करा दे वो मैं एक बार", "speaker": "B", "speaker_canonical": "SPEAKER_01", "resolved_face_id": "face_22", "is_on_screen": true}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 40610, "end_ms": 54490, "type": "utterance", "payload": {"text": "वो बिल देख लेता हूँ घर म नहीं नहीं ऐसी ऐसा नहीं बोला मैंने", "speaker": "A", "speaker_canonical": "SPEAKER_00", "resolved_face_id": "face_40", "is_on_screen": true}, "confidence": 0.982, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 54490, "end_ms": 59870, "type": "utterance", "payload": {"text": "हम्म ऐसे ही कह रहा है तू तो तू पैदा भी नहीं हुआ ना बेटे जब से ब्रेड जाम खा रहा", "speaker": "B", "speaker_canonical": "SPEAKER_01", "resolved_face_id": "face_22", "is_on_screen": true}, "confidence": 0.977, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 59870, "end_ms": 66550, "type": "utterance", "payload": {"text": "हूँ मैं खा रहे होंगे जिया जी मैं कुछ मजा थोड़ी कर रहा हूँ आपको मतलब हम भी सेम इस्तेमाल करते हैं ब्रांडेड ही है आपको भी वही", "speaker": "A", "speaker_canonical": "SPEAKER_00", "resolved_face_id": "face_40", "is_on_screen": true}, "confidence": 0.981, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 66550, "end_ms": 143940, "type": "utterance", "payload": {"text": "दिया था सेम अभी देख लेता हू इंडक्शन दिया हैं घर में तुम तीन बंदे हो गैस देखले तुम्हारा चार बर्नर वाला है ये हैवी मटेरियल कॉमन है यार कॉमन है ये टिश्यू पेपर का ये स्टैंड कॉमन है कॉमन है ये हैं ये वाह कैसा रोल देखो भाई साहब इसमें रोटी दिख रही है हैं मुझे दे दिया तुमने प्लास्टिक वाला आप ले चम्मच तुमने एकदम अम्मानी वाले ले रखे हैं ये तो तो आप ले लो आप ले लो मैं मैं क्या करूँ आप ले लो अम्मानी वाली रसोई बना रखी है तुमने इसमें तो खीर खाते होगे तुम हमें तो दे दी वो प्लेट बड़ी चार खांचे वाली उसमें खीर खाओ सब्जी खाओ रायता भी उसी में पियो अच्छा आप ले ज कब देता मुझे और मैंने ले जाओ कुछ जो चाहिए ये ये देख लेना तू ये कितना मजबूत है हाँ तुमने भाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा", "speaker": "B", "speaker_canonical": "SPEAKER_01", "resolved_face_id": "face_22", "is_on_screen": true}, "confidence": 0.97, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 143940, "end_ms": 146100, "type": "utterance", "payload": {"text": "है ऐसा कुछ नहीं है जी जी", "speaker": "A", "speaker_canonical": "SPEAKER_00", "resolved_face_id": "face_40", "is_on_screen": true}, "confidence": 0.921, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 146100, "end_ms": 163520, "type": "utterance", "payload": {"text": "आप ही अरे नहीं भाई चाहिए ही नहीं मुझे चाहिए ही नहीं भाई रेंदे चाहिए ही नहीं मुझे आप तो चलो क", "speaker": "B", "speaker_canonical": "SPEAKER_01", "resolved_face_id": "face_22", "is_on_screen": true}, "confidence": 0.954, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}, {"track": "speech", "start_ms": 168350, "end_ms": 169810, "type": "utterance", "payload": {"text": "नहीं नहीं नहीं जी अजीब", "speaker": "A", "speaker_canonical": "SPEAKER_00", "resolved_face_id": "face_40", "is_on_screen": true}, "confidence": 0.918, "provider": "assemblyai", "provider_version": "1.3.0", "run_id": null}], "shots": [], "ocr": [{"track": "ocr", "start_ms": 0, "end_ms": 4333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 13, "span_index": 0}, "confidence": 0.9902, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 4000, "end_ms": 4333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5344, 0.1958, 0.5453, 0.2167], "frame_count": 1, "span_index": 1}, "confidence": 0.632, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 4333, "end_ms": 4999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8625], "frame_count": 2, "span_index": 2}, "confidence": 0.9901, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 4666, "end_ms": 4999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.55, 0.2056, 0.5602, 0.2264], "frame_count": 1, "span_index": 3}, "confidence": 0.6391, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 5000, "end_ms": 7999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 9, "span_index": 4}, "confidence": 0.99, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 7666, "end_ms": 7999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5586, 0.1861, 0.568, 0.2056], "frame_count": 1, "span_index": 5}, "confidence": 0.6859, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 8000, "end_ms": 8999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 3, "span_index": 6}, "confidence": 0.99, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 8666, "end_ms": 8999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5695, 0.1792, 0.5789, 0.2], "frame_count": 1, "span_index": 7}, "confidence": 0.7417, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 9000, "end_ms": 9333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 1, "span_index": 8}, "confidence": 0.99, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 9000, "end_ms": 9333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5711, 0.1778, 0.5797, 0.1986], "frame_count": 1, "span_index": 9}, "confidence": 0.6747, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 9333, "end_ms": 9666, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 1, "span_index": 10}, "confidence": 0.99, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 9333, "end_ms": 9666, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5711, 0.1806, 0.5797, 0.2], "frame_count": 1, "span_index": 11}, "confidence": 0.7916, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 9666, "end_ms": 11333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 5, "span_index": 12}, "confidence": 0.99, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 11000, "end_ms": 11333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5695, 0.2028, 0.5781, 0.2208], "frame_count": 1, "span_index": 13}, "confidence": 0.6968, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 11333, "end_ms": 12333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 3, "span_index": 14}, "confidence": 0.9897, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 12000, "end_ms": 12333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5687, 0.2056, 0.5758, 0.2194], "frame_count": 1, "span_index": 15}, "confidence": 0.922, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 12333, "end_ms": 15999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 11, "span_index": 16}, "confidence": 0.9904, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 15666, "end_ms": 15999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5656, 0.1958, 0.5727, 0.2097], "frame_count": 1, "span_index": 17}, "confidence": 0.6822, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 16000, "end_ms": 16333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 1, "span_index": 18}, "confidence": 0.9904, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 16000, "end_ms": 16333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5617, 0.1875, 0.5727, 0.2083], "frame_count": 1, "span_index": 19}, "confidence": 0.6407, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 16333, "end_ms": 17666, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 4, "span_index": 20}, "confidence": 0.9904, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 17333, "end_ms": 17666, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.557, 0.1861, 0.5664, 0.2056], "frame_count": 1, "span_index": 21}, "confidence": 0.666, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 17666, "end_ms": 18666, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 3, "span_index": 22}, "confidence": 0.9904, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 18333, "end_ms": 18666, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5617, 0.1917, 0.5727, 0.2111], "frame_count": 1, "span_index": 23}, "confidence": 0.6621, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 18666, "end_ms": 19999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 4, "span_index": 24}, "confidence": 0.9904, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 19666, "end_ms": 19999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.575, 0.1958, 0.582, 0.2097], "frame_count": 1, "span_index": 25}, "confidence": 0.6768, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 20000, "end_ms": 22333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 7, "span_index": 26}, "confidence": 0.9901, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 22000, "end_ms": 22333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5711, 0.2319, 0.5781, 0.2472], "frame_count": 1, "span_index": 27}, "confidence": 0.7658, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 22333, "end_ms": 22999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8625], "frame_count": 2, "span_index": 28}, "confidence": 0.9897, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 22666, "end_ms": 22999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5492, 0.2236, 0.5602, 0.2431], "frame_count": 1, "span_index": 29}, "confidence": 0.7578, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 23000, "end_ms": 25999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 9, "span_index": 30}, "confidence": 0.9901, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 25666, "end_ms": 25999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5609, 0.2097, 0.5687, 0.2222], "frame_count": 1, "span_index": 31}, "confidence": 0.7496, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 26000, "end_ms": 35999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8625], "frame_count": 30, "span_index": 32}, "confidence": 0.99, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 35666, "end_ms": 35999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5617, 0.2208, 0.5719, 0.2417], "frame_count": 1, "span_index": 33}, "confidence": 0.7095, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 36000, "end_ms": 36999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8625], "frame_count": 3, "span_index": 34}, "confidence": 0.9898, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 36666, "end_ms": 36999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5563, 0.2264, 0.5641, 0.2403], "frame_count": 1, "span_index": 35}, "confidence": 0.683, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 37000, "end_ms": 41333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 13, "span_index": 36}, "confidence": 0.9898, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 41000, "end_ms": 41333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.532, 0.2333, 0.5398, 0.2472], "frame_count": 1, "span_index": 37}, "confidence": 0.6952, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 41333, "end_ms": 41666, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8625], "frame_count": 1, "span_index": 38}, "confidence": 0.9895, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 41333, "end_ms": 41666, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5242, 0.2347, 0.5344, 0.2528], "frame_count": 1, "span_index": 39}, "confidence": 0.6308, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 41666, "end_ms": 41999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8625], "frame_count": 1, "span_index": 40}, "confidence": 0.9895, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 41666, "end_ms": 41999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5234, 0.2514, 0.5336, 0.2708], "frame_count": 1, "span_index": 41}, "confidence": 0.8001, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 42000, "end_ms": 43666, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8639], "frame_count": 5, "span_index": 42}, "confidence": 0.989, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 43333, "end_ms": 43666, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5242, 0.2583, 0.5344, 0.2764], "frame_count": 1, "span_index": 43}, "confidence": 0.663, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 43666, "end_ms": 44333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8639], "frame_count": 2, "span_index": 44}, "confidence": 0.989, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 44000, "end_ms": 44333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5258, 0.2417, 0.5328, 0.2528], "frame_count": 1, "span_index": 45}, "confidence": 0.6133, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 44333, "end_ms": 45333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8639], "frame_count": 3, "span_index": 46}, "confidence": 0.9891, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 45000, "end_ms": 45333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5219, 0.2514, 0.5312, 0.2708], "frame_count": 1, "span_index": 47}, "confidence": 0.7202, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 45333, "end_ms": 45999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8639], "frame_count": 2, "span_index": 48}, "confidence": 0.9891, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 45666, "end_ms": 45999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.525, 0.25, 0.532, 0.2639], "frame_count": 1, "span_index": 49}, "confidence": 0.6846, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 46000, "end_ms": 46333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8639], "frame_count": 1, "span_index": 50}, "confidence": 0.9891, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 46000, "end_ms": 46333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5227, 0.2444, 0.5297, 0.2583], "frame_count": 1, "span_index": 51}, "confidence": 0.8253, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 46333, "end_ms": 49666, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8639], "frame_count": 10, "span_index": 52}, "confidence": 0.9891, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 49333, "end_ms": 49666, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5164, 0.2653, 0.5234, 0.2806], "frame_count": 1, "span_index": 53}, "confidence": 0.7563, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 49666, "end_ms": 51333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8639], "frame_count": 5, "span_index": 54}, "confidence": 0.9892, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 51000, "end_ms": 51333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5219, 0.2431, 0.5289, 0.2583], "frame_count": 1, "span_index": 55}, "confidence": 0.7894, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 51333, "end_ms": 52666, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 4, "span_index": 56}, "confidence": 0.9899, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 52333, "end_ms": 52666, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5242, 0.2236, 0.5344, 0.2431], "frame_count": 1, "span_index": 57}, "confidence": 0.6352, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 52666, "end_ms": 53999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8639], "frame_count": 4, "span_index": 58}, "confidence": 0.9892, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 53666, "end_ms": 53999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5242, 0.2361, 0.5336, 0.2542], "frame_count": 1, "span_index": 59}, "confidence": 0.6174, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 54000, "end_ms": 55333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8639], "frame_count": 4, "span_index": 60}, "confidence": 0.9892, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 55000, "end_ms": 55333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5195, 0.2375, 0.5273, 0.2514], "frame_count": 1, "span_index": 61}, "confidence": 0.7837, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 55333, "end_ms": 66333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8625], "frame_count": 33, "span_index": 62}, "confidence": 0.99, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 66000, "end_ms": 66333, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5398, 0.2028, 0.5469, 0.2167], "frame_count": 1, "span_index": 63}, "confidence": 0.699, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 66333, "end_ms": 66999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1417, 0.1977, 0.8625], "frame_count": 2, "span_index": 64}, "confidence": 0.9894, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 66666, "end_ms": 66999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5477, 0.2056, 0.5578, 0.2222], "frame_count": 1, "span_index": 65}, "confidence": 0.8686, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 67000, "end_ms": 67666, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8625], "frame_count": 2, "span_index": 66}, "confidence": 0.9896, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 67333, "end_ms": 67666, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5563, 0.2097, 0.5633, 0.2208], "frame_count": 1, "span_index": 67}, "confidence": 0.6504, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 67666, "end_ms": 67999, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 1, "span_index": 68}, "confidence": 0.9897, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 67666, "end_ms": 67999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5547, 0.2028, 0.5656, 0.2208], "frame_count": 1, "span_index": 69}, "confidence": 0.6687, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 68000, "end_ms": 69333, "type": "text_overlay", "payload": {"text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE", "bbox": [0.1797, 0.1431, 0.1977, 0.8639], "frame_count": 4, "span_index": 70}, "confidence": 0.9897, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 69000, "end_ms": 70999, "type": "text_overlay", "payload": {"text": "?", "bbox": [0.5563, 0.2028, 0.5664, 0.2208], "frame_count": 3, "span_index": 71}, "confidence": 0.707, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 76666, "end_ms": 76999, "type": "text_overlay", "payload": {"text": "ot", "bbox": [0.5086, 0.5681, 0.5461, 0.6833], "frame_count": 1, "span_index": 72}, "confidence": 0.7587, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77000, "end_ms": 77333, "type": "text_overlay", "payload": {"text": "ast", "bbox": [0.5242, 0.6556, 0.5625, 0.7542], "frame_count": 1, "span_index": 73}, "confidence": 0.9897, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77000, "end_ms": 77333, "type": "text_overlay", "payload": {"text": "THE", "bbox": [0.5516, 0.4583, 0.5867, 0.5597], "frame_count": 1, "span_index": 74}, "confidence": 0.9918, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77000, "end_ms": 77333, "type": "text_overlay", "payload": {"text": "CLU", "bbox": [0.568, 0.6653, 0.6141, 0.8014], "frame_count": 1, "span_index": 75}, "confidence": 0.9827, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77000, "end_ms": 77333, "type": "text_overlay", "payload": {"text": "Coast", "bbox": [0.575, 0.5236, 0.6281, 0.6875], "frame_count": 1, "span_index": 76}, "confidence": 0.8908, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77000, "end_ms": 77333, "type": "text_overlay", "payload": {"text": "OC", "bbox": [0.5953, 0.4764, 0.6227, 0.5569], "frame_count": 1, "span_index": 77}, "confidence": 0.6928, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77000, "end_ms": 77333, "type": "text_overlay", "payload": {"text": "1", "bbox": [0.7312, 0.2236, 0.7937, 0.3458], "frame_count": 1, "span_index": 78}, "confidence": 0.8461, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77333, "end_ms": 77666, "type": "text_overlay", "payload": {"text": "oCast", "bbox": [0.5078, 0.6958, 0.5531, 0.8458], "frame_count": 1, "span_index": 79}, "confidence": 0.7266, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77333, "end_ms": 77666, "type": "text_overlay", "payload": {"text": "CLU", "bbox": [0.5516, 0.7736, 0.5898, 0.8833], "frame_count": 1, "span_index": 80}, "confidence": 0.975, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77333, "end_ms": 77666, "type": "text_overlay", "payload": {"text": "oCoast", "bbox": [0.5617, 0.6, 0.607, 0.7736], "frame_count": 1, "span_index": 81}, "confidence": 0.8791, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77666, "end_ms": 77999, "type": "text_overlay", "payload": {"text": "CEast", "bbox": [0.493, 0.7917, 0.5453, 0.9292], "frame_count": 1, "span_index": 82}, "confidence": 0.8191, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 77666, "end_ms": 77999, "type": "text_overlay", "payload": {"text": "CasfCLu", "bbox": [0.525, 0.7347, 0.5922, 0.9625], "frame_count": 1, "span_index": 83}, "confidence": 0.6584, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 78000, "end_ms": 78333, "type": "text_overlay", "payload": {"text": "Cas", "bbox": [0.4992, 0.8417, 0.5391, 0.9069], "frame_count": 1, "span_index": 84}, "confidence": 0.8428, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 78666, "end_ms": 78999, "type": "text_overlay", "payload": {"text": "Oint", "bbox": [0.5531, 0.6861, 0.6062, 0.7875], "frame_count": 1, "span_index": 85}, "confidence": 0.601, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 79000, "end_ms": 79333, "type": "text_overlay", "payload": {"text": "CEast", "bbox": [0.5117, 0.6778, 0.5648, 0.7944], "frame_count": 1, "span_index": 86}, "confidence": 0.7257, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 79000, "end_ms": 79666, "type": "text_overlay", "payload": {"text": "TH", "bbox": [0.5563, 0.6722, 0.5773, 0.7181], "frame_count": 2, "span_index": 87}, "confidence": 0.9762, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 80333, "end_ms": 80666, "type": "text_overlay", "payload": {"text": "7", "bbox": [0.8094, 0.0472, 0.8875, 0.1347], "frame_count": 1, "span_index": 88}, "confidence": 0.8331, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 80666, "end_ms": 80999, "type": "text_overlay", "payload": {"text": "Cast", "bbox": [0.5391, 0.8222, 0.5711, 0.8931], "frame_count": 1, "span_index": 89}, "confidence": 0.6116, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 80666, "end_ms": 80999, "type": "text_overlay", "payload": {"text": "CL", "bbox": [0.5781, 0.8667, 0.5984, 0.9028], "frame_count": 1, "span_index": 90}, "confidence": 0.7877, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 80666, "end_ms": 80999, "type": "text_overlay", "payload": {"text": "Cast", "bbox": [0.582, 0.7736, 0.6242, 0.8778], "frame_count": 1, "span_index": 91}, "confidence": 0.6089, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 81000, "end_ms": 81333, "type": "text_overlay", "payload": {"text": "CEast", "bbox": [0.5328, 0.775, 0.5836, 0.8875], "frame_count": 1, "span_index": 92}, "confidence": 0.728, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 81000, "end_ms": 81333, "type": "text_overlay", "payload": {"text": "THI", "bbox": [0.5727, 0.7417, 0.5906, 0.7833], "frame_count": 1, "span_index": 93}, "confidence": 0.7378, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 81000, "end_ms": 81333, "type": "text_overlay", "payload": {"text": "CL", "bbox": [0.5758, 0.8278, 0.6086, 0.8931], "frame_count": 1, "span_index": 94}, "confidence": 0.9898, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 81000, "end_ms": 81333, "type": "text_overlay", "payload": {"text": "Coast", "bbox": [0.5867, 0.7361, 0.6328, 0.8556], "frame_count": 1, "span_index": 95}, "confidence": 0.9052, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 81333, "end_ms": 81666, "type": "text_overlay", "payload": {"text": "CEast", "bbox": [0.5281, 0.7389, 0.5852, 0.8597], "frame_count": 1, "span_index": 96}, "confidence": 0.671, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 81333, "end_ms": 81666, "type": "text_overlay", "payload": {"text": "CastCLU", "bbox": [0.5633, 0.6986, 0.6406, 0.8889], "frame_count": 1, "span_index": 97}, "confidence": 0.68, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 81666, "end_ms": 81999, "type": "text_overlay", "payload": {"text": "Cast", "bbox": [0.5398, 0.7528, 0.5805, 0.8431], "frame_count": 1, "span_index": 98}, "confidence": 0.7681, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 81666, "end_ms": 81999, "type": "text_overlay", "payload": {"text": "CL", "bbox": [0.5781, 0.8056, 0.6016, 0.8528], "frame_count": 1, "span_index": 99}, "confidence": 0.9922, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 81666, "end_ms": 81999, "type": "text_overlay", "payload": {"text": "OCiast", "bbox": [0.5852, 0.7083, 0.6328, 0.8208], "frame_count": 1, "span_index": 100}, "confidence": 0.6567, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 86000, "end_ms": 86333, "type": "text_overlay", "payload": {"text": "20", "bbox": [0.5727, 0.9514, 0.5891, 0.9792], "frame_count": 1, "span_index": 101}, "confidence": 0.65, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 86666, "end_ms": 86999, "type": "text_overlay", "payload": {"text": "品", "bbox": [0.5484, 0.9278, 0.5906, 0.9972], "frame_count": 1, "span_index": 102}, "confidence": 0.6659, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 98666, "end_ms": 98999, "type": "text_overlay", "payload": {"text": "M", "bbox": [0.8508, 0.3042, 0.9516, 0.5194], "frame_count": 1, "span_index": 103}, "confidence": 0.6823, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 106666, "end_ms": 106999, "type": "text_overlay", "payload": {"text": "o", "bbox": [0.5602, 0.0472, 0.5883, 0.1736], "frame_count": 1, "span_index": 104}, "confidence": 0.6006, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 106666, "end_ms": 106999, "type": "text_overlay", "payload": {"text": "SinoeFohever.", "bbox": [0.5828, 0.125, 0.6148, 0.25], "frame_count": 1, "span_index": 105}, "confidence": 0.8636, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 120666, "end_ms": 120999, "type": "text_overlay", "payload": {"text": "Fall", "bbox": [0.5148, 0.7153, 0.5305, 0.775], "frame_count": 1, "span_index": 106}, "confidence": 0.6394, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 141000, "end_ms": 141333, "type": "text_overlay", "payload": {"text": "mne", "bbox": [0.8109, 0.4681, 0.8344, 0.5347], "frame_count": 1, "span_index": 107}, "confidence": 0.6237, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 144000, "end_ms": 144333, "type": "text_overlay", "payload": {"text": "Fadiin", "bbox": [0.4672, 0.7194, 0.4883, 0.7986], "frame_count": 1, "span_index": 108}, "confidence": 0.7632, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 147666, "end_ms": 147999, "type": "text_overlay", "payload": {"text": "Cidlableed", "bbox": [0.468, 0.7903, 0.4789, 0.8583], "frame_count": 1, "span_index": 109}, "confidence": 0.601, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 150333, "end_ms": 150999, "type": "text_overlay", "payload": {"text": "SinoeForever.", "bbox": [0.5961, 0.5917, 0.6383, 0.7597], "frame_count": 2, "span_index": 110}, "confidence": 0.9461, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 151000, "end_ms": 151333, "type": "text_overlay", "payload": {"text": "SnbeForever.", "bbox": [0.6141, 0.5153, 0.6594, 0.6778], "frame_count": 1, "span_index": 111}, "confidence": 0.8856, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 151333, "end_ms": 151666, "type": "text_overlay", "payload": {"text": "SreeFotever.", "bbox": [0.5906, 0.3569, 0.6297, 0.4861], "frame_count": 1, "span_index": 112}, "confidence": 0.8295, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 157666, "end_ms": 157999, "type": "text_overlay", "payload": {"text": "Fallu", "bbox": [0.4797, 0.8208, 0.4977, 0.8833], "frame_count": 1, "span_index": 113}, "confidence": 0.6396, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 158000, "end_ms": 158333, "type": "text_overlay", "payload": {"text": "ST", "bbox": [0.5109, 0.4806, 0.5719, 0.6111], "frame_count": 1, "span_index": 114}, "confidence": 0.7571, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 158333, "end_ms": 158666, "type": "text_overlay", "payload": {"text": "S", "bbox": [0.5008, 0.5069, 0.5594, 0.6264], "frame_count": 1, "span_index": 115}, "confidence": 0.9496, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}, {"track": "ocr", "start_ms": 159000, "end_ms": 159333, "type": "text_overlay", "payload": {"text": "Qal", "bbox": [0.45, 0.8208, 0.4633, 0.8778], "frame_count": 1, "span_index": 116}, "confidence": 0.6405, "provider": "rapidocr", "provider_version": "1.0.0", "run_id": null}], "faces": [{"track": "face", "start_ms": 5400, "end_ms": 5800, "type": "face_track", "payload": {"face_id": "face_1", "bbox": [0.4291, 0.2253, 0.5232, 0.3947], "is_speaking": false, "avg_mar": 0.0421, "avg_jaw_open": 0.0001, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 2, "duration_ms": 400}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 10600, "end_ms": 11400, "type": "face_track", "payload": {"face_id": "face_5", "bbox": [0.4466, 0.1738, 0.5312, 0.3295], "is_speaking": false, "avg_mar": 0.0362, "avg_jaw_open": 0.0001, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 4, "duration_ms": 800}, "confidence": 0.9, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 12200, "end_ms": 12600, "type": "face_track", "payload": {"face_id": "face_6", "bbox": [0.4457, 0.1639, 0.5303, 0.3208], "is_speaking": true, "avg_mar": 0.2045, "avg_jaw_open": 0.0034, "speaking_ratio": 0.5, "speaking_frames": 1, "total_frames": 2, "duration_ms": 400}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 72000, "end_ms": 74200, "type": "face_track", "payload": {"face_id": "face_13", "bbox": [0.2033, 0.5075, 0.3308, 0.6781], "is_speaking": false, "avg_mar": 0.0391, "avg_jaw_open": 0.0323, "speaking_ratio": 0.09, "speaking_frames": 1, "total_frames": 11, "duration_ms": 2200}, "confidence": 1.0, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 106000, "end_ms": 107000, "type": "face_track", "payload": {"face_id": "face_16", "bbox": [0.2798, 0.6841, 0.4117, 0.8943], "is_speaking": false, "avg_mar": 0.0939, "avg_jaw_open": 0.0, "speaking_ratio": 0.2, "speaking_frames": 1, "total_frames": 5, "duration_ms": 1000}, "confidence": 0.95, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 114800, "end_ms": 115800, "type": "face_track", "payload": {"face_id": "face_21", "bbox": [0.3543, 0.1828, 0.4632, 0.3288], "is_speaking": false, "avg_mar": 0.1127, "avg_jaw_open": 0.01, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 5, "duration_ms": 1000}, "confidence": 0.95, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 115400, "end_ms": 116000, "type": "face_track", "payload": {"face_id": "face_22", "bbox": [0.3076, 0.6468, 0.4109, 0.8108], "is_speaking": true, "avg_mar": 0.1336, "avg_jaw_open": 0.0003, "speaking_ratio": 0.33, "speaking_frames": 1, "total_frames": 3, "duration_ms": 600}, "confidence": 0.85, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 127200, "end_ms": 127800, "type": "face_track", "payload": {"face_id": "face_28", "bbox": [0.3061, 0.5976, 0.4081, 0.7746], "is_speaking": false, "avg_mar": 0.0109, "avg_jaw_open": 0.0002, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 3, "duration_ms": 600}, "confidence": 0.85, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 131400, "end_ms": 131800, "type": "face_track", "payload": {"face_id": "face_30", "bbox": [0.2845, 0.7331, 0.3992, 0.9063], "is_speaking": false, "avg_mar": 0.0976, "avg_jaw_open": 0.0001, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 2, "duration_ms": 400}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 132400, "end_ms": 132800, "type": "face_track", "payload": {"face_id": "face_31", "bbox": [0.3062, 0.6996, 0.4224, 0.8928], "is_speaking": false, "avg_mar": 0.1213, "avg_jaw_open": 0.0001, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 2, "duration_ms": 400}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 135600, "end_ms": 136200, "type": "face_track", "payload": {"face_id": "face_32", "bbox": [0.3237, 0.6549, 0.4464, 0.8507], "is_speaking": false, "avg_mar": 0.0564, "avg_jaw_open": 0.0014, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 3, "duration_ms": 600}, "confidence": 0.85, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 137600, "end_ms": 138000, "type": "face_track", "payload": {"face_id": "face_33", "bbox": [0.3861, 0.1474, 0.4928, 0.2987], "is_speaking": false, "avg_mar": 0.1213, "avg_jaw_open": 0.0037, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 2, "duration_ms": 400}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 139600, "end_ms": 140000, "type": "face_track", "payload": {"face_id": "face_34", "bbox": [0.3724, 0.2047, 0.4851, 0.3569], "is_speaking": false, "avg_mar": 0.0149, "avg_jaw_open": 0.0012, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 2, "duration_ms": 400}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 140200, "end_ms": 140600, "type": "face_track", "payload": {"face_id": "face_35", "bbox": [0.3688, 0.1903, 0.4883, 0.3459], "is_speaking": false, "avg_mar": 0.069, "avg_jaw_open": 0.0077, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 2, "duration_ms": 400}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 142400, "end_ms": 143000, "type": "face_track", "payload": {"face_id": "face_36", "bbox": [0.3315, 0.134, 0.446, 0.2844], "is_speaking": false, "avg_mar": 0.035, "avg_jaw_open": 0.0017, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 3, "duration_ms": 600}, "confidence": 0.85, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 143000, "end_ms": 144000, "type": "face_track", "payload": {"face_id": "face_37", "bbox": [0.2725, 0.4489, 0.3864, 0.6397], "is_speaking": false, "avg_mar": 0.031, "avg_jaw_open": 0.0001, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 5, "duration_ms": 1000}, "confidence": 0.95, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 143200, "end_ms": 144000, "type": "face_track", "payload": {"face_id": "face_38", "bbox": [0.2899, 0.0508, 0.4095, 0.2207], "is_speaking": false, "avg_mar": 0.0613, "avg_jaw_open": 0.011, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 4, "duration_ms": 800}, "confidence": 0.9, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 144200, "end_ms": 145000, "type": "face_track", "payload": {"face_id": "face_40", "bbox": [0.2872, 0.0925, 0.3963, 0.2443], "is_speaking": true, "avg_mar": 0.1715, "avg_jaw_open": 0.0026, "speaking_ratio": 0.5, "speaking_frames": 2, "total_frames": 4, "duration_ms": 800}, "confidence": 0.9, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 145200, "end_ms": 145600, "type": "face_track", "payload": {"face_id": "face_41", "bbox": [0.2597, 0.5801, 0.3728, 0.7541], "is_speaking": false, "avg_mar": 0.0128, "avg_jaw_open": 0.0002, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 2, "duration_ms": 400}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 147200, "end_ms": 147600, "type": "face_track", "payload": {"face_id": "face_43", "bbox": [0.2803, 0.0866, 0.3987, 0.2458], "is_speaking": true, "avg_mar": 0.1741, "avg_jaw_open": 0.1938, "speaking_ratio": 0.5, "speaking_frames": 1, "total_frames": 2, "duration_ms": 400}, "confidence": 0.8, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 149400, "end_ms": 150200, "type": "face_track", "payload": {"face_id": "face_44", "bbox": [0.3233, 0.171, 0.4502, 0.374], "is_speaking": false, "avg_mar": 0.0179, "avg_jaw_open": 0.0004, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 4, "duration_ms": 800}, "confidence": 0.9, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 150400, "end_ms": 151400, "type": "face_track", "payload": {"face_id": "face_45", "bbox": [0.2525, 0.2764, 0.4319, 0.5493], "is_speaking": false, "avg_mar": 0.0395, "avg_jaw_open": 0.0001, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 5, "duration_ms": 1000}, "confidence": 0.95, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}, {"track": "face", "start_ms": 157200, "end_ms": 158600, "type": "face_track", "payload": {"face_id": "face_50", "bbox": [0.2461, 0.6644, 0.3528, 0.8195], "is_speaking": false, "avg_mar": 0.0399, "avg_jaw_open": 0.0001, "speaking_ratio": 0.0, "speaking_frames": 0, "total_frames": 7, "duration_ms": 1400}, "confidence": 1.0, "provider": "mediapipe", "provider_version": "1.0.0", "run_id": null}], "diarization": [{"track": "diarization", "start_ms": 0, "end_ms": 2520, "type": "speaker_turn", "payload": {"turn_index": 0, "speaker": "SPEAKER_00", "speaker_raw": "A", "start_ms": 0, "end_ms": 2520, "duration_ms": 2520, "duration_sec": 2.52, "text": "लो जिया जी गरमा गरम कॉफी पियो।"}, "confidence": 0.905, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 2520, "end_ms": 17240, "type": "speaker_turn", "payload": {"turn_index": 1, "speaker": "SPEAKER_01", "speaker_raw": "B", "start_ms": 2520, "end_ms": 17240, "duration_ms": 14720, "duration_sec": 14.72, "text": "हाँ भाई। हम्म, अच्छा जी। कांच के बर्तन आ रहे हैं? सही है, बढ़िया। ओहो, कॉफी एकदम बोरोसिलिकेट कप में आ रही है, डंडी देखो अलग है हाँ?"}, "confidence": 0.962, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 17240, "end_ms": 26450, "type": "speaker_turn", "payload": {"turn_index": 2, "speaker": "SPEAKER_00", "speaker_raw": "A", "start_ms": 17240, "end_ms": 26450, "duration_ms": 9210, "duration_sec": 9.21, "text": "जिया जी हम तो स्टार्टिंग से यही बर्तन इस्तेमाल करते हैं, क्वालिटी में कॉम्प्रोमाइज़ नहीं करते हम घर के सामान नहीं"}, "confidence": 0.998, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 26450, "end_ms": 29730, "type": "speaker_turn", "payload": {"turn_index": 3, "speaker": "SPEAKER_01", "speaker_raw": "B", "start_ms": 26450, "end_ms": 29730, "duration_ms": 3280, "duration_sec": 3.28, "text": "नहीं क्यों क्या हुआ शादी में देने चाहिए थे ना फिर हमें भी स्टिकली"}, "confidence": 0.962, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 29730, "end_ms": 35730, "type": "speaker_turn", "payload": {"turn_index": 4, "speaker": "SPEAKER_00", "speaker_raw": "A", "start_ms": 29730, "end_ms": 35730, "duration_ms": 6000, "duration_sec": 6.0, "text": "की जगह नहीं हमने तो सारे अच्छे बर्तन ही दिए मतलब वो शायद पुरानी बात होगी तो आपको याद नहीं आ"}, "confidence": 0.973, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 35730, "end_ms": 40610, "type": "speaker_turn", "payload": {"turn_index": 5, "speaker": "SPEAKER_01", "speaker_raw": "B", "start_ms": 35730, "end_ms": 40610, "duration_ms": 4880, "duration_sec": 4.88, "text": "रहा होगा अरे वो पुराने से याद आया मेरे को टोस्टर खराब हो गया ठीक करा दे वो मैं एक बार"}, "confidence": 0.994, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 40610, "end_ms": 54490, "type": "speaker_turn", "payload": {"turn_index": 6, "speaker": "SPEAKER_00", "speaker_raw": "A", "start_ms": 40610, "end_ms": 54490, "duration_ms": 13880, "duration_sec": 13.88, "text": "वो बिल देख लेता हूँ घर म नहीं नहीं ऐसी ऐसा नहीं बोला मैंने"}, "confidence": 0.982, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 54490, "end_ms": 59870, "type": "speaker_turn", "payload": {"turn_index": 7, "speaker": "SPEAKER_01", "speaker_raw": "B", "start_ms": 54490, "end_ms": 59870, "duration_ms": 5380, "duration_sec": 5.38, "text": "हम्म ऐसे ही कह रहा है तू तो तू पैदा भी नहीं हुआ ना बेटे जब से ब्रेड जाम खा रहा"}, "confidence": 0.977, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 59870, "end_ms": 66550, "type": "speaker_turn", "payload": {"turn_index": 8, "speaker": "SPEAKER_00", "speaker_raw": "A", "start_ms": 59870, "end_ms": 66550, "duration_ms": 6680, "duration_sec": 6.68, "text": "हूँ मैं खा रहे होंगे जिया जी मैं कुछ मजा थोड़ी कर रहा हूँ आपको मतलब हम भी सेम इस्तेमाल करते हैं ब्रांडेड ही है आपको भी वही"}, "confidence": 0.981, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 66550, "end_ms": 143940, "type": "speaker_turn", "payload": {"turn_index": 9, "speaker": "SPEAKER_01", "speaker_raw": "B", "start_ms": 66550, "end_ms": 143940, "duration_ms": 77390, "duration_sec": 77.39, "text": "दिया था सेम अभी देख लेता हू इंडक्शन दिया हैं घर में तुम तीन बंदे हो गैस देखले तुम्हारा चार बर्नर वाला है ये हैवी मटेरियल कॉमन है यार कॉमन है ये टिश्यू पेपर का ये स्टैंड कॉमन है कॉमन है ये हैं ये वाह कैसा रोल देखो भाई साहब इसमें रोटी दिख रही है हैं मुझे दे दिया तुमने प्लास्टिक वाला आप ले चम्मच तुमने एकदम अम्मानी वाले ले रखे हैं ये तो तो आप ले लो आप ले लो मैं मैं क्या करूँ आप ले लो अम्मानी वाली रसोई बना रखी है तुमने इसमें तो खीर खाते होगे तुम हमें तो दे दी वो प्लेट बड़ी चार खांचे वाली उसमें खीर खाओ सब्जी खाओ रायता भी उसी में पियो अच्छा आप ले ज कब देता मुझे और मैंने ले जाओ कुछ जो चाहिए ये ये देख लेना तू ये कितना मजबूत है हाँ तुमने भाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा"}, "confidence": 0.97, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 143940, "end_ms": 146100, "type": "speaker_turn", "payload": {"turn_index": 10, "speaker": "SPEAKER_00", "speaker_raw": "A", "start_ms": 143940, "end_ms": 146100, "duration_ms": 2160, "duration_sec": 2.16, "text": "है ऐसा कुछ नहीं है जी जी"}, "confidence": 0.921, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 146100, "end_ms": 163520, "type": "speaker_turn", "payload": {"turn_index": 11, "speaker": "SPEAKER_01", "speaker_raw": "B", "start_ms": 146100, "end_ms": 163520, "duration_ms": 17420, "duration_sec": 17.42, "text": "आप ही अरे नहीं भाई चाहिए ही नहीं मुझे चाहिए ही नहीं भाई रेंदे चाहिए ही नहीं मुझे आप तो चलो क"}, "confidence": 0.954, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}, {"track": "diarization", "start_ms": 168350, "end_ms": 169810, "type": "speaker_turn", "payload": {"turn_index": 12, "speaker": "SPEAKER_00", "speaker_raw": "A", "start_ms": 168350, "end_ms": 169810, "duration_ms": 1460, "duration_sec": 1.46, "text": "नहीं नहीं नहीं जी अजीब"}, "confidence": 0.918, "provider": "assemblyai", "provider_version": "1.0.0", "run_id": null}]}};
+  const totalDurationMs = timelineData.duration_ms || 1000;
+  const video = document.getElementById("video-player");
+  const playhead = document.getElementById("playhead");
+  const timeDisplay = document.getElementById("time-display");
+  const viewport = document.getElementById("timeline-viewport");
+  const tooltip = document.getElementById("tooltip");
+
+  const hudShot = document.getElementById("hud-shot");
+  const hudSpeaker = document.getElementById("hud-speaker");
+
+  // Speaker Color Palette
+  const speakerColors = [
+    { bg: "rgba(6, 182, 212, 0.25)", border: "#06b6d4", text: "#a5f3fc" },
+    { bg: "rgba(139, 92, 246, 0.25)", border: "#8b5cf6", text: "#ddd6fe" },
+    { bg: "rgba(245, 158, 11, 0.25)", border: "#f59e0b", text: "#fde68a" },
+    { bg: "rgba(236, 72, 153, 0.25)", border: "#ec4899", text: "#fbcfe8" },
+    { bg: "rgba(16, 185, 129, 0.25)", border: "#10b981", text: "#a7f3d0" }
+  ];
+
+  function getSpeakerStyle(spk) {
+    const num = parseInt((spk || "").replace(/\D/g, "")) || 0;
+    return speakerColors[num % speakerColors.length];
+  }
+
+  function formatTime(sec) {
+    const m = Math.floor(sec / 60);
+    const s = (sec % 60).toFixed(2);
+    return m.toString().padStart(2, '0') + ":" + s.padStart(5, '0');
+  }
+
+  // 1. Populate Speaker Resolution Matrix
+  const resolverContainer = document.getElementById("resolver-container");
+  const resolutionDetails = timelineData.resolved_speakers?.details || {};
+  
+  if (Object.keys(resolutionDetails).length === 0) {
+    resolverContainer.innerHTML = '<div style="color:var(--text-muted);font-size:13px;">No speaker clusters detected.</div>';
+  } else {
+    for (const [spk, info] of Object.entries(resolutionDetails)) {
+      const isMatched = info.status === "matched";
+      const card = document.createElement("div");
+      card.className = "resolver-card " + (isMatched ? 'matched' : 'off-screen');
+      
+      const faceDisplay = info.face_id ? info.face_id : "Off-Screen (Voiceover)";
+      const spkOverlapSec = (info.speaking_overlap_ms / 1000).toFixed(1);
+      const confPct = Math.round((info.confidence || 0) * 100);
+
+      card.innerHTML = 
+        '<div class="resolver-pair">' +
+          '<span style="color:var(--accent-cyan);">' + spk + '</span>' +
+          '<span class="arrow-icon">➔</span>' +
+          '<span style="color:' + (isMatched ? 'var(--accent-green)' : 'var(--accent-amber)') + '">' + faceDisplay + '</span>' +
+        '</div>' +
+        '<div style="font-size:11px;color:var(--text-muted);display:flex;justify-content:space-between;">' +
+          '<span>Speaking overlap: <strong>' + spkOverlapSec + 's</strong></span>' +
+          '<span>Match: <strong>' + confPct + '%</strong></span>' +
+        '</div>';
+      resolverContainer.appendChild(card);
+    }
+  }
+
+  // 2. Render Multi-Track Lanes
+  const laneShots = document.getElementById("lane-shots");
+  const laneSpeech = document.getElementById("lane-speech");
+  const laneFaces = document.getElementById("lane-faces");
+  const laneOcr = document.getElementById("lane-ocr");
+
+  // Track 1: Shots
+  (timelineData.tracks.shots || []).forEach((shot, i) => {
+    const leftPct = (shot.start_ms / totalDurationMs) * 100;
+    const widthPct = Math.max(0.5, ((shot.end_ms - shot.start_ms) / totalDurationMs) * 100);
+    const block = document.createElement("div");
+    block.className = "block block-shot";
+    block.style.left = leftPct + "%";
+    block.style.width = widthPct + "%";
+    block.innerText = "S" + (i + 1) + " (" + (shot.payload.duration_sec || 0).toFixed(1) + "s)";
+    block.onclick = () => seekTo(shot.start_ms);
+    block.onmouseenter = (e) => showTooltip(e, "Shot #" + (i + 1) + ": " + (shot.start_ms/1000).toFixed(2) + "s - " + (shot.end_ms/1000).toFixed(2) + "s (" + shot.payload.duration_sec + "s)");
+    block.onmouseleave = hideTooltip;
+    laneShots.appendChild(block);
+  });
+
+  // Track 2: Speech Utterances
+  (timelineData.tracks.speech_utterances || []).forEach((utt, i) => {
+    const leftPct = (utt.start_ms / totalDurationMs) * 100;
+    const widthPct = Math.max(0.5, ((utt.end_ms - utt.start_ms) / totalDurationMs) * 100);
+    const spk = utt.payload.speaker_canonical || utt.payload.speaker || "SPEAKER_00";
+    const style = getSpeakerStyle(spk);
+
+    const block = document.createElement("div");
+    block.className = "block";
+    block.style.left = leftPct + "%";
+    block.style.width = widthPct + "%";
+    block.style.background = style.bg;
+    block.style.borderColor = style.border;
+    block.style.color = style.text;
+    block.innerText = utt.payload.text || spk;
+    block.onclick = () => seekTo(utt.start_ms);
+    block.onmouseenter = (e) => showTooltip(e, "[" + spk + '] "' + utt.payload.text + '"\n' + (utt.start_ms/1000).toFixed(2) + "s → " + (utt.end_ms/1000).toFixed(2) + "s");
+    block.onmouseleave = hideTooltip;
+    laneSpeech.appendChild(block);
+  });
+
+  // Track 3: Faces & MAR
+  (timelineData.tracks.faces || []).forEach((face, i) => {
+    const leftPct = (face.start_ms / totalDurationMs) * 100;
+    const widthPct = Math.max(0.5, ((face.end_ms - face.start_ms) / totalDurationMs) * 100);
+    const isSpeaking = face.payload.is_speaking;
+
+    const block = document.createElement("div");
+    block.className = "block " + (isSpeaking ? 'block-face-speaking' : 'block-face-silent');
+    block.style.left = leftPct + "%";
+    block.style.width = widthPct + "%";
+    block.innerText = face.payload.face_id + " (MAR:" + face.payload.avg_mar + ")";
+    block.onclick = () => seekTo(face.start_ms);
+    block.onmouseenter = (e) => showTooltip(e, face.payload.face_id + ": " + (isSpeaking ? 'SPEAKING' : 'Silent') + " (MAR: " + face.payload.avg_mar + ")\n" + (face.start_ms/1000).toFixed(2) + "s → " + (face.end_ms/1000).toFixed(2) + "s");
+    block.onmouseleave = hideTooltip;
+    laneFaces.appendChild(block);
+  });
+
+  // Track 4: OCR
+  (timelineData.tracks.ocr || []).forEach((ocr, i) => {
+    const leftPct = (ocr.start_ms / totalDurationMs) * 100;
+    const widthPct = Math.max(0.5, ((ocr.end_ms - ocr.start_ms) / totalDurationMs) * 100);
+
+    const block = document.createElement("div");
+    block.className = "block block-ocr";
+    block.style.left = leftPct + "%";
+    block.style.width = widthPct + "%";
+    block.innerText = ocr.payload.text || "Text";
+    block.onclick = () => seekTo(ocr.start_ms);
+    block.onmouseenter = (e) => showTooltip(e, 'OCR: "' + ocr.payload.text + '"\n' + (ocr.start_ms/1000).toFixed(2) + "s → " + (ocr.end_ms/1000).toFixed(2) + "s");
+    block.onmouseleave = hideTooltip;
+    laneOcr.appendChild(block);
+  });
+
+  // 3. Render Screenplay Dialogue Feed
+  const feed = document.getElementById("dialogue-feed");
+  const dialogueElements = [];
+
+  (timelineData.tracks.speech_utterances || []).forEach((utt, idx) => {
+    const spk = utt.payload.speaker_canonical || utt.payload.speaker || "SPEAKER_00";
+    const faceId = utt.payload.resolved_face_id || "Off-Screen";
+    const style = getSpeakerStyle(spk);
+
+    const item = document.createElement("div");
+    item.className = "dialogue-item";
+    item.dataset.start = utt.start_ms;
+    item.dataset.end = utt.end_ms;
+    item.onclick = () => seekTo(utt.start_ms);
+
+    item.innerHTML = 
+      '<div class="dialogue-meta">' +
+        '<span class="speaker-pill" style="background:' + style.bg + ';border:1px solid ' + style.border + ';color:' + style.text + ';">' +
+          spk + ' ➔ ' + faceId +
+        '</span>' +
+        '<span class="time-chip">' + (utt.start_ms/1000).toFixed(2) + 's → ' + (utt.end_ms/1000).toFixed(2) + 's</span>' +
+      '</div>' +
+      '<div class="dialogue-text">' + utt.payload.text + '</div>';
+
+    feed.appendChild(item);
+    dialogueElements.push(item);
+  });
+
+  // 4. Video Sync & Playhead Movement
+  video.ontimeupdate = () => {
+    const currentMs = video.currentTime * 1000;
+    const currentPct = (currentMs / totalDurationMs) * 100;
+    playhead.style.left = Math.min(100, Math.max(0, currentPct)) + "%";
+    timeDisplay.innerText = formatTime(video.currentTime) + " / " + formatTime(totalDurationMs / 1000);
+
+    // Update HUD
+    const activeShot = (timelineData.tracks.shots || []).find(s => currentMs >= s.start_ms && currentMs <= s.end_ms);
+    if (activeShot) {
+      hudShot.innerText = "Shot " + ((timelineData.tracks.shots || []).indexOf(activeShot) + 1);
+    }
+
+    const activeUtt = (timelineData.tracks.speech_utterances || []).find(u => currentMs >= u.start_ms && currentMs <= u.end_ms);
+    if (activeUtt) {
+      hudSpeaker.innerText = (activeUtt.payload.speaker_canonical || activeUtt.payload.speaker) + " (" + (activeUtt.payload.resolved_face_id || 'Off-Screen') + ")";
+    } else {
+      hudSpeaker.innerText = "No active speech";
+    }
+
+    // Highlight Dialogue Feed
+    dialogueElements.forEach(el => {
+      const start = parseFloat(el.dataset.start);
+      const end = parseFloat(el.dataset.end);
+      if (currentMs >= start && currentMs <= end) {
+        if (!el.classList.contains("active")) {
+          el.classList.add("active");
+          el.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      } else {
+        el.classList.remove("active");
+      }
+    });
+  };
+
+  // Click on Timeline Viewport to Seek
+  viewport.onclick = (e) => {
+    const rect = viewport.getBoundingClientRect();
+    const clickX = e.clientX - rect.left;
+    const pct = Math.max(0, Math.min(1, clickX / rect.width));
+    video.currentTime = (pct * totalDurationMs) / 1000;
+  };
+
+  function seekTo(ms) {
+    video.currentTime = ms / 1000;
+    video.play();
+  }
+
+  function showTooltip(e, text) {
+    tooltip.innerText = text;
+    tooltip.style.display = "block";
+    tooltip.style.left = (e.clientX + 10) + "px";
+    tooltip.style.top = (e.clientY + 10) + "px";
+  }
+
+  function hideTooltip() {
+    tooltip.style.display = "none";
+  }
+</script>
+
+</body>
+</html>

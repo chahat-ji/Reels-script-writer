@@ -1,0 +1,417 @@
+{
+  "capability": "diarization",
+  "provider_name": "assemblyai",
+  "provider_version": "1.0.0",
+  "events": [
+    {
+      "track": "diarization",
+      "start_ms": 0,
+      "end_ms": 2520,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 0,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 0,
+        "end_ms": 2520,
+        "duration_ms": 2520,
+        "duration_sec": 2.52,
+        "text": "लो जिया जी गरमा गरम कॉफी पियो।"
+      },
+      "confidence": 0.905,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 2520,
+      "end_ms": 17240,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 1,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 2520,
+        "end_ms": 17240,
+        "duration_ms": 14720,
+        "duration_sec": 14.72,
+        "text": "हाँ भाई। हम्म, अच्छा जी। कांच के बर्तन आ रहे हैं? सही है, बढ़िया। ओहो, कॉफी एकदम बोरोसिलिकेट कप में आ रही है, डंडी देखो अलग है हाँ?"
+      },
+      "confidence": 0.962,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 17240,
+      "end_ms": 26450,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 2,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 17240,
+        "end_ms": 26450,
+        "duration_ms": 9210,
+        "duration_sec": 9.21,
+        "text": "जिया जी हम तो स्टार्टिंग से यही बर्तन इस्तेमाल करते हैं, क्वालिटी में कॉम्प्रोमाइज़ नहीं करते हम घर के सामान नहीं"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 26450,
+      "end_ms": 29730,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 3,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 26450,
+        "end_ms": 29730,
+        "duration_ms": 3280,
+        "duration_sec": 3.28,
+        "text": "नहीं क्यों क्या हुआ शादी में देने चाहिए थे ना फिर हमें भी स्टिकली"
+      },
+      "confidence": 0.962,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 29730,
+      "end_ms": 35730,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 4,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 29730,
+        "end_ms": 35730,
+        "duration_ms": 6000,
+        "duration_sec": 6.0,
+        "text": "की जगह नहीं हमने तो सारे अच्छे बर्तन ही दिए मतलब वो शायद पुरानी बात होगी तो आपको याद नहीं आ"
+      },
+      "confidence": 0.973,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 35730,
+      "end_ms": 40610,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 5,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 35730,
+        "end_ms": 40610,
+        "duration_ms": 4880,
+        "duration_sec": 4.88,
+        "text": "रहा होगा अरे वो पुराने से याद आया मेरे को टोस्टर खराब हो गया ठीक करा दे वो मैं एक बार"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 40610,
+      "end_ms": 54490,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 6,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 40610,
+        "end_ms": 54490,
+        "duration_ms": 13880,
+        "duration_sec": 13.88,
+        "text": "वो बिल देख लेता हूँ घर म नहीं नहीं ऐसी ऐसा नहीं बोला मैंने"
+      },
+      "confidence": 0.982,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 54490,
+      "end_ms": 59870,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 7,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 54490,
+        "end_ms": 59870,
+        "duration_ms": 5380,
+        "duration_sec": 5.38,
+        "text": "हम्म ऐसे ही कह रहा है तू तो तू पैदा भी नहीं हुआ ना बेटे जब से ब्रेड जाम खा रहा"
+      },
+      "confidence": 0.977,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 59870,
+      "end_ms": 66550,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 8,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 59870,
+        "end_ms": 66550,
+        "duration_ms": 6680,
+        "duration_sec": 6.68,
+        "text": "हूँ मैं खा रहे होंगे जिया जी मैं कुछ मजा थोड़ी कर रहा हूँ आपको मतलब हम भी सेम इस्तेमाल करते हैं ब्रांडेड ही है आपको भी वही"
+      },
+      "confidence": 0.981,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 66550,
+      "end_ms": 143940,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 9,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 66550,
+        "end_ms": 143940,
+        "duration_ms": 77390,
+        "duration_sec": 77.39,
+        "text": "दिया था सेम अभी देख लेता हू इंडक्शन दिया हैं घर में तुम तीन बंदे हो गैस देखले तुम्हारा चार बर्नर वाला है ये हैवी मटेरियल कॉमन है यार कॉमन है ये टिश्यू पेपर का ये स्टैंड कॉमन है कॉमन है ये हैं ये वाह कैसा रोल देखो भाई साहब इसमें रोटी दिख रही है हैं मुझे दे दिया तुमने प्लास्टिक वाला आप ले चम्मच तुमने एकदम अम्मानी वाले ले रखे हैं ये तो तो आप ले लो आप ले लो मैं मैं क्या करूँ आप ले लो अम्मानी वाली रसोई बना रखी है तुमने इसमें तो खीर खाते होगे तुम हमें तो दे दी वो प्लेट बड़ी चार खांचे वाली उसमें खीर खाओ सब्जी खाओ रायता भी उसी में पियो अच्छा आप ले ज कब देता मुझे और मैंने ले जाओ कुछ जो चाहिए ये ये देख लेना तू ये कितना मजबूत है हाँ तुमने भाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा"
+      },
+      "confidence": 0.97,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 143940,
+      "end_ms": 146100,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 10,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 143940,
+        "end_ms": 146100,
+        "duration_ms": 2160,
+        "duration_sec": 2.16,
+        "text": "है ऐसा कुछ नहीं है जी जी"
+      },
+      "confidence": 0.921,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 146100,
+      "end_ms": 163520,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 11,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 146100,
+        "end_ms": 163520,
+        "duration_ms": 17420,
+        "duration_sec": 17.42,
+        "text": "आप ही अरे नहीं भाई चाहिए ही नहीं मुझे चाहिए ही नहीं भाई रेंदे चाहिए ही नहीं मुझे आप तो चलो क"
+      },
+      "confidence": 0.954,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "diarization",
+      "start_ms": 168350,
+      "end_ms": 169810,
+      "type": "speaker_turn",
+      "payload": {
+        "turn_index": 12,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 168350,
+        "end_ms": 169810,
+        "duration_ms": 1460,
+        "duration_sec": 1.46,
+        "text": "नहीं नहीं नहीं जी अजीब"
+      },
+      "confidence": 0.918,
+      "provider": "assemblyai",
+      "provider_version": "1.0.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "metrics": {
+      "total_speaker_turns": 13,
+      "unique_speakers": [
+        "SPEAKER_00",
+        "SPEAKER_01"
+      ],
+      "speaker_count": 2,
+      "total_speech_duration_ms": 164980,
+      "speaker_mapping": {
+        "A": "SPEAKER_00",
+        "B": "SPEAKER_01"
+      }
+    },
+    "turns": [
+      {
+        "turn_index": 0,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 0,
+        "end_ms": 2520,
+        "duration_ms": 2520,
+        "duration_sec": 2.52,
+        "text": "लो जिया जी गरमा गरम कॉफी पियो।"
+      },
+      {
+        "turn_index": 1,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 2520,
+        "end_ms": 17240,
+        "duration_ms": 14720,
+        "duration_sec": 14.72,
+        "text": "हाँ भाई। हम्म, अच्छा जी। कांच के बर्तन आ रहे हैं? सही है, बढ़िया। ओहो, कॉफी एकदम बोरोसिलिकेट कप में आ रही है, डंडी देखो अलग है हाँ?"
+      },
+      {
+        "turn_index": 2,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 17240,
+        "end_ms": 26450,
+        "duration_ms": 9210,
+        "duration_sec": 9.21,
+        "text": "जिया जी हम तो स्टार्टिंग से यही बर्तन इस्तेमाल करते हैं, क्वालिटी में कॉम्प्रोमाइज़ नहीं करते हम घर के सामान नहीं"
+      },
+      {
+        "turn_index": 3,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 26450,
+        "end_ms": 29730,
+        "duration_ms": 3280,
+        "duration_sec": 3.28,
+        "text": "नहीं क्यों क्या हुआ शादी में देने चाहिए थे ना फिर हमें भी स्टिकली"
+      },
+      {
+        "turn_index": 4,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 29730,
+        "end_ms": 35730,
+        "duration_ms": 6000,
+        "duration_sec": 6.0,
+        "text": "की जगह नहीं हमने तो सारे अच्छे बर्तन ही दिए मतलब वो शायद पुरानी बात होगी तो आपको याद नहीं आ"
+      },
+      {
+        "turn_index": 5,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 35730,
+        "end_ms": 40610,
+        "duration_ms": 4880,
+        "duration_sec": 4.88,
+        "text": "रहा होगा अरे वो पुराने से याद आया मेरे को टोस्टर खराब हो गया ठीक करा दे वो मैं एक बार"
+      },
+      {
+        "turn_index": 6,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 40610,
+        "end_ms": 54490,
+        "duration_ms": 13880,
+        "duration_sec": 13.88,
+        "text": "वो बिल देख लेता हूँ घर म नहीं नहीं ऐसी ऐसा नहीं बोला मैंने"
+      },
+      {
+        "turn_index": 7,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 54490,
+        "end_ms": 59870,
+        "duration_ms": 5380,
+        "duration_sec": 5.38,
+        "text": "हम्म ऐसे ही कह रहा है तू तो तू पैदा भी नहीं हुआ ना बेटे जब से ब्रेड जाम खा रहा"
+      },
+      {
+        "turn_index": 8,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 59870,
+        "end_ms": 66550,
+        "duration_ms": 6680,
+        "duration_sec": 6.68,
+        "text": "हूँ मैं खा रहे होंगे जिया जी मैं कुछ मजा थोड़ी कर रहा हूँ आपको मतलब हम भी सेम इस्तेमाल करते हैं ब्रांडेड ही है आपको भी वही"
+      },
+      {
+        "turn_index": 9,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 66550,
+        "end_ms": 143940,
+        "duration_ms": 77390,
+        "duration_sec": 77.39,
+        "text": "दिया था सेम अभी देख लेता हू इंडक्शन दिया हैं घर में तुम तीन बंदे हो गैस देखले तुम्हारा चार बर्नर वाला है ये हैवी मटेरियल कॉमन है यार कॉमन है ये टिश्यू पेपर का ये स्टैंड कॉमन है कॉमन है ये हैं ये वाह कैसा रोल देखो भाई साहब इसमें रोटी दिख रही है हैं मुझे दे दिया तुमने प्लास्टिक वाला आप ले चम्मच तुमने एकदम अम्मानी वाले ले रखे हैं ये तो तो आप ले लो आप ले लो मैं मैं क्या करूँ आप ले लो अम्मानी वाली रसोई बना रखी है तुमने इसमें तो खीर खाते होगे तुम हमें तो दे दी वो प्लेट बड़ी चार खांचे वाली उसमें खीर खाओ सब्जी खाओ रायता भी उसी में पियो अच्छा आप ले ज कब देता मुझे और मैंने ले जाओ कुछ जो चाहिए ये ये देख लेना तू ये कितना मजबूत है हाँ तुमने भाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा"
+      },
+      {
+        "turn_index": 10,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 143940,
+        "end_ms": 146100,
+        "duration_ms": 2160,
+        "duration_sec": 2.16,
+        "text": "है ऐसा कुछ नहीं है जी जी"
+      },
+      {
+        "turn_index": 11,
+        "speaker": "SPEAKER_01",
+        "speaker_raw": "B",
+        "start_ms": 146100,
+        "end_ms": 163520,
+        "duration_ms": 17420,
+        "duration_sec": 17.42,
+        "text": "आप ही अरे नहीं भाई चाहिए ही नहीं मुझे चाहिए ही नहीं भाई रेंदे चाहिए ही नहीं मुझे आप तो चलो क"
+      },
+      {
+        "turn_index": 12,
+        "speaker": "SPEAKER_00",
+        "speaker_raw": "A",
+        "start_ms": 168350,
+        "end_ms": 169810,
+        "duration_ms": 1460,
+        "duration_sec": 1.46,
+        "text": "नहीं नहीं नहीं जी अजीब"
+      }
+    ]
+  },
+  "metadata": {
+    "audio_path": "data/reels/DdrIIFTCWdx/audio.wav"
+  }
+}

@@ -1,0 +1,4238 @@
+{
+  "capability": "ocr",
+  "provider_name": "rapidocr",
+  "provider_version": "1.0.0",
+  "events": [
+    {
+      "track": "ocr",
+      "start_ms": 0,
+      "end_ms": 4333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 13,
+        "span_index": 0
+      },
+      "confidence": 0.9902,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 4000,
+      "end_ms": 4333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5344,
+          0.1958,
+          0.5453,
+          0.2167
+        ],
+        "frame_count": 1,
+        "span_index": 1
+      },
+      "confidence": 0.632,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 4333,
+      "end_ms": 4999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 2,
+        "span_index": 2
+      },
+      "confidence": 0.9901,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 4666,
+      "end_ms": 4999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.55,
+          0.2056,
+          0.5602,
+          0.2264
+        ],
+        "frame_count": 1,
+        "span_index": 3
+      },
+      "confidence": 0.6391,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 5000,
+      "end_ms": 7999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 9,
+        "span_index": 4
+      },
+      "confidence": 0.99,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 7666,
+      "end_ms": 7999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5586,
+          0.1861,
+          0.568,
+          0.2056
+        ],
+        "frame_count": 1,
+        "span_index": 5
+      },
+      "confidence": 0.6859,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 8000,
+      "end_ms": 8999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 3,
+        "span_index": 6
+      },
+      "confidence": 0.99,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 8666,
+      "end_ms": 8999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5695,
+          0.1792,
+          0.5789,
+          0.2
+        ],
+        "frame_count": 1,
+        "span_index": 7
+      },
+      "confidence": 0.7417,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 9000,
+      "end_ms": 9333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 1,
+        "span_index": 8
+      },
+      "confidence": 0.99,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 9000,
+      "end_ms": 9333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5711,
+          0.1778,
+          0.5797,
+          0.1986
+        ],
+        "frame_count": 1,
+        "span_index": 9
+      },
+      "confidence": 0.6747,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 9333,
+      "end_ms": 9666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 1,
+        "span_index": 10
+      },
+      "confidence": 0.99,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 9333,
+      "end_ms": 9666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5711,
+          0.1806,
+          0.5797,
+          0.2
+        ],
+        "frame_count": 1,
+        "span_index": 11
+      },
+      "confidence": 0.7916,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 9666,
+      "end_ms": 11333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 5,
+        "span_index": 12
+      },
+      "confidence": 0.99,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 11000,
+      "end_ms": 11333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5695,
+          0.2028,
+          0.5781,
+          0.2208
+        ],
+        "frame_count": 1,
+        "span_index": 13
+      },
+      "confidence": 0.6968,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 11333,
+      "end_ms": 12333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 3,
+        "span_index": 14
+      },
+      "confidence": 0.9897,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 12000,
+      "end_ms": 12333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5687,
+          0.2056,
+          0.5758,
+          0.2194
+        ],
+        "frame_count": 1,
+        "span_index": 15
+      },
+      "confidence": 0.922,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 12333,
+      "end_ms": 15999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 11,
+        "span_index": 16
+      },
+      "confidence": 0.9904,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 15666,
+      "end_ms": 15999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5656,
+          0.1958,
+          0.5727,
+          0.2097
+        ],
+        "frame_count": 1,
+        "span_index": 17
+      },
+      "confidence": 0.6822,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 16000,
+      "end_ms": 16333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 1,
+        "span_index": 18
+      },
+      "confidence": 0.9904,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 16000,
+      "end_ms": 16333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5617,
+          0.1875,
+          0.5727,
+          0.2083
+        ],
+        "frame_count": 1,
+        "span_index": 19
+      },
+      "confidence": 0.6407,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 16333,
+      "end_ms": 17666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4,
+        "span_index": 20
+      },
+      "confidence": 0.9904,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 17333,
+      "end_ms": 17666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.557,
+          0.1861,
+          0.5664,
+          0.2056
+        ],
+        "frame_count": 1,
+        "span_index": 21
+      },
+      "confidence": 0.666,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 17666,
+      "end_ms": 18666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 3,
+        "span_index": 22
+      },
+      "confidence": 0.9904,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 18333,
+      "end_ms": 18666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5617,
+          0.1917,
+          0.5727,
+          0.2111
+        ],
+        "frame_count": 1,
+        "span_index": 23
+      },
+      "confidence": 0.6621,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 18666,
+      "end_ms": 19999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4,
+        "span_index": 24
+      },
+      "confidence": 0.9904,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 19666,
+      "end_ms": 19999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.575,
+          0.1958,
+          0.582,
+          0.2097
+        ],
+        "frame_count": 1,
+        "span_index": 25
+      },
+      "confidence": 0.6768,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 20000,
+      "end_ms": 22333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 7,
+        "span_index": 26
+      },
+      "confidence": 0.9901,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 22000,
+      "end_ms": 22333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5711,
+          0.2319,
+          0.5781,
+          0.2472
+        ],
+        "frame_count": 1,
+        "span_index": 27
+      },
+      "confidence": 0.7658,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 22333,
+      "end_ms": 22999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 2,
+        "span_index": 28
+      },
+      "confidence": 0.9897,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 22666,
+      "end_ms": 22999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5492,
+          0.2236,
+          0.5602,
+          0.2431
+        ],
+        "frame_count": 1,
+        "span_index": 29
+      },
+      "confidence": 0.7578,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 23000,
+      "end_ms": 25999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 9,
+        "span_index": 30
+      },
+      "confidence": 0.9901,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 25666,
+      "end_ms": 25999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5609,
+          0.2097,
+          0.5687,
+          0.2222
+        ],
+        "frame_count": 1,
+        "span_index": 31
+      },
+      "confidence": 0.7496,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 26000,
+      "end_ms": 35999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 30,
+        "span_index": 32
+      },
+      "confidence": 0.99,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 35666,
+      "end_ms": 35999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5617,
+          0.2208,
+          0.5719,
+          0.2417
+        ],
+        "frame_count": 1,
+        "span_index": 33
+      },
+      "confidence": 0.7095,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 36000,
+      "end_ms": 36999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 3,
+        "span_index": 34
+      },
+      "confidence": 0.9898,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 36666,
+      "end_ms": 36999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5563,
+          0.2264,
+          0.5641,
+          0.2403
+        ],
+        "frame_count": 1,
+        "span_index": 35
+      },
+      "confidence": 0.683,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 37000,
+      "end_ms": 41333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 13,
+        "span_index": 36
+      },
+      "confidence": 0.9898,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 41000,
+      "end_ms": 41333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.532,
+          0.2333,
+          0.5398,
+          0.2472
+        ],
+        "frame_count": 1,
+        "span_index": 37
+      },
+      "confidence": 0.6952,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 41333,
+      "end_ms": 41666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 1,
+        "span_index": 38
+      },
+      "confidence": 0.9895,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 41333,
+      "end_ms": 41666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5242,
+          0.2347,
+          0.5344,
+          0.2528
+        ],
+        "frame_count": 1,
+        "span_index": 39
+      },
+      "confidence": 0.6308,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 41666,
+      "end_ms": 41999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 1,
+        "span_index": 40
+      },
+      "confidence": 0.9895,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 41666,
+      "end_ms": 41999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5234,
+          0.2514,
+          0.5336,
+          0.2708
+        ],
+        "frame_count": 1,
+        "span_index": 41
+      },
+      "confidence": 0.8001,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 42000,
+      "end_ms": 43666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 5,
+        "span_index": 42
+      },
+      "confidence": 0.989,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 43333,
+      "end_ms": 43666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5242,
+          0.2583,
+          0.5344,
+          0.2764
+        ],
+        "frame_count": 1,
+        "span_index": 43
+      },
+      "confidence": 0.663,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 43666,
+      "end_ms": 44333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 2,
+        "span_index": 44
+      },
+      "confidence": 0.989,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 44000,
+      "end_ms": 44333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5258,
+          0.2417,
+          0.5328,
+          0.2528
+        ],
+        "frame_count": 1,
+        "span_index": 45
+      },
+      "confidence": 0.6133,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 44333,
+      "end_ms": 45333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 3,
+        "span_index": 46
+      },
+      "confidence": 0.9891,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 45000,
+      "end_ms": 45333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5219,
+          0.2514,
+          0.5312,
+          0.2708
+        ],
+        "frame_count": 1,
+        "span_index": 47
+      },
+      "confidence": 0.7202,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 45333,
+      "end_ms": 45999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 2,
+        "span_index": 48
+      },
+      "confidence": 0.9891,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 45666,
+      "end_ms": 45999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.525,
+          0.25,
+          0.532,
+          0.2639
+        ],
+        "frame_count": 1,
+        "span_index": 49
+      },
+      "confidence": 0.6846,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 46000,
+      "end_ms": 46333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 1,
+        "span_index": 50
+      },
+      "confidence": 0.9891,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 46000,
+      "end_ms": 46333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5227,
+          0.2444,
+          0.5297,
+          0.2583
+        ],
+        "frame_count": 1,
+        "span_index": 51
+      },
+      "confidence": 0.8253,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 46333,
+      "end_ms": 49666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 10,
+        "span_index": 52
+      },
+      "confidence": 0.9891,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 49333,
+      "end_ms": 49666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5164,
+          0.2653,
+          0.5234,
+          0.2806
+        ],
+        "frame_count": 1,
+        "span_index": 53
+      },
+      "confidence": 0.7563,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 49666,
+      "end_ms": 51333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 5,
+        "span_index": 54
+      },
+      "confidence": 0.9892,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 51000,
+      "end_ms": 51333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5219,
+          0.2431,
+          0.5289,
+          0.2583
+        ],
+        "frame_count": 1,
+        "span_index": 55
+      },
+      "confidence": 0.7894,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 51333,
+      "end_ms": 52666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4,
+        "span_index": 56
+      },
+      "confidence": 0.9899,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 52333,
+      "end_ms": 52666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5242,
+          0.2236,
+          0.5344,
+          0.2431
+        ],
+        "frame_count": 1,
+        "span_index": 57
+      },
+      "confidence": 0.6352,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 52666,
+      "end_ms": 53999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4,
+        "span_index": 58
+      },
+      "confidence": 0.9892,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 53666,
+      "end_ms": 53999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5242,
+          0.2361,
+          0.5336,
+          0.2542
+        ],
+        "frame_count": 1,
+        "span_index": 59
+      },
+      "confidence": 0.6174,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 54000,
+      "end_ms": 55333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4,
+        "span_index": 60
+      },
+      "confidence": 0.9892,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 55000,
+      "end_ms": 55333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5195,
+          0.2375,
+          0.5273,
+          0.2514
+        ],
+        "frame_count": 1,
+        "span_index": 61
+      },
+      "confidence": 0.7837,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 55333,
+      "end_ms": 66333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 33,
+        "span_index": 62
+      },
+      "confidence": 0.99,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 66000,
+      "end_ms": 66333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5398,
+          0.2028,
+          0.5469,
+          0.2167
+        ],
+        "frame_count": 1,
+        "span_index": 63
+      },
+      "confidence": 0.699,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 66333,
+      "end_ms": 66999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 2,
+        "span_index": 64
+      },
+      "confidence": 0.9894,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 66666,
+      "end_ms": 66999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5477,
+          0.2056,
+          0.5578,
+          0.2222
+        ],
+        "frame_count": 1,
+        "span_index": 65
+      },
+      "confidence": 0.8686,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 67000,
+      "end_ms": 67666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 2,
+        "span_index": 66
+      },
+      "confidence": 0.9896,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 67333,
+      "end_ms": 67666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5563,
+          0.2097,
+          0.5633,
+          0.2208
+        ],
+        "frame_count": 1,
+        "span_index": 67
+      },
+      "confidence": 0.6504,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 67666,
+      "end_ms": 67999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 1,
+        "span_index": 68
+      },
+      "confidence": 0.9897,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 67666,
+      "end_ms": 67999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5547,
+          0.2028,
+          0.5656,
+          0.2208
+        ],
+        "frame_count": 1,
+        "span_index": 69
+      },
+      "confidence": 0.6687,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 68000,
+      "end_ms": 69333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4,
+        "span_index": 70
+      },
+      "confidence": 0.9897,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 69000,
+      "end_ms": 70999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "?",
+        "bbox": [
+          0.5563,
+          0.2028,
+          0.5664,
+          0.2208
+        ],
+        "frame_count": 3,
+        "span_index": 71
+      },
+      "confidence": 0.707,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 76666,
+      "end_ms": 76999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "ot",
+        "bbox": [
+          0.5086,
+          0.5681,
+          0.5461,
+          0.6833
+        ],
+        "frame_count": 1,
+        "span_index": 72
+      },
+      "confidence": 0.7587,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77000,
+      "end_ms": 77333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "ast",
+        "bbox": [
+          0.5242,
+          0.6556,
+          0.5625,
+          0.7542
+        ],
+        "frame_count": 1,
+        "span_index": 73
+      },
+      "confidence": 0.9897,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77000,
+      "end_ms": 77333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THE",
+        "bbox": [
+          0.5516,
+          0.4583,
+          0.5867,
+          0.5597
+        ],
+        "frame_count": 1,
+        "span_index": 74
+      },
+      "confidence": 0.9918,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77000,
+      "end_ms": 77333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CLU",
+        "bbox": [
+          0.568,
+          0.6653,
+          0.6141,
+          0.8014
+        ],
+        "frame_count": 1,
+        "span_index": 75
+      },
+      "confidence": 0.9827,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77000,
+      "end_ms": 77333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Coast",
+        "bbox": [
+          0.575,
+          0.5236,
+          0.6281,
+          0.6875
+        ],
+        "frame_count": 1,
+        "span_index": 76
+      },
+      "confidence": 0.8908,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77000,
+      "end_ms": 77333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "OC",
+        "bbox": [
+          0.5953,
+          0.4764,
+          0.6227,
+          0.5569
+        ],
+        "frame_count": 1,
+        "span_index": 77
+      },
+      "confidence": 0.6928,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77000,
+      "end_ms": 77333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "1",
+        "bbox": [
+          0.7312,
+          0.2236,
+          0.7937,
+          0.3458
+        ],
+        "frame_count": 1,
+        "span_index": 78
+      },
+      "confidence": 0.8461,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77333,
+      "end_ms": 77666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "oCast",
+        "bbox": [
+          0.5078,
+          0.6958,
+          0.5531,
+          0.8458
+        ],
+        "frame_count": 1,
+        "span_index": 79
+      },
+      "confidence": 0.7266,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77333,
+      "end_ms": 77666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CLU",
+        "bbox": [
+          0.5516,
+          0.7736,
+          0.5898,
+          0.8833
+        ],
+        "frame_count": 1,
+        "span_index": 80
+      },
+      "confidence": 0.975,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77333,
+      "end_ms": 77666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "oCoast",
+        "bbox": [
+          0.5617,
+          0.6,
+          0.607,
+          0.7736
+        ],
+        "frame_count": 1,
+        "span_index": 81
+      },
+      "confidence": 0.8791,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77666,
+      "end_ms": 77999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CEast",
+        "bbox": [
+          0.493,
+          0.7917,
+          0.5453,
+          0.9292
+        ],
+        "frame_count": 1,
+        "span_index": 82
+      },
+      "confidence": 0.8191,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 77666,
+      "end_ms": 77999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CasfCLu",
+        "bbox": [
+          0.525,
+          0.7347,
+          0.5922,
+          0.9625
+        ],
+        "frame_count": 1,
+        "span_index": 83
+      },
+      "confidence": 0.6584,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 78000,
+      "end_ms": 78333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Cas",
+        "bbox": [
+          0.4992,
+          0.8417,
+          0.5391,
+          0.9069
+        ],
+        "frame_count": 1,
+        "span_index": 84
+      },
+      "confidence": 0.8428,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 78666,
+      "end_ms": 78999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Oint",
+        "bbox": [
+          0.5531,
+          0.6861,
+          0.6062,
+          0.7875
+        ],
+        "frame_count": 1,
+        "span_index": 85
+      },
+      "confidence": 0.601,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 79000,
+      "end_ms": 79333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CEast",
+        "bbox": [
+          0.5117,
+          0.6778,
+          0.5648,
+          0.7944
+        ],
+        "frame_count": 1,
+        "span_index": 86
+      },
+      "confidence": 0.7257,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 79000,
+      "end_ms": 79666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "TH",
+        "bbox": [
+          0.5563,
+          0.6722,
+          0.5773,
+          0.7181
+        ],
+        "frame_count": 2,
+        "span_index": 87
+      },
+      "confidence": 0.9762,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 80333,
+      "end_ms": 80666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "7",
+        "bbox": [
+          0.8094,
+          0.0472,
+          0.8875,
+          0.1347
+        ],
+        "frame_count": 1,
+        "span_index": 88
+      },
+      "confidence": 0.8331,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 80666,
+      "end_ms": 80999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Cast",
+        "bbox": [
+          0.5391,
+          0.8222,
+          0.5711,
+          0.8931
+        ],
+        "frame_count": 1,
+        "span_index": 89
+      },
+      "confidence": 0.6116,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 80666,
+      "end_ms": 80999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CL",
+        "bbox": [
+          0.5781,
+          0.8667,
+          0.5984,
+          0.9028
+        ],
+        "frame_count": 1,
+        "span_index": 90
+      },
+      "confidence": 0.7877,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 80666,
+      "end_ms": 80999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Cast",
+        "bbox": [
+          0.582,
+          0.7736,
+          0.6242,
+          0.8778
+        ],
+        "frame_count": 1,
+        "span_index": 91
+      },
+      "confidence": 0.6089,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 81000,
+      "end_ms": 81333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CEast",
+        "bbox": [
+          0.5328,
+          0.775,
+          0.5836,
+          0.8875
+        ],
+        "frame_count": 1,
+        "span_index": 92
+      },
+      "confidence": 0.728,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 81000,
+      "end_ms": 81333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "THI",
+        "bbox": [
+          0.5727,
+          0.7417,
+          0.5906,
+          0.7833
+        ],
+        "frame_count": 1,
+        "span_index": 93
+      },
+      "confidence": 0.7378,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 81000,
+      "end_ms": 81333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CL",
+        "bbox": [
+          0.5758,
+          0.8278,
+          0.6086,
+          0.8931
+        ],
+        "frame_count": 1,
+        "span_index": 94
+      },
+      "confidence": 0.9898,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 81000,
+      "end_ms": 81333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Coast",
+        "bbox": [
+          0.5867,
+          0.7361,
+          0.6328,
+          0.8556
+        ],
+        "frame_count": 1,
+        "span_index": 95
+      },
+      "confidence": 0.9052,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 81333,
+      "end_ms": 81666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CEast",
+        "bbox": [
+          0.5281,
+          0.7389,
+          0.5852,
+          0.8597
+        ],
+        "frame_count": 1,
+        "span_index": 96
+      },
+      "confidence": 0.671,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 81333,
+      "end_ms": 81666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CastCLU",
+        "bbox": [
+          0.5633,
+          0.6986,
+          0.6406,
+          0.8889
+        ],
+        "frame_count": 1,
+        "span_index": 97
+      },
+      "confidence": 0.68,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 81666,
+      "end_ms": 81999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Cast",
+        "bbox": [
+          0.5398,
+          0.7528,
+          0.5805,
+          0.8431
+        ],
+        "frame_count": 1,
+        "span_index": 98
+      },
+      "confidence": 0.7681,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 81666,
+      "end_ms": 81999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "CL",
+        "bbox": [
+          0.5781,
+          0.8056,
+          0.6016,
+          0.8528
+        ],
+        "frame_count": 1,
+        "span_index": 99
+      },
+      "confidence": 0.9922,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 81666,
+      "end_ms": 81999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "OCiast",
+        "bbox": [
+          0.5852,
+          0.7083,
+          0.6328,
+          0.8208
+        ],
+        "frame_count": 1,
+        "span_index": 100
+      },
+      "confidence": 0.6567,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 86000,
+      "end_ms": 86333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "20",
+        "bbox": [
+          0.5727,
+          0.9514,
+          0.5891,
+          0.9792
+        ],
+        "frame_count": 1,
+        "span_index": 101
+      },
+      "confidence": 0.65,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 86666,
+      "end_ms": 86999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "品",
+        "bbox": [
+          0.5484,
+          0.9278,
+          0.5906,
+          0.9972
+        ],
+        "frame_count": 1,
+        "span_index": 102
+      },
+      "confidence": 0.6659,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 98666,
+      "end_ms": 98999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "M",
+        "bbox": [
+          0.8508,
+          0.3042,
+          0.9516,
+          0.5194
+        ],
+        "frame_count": 1,
+        "span_index": 103
+      },
+      "confidence": 0.6823,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 106666,
+      "end_ms": 106999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "o",
+        "bbox": [
+          0.5602,
+          0.0472,
+          0.5883,
+          0.1736
+        ],
+        "frame_count": 1,
+        "span_index": 104
+      },
+      "confidence": 0.6006,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 106666,
+      "end_ms": 106999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "SinoeFohever.",
+        "bbox": [
+          0.5828,
+          0.125,
+          0.6148,
+          0.25
+        ],
+        "frame_count": 1,
+        "span_index": 105
+      },
+      "confidence": 0.8636,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 120666,
+      "end_ms": 120999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Fall",
+        "bbox": [
+          0.5148,
+          0.7153,
+          0.5305,
+          0.775
+        ],
+        "frame_count": 1,
+        "span_index": 106
+      },
+      "confidence": 0.6394,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 141000,
+      "end_ms": 141333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "mne",
+        "bbox": [
+          0.8109,
+          0.4681,
+          0.8344,
+          0.5347
+        ],
+        "frame_count": 1,
+        "span_index": 107
+      },
+      "confidence": 0.6237,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 144000,
+      "end_ms": 144333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Fadiin",
+        "bbox": [
+          0.4672,
+          0.7194,
+          0.4883,
+          0.7986
+        ],
+        "frame_count": 1,
+        "span_index": 108
+      },
+      "confidence": 0.7632,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 147666,
+      "end_ms": 147999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Cidlableed",
+        "bbox": [
+          0.468,
+          0.7903,
+          0.4789,
+          0.8583
+        ],
+        "frame_count": 1,
+        "span_index": 109
+      },
+      "confidence": 0.601,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 150333,
+      "end_ms": 150999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "SinoeForever.",
+        "bbox": [
+          0.5961,
+          0.5917,
+          0.6383,
+          0.7597
+        ],
+        "frame_count": 2,
+        "span_index": 110
+      },
+      "confidence": 0.9461,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 151000,
+      "end_ms": 151333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "SnbeForever.",
+        "bbox": [
+          0.6141,
+          0.5153,
+          0.6594,
+          0.6778
+        ],
+        "frame_count": 1,
+        "span_index": 111
+      },
+      "confidence": 0.8856,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 151333,
+      "end_ms": 151666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "SreeFotever.",
+        "bbox": [
+          0.5906,
+          0.3569,
+          0.6297,
+          0.4861
+        ],
+        "frame_count": 1,
+        "span_index": 112
+      },
+      "confidence": 0.8295,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 157666,
+      "end_ms": 157999,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Fallu",
+        "bbox": [
+          0.4797,
+          0.8208,
+          0.4977,
+          0.8833
+        ],
+        "frame_count": 1,
+        "span_index": 113
+      },
+      "confidence": 0.6396,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 158000,
+      "end_ms": 158333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "ST",
+        "bbox": [
+          0.5109,
+          0.4806,
+          0.5719,
+          0.6111
+        ],
+        "frame_count": 1,
+        "span_index": 114
+      },
+      "confidence": 0.7571,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 158333,
+      "end_ms": 158666,
+      "type": "text_overlay",
+      "payload": {
+        "text": "S",
+        "bbox": [
+          0.5008,
+          0.5069,
+          0.5594,
+          0.6264
+        ],
+        "frame_count": 1,
+        "span_index": 115
+      },
+      "confidence": 0.9496,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    },
+    {
+      "track": "ocr",
+      "start_ms": 159000,
+      "end_ms": 159333,
+      "type": "text_overlay",
+      "payload": {
+        "text": "Qal",
+        "bbox": [
+          0.45,
+          0.8208,
+          0.4633,
+          0.8778
+        ],
+        "frame_count": 1,
+        "span_index": 116
+      },
+      "confidence": 0.6405,
+      "provider": "rapidocr",
+      "provider_version": "1.0.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "metrics": {
+      "total_text_spans": 117,
+      "total_raw_detections": 293,
+      "frames_sampled": 511,
+      "video_duration_ms": 170100,
+      "text_coverage_ms": 98624,
+      "text_coverage_pct": 58.0,
+      "sample_fps": 3.0
+    },
+    "spans": [
+      {
+        "span_index": 0,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 0,
+        "end_ms": 4333,
+        "duration_ms": 4333,
+        "confidence": 0.9902,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 13
+      },
+      {
+        "span_index": 1,
+        "text": "?",
+        "start_ms": 4000,
+        "end_ms": 4333,
+        "duration_ms": 333,
+        "confidence": 0.632,
+        "bbox": [
+          0.5344,
+          0.1958,
+          0.5453,
+          0.2167
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 2,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 4333,
+        "end_ms": 4999,
+        "duration_ms": 666,
+        "confidence": 0.9901,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 2
+      },
+      {
+        "span_index": 3,
+        "text": "?",
+        "start_ms": 4666,
+        "end_ms": 4999,
+        "duration_ms": 333,
+        "confidence": 0.6391,
+        "bbox": [
+          0.55,
+          0.2056,
+          0.5602,
+          0.2264
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 4,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 5000,
+        "end_ms": 7999,
+        "duration_ms": 2999,
+        "confidence": 0.99,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 9
+      },
+      {
+        "span_index": 5,
+        "text": "?",
+        "start_ms": 7666,
+        "end_ms": 7999,
+        "duration_ms": 333,
+        "confidence": 0.6859,
+        "bbox": [
+          0.5586,
+          0.1861,
+          0.568,
+          0.2056
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 6,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 8000,
+        "end_ms": 8999,
+        "duration_ms": 999,
+        "confidence": 0.99,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 3
+      },
+      {
+        "span_index": 7,
+        "text": "?",
+        "start_ms": 8666,
+        "end_ms": 8999,
+        "duration_ms": 333,
+        "confidence": 0.7417,
+        "bbox": [
+          0.5695,
+          0.1792,
+          0.5789,
+          0.2
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 8,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 9000,
+        "end_ms": 9333,
+        "duration_ms": 333,
+        "confidence": 0.99,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 9,
+        "text": "?",
+        "start_ms": 9000,
+        "end_ms": 9333,
+        "duration_ms": 333,
+        "confidence": 0.6747,
+        "bbox": [
+          0.5711,
+          0.1778,
+          0.5797,
+          0.1986
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 10,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 9333,
+        "end_ms": 9666,
+        "duration_ms": 333,
+        "confidence": 0.99,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 11,
+        "text": "?",
+        "start_ms": 9333,
+        "end_ms": 9666,
+        "duration_ms": 333,
+        "confidence": 0.7916,
+        "bbox": [
+          0.5711,
+          0.1806,
+          0.5797,
+          0.2
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 12,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 9666,
+        "end_ms": 11333,
+        "duration_ms": 1667,
+        "confidence": 0.99,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 5
+      },
+      {
+        "span_index": 13,
+        "text": "?",
+        "start_ms": 11000,
+        "end_ms": 11333,
+        "duration_ms": 333,
+        "confidence": 0.6968,
+        "bbox": [
+          0.5695,
+          0.2028,
+          0.5781,
+          0.2208
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 14,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 11333,
+        "end_ms": 12333,
+        "duration_ms": 1000,
+        "confidence": 0.9897,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 3
+      },
+      {
+        "span_index": 15,
+        "text": "?",
+        "start_ms": 12000,
+        "end_ms": 12333,
+        "duration_ms": 333,
+        "confidence": 0.922,
+        "bbox": [
+          0.5687,
+          0.2056,
+          0.5758,
+          0.2194
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 16,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 12333,
+        "end_ms": 15999,
+        "duration_ms": 3666,
+        "confidence": 0.9904,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 11
+      },
+      {
+        "span_index": 17,
+        "text": "?",
+        "start_ms": 15666,
+        "end_ms": 15999,
+        "duration_ms": 333,
+        "confidence": 0.6822,
+        "bbox": [
+          0.5656,
+          0.1958,
+          0.5727,
+          0.2097
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 18,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 16000,
+        "end_ms": 16333,
+        "duration_ms": 333,
+        "confidence": 0.9904,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 19,
+        "text": "?",
+        "start_ms": 16000,
+        "end_ms": 16333,
+        "duration_ms": 333,
+        "confidence": 0.6407,
+        "bbox": [
+          0.5617,
+          0.1875,
+          0.5727,
+          0.2083
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 20,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 16333,
+        "end_ms": 17666,
+        "duration_ms": 1333,
+        "confidence": 0.9904,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4
+      },
+      {
+        "span_index": 21,
+        "text": "?",
+        "start_ms": 17333,
+        "end_ms": 17666,
+        "duration_ms": 333,
+        "confidence": 0.666,
+        "bbox": [
+          0.557,
+          0.1861,
+          0.5664,
+          0.2056
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 22,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 17666,
+        "end_ms": 18666,
+        "duration_ms": 1000,
+        "confidence": 0.9904,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 3
+      },
+      {
+        "span_index": 23,
+        "text": "?",
+        "start_ms": 18333,
+        "end_ms": 18666,
+        "duration_ms": 333,
+        "confidence": 0.6621,
+        "bbox": [
+          0.5617,
+          0.1917,
+          0.5727,
+          0.2111
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 24,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 18666,
+        "end_ms": 19999,
+        "duration_ms": 1333,
+        "confidence": 0.9904,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4
+      },
+      {
+        "span_index": 25,
+        "text": "?",
+        "start_ms": 19666,
+        "end_ms": 19999,
+        "duration_ms": 333,
+        "confidence": 0.6768,
+        "bbox": [
+          0.575,
+          0.1958,
+          0.582,
+          0.2097
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 26,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 20000,
+        "end_ms": 22333,
+        "duration_ms": 2333,
+        "confidence": 0.9901,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 7
+      },
+      {
+        "span_index": 27,
+        "text": "?",
+        "start_ms": 22000,
+        "end_ms": 22333,
+        "duration_ms": 333,
+        "confidence": 0.7658,
+        "bbox": [
+          0.5711,
+          0.2319,
+          0.5781,
+          0.2472
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 28,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 22333,
+        "end_ms": 22999,
+        "duration_ms": 666,
+        "confidence": 0.9897,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 2
+      },
+      {
+        "span_index": 29,
+        "text": "?",
+        "start_ms": 22666,
+        "end_ms": 22999,
+        "duration_ms": 333,
+        "confidence": 0.7578,
+        "bbox": [
+          0.5492,
+          0.2236,
+          0.5602,
+          0.2431
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 30,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 23000,
+        "end_ms": 25999,
+        "duration_ms": 2999,
+        "confidence": 0.9901,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 9
+      },
+      {
+        "span_index": 31,
+        "text": "?",
+        "start_ms": 25666,
+        "end_ms": 25999,
+        "duration_ms": 333,
+        "confidence": 0.7496,
+        "bbox": [
+          0.5609,
+          0.2097,
+          0.5687,
+          0.2222
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 32,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 26000,
+        "end_ms": 35999,
+        "duration_ms": 9999,
+        "confidence": 0.99,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 30
+      },
+      {
+        "span_index": 33,
+        "text": "?",
+        "start_ms": 35666,
+        "end_ms": 35999,
+        "duration_ms": 333,
+        "confidence": 0.7095,
+        "bbox": [
+          0.5617,
+          0.2208,
+          0.5719,
+          0.2417
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 34,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 36000,
+        "end_ms": 36999,
+        "duration_ms": 999,
+        "confidence": 0.9898,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 3
+      },
+      {
+        "span_index": 35,
+        "text": "?",
+        "start_ms": 36666,
+        "end_ms": 36999,
+        "duration_ms": 333,
+        "confidence": 0.683,
+        "bbox": [
+          0.5563,
+          0.2264,
+          0.5641,
+          0.2403
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 36,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 37000,
+        "end_ms": 41333,
+        "duration_ms": 4333,
+        "confidence": 0.9898,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 13
+      },
+      {
+        "span_index": 37,
+        "text": "?",
+        "start_ms": 41000,
+        "end_ms": 41333,
+        "duration_ms": 333,
+        "confidence": 0.6952,
+        "bbox": [
+          0.532,
+          0.2333,
+          0.5398,
+          0.2472
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 38,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 41333,
+        "end_ms": 41666,
+        "duration_ms": 333,
+        "confidence": 0.9895,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 39,
+        "text": "?",
+        "start_ms": 41333,
+        "end_ms": 41666,
+        "duration_ms": 333,
+        "confidence": 0.6308,
+        "bbox": [
+          0.5242,
+          0.2347,
+          0.5344,
+          0.2528
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 40,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 41666,
+        "end_ms": 41999,
+        "duration_ms": 333,
+        "confidence": 0.9895,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 41,
+        "text": "?",
+        "start_ms": 41666,
+        "end_ms": 41999,
+        "duration_ms": 333,
+        "confidence": 0.8001,
+        "bbox": [
+          0.5234,
+          0.2514,
+          0.5336,
+          0.2708
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 42,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 42000,
+        "end_ms": 43666,
+        "duration_ms": 1666,
+        "confidence": 0.989,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 5
+      },
+      {
+        "span_index": 43,
+        "text": "?",
+        "start_ms": 43333,
+        "end_ms": 43666,
+        "duration_ms": 333,
+        "confidence": 0.663,
+        "bbox": [
+          0.5242,
+          0.2583,
+          0.5344,
+          0.2764
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 44,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 43666,
+        "end_ms": 44333,
+        "duration_ms": 667,
+        "confidence": 0.989,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 2
+      },
+      {
+        "span_index": 45,
+        "text": "?",
+        "start_ms": 44000,
+        "end_ms": 44333,
+        "duration_ms": 333,
+        "confidence": 0.6133,
+        "bbox": [
+          0.5258,
+          0.2417,
+          0.5328,
+          0.2528
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 46,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 44333,
+        "end_ms": 45333,
+        "duration_ms": 1000,
+        "confidence": 0.9891,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 3
+      },
+      {
+        "span_index": 47,
+        "text": "?",
+        "start_ms": 45000,
+        "end_ms": 45333,
+        "duration_ms": 333,
+        "confidence": 0.7202,
+        "bbox": [
+          0.5219,
+          0.2514,
+          0.5312,
+          0.2708
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 48,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 45333,
+        "end_ms": 45999,
+        "duration_ms": 666,
+        "confidence": 0.9891,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 2
+      },
+      {
+        "span_index": 49,
+        "text": "?",
+        "start_ms": 45666,
+        "end_ms": 45999,
+        "duration_ms": 333,
+        "confidence": 0.6846,
+        "bbox": [
+          0.525,
+          0.25,
+          0.532,
+          0.2639
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 50,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 46000,
+        "end_ms": 46333,
+        "duration_ms": 333,
+        "confidence": 0.9891,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 51,
+        "text": "?",
+        "start_ms": 46000,
+        "end_ms": 46333,
+        "duration_ms": 333,
+        "confidence": 0.8253,
+        "bbox": [
+          0.5227,
+          0.2444,
+          0.5297,
+          0.2583
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 52,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 46333,
+        "end_ms": 49666,
+        "duration_ms": 3333,
+        "confidence": 0.9891,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 10
+      },
+      {
+        "span_index": 53,
+        "text": "?",
+        "start_ms": 49333,
+        "end_ms": 49666,
+        "duration_ms": 333,
+        "confidence": 0.7563,
+        "bbox": [
+          0.5164,
+          0.2653,
+          0.5234,
+          0.2806
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 54,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 49666,
+        "end_ms": 51333,
+        "duration_ms": 1667,
+        "confidence": 0.9892,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 5
+      },
+      {
+        "span_index": 55,
+        "text": "?",
+        "start_ms": 51000,
+        "end_ms": 51333,
+        "duration_ms": 333,
+        "confidence": 0.7894,
+        "bbox": [
+          0.5219,
+          0.2431,
+          0.5289,
+          0.2583
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 56,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 51333,
+        "end_ms": 52666,
+        "duration_ms": 1333,
+        "confidence": 0.9899,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4
+      },
+      {
+        "span_index": 57,
+        "text": "?",
+        "start_ms": 52333,
+        "end_ms": 52666,
+        "duration_ms": 333,
+        "confidence": 0.6352,
+        "bbox": [
+          0.5242,
+          0.2236,
+          0.5344,
+          0.2431
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 58,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 52666,
+        "end_ms": 53999,
+        "duration_ms": 1333,
+        "confidence": 0.9892,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4
+      },
+      {
+        "span_index": 59,
+        "text": "?",
+        "start_ms": 53666,
+        "end_ms": 53999,
+        "duration_ms": 333,
+        "confidence": 0.6174,
+        "bbox": [
+          0.5242,
+          0.2361,
+          0.5336,
+          0.2542
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 60,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 54000,
+        "end_ms": 55333,
+        "duration_ms": 1333,
+        "confidence": 0.9892,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4
+      },
+      {
+        "span_index": 61,
+        "text": "?",
+        "start_ms": 55000,
+        "end_ms": 55333,
+        "duration_ms": 333,
+        "confidence": 0.7837,
+        "bbox": [
+          0.5195,
+          0.2375,
+          0.5273,
+          0.2514
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 62,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 55333,
+        "end_ms": 66333,
+        "duration_ms": 11000,
+        "confidence": 0.99,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 33
+      },
+      {
+        "span_index": 63,
+        "text": "?",
+        "start_ms": 66000,
+        "end_ms": 66333,
+        "duration_ms": 333,
+        "confidence": 0.699,
+        "bbox": [
+          0.5398,
+          0.2028,
+          0.5469,
+          0.2167
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 64,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 66333,
+        "end_ms": 66999,
+        "duration_ms": 666,
+        "confidence": 0.9894,
+        "bbox": [
+          0.1797,
+          0.1417,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 2
+      },
+      {
+        "span_index": 65,
+        "text": "?",
+        "start_ms": 66666,
+        "end_ms": 66999,
+        "duration_ms": 333,
+        "confidence": 0.8686,
+        "bbox": [
+          0.5477,
+          0.2056,
+          0.5578,
+          0.2222
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 66,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 67000,
+        "end_ms": 67666,
+        "duration_ms": 666,
+        "confidence": 0.9896,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8625
+        ],
+        "frame_count": 2
+      },
+      {
+        "span_index": 67,
+        "text": "?",
+        "start_ms": 67333,
+        "end_ms": 67666,
+        "duration_ms": 333,
+        "confidence": 0.6504,
+        "bbox": [
+          0.5563,
+          0.2097,
+          0.5633,
+          0.2208
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 68,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 67666,
+        "end_ms": 67999,
+        "duration_ms": 333,
+        "confidence": 0.9897,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 69,
+        "text": "?",
+        "start_ms": 67666,
+        "end_ms": 67999,
+        "duration_ms": 333,
+        "confidence": 0.6687,
+        "bbox": [
+          0.5547,
+          0.2028,
+          0.5656,
+          0.2208
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 70,
+        "text": "WHENJIJAISJEALOUSOFIN-LAWS'LIFESTYLE",
+        "start_ms": 68000,
+        "end_ms": 69333,
+        "duration_ms": 1333,
+        "confidence": 0.9897,
+        "bbox": [
+          0.1797,
+          0.1431,
+          0.1977,
+          0.8639
+        ],
+        "frame_count": 4
+      },
+      {
+        "span_index": 71,
+        "text": "?",
+        "start_ms": 69000,
+        "end_ms": 70999,
+        "duration_ms": 1999,
+        "confidence": 0.707,
+        "bbox": [
+          0.5563,
+          0.2028,
+          0.5664,
+          0.2208
+        ],
+        "frame_count": 3
+      },
+      {
+        "span_index": 72,
+        "text": "ot",
+        "start_ms": 76666,
+        "end_ms": 76999,
+        "duration_ms": 333,
+        "confidence": 0.7587,
+        "bbox": [
+          0.5086,
+          0.5681,
+          0.5461,
+          0.6833
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 73,
+        "text": "ast",
+        "start_ms": 77000,
+        "end_ms": 77333,
+        "duration_ms": 333,
+        "confidence": 0.9897,
+        "bbox": [
+          0.5242,
+          0.6556,
+          0.5625,
+          0.7542
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 74,
+        "text": "THE",
+        "start_ms": 77000,
+        "end_ms": 77333,
+        "duration_ms": 333,
+        "confidence": 0.9918,
+        "bbox": [
+          0.5516,
+          0.4583,
+          0.5867,
+          0.5597
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 75,
+        "text": "CLU",
+        "start_ms": 77000,
+        "end_ms": 77333,
+        "duration_ms": 333,
+        "confidence": 0.9827,
+        "bbox": [
+          0.568,
+          0.6653,
+          0.6141,
+          0.8014
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 76,
+        "text": "Coast",
+        "start_ms": 77000,
+        "end_ms": 77333,
+        "duration_ms": 333,
+        "confidence": 0.8908,
+        "bbox": [
+          0.575,
+          0.5236,
+          0.6281,
+          0.6875
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 77,
+        "text": "OC",
+        "start_ms": 77000,
+        "end_ms": 77333,
+        "duration_ms": 333,
+        "confidence": 0.6928,
+        "bbox": [
+          0.5953,
+          0.4764,
+          0.6227,
+          0.5569
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 78,
+        "text": "1",
+        "start_ms": 77000,
+        "end_ms": 77333,
+        "duration_ms": 333,
+        "confidence": 0.8461,
+        "bbox": [
+          0.7312,
+          0.2236,
+          0.7937,
+          0.3458
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 79,
+        "text": "oCast",
+        "start_ms": 77333,
+        "end_ms": 77666,
+        "duration_ms": 333,
+        "confidence": 0.7266,
+        "bbox": [
+          0.5078,
+          0.6958,
+          0.5531,
+          0.8458
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 80,
+        "text": "CLU",
+        "start_ms": 77333,
+        "end_ms": 77666,
+        "duration_ms": 333,
+        "confidence": 0.975,
+        "bbox": [
+          0.5516,
+          0.7736,
+          0.5898,
+          0.8833
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 81,
+        "text": "oCoast",
+        "start_ms": 77333,
+        "end_ms": 77666,
+        "duration_ms": 333,
+        "confidence": 0.8791,
+        "bbox": [
+          0.5617,
+          0.6,
+          0.607,
+          0.7736
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 82,
+        "text": "CEast",
+        "start_ms": 77666,
+        "end_ms": 77999,
+        "duration_ms": 333,
+        "confidence": 0.8191,
+        "bbox": [
+          0.493,
+          0.7917,
+          0.5453,
+          0.9292
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 83,
+        "text": "CasfCLu",
+        "start_ms": 77666,
+        "end_ms": 77999,
+        "duration_ms": 333,
+        "confidence": 0.6584,
+        "bbox": [
+          0.525,
+          0.7347,
+          0.5922,
+          0.9625
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 84,
+        "text": "Cas",
+        "start_ms": 78000,
+        "end_ms": 78333,
+        "duration_ms": 333,
+        "confidence": 0.8428,
+        "bbox": [
+          0.4992,
+          0.8417,
+          0.5391,
+          0.9069
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 85,
+        "text": "Oint",
+        "start_ms": 78666,
+        "end_ms": 78999,
+        "duration_ms": 333,
+        "confidence": 0.601,
+        "bbox": [
+          0.5531,
+          0.6861,
+          0.6062,
+          0.7875
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 86,
+        "text": "CEast",
+        "start_ms": 79000,
+        "end_ms": 79333,
+        "duration_ms": 333,
+        "confidence": 0.7257,
+        "bbox": [
+          0.5117,
+          0.6778,
+          0.5648,
+          0.7944
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 87,
+        "text": "TH",
+        "start_ms": 79000,
+        "end_ms": 79666,
+        "duration_ms": 666,
+        "confidence": 0.9762,
+        "bbox": [
+          0.5563,
+          0.6722,
+          0.5773,
+          0.7181
+        ],
+        "frame_count": 2
+      },
+      {
+        "span_index": 88,
+        "text": "7",
+        "start_ms": 80333,
+        "end_ms": 80666,
+        "duration_ms": 333,
+        "confidence": 0.8331,
+        "bbox": [
+          0.8094,
+          0.0472,
+          0.8875,
+          0.1347
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 89,
+        "text": "Cast",
+        "start_ms": 80666,
+        "end_ms": 80999,
+        "duration_ms": 333,
+        "confidence": 0.6116,
+        "bbox": [
+          0.5391,
+          0.8222,
+          0.5711,
+          0.8931
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 90,
+        "text": "CL",
+        "start_ms": 80666,
+        "end_ms": 80999,
+        "duration_ms": 333,
+        "confidence": 0.7877,
+        "bbox": [
+          0.5781,
+          0.8667,
+          0.5984,
+          0.9028
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 91,
+        "text": "Cast",
+        "start_ms": 80666,
+        "end_ms": 80999,
+        "duration_ms": 333,
+        "confidence": 0.6089,
+        "bbox": [
+          0.582,
+          0.7736,
+          0.6242,
+          0.8778
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 92,
+        "text": "CEast",
+        "start_ms": 81000,
+        "end_ms": 81333,
+        "duration_ms": 333,
+        "confidence": 0.728,
+        "bbox": [
+          0.5328,
+          0.775,
+          0.5836,
+          0.8875
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 93,
+        "text": "THI",
+        "start_ms": 81000,
+        "end_ms": 81333,
+        "duration_ms": 333,
+        "confidence": 0.7378,
+        "bbox": [
+          0.5727,
+          0.7417,
+          0.5906,
+          0.7833
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 94,
+        "text": "CL",
+        "start_ms": 81000,
+        "end_ms": 81333,
+        "duration_ms": 333,
+        "confidence": 0.9898,
+        "bbox": [
+          0.5758,
+          0.8278,
+          0.6086,
+          0.8931
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 95,
+        "text": "Coast",
+        "start_ms": 81000,
+        "end_ms": 81333,
+        "duration_ms": 333,
+        "confidence": 0.9052,
+        "bbox": [
+          0.5867,
+          0.7361,
+          0.6328,
+          0.8556
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 96,
+        "text": "CEast",
+        "start_ms": 81333,
+        "end_ms": 81666,
+        "duration_ms": 333,
+        "confidence": 0.671,
+        "bbox": [
+          0.5281,
+          0.7389,
+          0.5852,
+          0.8597
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 97,
+        "text": "CastCLU",
+        "start_ms": 81333,
+        "end_ms": 81666,
+        "duration_ms": 333,
+        "confidence": 0.68,
+        "bbox": [
+          0.5633,
+          0.6986,
+          0.6406,
+          0.8889
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 98,
+        "text": "Cast",
+        "start_ms": 81666,
+        "end_ms": 81999,
+        "duration_ms": 333,
+        "confidence": 0.7681,
+        "bbox": [
+          0.5398,
+          0.7528,
+          0.5805,
+          0.8431
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 99,
+        "text": "CL",
+        "start_ms": 81666,
+        "end_ms": 81999,
+        "duration_ms": 333,
+        "confidence": 0.9922,
+        "bbox": [
+          0.5781,
+          0.8056,
+          0.6016,
+          0.8528
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 100,
+        "text": "OCiast",
+        "start_ms": 81666,
+        "end_ms": 81999,
+        "duration_ms": 333,
+        "confidence": 0.6567,
+        "bbox": [
+          0.5852,
+          0.7083,
+          0.6328,
+          0.8208
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 101,
+        "text": "20",
+        "start_ms": 86000,
+        "end_ms": 86333,
+        "duration_ms": 333,
+        "confidence": 0.65,
+        "bbox": [
+          0.5727,
+          0.9514,
+          0.5891,
+          0.9792
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 102,
+        "text": "品",
+        "start_ms": 86666,
+        "end_ms": 86999,
+        "duration_ms": 333,
+        "confidence": 0.6659,
+        "bbox": [
+          0.5484,
+          0.9278,
+          0.5906,
+          0.9972
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 103,
+        "text": "M",
+        "start_ms": 98666,
+        "end_ms": 98999,
+        "duration_ms": 333,
+        "confidence": 0.6823,
+        "bbox": [
+          0.8508,
+          0.3042,
+          0.9516,
+          0.5194
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 104,
+        "text": "o",
+        "start_ms": 106666,
+        "end_ms": 106999,
+        "duration_ms": 333,
+        "confidence": 0.6006,
+        "bbox": [
+          0.5602,
+          0.0472,
+          0.5883,
+          0.1736
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 105,
+        "text": "SinoeFohever.",
+        "start_ms": 106666,
+        "end_ms": 106999,
+        "duration_ms": 333,
+        "confidence": 0.8636,
+        "bbox": [
+          0.5828,
+          0.125,
+          0.6148,
+          0.25
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 106,
+        "text": "Fall",
+        "start_ms": 120666,
+        "end_ms": 120999,
+        "duration_ms": 333,
+        "confidence": 0.6394,
+        "bbox": [
+          0.5148,
+          0.7153,
+          0.5305,
+          0.775
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 107,
+        "text": "mne",
+        "start_ms": 141000,
+        "end_ms": 141333,
+        "duration_ms": 333,
+        "confidence": 0.6237,
+        "bbox": [
+          0.8109,
+          0.4681,
+          0.8344,
+          0.5347
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 108,
+        "text": "Fadiin",
+        "start_ms": 144000,
+        "end_ms": 144333,
+        "duration_ms": 333,
+        "confidence": 0.7632,
+        "bbox": [
+          0.4672,
+          0.7194,
+          0.4883,
+          0.7986
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 109,
+        "text": "Cidlableed",
+        "start_ms": 147666,
+        "end_ms": 147999,
+        "duration_ms": 333,
+        "confidence": 0.601,
+        "bbox": [
+          0.468,
+          0.7903,
+          0.4789,
+          0.8583
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 110,
+        "text": "SinoeForever.",
+        "start_ms": 150333,
+        "end_ms": 150999,
+        "duration_ms": 666,
+        "confidence": 0.9461,
+        "bbox": [
+          0.5961,
+          0.5917,
+          0.6383,
+          0.7597
+        ],
+        "frame_count": 2
+      },
+      {
+        "span_index": 111,
+        "text": "SnbeForever.",
+        "start_ms": 151000,
+        "end_ms": 151333,
+        "duration_ms": 333,
+        "confidence": 0.8856,
+        "bbox": [
+          0.6141,
+          0.5153,
+          0.6594,
+          0.6778
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 112,
+        "text": "SreeFotever.",
+        "start_ms": 151333,
+        "end_ms": 151666,
+        "duration_ms": 333,
+        "confidence": 0.8295,
+        "bbox": [
+          0.5906,
+          0.3569,
+          0.6297,
+          0.4861
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 113,
+        "text": "Fallu",
+        "start_ms": 157666,
+        "end_ms": 157999,
+        "duration_ms": 333,
+        "confidence": 0.6396,
+        "bbox": [
+          0.4797,
+          0.8208,
+          0.4977,
+          0.8833
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 114,
+        "text": "ST",
+        "start_ms": 158000,
+        "end_ms": 158333,
+        "duration_ms": 333,
+        "confidence": 0.7571,
+        "bbox": [
+          0.5109,
+          0.4806,
+          0.5719,
+          0.6111
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 115,
+        "text": "S",
+        "start_ms": 158333,
+        "end_ms": 158666,
+        "duration_ms": 333,
+        "confidence": 0.9496,
+        "bbox": [
+          0.5008,
+          0.5069,
+          0.5594,
+          0.6264
+        ],
+        "frame_count": 1
+      },
+      {
+        "span_index": 116,
+        "text": "Qal",
+        "start_ms": 159000,
+        "end_ms": 159333,
+        "duration_ms": 333,
+        "confidence": 0.6405,
+        "bbox": [
+          0.45,
+          0.8208,
+          0.4633,
+          0.8778
+        ],
+        "frame_count": 1
+      }
+    ]
+  },
+  "metadata": {
+    "video_path": "data/reels/DdrIIFTCWdx/video.mp4",
+    "sample_fps": 3.0,
+    "min_confidence": 0.6,
+    "similarity_threshold": 0.75
+  }
+}

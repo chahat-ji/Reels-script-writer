@@ -1,0 +1,5750 @@
+{
+  "capability": "speech",
+  "provider_name": "assemblyai",
+  "provider_version": "1.3.0",
+  "events": [
+    {
+      "track": "speech",
+      "start_ms": 0,
+      "end_ms": 420,
+      "type": "word",
+      "payload": {
+        "text": "लो",
+        "raw": "लो",
+        "speaker": "A"
+      },
+      "confidence": 0.827,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 420,
+      "end_ms": 620,
+      "type": "word",
+      "payload": {
+        "text": "जिया",
+        "raw": "जिया",
+        "speaker": "A"
+      },
+      "confidence": 0.885,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 620,
+      "end_ms": 680,
+      "type": "word",
+      "payload": {
+        "text": "जी",
+        "raw": "जी",
+        "speaker": "A"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 680,
+      "end_ms": 940,
+      "type": "word",
+      "payload": {
+        "text": "गरमा",
+        "raw": "गरमा",
+        "speaker": "A"
+      },
+      "confidence": 0.773,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 940,
+      "end_ms": 1100,
+      "type": "word",
+      "payload": {
+        "text": "गरम",
+        "raw": "गरम",
+        "speaker": "A"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1100,
+      "end_ms": 1380,
+      "type": "word",
+      "payload": {
+        "text": "कॉफी",
+        "raw": "कॉफी",
+        "speaker": "A"
+      },
+      "confidence": 0.978,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1380,
+      "end_ms": 2520,
+      "type": "word",
+      "payload": {
+        "text": "पियो",
+        "raw": "पियो।",
+        "speaker": "A"
+      },
+      "confidence": 0.877,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2520,
+      "end_ms": 2540,
+      "type": "word",
+      "payload": {
+        "text": "हाँ",
+        "raw": "हाँ",
+        "speaker": "B"
+      },
+      "confidence": 0.688,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2540,
+      "end_ms": 4860,
+      "type": "word",
+      "payload": {
+        "text": "भाई",
+        "raw": "भाई।",
+        "speaker": "B"
+      },
+      "confidence": 0.985,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 4860,
+      "end_ms": 5560,
+      "type": "word",
+      "payload": {
+        "text": "हम्म",
+        "raw": "हम्म,",
+        "speaker": "B"
+      },
+      "confidence": 0.792,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 6600,
+      "end_ms": 7040,
+      "type": "word",
+      "payload": {
+        "text": "अच्छा",
+        "raw": "अच्छा",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 7040,
+      "end_ms": 8300,
+      "type": "word",
+      "payload": {
+        "text": "जी",
+        "raw": "जी।",
+        "speaker": "B"
+      },
+      "confidence": 0.99,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8300,
+      "end_ms": 8460,
+      "type": "word",
+      "payload": {
+        "text": "कांच",
+        "raw": "कांच",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8460,
+      "end_ms": 8620,
+      "type": "word",
+      "payload": {
+        "text": "के",
+        "raw": "के",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8620,
+      "end_ms": 8860,
+      "type": "word",
+      "payload": {
+        "text": "बर्तन",
+        "raw": "बर्तन",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8860,
+      "end_ms": 9100,
+      "type": "word",
+      "payload": {
+        "text": "आ",
+        "raw": "आ",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9100,
+      "end_ms": 9200,
+      "type": "word",
+      "payload": {
+        "text": "रहे",
+        "raw": "रहे",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9200,
+      "end_ms": 9800,
+      "type": "word",
+      "payload": {
+        "text": "हैं",
+        "raw": "हैं?",
+        "speaker": "B"
+      },
+      "confidence": 0.989,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 9900,
+      "end_ms": 10400,
+      "type": "word",
+      "payload": {
+        "text": "सही",
+        "raw": "सही",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10400,
+      "end_ms": 10760,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है,",
+        "speaker": "B"
+      },
+      "confidence": 0.984,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10760,
+      "end_ms": 11560,
+      "type": "word",
+      "payload": {
+        "text": "बढ़िया",
+        "raw": "बढ़िया।",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 11560,
+      "end_ms": 12520,
+      "type": "word",
+      "payload": {
+        "text": "ओहो",
+        "raw": "ओहो,",
+        "speaker": "B"
+      },
+      "confidence": 0.899,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 13380,
+      "end_ms": 14080,
+      "type": "word",
+      "payload": {
+        "text": "कॉफी",
+        "raw": "कॉफी",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14080,
+      "end_ms": 14360,
+      "type": "word",
+      "payload": {
+        "text": "एकदम",
+        "raw": "एकदम",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 14360,
+      "end_ms": 15000,
+      "type": "word",
+      "payload": {
+        "text": "बोरोसिलिकेट",
+        "raw": "बोरोसिलिकेट",
+        "speaker": "B"
+      },
+      "confidence": 0.904,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15000,
+      "end_ms": 15580,
+      "type": "word",
+      "payload": {
+        "text": "कप",
+        "raw": "कप",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15580,
+      "end_ms": 15700,
+      "type": "word",
+      "payload": {
+        "text": "में",
+        "raw": "में",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15700,
+      "end_ms": 15900,
+      "type": "word",
+      "payload": {
+        "text": "आ",
+        "raw": "आ",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15900,
+      "end_ms": 15900,
+      "type": "word",
+      "payload": {
+        "text": "रही",
+        "raw": "रही",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 15900,
+      "end_ms": 16020,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है,",
+        "speaker": "B"
+      },
+      "confidence": 0.979,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16020,
+      "end_ms": 16300,
+      "type": "word",
+      "payload": {
+        "text": "डंडी",
+        "raw": "डंडी",
+        "speaker": "B"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16300,
+      "end_ms": 16520,
+      "type": "word",
+      "payload": {
+        "text": "देखो",
+        "raw": "देखो",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16520,
+      "end_ms": 16720,
+      "type": "word",
+      "payload": {
+        "text": "अलग",
+        "raw": "अलग",
+        "speaker": "B"
+      },
+      "confidence": 0.821,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16720,
+      "end_ms": 16900,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 0.972,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 16900,
+      "end_ms": 17240,
+      "type": "word",
+      "payload": {
+        "text": "हाँ",
+        "raw": "हाँ?",
+        "speaker": "B"
+      },
+      "confidence": 0.943,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17240,
+      "end_ms": 17620,
+      "type": "word",
+      "payload": {
+        "text": "जिया",
+        "raw": "जिया",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17620,
+      "end_ms": 17680,
+      "type": "word",
+      "payload": {
+        "text": "जी",
+        "raw": "जी",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17680,
+      "end_ms": 17780,
+      "type": "word",
+      "payload": {
+        "text": "हम",
+        "raw": "हम",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17780,
+      "end_ms": 17880,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17880,
+      "end_ms": 18260,
+      "type": "word",
+      "payload": {
+        "text": "स्टार्टिंग",
+        "raw": "स्टार्टिंग",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18260,
+      "end_ms": 18380,
+      "type": "word",
+      "payload": {
+        "text": "से",
+        "raw": "से",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18380,
+      "end_ms": 18540,
+      "type": "word",
+      "payload": {
+        "text": "यही",
+        "raw": "यही",
+        "speaker": "A"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18540,
+      "end_ms": 18720,
+      "type": "word",
+      "payload": {
+        "text": "बर्तन",
+        "raw": "बर्तन",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 18720,
+      "end_ms": 19080,
+      "type": "word",
+      "payload": {
+        "text": "इस्तेमाल",
+        "raw": "इस्तेमाल",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19080,
+      "end_ms": 19360,
+      "type": "word",
+      "payload": {
+        "text": "करते",
+        "raw": "करते",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19360,
+      "end_ms": 19480,
+      "type": "word",
+      "payload": {
+        "text": "हैं",
+        "raw": "हैं,",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19480,
+      "end_ms": 19840,
+      "type": "word",
+      "payload": {
+        "text": "क्वालिटी",
+        "raw": "क्वालिटी",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19840,
+      "end_ms": 19920,
+      "type": "word",
+      "payload": {
+        "text": "में",
+        "raw": "में",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 19920,
+      "end_ms": 20460,
+      "type": "word",
+      "payload": {
+        "text": "कॉम्प्रोमाइज़",
+        "raw": "कॉम्प्रोमाइज़",
+        "speaker": "A"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20460,
+      "end_ms": 20460,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20460,
+      "end_ms": 20700,
+      "type": "word",
+      "payload": {
+        "text": "करते",
+        "raw": "करते",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20700,
+      "end_ms": 20780,
+      "type": "word",
+      "payload": {
+        "text": "हम",
+        "raw": "हम",
+        "speaker": "A"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20780,
+      "end_ms": 20980,
+      "type": "word",
+      "payload": {
+        "text": "घर",
+        "raw": "घर",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20980,
+      "end_ms": 21180,
+      "type": "word",
+      "payload": {
+        "text": "के",
+        "raw": "के",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 21180,
+      "end_ms": 21580,
+      "type": "word",
+      "payload": {
+        "text": "सामान",
+        "raw": "सामान",
+        "speaker": "A"
+      },
+      "confidence": 0.974,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 26010,
+      "end_ms": 26450,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 26450,
+      "end_ms": 26570,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 26570,
+      "end_ms": 26790,
+      "type": "word",
+      "payload": {
+        "text": "क्यों",
+        "raw": "क्यों",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 26790,
+      "end_ms": 27010,
+      "type": "word",
+      "payload": {
+        "text": "क्या",
+        "raw": "क्या",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27010,
+      "end_ms": 27230,
+      "type": "word",
+      "payload": {
+        "text": "हुआ",
+        "raw": "हुआ",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27230,
+      "end_ms": 28130,
+      "type": "word",
+      "payload": {
+        "text": "शादी",
+        "raw": "शादी",
+        "speaker": "B"
+      },
+      "confidence": 0.95,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28130,
+      "end_ms": 28230,
+      "type": "word",
+      "payload": {
+        "text": "में",
+        "raw": "में",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28230,
+      "end_ms": 28490,
+      "type": "word",
+      "payload": {
+        "text": "देने",
+        "raw": "देने",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28490,
+      "end_ms": 28630,
+      "type": "word",
+      "payload": {
+        "text": "चाहिए",
+        "raw": "चाहिए",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28630,
+      "end_ms": 28730,
+      "type": "word",
+      "payload": {
+        "text": "थे",
+        "raw": "थे",
+        "speaker": "B"
+      },
+      "confidence": 0.86,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28730,
+      "end_ms": 28810,
+      "type": "word",
+      "payload": {
+        "text": "ना",
+        "raw": "ना",
+        "speaker": "B"
+      },
+      "confidence": 0.993,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28810,
+      "end_ms": 28990,
+      "type": "word",
+      "payload": {
+        "text": "फिर",
+        "raw": "फिर",
+        "speaker": "B"
+      },
+      "confidence": 0.963,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 28990,
+      "end_ms": 29130,
+      "type": "word",
+      "payload": {
+        "text": "हमें",
+        "raw": "हमें",
+        "speaker": "B"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29130,
+      "end_ms": 29410,
+      "type": "word",
+      "payload": {
+        "text": "भी",
+        "raw": "भी",
+        "speaker": "B"
+      },
+      "confidence": 0.853,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29410,
+      "end_ms": 29730,
+      "type": "word",
+      "payload": {
+        "text": "स्टिकली",
+        "raw": "स्टिकली",
+        "speaker": "B"
+      },
+      "confidence": 0.867,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29730,
+      "end_ms": 29890,
+      "type": "word",
+      "payload": {
+        "text": "की",
+        "raw": "की",
+        "speaker": "A"
+      },
+      "confidence": 0.919,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29890,
+      "end_ms": 30490,
+      "type": "word",
+      "payload": {
+        "text": "जगह",
+        "raw": "जगह",
+        "speaker": "A"
+      },
+      "confidence": 0.989,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 30490,
+      "end_ms": 31270,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31270,
+      "end_ms": 31490,
+      "type": "word",
+      "payload": {
+        "text": "हमने",
+        "raw": "हमने",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31490,
+      "end_ms": 31610,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31610,
+      "end_ms": 31950,
+      "type": "word",
+      "payload": {
+        "text": "सारे",
+        "raw": "सारे",
+        "speaker": "A"
+      },
+      "confidence": 0.861,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31950,
+      "end_ms": 32210,
+      "type": "word",
+      "payload": {
+        "text": "अच्छे",
+        "raw": "अच्छे",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32210,
+      "end_ms": 32470,
+      "type": "word",
+      "payload": {
+        "text": "बर्तन",
+        "raw": "बर्तन",
+        "speaker": "A"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32470,
+      "end_ms": 32550,
+      "type": "word",
+      "payload": {
+        "text": "ही",
+        "raw": "ही",
+        "speaker": "A"
+      },
+      "confidence": 0.988,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32550,
+      "end_ms": 32730,
+      "type": "word",
+      "payload": {
+        "text": "दिए",
+        "raw": "दिए",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32730,
+      "end_ms": 32990,
+      "type": "word",
+      "payload": {
+        "text": "मतलब",
+        "raw": "मतलब",
+        "speaker": "A"
+      },
+      "confidence": 0.744,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32990,
+      "end_ms": 33110,
+      "type": "word",
+      "payload": {
+        "text": "वो",
+        "raw": "वो",
+        "speaker": "A"
+      },
+      "confidence": 0.977,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33110,
+      "end_ms": 33270,
+      "type": "word",
+      "payload": {
+        "text": "शायद",
+        "raw": "शायद",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33270,
+      "end_ms": 33610,
+      "type": "word",
+      "payload": {
+        "text": "पुरानी",
+        "raw": "पुरानी",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33610,
+      "end_ms": 33770,
+      "type": "word",
+      "payload": {
+        "text": "बात",
+        "raw": "बात",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33770,
+      "end_ms": 33990,
+      "type": "word",
+      "payload": {
+        "text": "होगी",
+        "raw": "होगी",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 33990,
+      "end_ms": 34150,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34150,
+      "end_ms": 34350,
+      "type": "word",
+      "payload": {
+        "text": "आपको",
+        "raw": "आपको",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 34350,
+      "end_ms": 35350,
+      "type": "word",
+      "payload": {
+        "text": "याद",
+        "raw": "याद",
+        "speaker": "A"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35350,
+      "end_ms": 35490,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35490,
+      "end_ms": 35730,
+      "type": "word",
+      "payload": {
+        "text": "आ",
+        "raw": "आ",
+        "speaker": "A"
+      },
+      "confidence": 0.973,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35730,
+      "end_ms": 35730,
+      "type": "word",
+      "payload": {
+        "text": "रहा",
+        "raw": "रहा",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35730,
+      "end_ms": 36090,
+      "type": "word",
+      "payload": {
+        "text": "होगा",
+        "raw": "होगा",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36090,
+      "end_ms": 36370,
+      "type": "word",
+      "payload": {
+        "text": "अरे",
+        "raw": "अरे",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36370,
+      "end_ms": 36590,
+      "type": "word",
+      "payload": {
+        "text": "वो",
+        "raw": "वो",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36590,
+      "end_ms": 36970,
+      "type": "word",
+      "payload": {
+        "text": "पुराने",
+        "raw": "पुराने",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 36970,
+      "end_ms": 37070,
+      "type": "word",
+      "payload": {
+        "text": "से",
+        "raw": "से",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37070,
+      "end_ms": 37290,
+      "type": "word",
+      "payload": {
+        "text": "याद",
+        "raw": "याद",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37290,
+      "end_ms": 37370,
+      "type": "word",
+      "payload": {
+        "text": "आया",
+        "raw": "आया",
+        "speaker": "B"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37370,
+      "end_ms": 37570,
+      "type": "word",
+      "payload": {
+        "text": "मेरे",
+        "raw": "मेरे",
+        "speaker": "B"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 37570,
+      "end_ms": 38120,
+      "type": "word",
+      "payload": {
+        "text": "को",
+        "raw": "को",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38130,
+      "end_ms": 38490,
+      "type": "word",
+      "payload": {
+        "text": "टोस्टर",
+        "raw": "टोस्टर",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38490,
+      "end_ms": 38710,
+      "type": "word",
+      "payload": {
+        "text": "खराब",
+        "raw": "खराब",
+        "speaker": "B"
+      },
+      "confidence": 0.906,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38710,
+      "end_ms": 38850,
+      "type": "word",
+      "payload": {
+        "text": "हो",
+        "raw": "हो",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38850,
+      "end_ms": 38890,
+      "type": "word",
+      "payload": {
+        "text": "गया",
+        "raw": "गया",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 38890,
+      "end_ms": 39070,
+      "type": "word",
+      "payload": {
+        "text": "ठीक",
+        "raw": "ठीक",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39070,
+      "end_ms": 39290,
+      "type": "word",
+      "payload": {
+        "text": "करा",
+        "raw": "करा",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39290,
+      "end_ms": 39370,
+      "type": "word",
+      "payload": {
+        "text": "दे",
+        "raw": "दे",
+        "speaker": "B"
+      },
+      "confidence": 0.988,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39370,
+      "end_ms": 39830,
+      "type": "word",
+      "payload": {
+        "text": "वो",
+        "raw": "वो",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 39830,
+      "end_ms": 40490,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40490,
+      "end_ms": 40610,
+      "type": "word",
+      "payload": {
+        "text": "एक",
+        "raw": "एक",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40610,
+      "end_ms": 40610,
+      "type": "word",
+      "payload": {
+        "text": "बार",
+        "raw": "बार",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40610,
+      "end_ms": 40730,
+      "type": "word",
+      "payload": {
+        "text": "वो",
+        "raw": "वो",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40730,
+      "end_ms": 40910,
+      "type": "word",
+      "payload": {
+        "text": "बिल",
+        "raw": "बिल",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40910,
+      "end_ms": 41150,
+      "type": "word",
+      "payload": {
+        "text": "देख",
+        "raw": "देख",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41150,
+      "end_ms": 41230,
+      "type": "word",
+      "payload": {
+        "text": "लेता",
+        "raw": "लेता",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 41230,
+      "end_ms": 52370,
+      "type": "word",
+      "payload": {
+        "text": "हूँ",
+        "raw": "हूँ",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 52370,
+      "end_ms": 52370,
+      "type": "word",
+      "payload": {
+        "text": "घर",
+        "raw": "घर",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 52370,
+      "end_ms": 52390,
+      "type": "word",
+      "payload": {
+        "text": "म",
+        "raw": "म",
+        "speaker": "A"
+      },
+      "confidence": 0.818,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 52620,
+      "end_ms": 53070,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 53070,
+      "end_ms": 53170,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.956,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 53170,
+      "end_ms": 53450,
+      "type": "word",
+      "payload": {
+        "text": "ऐसी",
+        "raw": "ऐसी",
+        "speaker": "A"
+      },
+      "confidence": 0.993,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 53450,
+      "end_ms": 53830,
+      "type": "word",
+      "payload": {
+        "text": "ऐसा",
+        "raw": "ऐसा",
+        "speaker": "A"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 53830,
+      "end_ms": 53950,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 53950,
+      "end_ms": 54150,
+      "type": "word",
+      "payload": {
+        "text": "बोला",
+        "raw": "बोला",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 54150,
+      "end_ms": 54490,
+      "type": "word",
+      "payload": {
+        "text": "मैंने",
+        "raw": "मैंने",
+        "speaker": "A"
+      },
+      "confidence": 0.982,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 54490,
+      "end_ms": 55730,
+      "type": "word",
+      "payload": {
+        "text": "हम्म",
+        "raw": "हम्म",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 55730,
+      "end_ms": 55830,
+      "type": "word",
+      "payload": {
+        "text": "ऐसे",
+        "raw": "ऐसे",
+        "speaker": "B"
+      },
+      "confidence": 0.945,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 55830,
+      "end_ms": 55870,
+      "type": "word",
+      "payload": {
+        "text": "ही",
+        "raw": "ही",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 55870,
+      "end_ms": 55990,
+      "type": "word",
+      "payload": {
+        "text": "कह",
+        "raw": "कह",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 55990,
+      "end_ms": 56070,
+      "type": "word",
+      "payload": {
+        "text": "रहा",
+        "raw": "रहा",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 56070,
+      "end_ms": 56150,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 56150,
+      "end_ms": 56230,
+      "type": "word",
+      "payload": {
+        "text": "तू",
+        "raw": "तू",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 56230,
+      "end_ms": 56910,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 56910,
+      "end_ms": 57270,
+      "type": "word",
+      "payload": {
+        "text": "तू",
+        "raw": "तू",
+        "speaker": "B"
+      },
+      "confidence": 0.898,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 57270,
+      "end_ms": 57610,
+      "type": "word",
+      "payload": {
+        "text": "पैदा",
+        "raw": "पैदा",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 57610,
+      "end_ms": 57730,
+      "type": "word",
+      "payload": {
+        "text": "भी",
+        "raw": "भी",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 57730,
+      "end_ms": 57790,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "B"
+      },
+      "confidence": 0.99,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 57790,
+      "end_ms": 57910,
+      "type": "word",
+      "payload": {
+        "text": "हुआ",
+        "raw": "हुआ",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 57910,
+      "end_ms": 58010,
+      "type": "word",
+      "payload": {
+        "text": "ना",
+        "raw": "ना",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 58010,
+      "end_ms": 58590,
+      "type": "word",
+      "payload": {
+        "text": "बेटे",
+        "raw": "बेटे",
+        "speaker": "B"
+      },
+      "confidence": 0.946,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 58590,
+      "end_ms": 59070,
+      "type": "word",
+      "payload": {
+        "text": "जब",
+        "raw": "जब",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59070,
+      "end_ms": 59170,
+      "type": "word",
+      "payload": {
+        "text": "से",
+        "raw": "से",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59170,
+      "end_ms": 59370,
+      "type": "word",
+      "payload": {
+        "text": "ब्रेड",
+        "raw": "ब्रेड",
+        "speaker": "B"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59370,
+      "end_ms": 59550,
+      "type": "word",
+      "payload": {
+        "text": "जाम",
+        "raw": "जाम",
+        "speaker": "B"
+      },
+      "confidence": 0.778,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59550,
+      "end_ms": 59710,
+      "type": "word",
+      "payload": {
+        "text": "खा",
+        "raw": "खा",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59710,
+      "end_ms": 59870,
+      "type": "word",
+      "payload": {
+        "text": "रहा",
+        "raw": "रहा",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59870,
+      "end_ms": 59950,
+      "type": "word",
+      "payload": {
+        "text": "हूँ",
+        "raw": "हूँ",
+        "speaker": "A"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59950,
+      "end_ms": 60670,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं",
+        "speaker": "A"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 60670,
+      "end_ms": 61210,
+      "type": "word",
+      "payload": {
+        "text": "खा",
+        "raw": "खा",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 61210,
+      "end_ms": 61330,
+      "type": "word",
+      "payload": {
+        "text": "रहे",
+        "raw": "रहे",
+        "speaker": "A"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 61330,
+      "end_ms": 61550,
+      "type": "word",
+      "payload": {
+        "text": "होंगे",
+        "raw": "होंगे",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 61550,
+      "end_ms": 61730,
+      "type": "word",
+      "payload": {
+        "text": "जिया",
+        "raw": "जिया",
+        "speaker": "A"
+      },
+      "confidence": 0.804,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 61730,
+      "end_ms": 61870,
+      "type": "word",
+      "payload": {
+        "text": "जी",
+        "raw": "जी",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 61870,
+      "end_ms": 62030,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 62030,
+      "end_ms": 62230,
+      "type": "word",
+      "payload": {
+        "text": "कुछ",
+        "raw": "कुछ",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 62230,
+      "end_ms": 62430,
+      "type": "word",
+      "payload": {
+        "text": "मजा",
+        "raw": "मजा",
+        "speaker": "A"
+      },
+      "confidence": 0.725,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 62430,
+      "end_ms": 62670,
+      "type": "word",
+      "payload": {
+        "text": "थोड़ी",
+        "raw": "थोड़ी",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 62670,
+      "end_ms": 62930,
+      "type": "word",
+      "payload": {
+        "text": "कर",
+        "raw": "कर",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 62930,
+      "end_ms": 62970,
+      "type": "word",
+      "payload": {
+        "text": "रहा",
+        "raw": "रहा",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 62970,
+      "end_ms": 63110,
+      "type": "word",
+      "payload": {
+        "text": "हूँ",
+        "raw": "हूँ",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 63110,
+      "end_ms": 63690,
+      "type": "word",
+      "payload": {
+        "text": "आपको",
+        "raw": "आपको",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 63690,
+      "end_ms": 63970,
+      "type": "word",
+      "payload": {
+        "text": "मतलब",
+        "raw": "मतलब",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 63970,
+      "end_ms": 64170,
+      "type": "word",
+      "payload": {
+        "text": "हम",
+        "raw": "हम",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 64170,
+      "end_ms": 64270,
+      "type": "word",
+      "payload": {
+        "text": "भी",
+        "raw": "भी",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 64270,
+      "end_ms": 64470,
+      "type": "word",
+      "payload": {
+        "text": "सेम",
+        "raw": "सेम",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 64470,
+      "end_ms": 64910,
+      "type": "word",
+      "payload": {
+        "text": "इस्तेमाल",
+        "raw": "इस्तेमाल",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 64910,
+      "end_ms": 65210,
+      "type": "word",
+      "payload": {
+        "text": "करते",
+        "raw": "करते",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 65210,
+      "end_ms": 65330,
+      "type": "word",
+      "payload": {
+        "text": "हैं",
+        "raw": "हैं",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 65330,
+      "end_ms": 65730,
+      "type": "word",
+      "payload": {
+        "text": "ब्रांडेड",
+        "raw": "ब्रांडेड",
+        "speaker": "A"
+      },
+      "confidence": 0.957,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 65730,
+      "end_ms": 65830,
+      "type": "word",
+      "payload": {
+        "text": "ही",
+        "raw": "ही",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 65830,
+      "end_ms": 65930,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 65930,
+      "end_ms": 66230,
+      "type": "word",
+      "payload": {
+        "text": "आपको",
+        "raw": "आपको",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 66230,
+      "end_ms": 66350,
+      "type": "word",
+      "payload": {
+        "text": "भी",
+        "raw": "भी",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 66350,
+      "end_ms": 66550,
+      "type": "word",
+      "payload": {
+        "text": "वही",
+        "raw": "वही",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 66550,
+      "end_ms": 66710,
+      "type": "word",
+      "payload": {
+        "text": "दिया",
+        "raw": "दिया",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 66710,
+      "end_ms": 67110,
+      "type": "word",
+      "payload": {
+        "text": "था",
+        "raw": "था",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 67110,
+      "end_ms": 77710,
+      "type": "word",
+      "payload": {
+        "text": "सेम",
+        "raw": "सेम",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 77710,
+      "end_ms": 77850,
+      "type": "word",
+      "payload": {
+        "text": "अभी",
+        "raw": "अभी",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 77850,
+      "end_ms": 77850,
+      "type": "word",
+      "payload": {
+        "text": "देख",
+        "raw": "देख",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 77850,
+      "end_ms": 77850,
+      "type": "word",
+      "payload": {
+        "text": "लेता",
+        "raw": "लेता",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 77850,
+      "end_ms": 78250,
+      "type": "word",
+      "payload": {
+        "text": "हू",
+        "raw": "हू",
+        "speaker": "B"
+      },
+      "confidence": 0.837,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 78900,
+      "end_ms": 79240,
+      "type": "word",
+      "payload": {
+        "text": "इंडक्शन",
+        "raw": "इंडक्शन",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 79240,
+      "end_ms": 79540,
+      "type": "word",
+      "payload": {
+        "text": "दिया",
+        "raw": "दिया",
+        "speaker": "B"
+      },
+      "confidence": 0.879,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 79540,
+      "end_ms": 80520,
+      "type": "word",
+      "payload": {
+        "text": "हैं",
+        "raw": "हैं",
+        "speaker": "B"
+      },
+      "confidence": 0.912,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 80520,
+      "end_ms": 80640,
+      "type": "word",
+      "payload": {
+        "text": "घर",
+        "raw": "घर",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 80640,
+      "end_ms": 80780,
+      "type": "word",
+      "payload": {
+        "text": "में",
+        "raw": "में",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 80780,
+      "end_ms": 80980,
+      "type": "word",
+      "payload": {
+        "text": "तुम",
+        "raw": "तुम",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 80980,
+      "end_ms": 81200,
+      "type": "word",
+      "payload": {
+        "text": "तीन",
+        "raw": "तीन",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 81200,
+      "end_ms": 81520,
+      "type": "word",
+      "payload": {
+        "text": "बंदे",
+        "raw": "बंदे",
+        "speaker": "B"
+      },
+      "confidence": 0.977,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 81520,
+      "end_ms": 81600,
+      "type": "word",
+      "payload": {
+        "text": "हो",
+        "raw": "हो",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 81600,
+      "end_ms": 82300,
+      "type": "word",
+      "payload": {
+        "text": "गैस",
+        "raw": "गैस",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 82300,
+      "end_ms": 82660,
+      "type": "word",
+      "payload": {
+        "text": "देखले",
+        "raw": "देखले",
+        "speaker": "B"
+      },
+      "confidence": 0.9,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 82660,
+      "end_ms": 83040,
+      "type": "word",
+      "payload": {
+        "text": "तुम्हारा",
+        "raw": "तुम्हारा",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 83040,
+      "end_ms": 83260,
+      "type": "word",
+      "payload": {
+        "text": "चार",
+        "raw": "चार",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 83260,
+      "end_ms": 83560,
+      "type": "word",
+      "payload": {
+        "text": "बर्नर",
+        "raw": "बर्नर",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 83560,
+      "end_ms": 83860,
+      "type": "word",
+      "payload": {
+        "text": "वाला",
+        "raw": "वाला",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 83860,
+      "end_ms": 84020,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 0.479,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 84020,
+      "end_ms": 84500,
+      "type": "word",
+      "payload": {
+        "text": "ये",
+        "raw": "ये",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 84500,
+      "end_ms": 84720,
+      "type": "word",
+      "payload": {
+        "text": "हैवी",
+        "raw": "हैवी",
+        "speaker": "B"
+      },
+      "confidence": 0.983,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 84720,
+      "end_ms": 85300,
+      "type": "word",
+      "payload": {
+        "text": "मटेरियल",
+        "raw": "मटेरियल",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 85300,
+      "end_ms": 86040,
+      "type": "word",
+      "payload": {
+        "text": "कॉमन",
+        "raw": "कॉमन",
+        "speaker": "B"
+      },
+      "confidence": 0.96,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 86040,
+      "end_ms": 86160,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 86160,
+      "end_ms": 86460,
+      "type": "word",
+      "payload": {
+        "text": "यार",
+        "raw": "यार",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 86460,
+      "end_ms": 86740,
+      "type": "word",
+      "payload": {
+        "text": "कॉमन",
+        "raw": "कॉमन",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 86740,
+      "end_ms": 86960,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 86960,
+      "end_ms": 87400,
+      "type": "word",
+      "payload": {
+        "text": "ये",
+        "raw": "ये",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 87400,
+      "end_ms": 87720,
+      "type": "word",
+      "payload": {
+        "text": "टिश्यू",
+        "raw": "टिश्यू",
+        "speaker": "B"
+      },
+      "confidence": 0.967,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 87720,
+      "end_ms": 87960,
+      "type": "word",
+      "payload": {
+        "text": "पेपर",
+        "raw": "पेपर",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 87960,
+      "end_ms": 88100,
+      "type": "word",
+      "payload": {
+        "text": "का",
+        "raw": "का",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 88100,
+      "end_ms": 88240,
+      "type": "word",
+      "payload": {
+        "text": "ये",
+        "raw": "ये",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 88240,
+      "end_ms": 88520,
+      "type": "word",
+      "payload": {
+        "text": "स्टैंड",
+        "raw": "स्टैंड",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 88520,
+      "end_ms": 88840,
+      "type": "word",
+      "payload": {
+        "text": "कॉमन",
+        "raw": "कॉमन",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 88840,
+      "end_ms": 89060,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 89060,
+      "end_ms": 90220,
+      "type": "word",
+      "payload": {
+        "text": "कॉमन",
+        "raw": "कॉमन",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 90220,
+      "end_ms": 90400,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 90400,
+      "end_ms": 90700,
+      "type": "word",
+      "payload": {
+        "text": "ये",
+        "raw": "ये",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 90700,
+      "end_ms": 91600,
+      "type": "word",
+      "payload": {
+        "text": "हैं",
+        "raw": "हैं",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 91600,
+      "end_ms": 91840,
+      "type": "word",
+      "payload": {
+        "text": "ये",
+        "raw": "ये",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 91840,
+      "end_ms": 92440,
+      "type": "word",
+      "payload": {
+        "text": "वाह",
+        "raw": "वाह",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 92440,
+      "end_ms": 92720,
+      "type": "word",
+      "payload": {
+        "text": "कैसा",
+        "raw": "कैसा",
+        "speaker": "B"
+      },
+      "confidence": 0.802,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 92720,
+      "end_ms": 92900,
+      "type": "word",
+      "payload": {
+        "text": "रोल",
+        "raw": "रोल",
+        "speaker": "B"
+      },
+      "confidence": 0.967,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 92900,
+      "end_ms": 93160,
+      "type": "word",
+      "payload": {
+        "text": "देखो",
+        "raw": "देखो",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 93160,
+      "end_ms": 93380,
+      "type": "word",
+      "payload": {
+        "text": "भाई",
+        "raw": "भाई",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 93380,
+      "end_ms": 93560,
+      "type": "word",
+      "payload": {
+        "text": "साहब",
+        "raw": "साहब",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 93560,
+      "end_ms": 93860,
+      "type": "word",
+      "payload": {
+        "text": "इसमें",
+        "raw": "इसमें",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 93860,
+      "end_ms": 94120,
+      "type": "word",
+      "payload": {
+        "text": "रोटी",
+        "raw": "रोटी",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 94120,
+      "end_ms": 94300,
+      "type": "word",
+      "payload": {
+        "text": "दिख",
+        "raw": "दिख",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 94300,
+      "end_ms": 94380,
+      "type": "word",
+      "payload": {
+        "text": "रही",
+        "raw": "रही",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 94380,
+      "end_ms": 94580,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 0.989,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 94580,
+      "end_ms": 95180,
+      "type": "word",
+      "payload": {
+        "text": "हैं",
+        "raw": "हैं",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 95180,
+      "end_ms": 95360,
+      "type": "word",
+      "payload": {
+        "text": "मुझे",
+        "raw": "मुझे",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 95360,
+      "end_ms": 95580,
+      "type": "word",
+      "payload": {
+        "text": "दे",
+        "raw": "दे",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 95580,
+      "end_ms": 95580,
+      "type": "word",
+      "payload": {
+        "text": "दिया",
+        "raw": "दिया",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 95580,
+      "end_ms": 95940,
+      "type": "word",
+      "payload": {
+        "text": "तुमने",
+        "raw": "तुमने",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 95940,
+      "end_ms": 96280,
+      "type": "word",
+      "payload": {
+        "text": "प्लास्टिक",
+        "raw": "प्लास्टिक",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 96280,
+      "end_ms": 96540,
+      "type": "word",
+      "payload": {
+        "text": "वाला",
+        "raw": "वाला",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 96540,
+      "end_ms": 107360,
+      "type": "word",
+      "payload": {
+        "text": "आप",
+        "raw": "आप",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 107360,
+      "end_ms": 107360,
+      "type": "word",
+      "payload": {
+        "text": "ले",
+        "raw": "ले",
+        "speaker": "B"
+      },
+      "confidence": 0.756,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 107370,
+      "end_ms": 107770,
+      "type": "word",
+      "payload": {
+        "text": "चम्मच",
+        "raw": "चम्मच",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 107770,
+      "end_ms": 108050,
+      "type": "word",
+      "payload": {
+        "text": "तुमने",
+        "raw": "तुमने",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 108050,
+      "end_ms": 108330,
+      "type": "word",
+      "payload": {
+        "text": "एकदम",
+        "raw": "एकदम",
+        "speaker": "B"
+      },
+      "confidence": 0.979,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 108330,
+      "end_ms": 108830,
+      "type": "word",
+      "payload": {
+        "text": "अम्मानी",
+        "raw": "अम्मानी",
+        "speaker": "B"
+      },
+      "confidence": 0.967,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 108830,
+      "end_ms": 109030,
+      "type": "word",
+      "payload": {
+        "text": "वाले",
+        "raw": "वाले",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 109030,
+      "end_ms": 109210,
+      "type": "word",
+      "payload": {
+        "text": "ले",
+        "raw": "ले",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 109210,
+      "end_ms": 109450,
+      "type": "word",
+      "payload": {
+        "text": "रखे",
+        "raw": "रखे",
+        "speaker": "B"
+      },
+      "confidence": 0.951,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 109450,
+      "end_ms": 109530,
+      "type": "word",
+      "payload": {
+        "text": "हैं",
+        "raw": "हैं",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 109530,
+      "end_ms": 109610,
+      "type": "word",
+      "payload": {
+        "text": "ये",
+        "raw": "ये",
+        "speaker": "B"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 109610,
+      "end_ms": 109790,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "B"
+      },
+      "confidence": 0.987,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 109790,
+      "end_ms": 110010,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 110010,
+      "end_ms": 110230,
+      "type": "word",
+      "payload": {
+        "text": "आप",
+        "raw": "आप",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 110230,
+      "end_ms": 110370,
+      "type": "word",
+      "payload": {
+        "text": "ले",
+        "raw": "ले",
+        "speaker": "B"
+      },
+      "confidence": 0.988,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 110370,
+      "end_ms": 110470,
+      "type": "word",
+      "payload": {
+        "text": "लो",
+        "raw": "लो",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 110470,
+      "end_ms": 110590,
+      "type": "word",
+      "payload": {
+        "text": "आप",
+        "raw": "आप",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 110590,
+      "end_ms": 110710,
+      "type": "word",
+      "payload": {
+        "text": "ले",
+        "raw": "ले",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 110710,
+      "end_ms": 110790,
+      "type": "word",
+      "payload": {
+        "text": "लो",
+        "raw": "लो",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 110790,
+      "end_ms": 111110,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 111110,
+      "end_ms": 111250,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 111250,
+      "end_ms": 111410,
+      "type": "word",
+      "payload": {
+        "text": "क्या",
+        "raw": "क्या",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 111410,
+      "end_ms": 111890,
+      "type": "word",
+      "payload": {
+        "text": "करूँ",
+        "raw": "करूँ",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 111890,
+      "end_ms": 112310,
+      "type": "word",
+      "payload": {
+        "text": "आप",
+        "raw": "आप",
+        "speaker": "B"
+      },
+      "confidence": 0.963,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 112310,
+      "end_ms": 112370,
+      "type": "word",
+      "payload": {
+        "text": "ले",
+        "raw": "ले",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 112370,
+      "end_ms": 112590,
+      "type": "word",
+      "payload": {
+        "text": "लो",
+        "raw": "लो",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 112590,
+      "end_ms": 113190,
+      "type": "word",
+      "payload": {
+        "text": "अम्मानी",
+        "raw": "अम्मानी",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 113190,
+      "end_ms": 113370,
+      "type": "word",
+      "payload": {
+        "text": "वाली",
+        "raw": "वाली",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 113370,
+      "end_ms": 113610,
+      "type": "word",
+      "payload": {
+        "text": "रसोई",
+        "raw": "रसोई",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 113610,
+      "end_ms": 113890,
+      "type": "word",
+      "payload": {
+        "text": "बना",
+        "raw": "बना",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 113890,
+      "end_ms": 114050,
+      "type": "word",
+      "payload": {
+        "text": "रखी",
+        "raw": "रखी",
+        "speaker": "B"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 114050,
+      "end_ms": 114250,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 0.943,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 114250,
+      "end_ms": 114390,
+      "type": "word",
+      "payload": {
+        "text": "तुमने",
+        "raw": "तुमने",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 114390,
+      "end_ms": 114630,
+      "type": "word",
+      "payload": {
+        "text": "इसमें",
+        "raw": "इसमें",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 114630,
+      "end_ms": 114730,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 114730,
+      "end_ms": 114950,
+      "type": "word",
+      "payload": {
+        "text": "खीर",
+        "raw": "खीर",
+        "speaker": "B"
+      },
+      "confidence": 0.956,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 114950,
+      "end_ms": 115230,
+      "type": "word",
+      "payload": {
+        "text": "खाते",
+        "raw": "खाते",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 115230,
+      "end_ms": 115390,
+      "type": "word",
+      "payload": {
+        "text": "होगे",
+        "raw": "होगे",
+        "speaker": "B"
+      },
+      "confidence": 0.987,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 115390,
+      "end_ms": 115750,
+      "type": "word",
+      "payload": {
+        "text": "तुम",
+        "raw": "तुम",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 115750,
+      "end_ms": 115990,
+      "type": "word",
+      "payload": {
+        "text": "हमें",
+        "raw": "हमें",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 115990,
+      "end_ms": 116110,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 116110,
+      "end_ms": 116290,
+      "type": "word",
+      "payload": {
+        "text": "दे",
+        "raw": "दे",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 116290,
+      "end_ms": 116330,
+      "type": "word",
+      "payload": {
+        "text": "दी",
+        "raw": "दी",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 116330,
+      "end_ms": 116550,
+      "type": "word",
+      "payload": {
+        "text": "वो",
+        "raw": "वो",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 116550,
+      "end_ms": 116810,
+      "type": "word",
+      "payload": {
+        "text": "प्लेट",
+        "raw": "प्लेट",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 116810,
+      "end_ms": 117090,
+      "type": "word",
+      "payload": {
+        "text": "बड़ी",
+        "raw": "बड़ी",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 117090,
+      "end_ms": 117650,
+      "type": "word",
+      "payload": {
+        "text": "चार",
+        "raw": "चार",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 117650,
+      "end_ms": 118010,
+      "type": "word",
+      "payload": {
+        "text": "खांचे",
+        "raw": "खांचे",
+        "speaker": "B"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 118010,
+      "end_ms": 118190,
+      "type": "word",
+      "payload": {
+        "text": "वाली",
+        "raw": "वाली",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 118190,
+      "end_ms": 118490,
+      "type": "word",
+      "payload": {
+        "text": "उसमें",
+        "raw": "उसमें",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 118490,
+      "end_ms": 118650,
+      "type": "word",
+      "payload": {
+        "text": "खीर",
+        "raw": "खीर",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 118650,
+      "end_ms": 118870,
+      "type": "word",
+      "payload": {
+        "text": "खाओ",
+        "raw": "खाओ",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 118870,
+      "end_ms": 119230,
+      "type": "word",
+      "payload": {
+        "text": "सब्जी",
+        "raw": "सब्जी",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 119230,
+      "end_ms": 119750,
+      "type": "word",
+      "payload": {
+        "text": "खाओ",
+        "raw": "खाओ",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 119750,
+      "end_ms": 120150,
+      "type": "word",
+      "payload": {
+        "text": "रायता",
+        "raw": "रायता",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 120150,
+      "end_ms": 120250,
+      "type": "word",
+      "payload": {
+        "text": "भी",
+        "raw": "भी",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 120250,
+      "end_ms": 120430,
+      "type": "word",
+      "payload": {
+        "text": "उसी",
+        "raw": "उसी",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 120430,
+      "end_ms": 120530,
+      "type": "word",
+      "payload": {
+        "text": "में",
+        "raw": "में",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 120530,
+      "end_ms": 120810,
+      "type": "word",
+      "payload": {
+        "text": "पियो",
+        "raw": "पियो",
+        "speaker": "B"
+      },
+      "confidence": 0.995,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 120810,
+      "end_ms": 136190,
+      "type": "word",
+      "payload": {
+        "text": "अच्छा",
+        "raw": "अच्छा",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 136190,
+      "end_ms": 136190,
+      "type": "word",
+      "payload": {
+        "text": "आप",
+        "raw": "आप",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 136190,
+      "end_ms": 136190,
+      "type": "word",
+      "payload": {
+        "text": "ले",
+        "raw": "ले",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 136190,
+      "end_ms": 136190,
+      "type": "word",
+      "payload": {
+        "text": "ज",
+        "raw": "ज",
+        "speaker": "B"
+      },
+      "confidence": 0.65,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 136200,
+      "end_ms": 136380,
+      "type": "word",
+      "payload": {
+        "text": "कब",
+        "raw": "कब",
+        "speaker": "B"
+      },
+      "confidence": 0.959,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 136380,
+      "end_ms": 136660,
+      "type": "word",
+      "payload": {
+        "text": "देता",
+        "raw": "देता",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 136660,
+      "end_ms": 136840,
+      "type": "word",
+      "payload": {
+        "text": "मुझे",
+        "raw": "मुझे",
+        "speaker": "B"
+      },
+      "confidence": 0.984,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 136840,
+      "end_ms": 137460,
+      "type": "word",
+      "payload": {
+        "text": "और",
+        "raw": "और",
+        "speaker": "B"
+      },
+      "confidence": 0.932,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 137460,
+      "end_ms": 137520,
+      "type": "word",
+      "payload": {
+        "text": "मैंने",
+        "raw": "मैंने",
+        "speaker": "B"
+      },
+      "confidence": 0.791,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 137520,
+      "end_ms": 137660,
+      "type": "word",
+      "payload": {
+        "text": "ले",
+        "raw": "ले",
+        "speaker": "B"
+      },
+      "confidence": 0.562,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 137660,
+      "end_ms": 137800,
+      "type": "word",
+      "payload": {
+        "text": "जाओ",
+        "raw": "जाओ",
+        "speaker": "B"
+      },
+      "confidence": 0.624,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 137800,
+      "end_ms": 137960,
+      "type": "word",
+      "payload": {
+        "text": "कुछ",
+        "raw": "कुछ",
+        "speaker": "B"
+      },
+      "confidence": 0.796,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 137960,
+      "end_ms": 138140,
+      "type": "word",
+      "payload": {
+        "text": "जो",
+        "raw": "जो",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 138140,
+      "end_ms": 138160,
+      "type": "word",
+      "payload": {
+        "text": "चाहिए",
+        "raw": "चाहिए",
+        "speaker": "B"
+      },
+      "confidence": 0.922,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 138160,
+      "end_ms": 138160,
+      "type": "word",
+      "payload": {
+        "text": "ये",
+        "raw": "ये",
+        "speaker": "B"
+      },
+      "confidence": 0.988,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 138160,
+      "end_ms": 138580,
+      "type": "word",
+      "payload": {
+        "text": "ये",
+        "raw": "ये",
+        "speaker": "B"
+      },
+      "confidence": 0.983,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 138580,
+      "end_ms": 138800,
+      "type": "word",
+      "payload": {
+        "text": "देख",
+        "raw": "देख",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 138800,
+      "end_ms": 138940,
+      "type": "word",
+      "payload": {
+        "text": "लेना",
+        "raw": "लेना",
+        "speaker": "B"
+      },
+      "confidence": 0.964,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 138940,
+      "end_ms": 139140,
+      "type": "word",
+      "payload": {
+        "text": "तू",
+        "raw": "तू",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 139140,
+      "end_ms": 139260,
+      "type": "word",
+      "payload": {
+        "text": "ये",
+        "raw": "ये",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 139260,
+      "end_ms": 139500,
+      "type": "word",
+      "payload": {
+        "text": "कितना",
+        "raw": "कितना",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 139500,
+      "end_ms": 139840,
+      "type": "word",
+      "payload": {
+        "text": "मजबूत",
+        "raw": "मजबूत",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 139840,
+      "end_ms": 140200,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 140200,
+      "end_ms": 140800,
+      "type": "word",
+      "payload": {
+        "text": "हाँ",
+        "raw": "हाँ",
+        "speaker": "B"
+      },
+      "confidence": 0.419,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 140800,
+      "end_ms": 140920,
+      "type": "word",
+      "payload": {
+        "text": "तुमने",
+        "raw": "तुमने",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 140920,
+      "end_ms": 141440,
+      "type": "word",
+      "payload": {
+        "text": "भाई",
+        "raw": "भाई",
+        "speaker": "B"
+      },
+      "confidence": 0.942,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 141440,
+      "end_ms": 141680,
+      "type": "word",
+      "payload": {
+        "text": "चीनी",
+        "raw": "चीनी",
+        "speaker": "B"
+      },
+      "confidence": 0.997,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 141680,
+      "end_ms": 141860,
+      "type": "word",
+      "payload": {
+        "text": "चाय",
+        "raw": "चाय",
+        "speaker": "B"
+      },
+      "confidence": 0.908,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 141860,
+      "end_ms": 142020,
+      "type": "word",
+      "payload": {
+        "text": "पत्ती",
+        "raw": "पत्ती",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142020,
+      "end_ms": 142220,
+      "type": "word",
+      "payload": {
+        "text": "रखने",
+        "raw": "रखने",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142220,
+      "end_ms": 142300,
+      "type": "word",
+      "payload": {
+        "text": "के",
+        "raw": "के",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142300,
+      "end_ms": 142420,
+      "type": "word",
+      "payload": {
+        "text": "लिए",
+        "raw": "लिए",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142420,
+      "end_ms": 142620,
+      "type": "word",
+      "payload": {
+        "text": "अलग",
+        "raw": "अलग",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142620,
+      "end_ms": 142740,
+      "type": "word",
+      "payload": {
+        "text": "से",
+        "raw": "से",
+        "speaker": "B"
+      },
+      "confidence": 0.889,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142740,
+      "end_ms": 142980,
+      "type": "word",
+      "payload": {
+        "text": "कांच",
+        "raw": "कांच",
+        "speaker": "B"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142980,
+      "end_ms": 143100,
+      "type": "word",
+      "payload": {
+        "text": "का",
+        "raw": "का",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143100,
+      "end_ms": 143380,
+      "type": "word",
+      "payload": {
+        "text": "शटर",
+        "raw": "शटर",
+        "speaker": "B"
+      },
+      "confidence": 0.896,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143380,
+      "end_ms": 143600,
+      "type": "word",
+      "payload": {
+        "text": "वाला",
+        "raw": "वाला",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143600,
+      "end_ms": 143780,
+      "type": "word",
+      "payload": {
+        "text": "बना",
+        "raw": "बना",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143780,
+      "end_ms": 143940,
+      "type": "word",
+      "payload": {
+        "text": "रखा",
+        "raw": "रखा",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143940,
+      "end_ms": 145160,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 145160,
+      "end_ms": 145420,
+      "type": "word",
+      "payload": {
+        "text": "ऐसा",
+        "raw": "ऐसा",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 145420,
+      "end_ms": 145660,
+      "type": "word",
+      "payload": {
+        "text": "कुछ",
+        "raw": "कुछ",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 145660,
+      "end_ms": 145800,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 145800,
+      "end_ms": 146100,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 146100,
+      "end_ms": 146100,
+      "type": "word",
+      "payload": {
+        "text": "जी",
+        "raw": "जी",
+        "speaker": "A"
+      },
+      "confidence": 0.895,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 146100,
+      "end_ms": 146100,
+      "type": "word",
+      "payload": {
+        "text": "जी",
+        "raw": "जी",
+        "speaker": "A"
+      },
+      "confidence": 0.551,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 146100,
+      "end_ms": 146260,
+      "type": "word",
+      "payload": {
+        "text": "आप",
+        "raw": "आप",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 146260,
+      "end_ms": 146300,
+      "type": "word",
+      "payload": {
+        "text": "ही",
+        "raw": "ही",
+        "speaker": "B"
+      },
+      "confidence": 0.993,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 146300,
+      "end_ms": 146420,
+      "type": "word",
+      "payload": {
+        "text": "अरे",
+        "raw": "अरे",
+        "speaker": "B"
+      },
+      "confidence": 0.992,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 146420,
+      "end_ms": 146700,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 146700,
+      "end_ms": 147060,
+      "type": "word",
+      "payload": {
+        "text": "भाई",
+        "raw": "भाई",
+        "speaker": "B"
+      },
+      "confidence": 0.723,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 147060,
+      "end_ms": 147300,
+      "type": "word",
+      "payload": {
+        "text": "चाहिए",
+        "raw": "चाहिए",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 147300,
+      "end_ms": 147460,
+      "type": "word",
+      "payload": {
+        "text": "ही",
+        "raw": "ही",
+        "speaker": "B"
+      },
+      "confidence": 0.991,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 147460,
+      "end_ms": 147520,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 147520,
+      "end_ms": 147960,
+      "type": "word",
+      "payload": {
+        "text": "मुझे",
+        "raw": "मुझे",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 147960,
+      "end_ms": 148340,
+      "type": "word",
+      "payload": {
+        "text": "चाहिए",
+        "raw": "चाहिए",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 148340,
+      "end_ms": 148500,
+      "type": "word",
+      "payload": {
+        "text": "ही",
+        "raw": "ही",
+        "speaker": "B"
+      },
+      "confidence": 0.996,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 148500,
+      "end_ms": 148500,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 148500,
+      "end_ms": 148780,
+      "type": "word",
+      "payload": {
+        "text": "भाई",
+        "raw": "भाई",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 148780,
+      "end_ms": 149980,
+      "type": "word",
+      "payload": {
+        "text": "रेंदे",
+        "raw": "रेंदे",
+        "speaker": "B"
+      },
+      "confidence": 0.461,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 149980,
+      "end_ms": 150260,
+      "type": "word",
+      "payload": {
+        "text": "चाहिए",
+        "raw": "चाहिए",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 150260,
+      "end_ms": 150460,
+      "type": "word",
+      "payload": {
+        "text": "ही",
+        "raw": "ही",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 150460,
+      "end_ms": 150460,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 150460,
+      "end_ms": 150700,
+      "type": "word",
+      "payload": {
+        "text": "मुझे",
+        "raw": "मुझे",
+        "speaker": "B"
+      },
+      "confidence": 1.0,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 150700,
+      "end_ms": 158620,
+      "type": "word",
+      "payload": {
+        "text": "आप",
+        "raw": "आप",
+        "speaker": "B"
+      },
+      "confidence": 0.869,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 158620,
+      "end_ms": 161220,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो",
+        "speaker": "B"
+      },
+      "confidence": 0.965,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 161220,
+      "end_ms": 163020,
+      "type": "word",
+      "payload": {
+        "text": "चलो",
+        "raw": "चलो",
+        "speaker": "B"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 163020,
+      "end_ms": 163520,
+      "type": "word",
+      "payload": {
+        "text": "क",
+        "raw": "क",
+        "speaker": "B"
+      },
+      "confidence": 0.993,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 168350,
+      "end_ms": 168900,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.766,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 168900,
+      "end_ms": 169120,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.999,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 169120,
+      "end_ms": 169200,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.965,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 169200,
+      "end_ms": 169260,
+      "type": "word",
+      "payload": {
+        "text": "जी",
+        "raw": "जी",
+        "speaker": "A"
+      },
+      "confidence": 0.896,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 169260,
+      "end_ms": 169810,
+      "type": "word",
+      "payload": {
+        "text": "अजीब",
+        "raw": "अजीब",
+        "speaker": "A"
+      },
+      "confidence": 0.966,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 0,
+      "end_ms": 2520,
+      "type": "utterance",
+      "payload": {
+        "text": "लो जिया जी गरमा गरम कॉफी पियो।",
+        "speaker": "A"
+      },
+      "confidence": 0.905,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2520,
+      "end_ms": 17240,
+      "type": "utterance",
+      "payload": {
+        "text": "हाँ भाई। हम्म, अच्छा जी। कांच के बर्तन आ रहे हैं? सही है, बढ़िया। ओहो, कॉफी एकदम बोरोसिलिकेट कप में आ रही है, डंडी देखो अलग है हाँ?",
+        "speaker": "B"
+      },
+      "confidence": 0.962,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 17240,
+      "end_ms": 26450,
+      "type": "utterance",
+      "payload": {
+        "text": "जिया जी हम तो स्टार्टिंग से यही बर्तन इस्तेमाल करते हैं, क्वालिटी में कॉम्प्रोमाइज़ नहीं करते हम घर के सामान नहीं",
+        "speaker": "A"
+      },
+      "confidence": 0.998,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 26450,
+      "end_ms": 29730,
+      "type": "utterance",
+      "payload": {
+        "text": "नहीं क्यों क्या हुआ शादी में देने चाहिए थे ना फिर हमें भी स्टिकली",
+        "speaker": "B"
+      },
+      "confidence": 0.962,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 29730,
+      "end_ms": 35730,
+      "type": "utterance",
+      "payload": {
+        "text": "की जगह नहीं हमने तो सारे अच्छे बर्तन ही दिए मतलब वो शायद पुरानी बात होगी तो आपको याद नहीं आ",
+        "speaker": "A"
+      },
+      "confidence": 0.973,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 35730,
+      "end_ms": 40610,
+      "type": "utterance",
+      "payload": {
+        "text": "रहा होगा अरे वो पुराने से याद आया मेरे को टोस्टर खराब हो गया ठीक करा दे वो मैं एक बार",
+        "speaker": "B"
+      },
+      "confidence": 0.994,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 40610,
+      "end_ms": 54490,
+      "type": "utterance",
+      "payload": {
+        "text": "वो बिल देख लेता हूँ घर म नहीं नहीं ऐसी ऐसा नहीं बोला मैंने",
+        "speaker": "A"
+      },
+      "confidence": 0.982,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 54490,
+      "end_ms": 59870,
+      "type": "utterance",
+      "payload": {
+        "text": "हम्म ऐसे ही कह रहा है तू तो तू पैदा भी नहीं हुआ ना बेटे जब से ब्रेड जाम खा रहा",
+        "speaker": "B"
+      },
+      "confidence": 0.977,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 59870,
+      "end_ms": 66550,
+      "type": "utterance",
+      "payload": {
+        "text": "हूँ मैं खा रहे होंगे जिया जी मैं कुछ मजा थोड़ी कर रहा हूँ आपको मतलब हम भी सेम इस्तेमाल करते हैं ब्रांडेड ही है आपको भी वही",
+        "speaker": "A"
+      },
+      "confidence": 0.981,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 66550,
+      "end_ms": 143940,
+      "type": "utterance",
+      "payload": {
+        "text": "दिया था सेम अभी देख लेता हू इंडक्शन दिया हैं घर में तुम तीन बंदे हो गैस देखले तुम्हारा चार बर्नर वाला है ये हैवी मटेरियल कॉमन है यार कॉमन है ये टिश्यू पेपर का ये स्टैंड कॉमन है कॉमन है ये हैं ये वाह कैसा रोल देखो भाई साहब इसमें रोटी दिख रही है हैं मुझे दे दिया तुमने प्लास्टिक वाला आप ले चम्मच तुमने एकदम अम्मानी वाले ले रखे हैं ये तो तो आप ले लो आप ले लो मैं मैं क्या करूँ आप ले लो अम्मानी वाली रसोई बना रखी है तुमने इसमें तो खीर खाते होगे तुम हमें तो दे दी वो प्लेट बड़ी चार खांचे वाली उसमें खीर खाओ सब्जी खाओ रायता भी उसी में पियो अच्छा आप ले ज कब देता मुझे और मैंने ले जाओ कुछ जो चाहिए ये ये देख लेना तू ये कितना मजबूत है हाँ तुमने भाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा",
+        "speaker": "B"
+      },
+      "confidence": 0.97,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143940,
+      "end_ms": 146100,
+      "type": "utterance",
+      "payload": {
+        "text": "है ऐसा कुछ नहीं है जी जी",
+        "speaker": "A"
+      },
+      "confidence": 0.921,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 146100,
+      "end_ms": 163520,
+      "type": "utterance",
+      "payload": {
+        "text": "आप ही अरे नहीं भाई चाहिए ही नहीं मुझे चाहिए ही नहीं भाई रेंदे चाहिए ही नहीं मुझे आप तो चलो क",
+        "speaker": "B"
+      },
+      "confidence": 0.954,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 168350,
+      "end_ms": 169810,
+      "type": "utterance",
+      "payload": {
+        "text": "नहीं नहीं नहीं जी अजीब",
+        "speaker": "A"
+      },
+      "confidence": 0.918,
+      "provider": "assemblyai",
+      "provider_version": "1.3.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "transcript_id": "0b4501b9-dac1-4a74-bca0-db8fe16b7abb",
+    "text": "लो जिया जी गरमा गरम कॉफी पियो। हाँ भाई। हम्म, अच्छा जी। कांच के बर्तन आ रहे हैं? सही है, बढ़िया। ओहो, कॉफी एकदम बोरोसिलिकेट कप में आ रही है, डंडी देखो अलग है हाँ? जिया जी हम तो स्टार्टिंग से यही बर्तन इस्तेमाल करते हैं, क्वालिटी में कॉम्प्रोमाइज़ नहीं करते हम घर के सामान नहीं नहीं क्यों क्या हुआ शादी में देने चाहिए थे ना फिर हमें भी स्टिकली की जगह नहीं हमने तो सारे अच्छे बर्तन ही दिए मतलब वो शायद पुरानी बात होगी तो आपको याद नहीं आ रहा होगा अरे वो पुराने से याद आया मेरे को टोस्टर खराब हो गया ठीक करा दे वो मैं एक बार वो बिल देख लेता हूँ घर म नहीं नहीं ऐसी ऐसा नहीं बोला मैंने हम्म ऐसे ही कह रहा है तू तो तू पैदा भी नहीं हुआ ना बेटे जब से ब्रेड जाम खा रहा हूँ मैं खा रहे होंगे जिया जी मैं कुछ मजा थोड़ी कर रहा हूँ आपको मतलब हम भी सेम इस्तेमाल करते हैं ब्रांडेड ही है आपको भी वही दिया था सेम अभी देख लेता हू इंडक्शन दिया हैं घर में तुम तीन बंदे हो गैस देखले तुम्हारा चार बर्नर वाला है ये हैवी मटेरियल कॉमन है यार कॉमन है ये टिश्यू पेपर का ये स्टैंड कॉमन है कॉमन है ये हैं ये वाह कैसा रोल देखो भाई साहब इसमें रोटी दिख रही है हैं मुझे दे दिया तुमने प्लास्टिक वाला आप ले चम्मच तुमने एकदम अम्मानी वाले ले रखे हैं ये तो तो आप ले लो आप ले लो मैं मैं क्या करूँ आप ले लो अम्मानी वाली रसोई बना रखी है तुमने इसमें तो खीर खाते होगे तुम हमें तो दे दी वो प्लेट बड़ी चार खांचे वाली उसमें खीर खाओ सब्जी खाओ रायता भी उसी में पियो अच्छा आप ले ज कब देता मुझे और मैंने ले जाओ कुछ जो चाहिए ये ये देख लेना तू ये कितना मजबूत है हाँ तुमने भाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा है ऐसा कुछ नहीं है जी जी आप ही अरे नहीं भाई चाहिए ही नहीं मुझे चाहिए ही नहीं भाई रेंदे चाहिए ही नहीं मुझे आप तो चलो क नहीं नहीं नहीं जी अजीब",
+    "raw_text": "लो जिया जी गरमा गरम कॉफी पियो। हाँ भाई। हम्म, अच्छा जी। कांच के बर्तन आ रहे हैं? सही है, बढ़िया। ओहो, कॉफी एकदम बोरोसिलिकेट कप में आ रही है, डंडी देखो अलग है हाँ? जिया जी हम तो स्टार्टिंग से यही बर्तन इस्तेमाल करते हैं, क्वालिटी में कॉम्प्रोमाइज़ नहीं करते हम घर के सामान नहीं नहीं क्यों क्या हुआ शादी में देने चाहिए थे ना फिर हमें भी स्टिकली की जगह नहीं हमने तो सारे अच्छे बर्तन ही दिए मतलब वो शायद पुरानी बात होगी तो आपको याद नहीं आ रहा होगा अरे वो पुराने से याद आया मेरे को टोस्टर खराब हो गया ठीक करा दे वो मैं एक बार वो बिल देख लेता हूँ घर म नहीं नहीं ऐसी ऐसा नहीं बोला मैंने हम्म ऐसे ही कह रहा है तू तो तू पैदा भी नहीं हुआ ना बेटे जब से ब्रेड जाम खा रहा हूँ मैं खा रहे होंगे जिया जी मैं कुछ मजा थोड़ी कर रहा हूँ आपको मतलब हम भी सेम इस्तेमाल करते हैं ब्रांडेड ही है आपको भी वही दिया था सेम अभी देख लेता हू इंडक्शन दिया हैं घर में तुम तीन बंदे हो गैस देखले तुम्हारा चार बर्नर वाला है ये हैवी मटेरियल कॉमन है यार कॉमन है ये टिश्यू पेपर का ये स्टैंड कॉमन है कॉमन है ये हैं ये वाह कैसा रोल देखो भाई साहब इसमें रोटी दिख रही है हैं मुझे दे दिया तुमने प्लास्टिक वाला आप ले चम्मच तुमने एकदम अम्मानी वाले ले रखे हैं ये तो तो आप ले लो आप ले लो मैं मैं क्या करूँ आप ले लो अम्मानी वाली रसोई बना रखी है तुमने इसमें तो खीर खाते होगे तुम हमें तो दे दी वो प्लेट बड़ी चार खांचे वाली उसमें खीर खाओ सब्जी खाओ रायता भी उसी में पियो अच्छा आप ले ज कब देता मुझे और मैंने ले जाओ कुछ जो चाहिए ये ये देख लेना तू ये कितना मजबूत है हाँ तुमने भाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा है ऐसा कुछ नहीं है जी जी आप ही अरे नहीं भाई चाहिए ही नहीं मुझे चाहिए ही नहीं भाई रेंदे चाहिए ही नहीं मुझे आप तो चलो क नहीं नहीं नहीं जी अजीब",
+    "status": "TranscriptStatus.completed",
+    "words_count": 370
+  },
+  "metadata": {
+    "audio_path": "data/reels/DdrIIFTCWdx/audio.wav",
+    "language_code": null
+  }
+}
