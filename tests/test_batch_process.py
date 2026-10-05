@@ -4,7 +4,7 @@ Unit and Integration tests for batch_process.py.
 
 Verifies:
   1. CLI argument validation (rejects empty args, rejects both target and --all).
-  2. Inspect reel status on complete vs incomplete reel directories.
+  2. Inspect reel status on complete vs incomplete reel directories (verifies both Cloud and Local speech).
   3. Reel processing execution skips existing outputs and only fills missing manifests.
   4. Discovery and processing logic for --all.
 """
@@ -71,15 +71,28 @@ def test_inspect_reel_status_incomplete(tmp_path):
     assert status["shots"] is False
     assert status["ocr"] is False
     assert status["faces"] is False
-    assert status["speech"] is False
+    assert status["speech_cloud"] is False
+    assert status["speech_local"] is False
     assert status["diarization"] is False
     assert status["timeline"] is False
     assert status["report"] is False
     assert status["is_complete"] is False
 
 
+def test_inspect_reel_status_partial_speech(tmp_path):
+    """Verify when only cloud speech is present, speech_local is flagged as missing."""
+    reel_dir = tmp_path / "mock_reel"
+    reel_dir.mkdir()
+    (reel_dir / "manifest_speech_assemblyai_v1.3.0.json").write_text("{}")
+
+    status = inspect_reel_status(reel_dir)
+    assert status["speech_cloud"] is True
+    assert status["speech_local"] is False
+    assert status["is_complete"] is False
+
+
 def test_inspect_reel_status_complete(tmp_path):
-    """Verify inspect_reel_status correctly flags a complete reel directory."""
+    """Verify inspect_reel_status correctly flags a complete reel directory with both speech engines."""
     reel_dir = tmp_path / "mock_reel"
     reel_dir.mkdir()
     (reel_dir / "video.mp4").write_text("dummy")
@@ -90,6 +103,7 @@ def test_inspect_reel_status_complete(tmp_path):
     (reel_dir / "manifest_ocr_rapidocr_v1.0.0.json").write_text("{}")
     (reel_dir / "manifest_faces_mediapipe_v1.0.0.json").write_text("{}")
     (reel_dir / "manifest_speech_assemblyai_v1.3.0.json").write_text("{}")
+    (reel_dir / "manifest_speech_mlx_whisper_v1.3.0.json").write_text("{}")
     (reel_dir / "manifest_diarization_assemblyai_v1.0.0.json").write_text("{}")
     (reel_dir / "timeline.json").write_text("{}")
     (reel_dir / "timeline_report.html").write_text("<html></html>")
@@ -102,7 +116,8 @@ def test_inspect_reel_status_complete(tmp_path):
     assert status["shots"] is True
     assert status["ocr"] is True
     assert status["faces"] is True
-    assert status["speech"] is True
+    assert status["speech_cloud"] is True
+    assert status["speech_local"] is True
     assert status["diarization"] is True
     assert status["timeline"] is True
     assert status["report"] is True
@@ -121,7 +136,8 @@ def test_process_reel_on_complete_directory(tmp_path):
     (reel_dir / "manifest_shots_test.json").write_text("{}")
     (reel_dir / "manifest_ocr_test.json").write_text("{}")
     (reel_dir / "manifest_faces_test.json").write_text("{}")
-    (reel_dir / "manifest_speech_test.json").write_text("{}")
+    (reel_dir / "manifest_speech_assemblyai_test.json").write_text("{}")
+    (reel_dir / "manifest_speech_mlx_whisper_test.json").write_text("{}")
     (reel_dir / "manifest_diarization_test.json").write_text("{}")
     (reel_dir / "timeline.json").write_text("{}")
     (reel_dir / "timeline_report.html").write_text("<html></html>")
@@ -146,7 +162,8 @@ def test_process_all_discovers_reels(tmp_path):
         (r_dir / "manifest_shots_t.json").write_text("{}")
         (r_dir / "manifest_ocr_t.json").write_text("{}")
         (r_dir / "manifest_faces_t.json").write_text("{}")
-        (r_dir / "manifest_speech_t.json").write_text("{}")
+        (r_dir / "manifest_speech_assemblyai_t.json").write_text("{}")
+        (r_dir / "manifest_speech_mlx_whisper_t.json").write_text("{}")
         (r_dir / "manifest_diarization_t.json").write_text("{}")
         (r_dir / "timeline.json").write_text("{}")
         (r_dir / "timeline_report.html").write_text("<html></html>")

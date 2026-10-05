@@ -12,11 +12,12 @@ In both modes, it checks what is missing on disk and executes only the missing p
   - Step 1: Media Ingestion & 16kHz Audio Normalization (video.mp4, audio.wav, media_specs.json)
   - Step 2: Preflight Audio Analysis & Execution Planning (condition_report.json, plan.json)
   - Step 3: Multi-Lane AI Manifests:
-      - Shots (pyscenedetect)
-      - OCR (rapidocr)
-      - Faces & MAR (mediapipe)
-      - Speech ASR (manifest_speech_*.json)
-      - Speaker Diarization (manifest_diarization_*.json)
+      - Shots: PySceneDetect (manifest_shots_pyscenedetect_*.json)
+      - OCR: RapidOCR (manifest_ocr_rapidocr_*.json)
+      - Faces & MAR: MediaPipe (manifest_faces_mediapipe_*.json)
+      - Speech Cloud: AssemblyAI (manifest_speech_assemblyai_*.json)
+      - Speech Local: MLX Whisper (manifest_speech_mlx_whisper_*.json)
+      - Diarization: AssemblyAI / PyAnnote (manifest_diarization_*.json)
   - Step 4: Multimodal Consensus Timeline (timeline.json + Pacing DNA)
   - Step 5: Comparison Dashboard & Report (timeline_report.html)
 """
@@ -53,6 +54,7 @@ console = Console()
 def inspect_reel_status(reel_dir: Path) -> Dict[str, Any]:
     """
     Inspects which pipeline manifests and outputs exist on disk for a given reel directory.
+    Explicitly tracks both Cloud (AssemblyAI) and Local (MLX Whisper) speech engines.
     """
     has_video = (reel_dir / "video.mp4").exists()
     has_audio = (reel_dir / "audio.wav").exists()
@@ -62,7 +64,12 @@ def inspect_reel_status(reel_dir: Path) -> Dict[str, Any]:
     has_shots = any(reel_dir.glob("manifest_shots_*.json"))
     has_ocr = any(reel_dir.glob("manifest_ocr_*.json"))
     has_faces = any(reel_dir.glob("manifest_faces_*.json"))
-    has_speech = any(reel_dir.glob("manifest_speech_*.json"))
+
+    # Explicit differentiation between Cloud (AssemblyAI) and Local (MLX Whisper)
+    has_speech_cloud = any(reel_dir.glob("manifest_speech_assemblyai_*.json"))
+    has_speech_local = any(reel_dir.glob("manifest_speech_mlx_whisper_*.json"))
+
+    # Diarization tracking
     has_diarization = any(reel_dir.glob("manifest_diarization_*.json"))
 
     has_timeline = (reel_dir / "timeline.json").exists()
@@ -72,7 +79,8 @@ def inspect_reel_status(reel_dir: Path) -> Dict[str, Any]:
     is_complete = all([
         has_video, has_audio, has_specs, has_plan,
         has_shots, has_ocr, has_faces,
-        has_speech, has_diarization,
+        has_speech_cloud, has_speech_local,
+        has_diarization,
         has_timeline, has_report,
     ])
 
@@ -84,7 +92,8 @@ def inspect_reel_status(reel_dir: Path) -> Dict[str, Any]:
         "shots": has_shots,
         "ocr": has_ocr,
         "faces": has_faces,
-        "speech": has_speech,
+        "speech_cloud": has_speech_cloud,
+        "speech_local": has_speech_local,
         "diarization": has_diarization,
         "timeline": has_timeline,
         "report": has_report,
@@ -96,6 +105,7 @@ def inspect_reel_status(reel_dir: Path) -> Dict[str, Any]:
 def process_reel(reel_id: str, data_root: str = "data") -> bool:
     """
     Checks what pipeline stages are missing for reel_id and executes only the missing steps.
+    Ensures both Cloud (AssemblyAI) and Local (MLX Whisper) speech manifests are generated.
     """
     reel_dir = Path(data_root) / "reels" / reel_id
     if not reel_dir.exists():
@@ -123,9 +133,6 @@ def process_reel(reel_id: str, data_root: str = "data") -> bool:
         condition = analyze_audio_condition(audio_path, reel_id)
         create_execution_plan(condition, profile_name="default", data_root=data_root)
 
-    profile = config.get_profile("default")
-    speech_prov = profile.get("speech", "assemblyai")
-
     # Step 3: Multi-Lane Capabilities (Run only what is missing)
     # 3.1 Shots
     if not status["shots"]:
@@ -148,20 +155,28 @@ def process_reel(reel_id: str, data_root: str = "data") -> bool:
         if face_prov_cls:
             runner.execute(reel_id, face_prov_cls(), {"video_path": str(video_path)})
 
-    # 3.4 Speech
-    if not status["speech"]:
-        console.print(f"[dim]Running missing speech transcription ({speech_prov})...[/dim]")
-        speech_chain = [speech_prov, "mlx_whisper"]
-        runner.execute_chain(reel_id, "speech", speech_chain, {"audio_path": str(audio_path)})
+    # 3.4 Speech - Cloud (AssemblyAI)
+    if not status["speech_cloud"]:
+        console.print("[dim]Running missing Cloud speech transcription (AssemblyAI)...[/dim]")
+        speech_aai_cls = registry.get("speech", "assemblyai")
+        if speech_aai_cls:
+            runner.execute(reel_id, speech_aai_cls(), {"audio_path": str(audio_path)})
 
-    # 3.5 Diarization
+    # 3.5 Speech - Local (MLX Whisper)
+    if not status["speech_local"]:
+        console.print("[dim]Running missing Local speech transcription (MLX Whisper)...[/dim]")
+        speech_mlx_cls = registry.get("speech", "mlx_whisper")
+        if speech_mlx_cls:
+            runner.execute(reel_id, speech_mlx_cls(), {"audio_path": str(audio_path)})
+
+    # 3.6 Diarization
     if not status["diarization"]:
         console.print("[dim]Running missing speaker diarization...[/dim]")
         diar_chain = ["pyannote", "assemblyai"]
         runner.execute_chain(reel_id, "diarization", diar_chain, {"audio_path": str(audio_path)})
 
     # Step 4: Multimodal Consensus Timeline
-    # If timeline is missing or any upstream capability was freshly computed
+    # Re-align if timeline missing or any upstream capability was freshly computed
     timeline_path = reel_dir / "timeline.json"
     if not timeline_path.exists() or not status["is_complete"]:
         console.print("[dim]Aligning multimodal consensus timeline & computing Pacing DNA...[/dim]")
@@ -229,7 +244,8 @@ def process_all(data_root: str = "data") -> bool:
     initial_table.add_column("Shots", justify="center")
     initial_table.add_column("OCR", justify="center")
     initial_table.add_column("Faces", justify="center")
-    initial_table.add_column("Speech", justify="center")
+    initial_table.add_column("Speech (Cloud)", justify="center")
+    initial_table.add_column("Speech (Local)", justify="center")
     initial_table.add_column("Diarization", justify="center")
     initial_table.add_column("Timeline", justify="center")
     initial_table.add_column("Report", justify="center")
@@ -247,7 +263,8 @@ def process_all(data_root: str = "data") -> bool:
             mark(st["shots"]),
             mark(st["ocr"]),
             mark(st["faces"]),
-            mark(st["speech"]),
+            mark(st["speech_cloud"]),
+            mark(st["speech_local"]),
             mark(st["diarization"]),
             mark(st["timeline"]),
             mark(st["report"]),
