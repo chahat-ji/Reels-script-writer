@@ -1,6 +1,5 @@
 # Environment variables & secrets
 .env
-.env.*
 *.env
 
 # Virtual environments
@@ -20,6 +19,9 @@ data/models/
 data/reels/*/*.wav
 data/reels/*/*.mp4
 export/
+
+#Experimental files
+experiments/
 
 # System files
 .DS_Store

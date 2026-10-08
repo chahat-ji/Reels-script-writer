@@ -305,8 +305,65 @@ def extract_mlx_data(reel_dir: Path) -> Optional[Dict[str, Any]]:
         return None
 
 
+def extract_gemini_data(reel_id: str, reel_dir: Path) -> Optional[Dict[str, Any]]:
+    """Loads and formats Google Gemini audio transcription experiment results."""
+    # Look in experiments/gemini_speech/results/
+    candidates = [
+        Path("experiments") / "gemini_speech" / "results" / f"{reel_id}_gemini_audio.json",
+        reel_dir / f"{reel_id}_gemini_audio.json",
+        reel_dir / "manifest_speech_gemini_audio.json",
+    ]
+    for p in candidates:
+        if p.exists():
+            try:
+                with open(p, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+
+                utts = data.get("utterances", [])
+                stats = data.get("stats", {})
+                full_text = data.get("full_text", "")
+
+                formatted_utts = []
+                for idx, u in enumerate(utts, 1):
+                    formatted_utts.append({
+                        "id": idx,
+                        "start_ms": u.get("start_ms", 0),
+                        "end_ms": u.get("end_ms", 0),
+                        "speaker": u.get("speaker", "Speaker"),
+                        "speaker_id": u.get("speaker", "Speaker"),
+                        "text": u.get("text", ""),
+                    })
+
+                norm_text = normalize_text(full_text if full_text else " ".join(u["text"] for u in formatted_utts))
+                words = norm_text.split()
+                unique_speakers = list(set(u["speaker"] for u in formatted_utts))
+
+                model_name = stats.get("model", "gemini-3.5-flash")
+                cost_usd = stats.get("cost_usd", 0.0)
+                cost_str = f"~${cost_usd:.5f}" if cost_usd else "AI Multimodal"
+
+                return {
+                    "available": True,
+                    "provider": "gemini",
+                    "model": model_name,
+                    "cost_tier": f"Gemini Flash ({cost_str})",
+                    "cost_usd": cost_usd,
+                    "latency_sec": stats.get("total_latency_sec", 0.0),
+                    "utterances": formatted_utts,
+                    "full_text": full_text,
+                    "norm_text": norm_text,
+                    "words": words,
+                    "word_count": len(words),
+                    "turns_count": len(formatted_utts),
+                    "unique_speakers": unique_speakers,
+                }
+            except Exception as e:
+                console.print(f"[yellow]Error loading Gemini data for {reel_id}: {e}[/yellow]")
+    return None
+
+
 def collect_reel_bundle(reel_id: str, data_root: str = "data") -> Optional[Dict[str, Any]]:
-    """Gathers and cross-evaluates all 3 lanes (Local, Cloud, Gold) for a single reel."""
+    """Gathers and cross-evaluates all 4 lanes (Local, Cloud, Gemini, Gold) for a single reel."""
     reel_dir = Path(data_root) / "reels" / reel_id
     if not reel_dir.exists():
         return None
@@ -345,6 +402,9 @@ def collect_reel_bundle(reel_id: str, data_root: str = "data") -> Optional[Dict[
     # 3. MLX Whisper (Local)
     mlx = extract_mlx_data(reel_dir)
 
+    # 4. Google Gemini (Multimodal AI)
+    gemini = extract_gemini_data(reel_id, reel_dir)
+
     # Compute comparative metrics vs Gold Standard
     if gold and gold["words"]:
         ref_words = gold["words"]
@@ -360,6 +420,11 @@ def collect_reel_bundle(reel_id: str, data_root: str = "data") -> Optional[Dict[
             mlx["cer"] = compute_cer(ref_norm, mlx["norm_text"])
             mlx["recall"] = round((len(mlx["words"]) / max(1, len(ref_words))) * 100, 1)
 
+        if gemini:
+            gemini["wer"] = compute_wer(ref_words, gemini["words"])
+            gemini["cer"] = compute_cer(ref_norm, gemini["norm_text"])
+            gemini["recall"] = round((len(gemini["words"]) / max(1, len(ref_words))) * 100, 1)
+
     # Relative video URL for browser (served from repository root)
     rel_video_src = f"data/reels/{reel_id}/video.mp4"
 
@@ -372,6 +437,7 @@ def collect_reel_bundle(reel_id: str, data_root: str = "data") -> Optional[Dict[
         "gold": gold,
         "assembly": assembly,
         "mlx": mlx,
+        "gemini": gemini,
     }
 
 
@@ -409,17 +475,24 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       --cloud-accent: #10b981;
       --cloud-bg: rgba(16, 185, 129, 0.08);
       --cloud-border: rgba(16, 185, 129, 0.25);
+      --gemini-accent: #38bdf8;
+      --gemini-bg: rgba(56, 189, 248, 0.08);
+      --gemini-border: rgba(56, 189, 248, 0.25);
       --gold-accent: #f59e0b;
       --gold-bg: rgba(245, 158, 11, 0.08);
       --gold-border: rgba(245, 158, 11, 0.25);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    html, body {
+      height: 100vh;
+      max-height: 100vh;
+      overflow: hidden;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      min-height: 100vh;
+    }
+    body {
       display: flex;
       flex-direction: column;
     }
@@ -429,12 +502,13 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       background: rgba(17, 24, 39, 0.95);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--card-border);
-      padding: 12px 24px;
+      padding: 8px 20px;
+      height: 50px;
+      box-sizing: border-box;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: sticky;
-      top: 0;
+      flex-shrink: 0;
       z-index: 100;
     }
 
@@ -444,7 +518,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       gap: 12px;
     }
     .brand h1 {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       letter-spacing: -0.01em;
     }
@@ -477,7 +551,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       background: #1e293b;
       color: var(--text);
       border: 1px solid var(--card-border);
-      padding: 6px 12px;
+      padding: 5px 10px;
       border-radius: 6px;
       font-size: 13px;
       font-weight: 600;
@@ -491,44 +565,53 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     .verdict-pill {
       font-size: 12px;
       font-weight: 600;
-      padding: 4px 12px;
+      padding: 3px 10px;
       border-radius: 9999px;
       background: rgba(16, 185, 129, 0.15);
       color: #34d399;
       border: 1px solid rgba(16, 185, 129, 0.3);
     }
 
-    /* Main Grid Layout */
+    /* Main Grid Layout - Strictly Fits Viewport */
     .dashboard-layout {
       display: grid;
-      grid-template-columns: 380px 1fr;
-      flex: 1;
-      height: calc(100vh - 61px);
+      grid-template-columns: 370px 1fr;
+      height: calc(100vh - 50px);
+      max-height: calc(100vh - 50px);
       overflow: hidden;
+      flex: 1;
     }
 
     /* Left Dock: Video Player & Media Controls */
     .video-dock {
       background: #0d131f;
       border-right: 1px solid var(--card-border);
-      padding: 20px;
+      padding: 14px 16px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 10px;
+      height: 100%;
+      max-height: 100%;
       overflow-y: auto;
+      box-sizing: border-box;
     }
 
     .video-wrapper {
       position: relative;
       background: #000;
-      border-radius: 12px;
+      border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
       border: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
     video#videoPlayer {
       width: 100%;
-      height: 480px;
+      max-height: calc(100vh - 370px);
+      min-height: 220px;
       object-fit: contain;
       display: block;
       background: #000;
@@ -537,11 +620,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     .playback-controls {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 10px;
-      padding: 12px;
+      padding: 10px 12px;
+      flex-shrink: 0;
     }
 
     .timecode-bar {
@@ -554,20 +638,47 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       color: var(--text);
     }
 
-    .scrubber {
+    .timeline-scrubber-container {
       width: 100%;
-      height: 6px;
-      background: #334155;
-      border-radius: 3px;
-      cursor: pointer;
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 6px 0;
     }
-    .scrubber-fill {
-      height: 100%;
+    .scrubber-slider {
+      width: 100%;
+      height: 8px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: #334155;
+      border-radius: 4px;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .scrubber-slider:hover {
+      height: 10px;
+      background: #475569;
+    }
+    .scrubber-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
       background: #3b82f6;
-      border-radius: 3px;
-      width: 0%;
-      transition: width 0.05s linear;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.9);
+      border: 2px solid #ffffff;
+    }
+    .scrubber-slider::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #3b82f6;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(59, 130, 246, 0.9);
+      border: 2px solid #ffffff;
     }
 
     .btn-row {
@@ -627,10 +738,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     }
     .cast-pill .role { color: var(--text-muted); font-size: 11px; }
 
-    /* Right Arena: 3 Parallel Comparison Columns */
+    /* Right Arena: 4 Parallel Comparison Columns */
     .comparison-arena {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       height: 100%;
       overflow: hidden;
       background: #080c14;
@@ -645,14 +756,15 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     }
     .column:last-child { border-right: none; }
 
-    /* Column Header */
+    /* Column Header - Compact */
     .column-header {
-      padding: 16px;
+      padding: 10px 14px;
       border-bottom: 1px solid var(--card-border);
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 8px;
       background: #0f172a;
+      flex-shrink: 0;
     }
     .col-title-bar {
       display: flex;
@@ -660,171 +772,158 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       align-items: center;
     }
     .col-title {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
     .tier-badge {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
-      padding: 2px 8px;
+      padding: 2px 7px;
       border-radius: 9999px;
     }
 
     .column.local .tier-badge { background: var(--local-bg); color: var(--local-accent); border: 1px solid var(--local-border); }
     .column.cloud .tier-badge { background: var(--cloud-bg); color: var(--cloud-accent); border: 1px solid var(--cloud-border); }
+    .column.gemini .tier-badge { background: var(--gemini-bg); color: var(--gemini-accent); border: 1px solid var(--gemini-border); }
     .column.gold .tier-badge { background: var(--gold-bg); color: var(--gold-accent); border: 1px solid var(--gold-border); }
 
     /* Metrics Scorecard Grid */
     .scorecard-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
+      gap: 5px;
     }
     .metric-card {
       background: #1e293b;
-      padding: 8px;
+      padding: 5px 8px;
       border-radius: 6px;
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 1px;
       text-align: center;
     }
     .metric-label {
-      font-size: 10px;
+      font-size: 9.5px;
       color: var(--text-muted);
       text-transform: uppercase;
       font-weight: 600;
     }
     .metric-value {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
     }
     .metric-value.good { color: #34d399; }
     .metric-value.warn { color: #fbbf24; }
     .metric-value.bad { color: #f87171; }
 
-    /* Live Subtitle & Active Speaker HUD */
-    .live-hud {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--card-border);
-      background: #0b1120;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      min-height: 84px;
-    }
-    .hud-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 11px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-    .hud-speaker-pill {
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .column.local .hud-speaker-pill { background: #3b0764; color: #d8b4fe; }
-    .column.cloud .hud-speaker-pill { background: #064e3b; color: #6ee7b7; }
-    .column.gold .hud-speaker-pill { background: #451a03; color: #fcd34d; }
-
-    .live-text {
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.4;
-      color: #fff;
-    }
-    .live-text.silent {
-      color: #64748b;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 13px;
-    }
-
-    /* Dialogue Transcript Feed */
+    /* Rolling Subtitle Stream - Fixed in Viewport Center */
     .feed-container {
       flex: 1;
+      min-height: 0;
+      height: 100%;
+      max-height: 100%;
       overflow-y: auto;
-      padding: 12px;
+      overflow-x: hidden;
+      padding: calc(50vh - 120px) 16px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 12px;
       scroll-behavior: smooth;
+      position: relative;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
     }
 
     .utterance-card {
-      background: #111827;
-      border: 1px solid var(--card-border);
+      background: transparent;
+      border: none;
       border-radius: 8px;
-      padding: 10px 12px;
+      padding: 8px 12px;
       cursor: pointer;
-      transition: all 0.15s ease;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 4px;
+      opacity: 0.32;
+      transform: scale(0.96);
+      transform-origin: center center;
+      transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+      user-select: none;
     }
     .utterance-card:hover {
-      background: #1e293b;
-      border-color: rgba(255, 255, 255, 0.2);
+      opacity: 0.72;
+      background: rgba(255, 255, 255, 0.03);
     }
     .utterance-card.is-active {
-      transform: translateX(4px);
+      opacity: 1;
+      transform: scale(1.04);
+      padding: 12px 14px;
+      margin: 4px 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
     }
     .column.local .utterance-card.is-active {
-      background: var(--local-bg);
-      border-color: var(--local-accent);
-      box-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
+      background: linear-gradient(90deg, rgba(168, 85, 247, 0.16) 0%, rgba(168, 85, 247, 0.02) 100%);
+      border-left: 3px solid var(--local-accent);
     }
     .column.cloud .utterance-card.is-active {
-      background: var(--cloud-bg);
-      border-color: var(--cloud-accent);
-      box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+      background: linear-gradient(90deg, rgba(16, 185, 129, 0.16) 0%, rgba(16, 185, 129, 0.02) 100%);
+      border-left: 3px solid var(--cloud-accent);
+    }
+    .column.gemini .utterance-card.is-active {
+      background: linear-gradient(90deg, rgba(56, 189, 248, 0.16) 0%, rgba(56, 189, 248, 0.02) 100%);
+      border-left: 3px solid var(--gemini-accent);
     }
     .column.gold .utterance-card.is-active {
-      background: var(--gold-bg);
-      border-color: var(--gold-accent);
-      box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0.02) 100%);
+      border-left: 3px solid var(--gold-accent);
     }
 
     .card-top {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 8px;
       font-size: 11px;
     }
     .card-time {
       font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
       color: var(--text-muted);
-      font-weight: 600;
+      font-weight: 500;
+      font-size: 11px;
     }
     .card-speaker {
       font-weight: 700;
-      padding: 2px 6px;
+      padding: 2px 7px;
       border-radius: 4px;
       font-size: 11px;
+      letter-spacing: 0.02em;
     }
+    .column.local .card-speaker { background: #3b0764; color: #e9d5ff; }
+    .column.cloud .card-speaker { background: #064e3b; color: #a7f3d0; }
+    .column.gemini .card-speaker { background: #0c4a6e; color: #bae6fd; }
+    .column.gold .card-speaker { background: #451a03; color: #fde68a; }
+
     .card-edit-type {
       font-size: 10px;
-      padding: 1px 5px;
+      padding: 1px 6px;
       border-radius: 3px;
-      background: #334155;
-      color: #cbd5e1;
+      background: #1e293b;
+      color: #94a3b8;
     }
 
     .card-body {
-      font-size: 13px;
-      line-height: 1.4;
-      color: #e2e8f0;
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: #94a3b8;
+      transition: color 0.2s, font-size 0.2s;
+    }
+    .utterance-card.is-active .card-body {
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.45;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
     }
 
     .empty-state {
@@ -859,7 +958,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <!-- Left Dock: Video Player & Media Controls -->
     <div class="video-dock">
       <div class="video-wrapper">
-        <video id="videoPlayer" playsinline preload="auto"></video>
+        <video id="videoPlayer" controls playsinline preload="auto"></video>
       </div>
 
       <div class="playback-controls">
@@ -867,8 +966,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           <span id="currentTimeDisplay">00:00.00</span>
           <span id="durationDisplay">00:00.00</span>
         </div>
-        <div class="scrubber" id="scrubber" onclick="seekByScrubber(event)">
-          <div class="scrubber-fill" id="scrubberFill"></div>
+        <div class="timeline-scrubber-container">
+          <input type="range" id="timelineSlider" class="scrubber-slider" min="0" max="100" step="0.05" value="0" oninput="onSliderInput(this.value)" onchange="onSliderChange(this.value)">
         </div>
 
         <div class="btn-row">
@@ -885,7 +984,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
         <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 12px; color: var(--text-muted);">
           <input type="checkbox" id="autoScrollCheck" checked>
-          <label for="autoScrollCheck">Auto-scroll transcripts to playhead</label>
+          <label for="autoScrollCheck">Auto-scroll rolling subtitles to center</label>
         </div>
       </div>
 
@@ -950,14 +1049,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           </div>
         </div>
 
-        <div class="live-hud">
-          <div class="hud-header">
-            <span>Live Subtitle</span>
-            <span class="hud-speaker-pill" id="localHudSpeaker">No Active Speech</span>
-          </div>
-          <div class="live-text silent" id="localHudText">— Silence / No Speech —</div>
-        </div>
-
         <div class="feed-container" id="localFeed"></div>
       </div>
 
@@ -996,18 +1087,48 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           </div>
         </div>
 
-        <div class="live-hud">
-          <div class="hud-header">
-            <span>Live Subtitle</span>
-            <span class="hud-speaker-pill" id="cloudHudSpeaker">No Active Speech</span>
-          </div>
-          <div class="live-text silent" id="cloudHudText">— Silence / No Speech —</div>
-        </div>
-
         <div class="feed-container" id="cloudFeed"></div>
       </div>
 
-      <!-- Lane 3: Gold Standard -->
+      <!-- Lane 3: Gemini Flash Multimodal AI -->
+      <div class="column gemini" id="colGemini">
+        <div class="column-header">
+          <div class="col-title-bar">
+            <span class="col-title">✨ Gemini Flash</span>
+            <span class="tier-badge">AI Multimodal • ~$0.0006</span>
+          </div>
+          <div class="scorecard-grid">
+            <div class="metric-card">
+              <span class="metric-label">WER vs Gold</span>
+              <span class="metric-value" id="geminiWer">--</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">CER vs Gold</span>
+              <span class="metric-value" id="geminiCer">--</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Recall</span>
+              <span class="metric-value" id="geminiRecall">--</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Words</span>
+              <span class="metric-value" id="geminiWords">--</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Turns</span>
+              <span class="metric-value" id="geminiTurns">--</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Speakers</span>
+              <span class="metric-value" id="geminiSpeakers">--</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="feed-container" id="geminiFeed"></div>
+      </div>
+
+      <!-- Lane 4: Gold Standard -->
       <div class="column gold" id="colGold">
         <div class="column-header">
           <div class="col-title-bar">
@@ -1042,14 +1163,6 @@ HTML_TEMPLATE = """<!DOCTYPE html>
           </div>
         </div>
 
-        <div class="live-hud">
-          <div class="hud-header">
-            <span>Live Subtitle</span>
-            <span class="hud-speaker-pill" id="goldHudSpeaker">No Active Speech</span>
-          </div>
-          <div class="live-text silent" id="goldHudText">— Silence / No Speech —</div>
-        </div>
-
         <div class="feed-container" id="goldFeed"></div>
       </div>
 
@@ -1064,7 +1177,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     const playBtn = document.getElementById("playBtn");
     const currentTimeDisplay = document.getElementById("currentTimeDisplay");
     const durationDisplay = document.getElementById("durationDisplay");
-    const scrubberFill = document.getElementById("scrubberFill");
+    const timelineSlider = document.getElementById("timelineSlider");
+    let isDraggingSlider = false;
     const autoScrollCheck = document.getElementById("autoScrollCheck");
 
     // Initialize Dropdown
@@ -1103,25 +1217,27 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       castList.innerHTML = "";
       if (data.gold && data.gold.cast && data.gold.cast.length > 0) {
         data.gold.cast.forEach(c => {
-          const pill = document.createElement("div");
-          pill.className = "cast-pill";
-          pill.innerHTML = "<strong>" + (c.name_or_role || c.speaker_id) + "</strong><span class=\"role\">" + (c.visual_description || "") + "</span>";
+          const pill = document.createElement('div');
+          pill.className = 'cast-pill';
+          const nameStr = c.name_or_role || c.speaker_id || '';
+          const descStr = c.visual_description || '';
+          pill.innerHTML = '<strong>' + nameStr + '</strong><span class="role">' + descStr + '</span>';
           castList.appendChild(pill);
         });
       } else {
-        castList.innerHTML = "<span style=\"color:#64748b; font-style:italic;\">No cast metadata</span>";
+        castList.innerHTML = '<span style="color:#64748b; font-style:italic;">No cast metadata</span>';
       }
 
       // Update Verdict Pill
       const verdict = document.getElementById("verdictPill");
-      if (data.assembly && data.mlx && data.assembly.wer !== undefined && data.mlx.wer !== undefined) {
-        if (data.assembly.wer <= data.mlx.wer) {
-          verdict.innerText = "🏆 Best ASR: AssemblyAI Cloud (WER " + data.assembly.wer + "%)";
-        } else {
-          verdict.innerText = "🏆 Best ASR: Local MLX Whisper (WER " + data.mlx.wer + "%)";
-        }
-      } else if (data.assembly && data.assembly.wer !== undefined) {
-        verdict.innerText = "AssemblyAI WER: " + data.assembly.wer + "%";
+      const engines = [];
+      if (data.assembly && data.assembly.wer !== undefined) engines.push({ name: "AssemblyAI Cloud", wer: data.assembly.wer });
+      if (data.mlx && data.mlx.wer !== undefined) engines.push({ name: "Local MLX Whisper", wer: data.mlx.wer });
+      if (data.gemini && data.gemini.wer !== undefined) engines.push({ name: "Gemini Flash AI", wer: data.gemini.wer });
+
+      if (engines.length > 0) {
+        engines.sort((a, b) => a.wer - b.wer);
+        verdict.innerText = "🏆 Best ASR: " + engines[0].name + " (WER " + engines[0].wer + "%)";
       } else {
         verdict.innerText = "Awaiting Multi-Engine Data";
       }
@@ -1129,6 +1245,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
       // Render Lanes
       renderLane("local", data.mlx, data.duration_sec);
       renderLane("cloud", data.assembly, data.duration_sec);
+      renderLane("gemini", data.gemini, data.duration_sec);
       renderLane("gold", data.gold, data.duration_sec);
     }
 
@@ -1150,7 +1267,7 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         if (wordsEl) wordsEl.innerText = "--";
         if (turnsEl) turnsEl.innerText = "--";
         if (speakersEl) speakersEl.innerText = "--";
-        feed.innerHTML = "<div class=\"empty-state\">Manifest not computed yet for this reel.</div>";
+        feed.innerHTML = '<div class="empty-state">Manifest not computed yet for this reel.</div>';
         return;
       }
 
@@ -1175,7 +1292,10 @@ HTML_TEMPLATE = """<!DOCTYPE html>
         card.className = "utterance-card";
         card.dataset.start = u.start_ms;
         card.dataset.end = u.end_ms;
-        card.onclick = () => seekTo(u.start_ms);
+        card.onclick = () => {
+          seekTo(u.start_ms);
+          centerCardInFeed(feed, card);
+        };
 
         const cardTop = document.createElement("div");
         cardTop.className = "card-top";
@@ -1209,84 +1329,104 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
     // Video Playback Synchronizer
     video.ontimeupdate = updatePlayhead;
+    video.onseeking = updatePlayhead;
+    video.onseeked = updatePlayhead;
     video.onloadedmetadata = () => {
       durationDisplay.innerText = formatTime(video.duration);
     };
+    video.onplay = () => { playBtn.innerText = "Pause ❚❚"; };
+    video.onpause = () => { playBtn.innerText = "Play ▶"; };
 
     function updatePlayhead() {
       const cur = video.currentTime;
       const dur = video.duration || 1;
       currentTimeDisplay.innerText = formatTime(cur);
-      scrubberFill.style.width = ((cur / dur) * 100) + "%";
+      if (timelineSlider && !isDraggingSlider) {
+        timelineSlider.value = (cur / dur) * 100;
+      }
 
       const currentMs = cur * 1000;
       updateLaneHUD("local", currentMs);
       updateLaneHUD("cloud", currentMs);
+      updateLaneHUD("gemini", currentMs);
       updateLaneHUD("gold", currentMs);
+    }
+
+    function onSliderInput(val) {
+      isDraggingSlider = true;
+      if (video.duration) {
+        video.currentTime = (parseFloat(val) / 100) * video.duration;
+        updatePlayhead();
+      }
+    }
+
+    function onSliderChange(val) {
+      isDraggingSlider = false;
+      if (video.duration) {
+        video.currentTime = (parseFloat(val) / 100) * video.duration;
+        updatePlayhead();
+      }
+    }
+
+    function centerCardInFeed(feed, card, smooth = true) {
+      if (!feed || !card) return;
+      const feedRect = feed.getBoundingClientRect();
+      const cardRect = card.getBoundingClientRect();
+      const currentScroll = feed.scrollTop;
+      const relativeTop = cardRect.top - feedRect.top;
+      const targetScroll = currentScroll + relativeTop - (feed.clientHeight / 2) + (card.clientHeight / 2);
+      feed.scrollTo({
+        top: Math.max(0, targetScroll),
+        behavior: smooth ? "smooth" : "auto"
+      });
     }
 
     function updateLaneHUD(laneType, currentMs) {
       const feed = document.getElementById(laneType + "Feed");
-      const speakerEl = document.getElementById(laneType + "HudSpeaker");
-      const textEl = document.getElementById(laneType + "HudText");
-
+      if (!feed) return;
       const cards = feed.querySelectorAll(".utterance-card");
-      let activeCard = null;
 
       cards.forEach(card => {
         const start = parseFloat(card.dataset.start);
         const end = parseFloat(card.dataset.end);
         if (currentMs >= start && currentMs <= end) {
-          activeCard = card;
           if (!card.classList.contains("is-active")) {
             card.classList.add("is-active");
-            if (autoScrollCheck.checked) {
-              card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            if (autoScrollCheck && autoScrollCheck.checked) {
+              centerCardInFeed(feed, card);
             }
           }
         } else {
           card.classList.remove("is-active");
         }
       });
-
-      if (activeCard) {
-        const spk = activeCard.querySelector(".card-speaker").innerText;
-        const txt = activeCard.querySelector(".card-body").innerText;
-        speakerEl.innerText = "🗣️ " + spk;
-        textEl.innerText = txt;
-        textEl.className = "live-text";
-      } else {
-        speakerEl.innerText = "No Active Speech";
-        textEl.innerText = "— Silence / No Speech —";
-        textEl.className = "live-text silent";
-      }
     }
 
     function togglePlay() {
       if (video.paused) {
         video.play();
-        playBtn.innerText = "Pause ❚❚";
       } else {
         video.pause();
-        playBtn.innerText = "Play ▶";
       }
     }
 
     function skip(sec) {
       video.currentTime = Math.max(0, Math.min(video.duration || 100, video.currentTime + sec));
+      updatePlayhead();
     }
 
     function seekTo(ms) {
-      video.currentTime = ms / 1000;
-      video.play();
-      playBtn.innerText = "Pause ❚❚";
-    }
-
-    function seekByScrubber(e) {
-      const scrubber = document.getElementById("scrubber");
-      const rect = scrubber.getBoundingClientRect();
-      const pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-      video.currentTime = pct * (video.duration || 0);
+      const targetSec = Math.max(0, ms / 1000);
+      video.currentTime = targetSec;
+      updatePlayhead();
+      const p = video.play();
+      if (p !== undefined) {
+        p.then(() => {
+          playBtn.innerText = "Pause ❚❚";
+        }).catch(err => {
+          console.warn("Auto-play error:", err);
+        });
+      }
     }
 
     function setSpeed(rate) {
@@ -1342,12 +1482,91 @@ def generate_dashboard(initial_reel_id: Optional[str] = None, data_root: str = "
     return out_path
 
 
+class _RangeFileWrapper:
+    """Limits reading to a specific byte slice for HTTP 206 Partial Content responses."""
+
+    def __init__(self, file_obj, length: int):
+        self.file_obj = file_obj
+        self.remaining = length
+
+    def read(self, size: int = -1) -> bytes:
+        if self.remaining <= 0:
+            return b""
+        if size < 0 or size > self.remaining:
+            size = self.remaining
+        data = self.file_obj.read(size)
+        self.remaining -= len(data)
+        return data
+
+    def close(self):
+        self.file_obj.close()
+
+
+class RangeHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
+    """SimpleHTTPRequestHandler with HTTP 206 Partial Content (Range requests) support.
+    
+    Essential for HTML5 video seeking: browsers send `Range: bytes=start-end` when scrubbing
+    or jumping to a timestamp. Without 206 Partial Content, browsers reset playback to 0:00.
+    """
+
+    def end_headers(self):
+        self.send_header("Accept-Ranges", "bytes")
+        super().end_headers()
+
+    def send_head(self):
+        path = self.translate_path(self.path)
+        if os.path.isdir(path):
+            return super().send_head()
+
+        ctype = self.guess_type(path)
+        try:
+            f = open(path, "rb")
+        except OSError:
+            self.send_error(404, "File not found")
+            return None
+
+        try:
+            fs = os.fstat(f.fileno())
+            total = fs.st_size
+            range_header = self.headers.get("Range")
+
+            if range_header and range_header.startswith("bytes="):
+                ranges = range_header[6:].strip().split("-")
+                start = int(ranges[0]) if ranges[0] else 0
+                end = int(ranges[1]) if (len(ranges) > 1 and ranges[1]) else total - 1
+                if start >= total:
+                    self.send_error(416, "Requested Range Not Satisfiable")
+                    f.close()
+                    return None
+                end = min(end, total - 1)
+                length = end - start + 1
+
+                self.send_response(206, "Partial Content")
+                self.send_header("Content-Type", ctype)
+                self.send_header("Content-Range", f"bytes {start}-{end}/{total}")
+                self.send_header("Content-Length", str(length))
+                self.send_header("Last-Modified", self.date_time_string(fs.st_mtime))
+                self.end_headers()
+                f.seek(start)
+                return _RangeFileWrapper(f, length)
+
+            self.send_response(200)
+            self.send_header("Content-Type", ctype)
+            self.send_header("Content-Length", str(total))
+            self.send_header("Last-Modified", self.date_time_string(fs.st_mtime))
+            self.end_headers()
+            return f
+        except Exception:
+            f.close()
+            raise
+
+
 def start_server_and_open(initial_reel_id: Optional[str] = None, port: int = 8000, auto_open: bool = True):
     """Generates dashboard.html and starts a local HTTP server with Range-request support for video seeking."""
     out_path = generate_dashboard(initial_reel_id=initial_reel_id)
 
-    # Use standard HTTP server handler
-    handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(Path(".").resolve()))
+    # Use RangeHTTPRequestHandler for HTTP 206 Partial Content (smooth video seeking)
+    handler = functools.partial(RangeHTTPRequestHandler, directory=str(Path(".").resolve()))
 
     # Find open port if 8000 is occupied
     actual_port = port

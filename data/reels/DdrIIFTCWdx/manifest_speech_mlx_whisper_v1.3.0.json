@@ -1,0 +1,2001 @@
+{
+  "capability": "speech",
+  "provider_name": "mlx_whisper",
+  "provider_version": "1.3.0",
+  "events": [
+    {
+      "track": "speech",
+      "start_ms": 1000,
+      "end_ms": 4300,
+      "type": "utterance",
+      "payload": {
+        "text": "समय समय",
+        "raw_text": "समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.964,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 1000,
+      "end_ms": 2560,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.177,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 2560,
+      "end_ms": 4300,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.342,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8879,
+      "end_ms": 10920,
+      "type": "utterance",
+      "payload": {
+        "text": "समय समय",
+        "raw_text": "समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.963,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 8879,
+      "end_ms": 10280,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.215,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 10280,
+      "end_ms": 10920,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.347,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20020,
+      "end_ms": 21420,
+      "type": "utterance",
+      "payload": {
+        "text": "समय",
+        "raw_text": "समय",
+        "language": "hi"
+      },
+      "confidence": 0.963,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 20020,
+      "end_ms": 21420,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.675,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 22940,
+      "end_ms": 31860,
+      "type": "utterance",
+      "payload": {
+        "text": "मैंको कहती है कि मैंको महलत समय",
+        "raw_text": "मैंको कहती है कि मैंको महलत महलत महलत महलत महलत महलत महलत महलत महलत महलत महलत महलत महलत महलत समय",
+        "language": "hi"
+      },
+      "confidence": 0.977,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 22940,
+      "end_ms": 23420,
+      "type": "word",
+      "payload": {
+        "text": "मैंको",
+        "raw": "मैंको"
+      },
+      "confidence": 0.333,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23420,
+      "end_ms": 23620,
+      "type": "word",
+      "payload": {
+        "text": "कहती",
+        "raw": "कहती"
+      },
+      "confidence": 0.214,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23620,
+      "end_ms": 23860,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है"
+      },
+      "confidence": 0.685,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 23860,
+      "end_ms": 24000,
+      "type": "word",
+      "payload": {
+        "text": "कि",
+        "raw": "कि"
+      },
+      "confidence": 0.76,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 24000,
+      "end_ms": 24340,
+      "type": "word",
+      "payload": {
+        "text": "मैंको",
+        "raw": "मैंको"
+      },
+      "confidence": 0.423,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 24340,
+      "end_ms": 24460,
+      "type": "word",
+      "payload": {
+        "text": "महलत",
+        "raw": "महलत"
+      },
+      "confidence": 0.035,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 24460,
+      "end_ms": 24680,
+      "type": "word",
+      "payload": {
+        "text": "महलत",
+        "raw": "महलत"
+      },
+      "confidence": 0.328,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 27700,
+      "end_ms": 31860,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.217,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31860,
+      "end_ms": 45400,
+      "type": "utterance",
+      "payload": {
+        "text": "महलत समय",
+        "raw_text": "महलत समय",
+        "language": "hi"
+      },
+      "confidence": 0.977,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 31860,
+      "end_ms": 32020,
+      "type": "word",
+      "payload": {
+        "text": "महलत",
+        "raw": "महलत"
+      },
+      "confidence": 0.729,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 32020,
+      "end_ms": 45400,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.72,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45980,
+      "end_ms": 46460,
+      "type": "utterance",
+      "payload": {
+        "text": "समय",
+        "raw_text": "समय",
+        "language": "hi"
+      },
+      "confidence": 0.977,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 45980,
+      "end_ms": 46460,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.665,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49180,
+      "end_ms": 49660,
+      "type": "utterance",
+      "payload": {
+        "text": "समय",
+        "raw_text": "समय",
+        "language": "hi"
+      },
+      "confidence": 0.977,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49180,
+      "end_ms": 49660,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.807,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49660,
+      "end_ms": 53880,
+      "type": "utterance",
+      "payload": {
+        "text": "मैं टोस्टर महसूस समय",
+        "raw_text": "मैं टोस्टर महसूस महसूस महसूस समय समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.97,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 49660,
+      "end_ms": 50520,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं"
+      },
+      "confidence": 0.611,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 50520,
+      "end_ms": 51100,
+      "type": "word",
+      "payload": {
+        "text": "टोस्टर",
+        "raw": "टोस्टर"
+      },
+      "confidence": 0.864,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 51100,
+      "end_ms": 51800,
+      "type": "word",
+      "payload": {
+        "text": "महसूस",
+        "raw": "महसूस"
+      },
+      "confidence": 0.49,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 51800,
+      "end_ms": 52100,
+      "type": "word",
+      "payload": {
+        "text": "महसूस",
+        "raw": "महसूस"
+      },
+      "confidence": 0.583,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 52640,
+      "end_ms": 52940,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.204,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 52940,
+      "end_ms": 53820,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.491,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 53880,
+      "end_ms": 64860,
+      "type": "utterance",
+      "payload": {
+        "text": "मैं हमको महसूस समय समय",
+        "raw_text": "मैं हमको महसूस समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.97,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 53880,
+      "end_ms": 54240,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं"
+      },
+      "confidence": 0.385,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 54240,
+      "end_ms": 62080,
+      "type": "word",
+      "payload": {
+        "text": "हमको",
+        "raw": "हमको"
+      },
+      "confidence": 0.152,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 62080,
+      "end_ms": 64300,
+      "type": "word",
+      "payload": {
+        "text": "महसूस",
+        "raw": "महसूस"
+      },
+      "confidence": 0.677,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 64300,
+      "end_ms": 64480,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.655,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 64480,
+      "end_ms": 64860,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.757,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 64860,
+      "end_ms": 65920,
+      "type": "utterance",
+      "payload": {
+        "text": "समय",
+        "raw_text": "समय",
+        "language": "hi"
+      },
+      "confidence": 0.97,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 64860,
+      "end_ms": 65920,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.753,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 65920,
+      "end_ms": 67100,
+      "type": "utterance",
+      "payload": {
+        "text": "समय",
+        "raw_text": "समय",
+        "language": "hi"
+      },
+      "confidence": 0.97,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 65920,
+      "end_ms": 67100,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.754,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 67100,
+      "end_ms": 69220,
+      "type": "utterance",
+      "payload": {
+        "text": "समय",
+        "raw_text": "समय समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.931,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 67100,
+      "end_ms": 67660,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.28,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 67660,
+      "end_ms": 67840,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.375,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 70220,
+      "end_ms": 70380,
+      "type": "utterance",
+      "payload": {
+        "text": "समय समय",
+        "raw_text": "समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.876,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 70220,
+      "end_ms": 70260,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.228,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 70260,
+      "end_ms": 70380,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.364,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 74619,
+      "end_ms": 78020,
+      "type": "utterance",
+      "payload": {
+        "text": "सनसकस समय समय",
+        "raw_text": "सनसकस समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.959,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 74619,
+      "end_ms": 76020,
+      "type": "word",
+      "payload": {
+        "text": "सनसकस",
+        "raw": "सनसकस"
+      },
+      "confidence": 0.019,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 76020,
+      "end_ms": 77180,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.196,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 77180,
+      "end_ms": 78020,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.384,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 98799,
+      "end_ms": 101600,
+      "type": "utterance",
+      "payload": {
+        "text": "समय समय",
+        "raw_text": "समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.88,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 98799,
+      "end_ms": 100199,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.162,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 100199,
+      "end_ms": 101600,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.369,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 104520,
+      "end_ms": 105240,
+      "type": "utterance",
+      "payload": {
+        "text": "समय समय",
+        "raw_text": "समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.931,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 104520,
+      "end_ms": 104720,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.154,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 104720,
+      "end_ms": 105240,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.2,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 108640,
+      "end_ms": 115180,
+      "type": "utterance",
+      "payload": {
+        "text": "समय मैंकल महमल समय",
+        "raw_text": "समय मैंकल महमल समय समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.856,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 108640,
+      "end_ms": 110040,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.268,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 110040,
+      "end_ms": 110500,
+      "type": "word",
+      "payload": {
+        "text": "मैंकल",
+        "raw": "मैंकल"
+      },
+      "confidence": 0.222,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 110500,
+      "end_ms": 113220,
+      "type": "word",
+      "payload": {
+        "text": "महमल",
+        "raw": "महमल"
+      },
+      "confidence": 0.08,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 113220,
+      "end_ms": 113560,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.454,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 113560,
+      "end_ms": 114140,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.589,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 118600,
+      "end_ms": 120000,
+      "type": "utterance",
+      "payload": {
+        "text": "सब्सक्राइब",
+        "raw_text": "सब्सक्राइब",
+        "language": "hi"
+      },
+      "confidence": 0.865,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 118600,
+      "end_ms": 120000,
+      "type": "word",
+      "payload": {
+        "text": "सब्सक्राइब",
+        "raw": "सब्सक्राइब"
+      },
+      "confidence": 0.784,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 120000,
+      "end_ms": 120620,
+      "type": "utterance",
+      "payload": {
+        "text": "सब्सक्राइब",
+        "raw_text": "सब्सक्राइब",
+        "language": "hi"
+      },
+      "confidence": 0.865,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 120000,
+      "end_ms": 120620,
+      "type": "word",
+      "payload": {
+        "text": "सब्सक्राइब",
+        "raw": "सब्सक्राइब"
+      },
+      "confidence": 0.905,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 128259,
+      "end_ms": 130479,
+      "type": "utterance",
+      "payload": {
+        "text": "समय समय",
+        "raw_text": "समय समय",
+        "language": "hi"
+      },
+      "confidence": 0.867,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 128259,
+      "end_ms": 129660,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.214,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 129660,
+      "end_ms": 130479,
+      "type": "word",
+      "payload": {
+        "text": "समय",
+        "raw": "समय"
+      },
+      "confidence": 0.353,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 131940,
+      "end_ms": 144100,
+      "type": "utterance",
+      "payload": {
+        "text": "विस्की के वाइन के वो शैंपेन के मुझे कब देता भाई तू कब देता मुझे यह देख लेना तू यह कितना मजबूत है है तुमने आए बाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा है",
+        "raw_text": "विस्की के वाइन के वो शैंपेन के मुझे कब देता भाई तू कब देता मुझे यह देख लेना तू यह कितना मजबूत है है तुमने आए बाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा है",
+        "language": "hi"
+      },
+      "confidence": 0.816,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 131940,
+      "end_ms": 132400,
+      "type": "word",
+      "payload": {
+        "text": "विस्की",
+        "raw": "विस्की"
+      },
+      "confidence": 0.694,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 132400,
+      "end_ms": 132620,
+      "type": "word",
+      "payload": {
+        "text": "के",
+        "raw": "के"
+      },
+      "confidence": 0.397,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 132620,
+      "end_ms": 132940,
+      "type": "word",
+      "payload": {
+        "text": "वाइन",
+        "raw": "वाइन"
+      },
+      "confidence": 0.811,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 132940,
+      "end_ms": 133200,
+      "type": "word",
+      "payload": {
+        "text": "के",
+        "raw": "के"
+      },
+      "confidence": 0.819,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 133200,
+      "end_ms": 133340,
+      "type": "word",
+      "payload": {
+        "text": "वो",
+        "raw": "वो"
+      },
+      "confidence": 0.647,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 133340,
+      "end_ms": 134160,
+      "type": "word",
+      "payload": {
+        "text": "शैंपेन",
+        "raw": "शैंपेन"
+      },
+      "confidence": 0.671,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 134160,
+      "end_ms": 134440,
+      "type": "word",
+      "payload": {
+        "text": "के",
+        "raw": "के"
+      },
+      "confidence": 0.937,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 134440,
+      "end_ms": 134900,
+      "type": "word",
+      "payload": {
+        "text": "मुझे",
+        "raw": "मुझे"
+      },
+      "confidence": 0.88,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 134900,
+      "end_ms": 135140,
+      "type": "word",
+      "payload": {
+        "text": "कब",
+        "raw": "कब"
+      },
+      "confidence": 0.945,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 135140,
+      "end_ms": 135360,
+      "type": "word",
+      "payload": {
+        "text": "देता",
+        "raw": "देता"
+      },
+      "confidence": 0.988,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 135360,
+      "end_ms": 135540,
+      "type": "word",
+      "payload": {
+        "text": "भाई",
+        "raw": "भाई"
+      },
+      "confidence": 0.759,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 135540,
+      "end_ms": 135740,
+      "type": "word",
+      "payload": {
+        "text": "तू",
+        "raw": "तू"
+      },
+      "confidence": 0.913,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 135740,
+      "end_ms": 136380,
+      "type": "word",
+      "payload": {
+        "text": "कब",
+        "raw": "कब"
+      },
+      "confidence": 0.807,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 136380,
+      "end_ms": 136600,
+      "type": "word",
+      "payload": {
+        "text": "देता",
+        "raw": "देता"
+      },
+      "confidence": 0.995,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 136600,
+      "end_ms": 136800,
+      "type": "word",
+      "payload": {
+        "text": "मुझे",
+        "raw": "मुझे"
+      },
+      "confidence": 0.983,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 136800,
+      "end_ms": 137120,
+      "type": "word",
+      "payload": {
+        "text": "यह",
+        "raw": "यह"
+      },
+      "confidence": 0.613,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 137120,
+      "end_ms": 137660,
+      "type": "word",
+      "payload": {
+        "text": "देख",
+        "raw": "देख"
+      },
+      "confidence": 0.812,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 137660,
+      "end_ms": 138800,
+      "type": "word",
+      "payload": {
+        "text": "लेना",
+        "raw": "लेना"
+      },
+      "confidence": 0.772,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 138800,
+      "end_ms": 138980,
+      "type": "word",
+      "payload": {
+        "text": "तू",
+        "raw": "तू"
+      },
+      "confidence": 0.97,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 138980,
+      "end_ms": 139220,
+      "type": "word",
+      "payload": {
+        "text": "यह",
+        "raw": "यह"
+      },
+      "confidence": 0.896,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 139220,
+      "end_ms": 139480,
+      "type": "word",
+      "payload": {
+        "text": "कितना",
+        "raw": "कितना"
+      },
+      "confidence": 0.87,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 139480,
+      "end_ms": 139820,
+      "type": "word",
+      "payload": {
+        "text": "मजबूत",
+        "raw": "मजबूत"
+      },
+      "confidence": 0.936,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 139820,
+      "end_ms": 140080,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है"
+      },
+      "confidence": 0.994,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 140080,
+      "end_ms": 140560,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है"
+      },
+      "confidence": 0.417,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 140560,
+      "end_ms": 140920,
+      "type": "word",
+      "payload": {
+        "text": "तुमने",
+        "raw": "तुमने"
+      },
+      "confidence": 0.917,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 140920,
+      "end_ms": 141100,
+      "type": "word",
+      "payload": {
+        "text": "आए",
+        "raw": "आए"
+      },
+      "confidence": 0.479,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 141100,
+      "end_ms": 141280,
+      "type": "word",
+      "payload": {
+        "text": "बाई",
+        "raw": "बाई"
+      },
+      "confidence": 0.755,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 141280,
+      "end_ms": 141520,
+      "type": "word",
+      "payload": {
+        "text": "चीनी",
+        "raw": "चीनी"
+      },
+      "confidence": 0.97,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 141520,
+      "end_ms": 141700,
+      "type": "word",
+      "payload": {
+        "text": "चाय",
+        "raw": "चाय"
+      },
+      "confidence": 0.847,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 141700,
+      "end_ms": 142020,
+      "type": "word",
+      "payload": {
+        "text": "पत्ती",
+        "raw": "पत्ती"
+      },
+      "confidence": 0.919,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142020,
+      "end_ms": 142160,
+      "type": "word",
+      "payload": {
+        "text": "रखने",
+        "raw": "रखने"
+      },
+      "confidence": 0.994,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142160,
+      "end_ms": 142340,
+      "type": "word",
+      "payload": {
+        "text": "के",
+        "raw": "के"
+      },
+      "confidence": 0.995,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142340,
+      "end_ms": 142360,
+      "type": "word",
+      "payload": {
+        "text": "लिए",
+        "raw": "लिए"
+      },
+      "confidence": 0.999,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142360,
+      "end_ms": 142520,
+      "type": "word",
+      "payload": {
+        "text": "अलग",
+        "raw": "अलग"
+      },
+      "confidence": 0.981,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142520,
+      "end_ms": 142680,
+      "type": "word",
+      "payload": {
+        "text": "से",
+        "raw": "से"
+      },
+      "confidence": 0.944,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142680,
+      "end_ms": 142900,
+      "type": "word",
+      "payload": {
+        "text": "कांच",
+        "raw": "कांच"
+      },
+      "confidence": 0.939,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 142900,
+      "end_ms": 143060,
+      "type": "word",
+      "payload": {
+        "text": "का",
+        "raw": "का"
+      },
+      "confidence": 0.97,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143060,
+      "end_ms": 143300,
+      "type": "word",
+      "payload": {
+        "text": "शटर",
+        "raw": "शटर"
+      },
+      "confidence": 0.871,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143300,
+      "end_ms": 143500,
+      "type": "word",
+      "payload": {
+        "text": "वाला",
+        "raw": "वाला"
+      },
+      "confidence": 0.984,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143500,
+      "end_ms": 143680,
+      "type": "word",
+      "payload": {
+        "text": "बना",
+        "raw": "बना"
+      },
+      "confidence": 0.981,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143680,
+      "end_ms": 143940,
+      "type": "word",
+      "payload": {
+        "text": "रखा",
+        "raw": "रखा"
+      },
+      "confidence": 0.952,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 143940,
+      "end_ms": 144100,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है"
+      },
+      "confidence": 0.965,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 151720,
+      "end_ms": 153080,
+      "type": "utterance",
+      "payload": {
+        "text": "चलो कॉफी ठंडी हो रही है",
+        "raw_text": "चलो कॉफी ठंडी हो रही है",
+        "language": "hi"
+      },
+      "confidence": 0.81,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 151720,
+      "end_ms": 152120,
+      "type": "word",
+      "payload": {
+        "text": "चलो",
+        "raw": "चलो"
+      },
+      "confidence": 0.509,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 152120,
+      "end_ms": 152520,
+      "type": "word",
+      "payload": {
+        "text": "कॉफी",
+        "raw": "कॉफी"
+      },
+      "confidence": 0.847,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 152520,
+      "end_ms": 152820,
+      "type": "word",
+      "payload": {
+        "text": "ठंडी",
+        "raw": "ठंडी"
+      },
+      "confidence": 0.931,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 152820,
+      "end_ms": 152960,
+      "type": "word",
+      "payload": {
+        "text": "हो",
+        "raw": "हो"
+      },
+      "confidence": 0.979,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 152960,
+      "end_ms": 153040,
+      "type": "word",
+      "payload": {
+        "text": "रही",
+        "raw": "रही"
+      },
+      "confidence": 0.982,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 153040,
+      "end_ms": 153080,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है"
+      },
+      "confidence": 0.675,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 153080,
+      "end_ms": 157080,
+      "type": "utterance",
+      "payload": {
+        "text": "मैं कांच में पीने की आदत नहीं है",
+        "raw_text": "मैं कांच में पीने की आदत नहीं है",
+        "language": "hi"
+      },
+      "confidence": 0.81,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 153080,
+      "end_ms": 153860,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं"
+      },
+      "confidence": 0.419,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 153860,
+      "end_ms": 156180,
+      "type": "word",
+      "payload": {
+        "text": "कांच",
+        "raw": "कांच"
+      },
+      "confidence": 0.706,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 156180,
+      "end_ms": 156340,
+      "type": "word",
+      "payload": {
+        "text": "में",
+        "raw": "में"
+      },
+      "confidence": 0.953,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 156340,
+      "end_ms": 156480,
+      "type": "word",
+      "payload": {
+        "text": "पीने",
+        "raw": "पीने"
+      },
+      "confidence": 0.88,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 156480,
+      "end_ms": 156640,
+      "type": "word",
+      "payload": {
+        "text": "की",
+        "raw": "की"
+      },
+      "confidence": 0.775,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 156640,
+      "end_ms": 156840,
+      "type": "word",
+      "payload": {
+        "text": "आदत",
+        "raw": "आदत"
+      },
+      "confidence": 0.979,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 156840,
+      "end_ms": 157020,
+      "type": "word",
+      "payload": {
+        "text": "नहीं",
+        "raw": "नहीं"
+      },
+      "confidence": 0.973,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 157020,
+      "end_ms": 157080,
+      "type": "word",
+      "payload": {
+        "text": "है",
+        "raw": "है"
+      },
+      "confidence": 0.793,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 157080,
+      "end_ms": 170060,
+      "type": "utterance",
+      "payload": {
+        "text": "मैं तो स्टील की आदत की आदत की आदत की",
+        "raw_text": "मैं तो स्टील की आदत की आदत की आदत की",
+        "language": "hi"
+      },
+      "confidence": 0.81,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 157080,
+      "end_ms": 157400,
+      "type": "word",
+      "payload": {
+        "text": "मैं",
+        "raw": "मैं"
+      },
+      "confidence": 0.564,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 157400,
+      "end_ms": 157620,
+      "type": "word",
+      "payload": {
+        "text": "तो",
+        "raw": "तो"
+      },
+      "confidence": 0.551,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 157620,
+      "end_ms": 157880,
+      "type": "word",
+      "payload": {
+        "text": "स्टील",
+        "raw": "स्टील"
+      },
+      "confidence": 0.906,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 157880,
+      "end_ms": 158020,
+      "type": "word",
+      "payload": {
+        "text": "की",
+        "raw": "की"
+      },
+      "confidence": 0.647,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 158020,
+      "end_ms": 158200,
+      "type": "word",
+      "payload": {
+        "text": "आदत",
+        "raw": "आदत"
+      },
+      "confidence": 0.697,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 158200,
+      "end_ms": 159140,
+      "type": "word",
+      "payload": {
+        "text": "की",
+        "raw": "की"
+      },
+      "confidence": 0.282,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 159140,
+      "end_ms": 159340,
+      "type": "word",
+      "payload": {
+        "text": "आदत",
+        "raw": "आदत"
+      },
+      "confidence": 0.706,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 159340,
+      "end_ms": 159340,
+      "type": "word",
+      "payload": {
+        "text": "की",
+        "raw": "की"
+      },
+      "confidence": 0.468,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 159340,
+      "end_ms": 167080,
+      "type": "word",
+      "payload": {
+        "text": "आदत",
+        "raw": "आदत"
+      },
+      "confidence": 0.799,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    },
+    {
+      "track": "speech",
+      "start_ms": 167080,
+      "end_ms": 170060,
+      "type": "word",
+      "payload": {
+        "text": "की",
+        "raw": "की"
+      },
+      "confidence": 0.565,
+      "provider": "mlx_whisper",
+      "provider_version": "1.3.0",
+      "run_id": null
+    }
+  ],
+  "raw_payload": {
+    "text": "समय मैंको कहती है कि मैंको महलत समय महलत समय मैं टोस्टर महसूस समय मैं हमको महसूस समय सनसकस समय मैंकल महमल समय सब्सक्राइब सब्सक्राइब समय समय विस्की के वाइन के वो शैंपेन के मुझे कब देता भाई तू कब देता मुझे यह देख लेना तू यह कितना मजबूत है है तुमने आए बाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा है चलो कॉफी ठंडी हो रही है मैं कांच में पीने की आदत नहीं है मैं तो स्टील की आदत की आदत की आदत की",
+    "raw_text": "समय समय समय समय समय मैंको कहती है कि मैंको महलत महलत महलत महलत महलत महलत महलत महलत महलत महलत महलत महलत महलत महलत समय महलत समय समय समय मैं टोस्टर महसूस महसूस महसूस समय समय समय मैं हमको महसूस समय समय समय समय समय समय समय समय समय सनसकस समय समय समय समय समय समय समय मैंकल महमल समय समय समय सब्सक्राइब सब्सक्राइब समय समय विस्की के वाइन के वो शैंपेन के मुझे कब देता भाई तू कब देता मुझे यह देख लेना तू यह कितना मजबूत है है तुमने आए बाई चीनी चाय पत्ती रखने के लिए अलग से कांच का शटर वाला बना रखा है चलो कॉफी ठंडी हो रही है मैं कांच में पीने की आदत नहीं है मैं तो स्टील की आदत की आदत की आदत की",
+    "language": "hi",
+    "segment_count": 25
+  },
+  "metadata": {
+    "audio_path": "data/reels/DdrIIFTCWdx/audio.wav",
+    "model": "mlx-community/whisper-large-v3-mlx"
+  }
+}
