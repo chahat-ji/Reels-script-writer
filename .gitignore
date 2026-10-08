@@ -8,17 +8,52 @@
 venv/
 ENV/
 
-# Python cache & artifacts
+# Python cache & build artifacts
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+.pytest_cache/
+.coverage
+htmlcov/
 
-# Project data & media caches
+# Media & Heavy Binary Assets (Never commit raw video or audio)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.flv
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.flac
+*.ogg
+*.opus
+
+# Project storage directories (Preserve folder structure, ignore contents)
+data/videos/*
+!data/videos/.gitkeep
+data/audio/*
+!data/audio/.gitkeep
+data/staging/
 data/cache/
-data/reels/*/audio.wav
-data/reels/*/video.mp4
+data/reels/
+
+# Database files & local sessions
+*.db
+*.sqlite
+*.sqlite3
+*.ses
+data/app.db
+data/*.db
+data/*.sqlite
+
+# Exports, scratch & temporary files
 export/
+*.tmp
+reel_download_*
 
 # System files
 .DS_Store

@@ -1,0 +1,714 @@
+Video-to-Style Script Generation Architecture
+1. Objective
+
+Build a system where:
+
+Reference videos are uploaded once.
+Videos are permanently stored in our own storage.
+Videos are analyzed once by Gemini.
+The system extracts a reusable text representation of the video's creative characteristics.
+Original videos are not required during normal script generation.
+Future script generation is performed using text-only context.
+The system generates new/original scripts, not copies or rewrites of reference videos.
+Gemini cache is treated as a performance optimization, not permanent storage.
+2. High-Level Architecture
+REFERENCE VIDEOS
+       │
+       ▼
+Permanent Object Storage
+       │
+       ▼
+One-Time Gemini Video Analysis
+       │
+       ▼
+Detailed Extraction
+       │
+       ├──────────────► Archive / Recovery
+       │
+       ▼
+Video Memory
+       │
+       ├──────────────► Vector / Semantic Index
+       │
+       ▼
+Style Synthesis
+       │
+       ▼
+Style Bible
+       │
+       ▼
+Text-Only Generation Context
+       │
+       ├── Style Bible
+       ├── Relevant Video Memories
+       └── New User Premise
+       │
+       ▼
+NEW SCRIPT
+
+3. Permanent Storage
+
+Original videos are stored permanently in our own object storage.
+
+/videos/
+    /style_001/
+        v001.mp4
+        v002.mp4
+        v003.mp4
+        ...
+
+
+Recommended:
+
+Google Cloud Storage
+Amazon S3
+equivalent durable object storage
+
+Gemini's temporary file storage is not the permanent source of truth.
+
+4. Video Identity
+
+Every uploaded video receives:
+
+video_id
+sha256
+storage_uri
+duration
+language
+created_at
+processing_status
+extraction_version
+
+
+SHA-256 is used for duplicate detection.
+
+same video uploaded again
+        ↓
+same SHA-256
+        ↓
+skip re-processing
+
+5. One-Time Video Analysis
+
+Each video is sent to Gemini once for detailed extraction.
+
+Gemini receives:
+
+VIDEO
++
+EXTRACTION INSTRUCTIONS
++
+STRUCTURED OUTPUT SCHEMA
+
+
+Gemini structured output should be used for this stage.
+
+The extraction should capture:
+
+Content
+dialogue
+speakers
+scene boundaries
+meaningful physical actions
+meaningful reactions
+important visual events
+important sounds/non-verbal events
+Character information
+character identity
+personality
+relationship
+recurring behavior
+speech characteristics
+Scene information
+setting
+situation
+progression
+major beats
+Creative information
+comedy mechanism
+setup
+escalation
+reversal
+punchline
+pacing
+dialogue rhythm
+interaction pattern
+physical comedy
+Style information
+language
+register
+vocabulary
+sentence length
+dialogue density
+interruption frequency
+character voice
+scene pacing
+6. Extraction Output
+
+The canonical extraction should be compact structured JSON.
+
+Example:
+
+{
+  "v": 1,
+  "sp": {
+    "A": "Saala",
+    "B": "Jija"
+  },
+  "sc": [
+    {
+      "s": 0,
+      "e": 28500,
+      "x": [
+        [0,2500,"A","लो जी गरमा गरम कॉफ़ी पियो।","friendly","hands over steaming cup"],
+        [2500,5200,"B","हम्म, अच्छा जी, काँच के बर्तन?","skeptical","inspects cup"],
+        [5200,7000,"A","हाँ जी।"]
+      ]
+    }
+  ]
+}
+
+
+Schema:
+
+sp = speakers
+sc = scenes
+s  = start
+e  = end
+x  = dialogue/action turns
+
+turn:
+[s, e, speaker, dialogue, emotion?, action?]
+
+
+Optional fields are omitted when unnecessary.
+
+7. Why Compact Structured JSON
+
+Chosen because it provides:
+
+low output-token usage;
+deterministic parsing;
+schema validation;
+optional fields;
+easy conversion into other representations;
+reliable archival representation.
+
+The canonical JSON is not used directly as generation context.
+
+8. Detailed Extraction Archive
+
+The complete extraction is retained as a backup.
+
+video
+   ↓
+detailed extraction
+
+
+Purpose:
+
+recovery;
+reprocessing;
+rebuilding Video Memories;
+rebuilding Style Bibles;
+future features.
+
+It is not normally sent to the generation model.
+
+9. Video Memory
+
+The detailed extraction is converted into a compact text representation called Video Memory.
+
+Example:
+
+VIDEO v017
+
+CHARACTERS
+Jija — skeptical, dry, frequently undercuts others.
+Saala — confident, eager to impress, becomes defensive.
+
+SETTING
+Domestic kitchen.
+
+SITUATION
+Saala proudly presents ordinary coffee.
+
+SEQUENCE
+Saala presents coffee.
+Jija questions the presentation.
+Saala defends himself.
+Jija escalates the teasing.
+The exchange ends with a reversal.
+
+DIALOGUE STYLE
+Colloquial Hindi.
+Short conversational turns.
+High dialogue density.
+Frequent reactions and interruptions.
+
+COMEDIC MECHANISMS
+Teasing.
+Status-undercutting.
+Escalation.
+Reversal.
+
+PHYSICAL BEHAVIOR
+Presents cup proudly.
+Inspects cup skeptically.
+Defensive gestures increase.
+
+PACING
+Fast.
+Minimal exposition.
+Punchline follows escalation quickly.
+
+REPRESENTATIVE DIALOGUE
+SAALA: लो जी गरमा गरम कॉफ़ी पियो।
+JIJA: हम्म, अच्छा जी, काँच के बर्तन?
+
+10. Why Video Memory
+
+Video Memory is the primary RAG representation.
+
+It removes information that is useful for archival purposes but unnecessary for creative generation.
+
+The generation model receives:
+
+what the video does creatively
+
+rather than:
+
+every technical detail of the video.
+11. Style Bible
+
+After all reference videos have been processed:
+
+Video Memory 001
+Video Memory 002
+...
+Video Memory 100
+        │
+        ▼
+Style Synthesis
+        │
+        ▼
+Style Bible
+
+
+The Style Bible represents common characteristics across the library.
+
+Example:
+
+STYLE BIBLE v1
+
+LANGUAGE
+Colloquial Hindi.
+
+REGISTER
+Casual, conversational.
+
+DIALOGUE
+Short turns.
+High dialogue density.
+Frequent interruptions.
+Minimal exposition.
+
+CHARACTER DYNAMIC
+One character commonly makes confident claims.
+Another character challenges or undercuts those claims.
+
+COMEDY ENGINE
+Normal situation
+→ confident assertion
+→ reaction
+→ objection
+→ escalation
+→ reversal/punchline.
+
+COMMON COMEDIC DEVICES
+Teasing.
+Misunderstanding.
+Exaggeration.
+Status reversal.
+Literal interpretation.
+
+PACING
+Fast.
+Frequent comedic beats.
+
+PHYSICAL COMEDY
+Small everyday actions and reactions.
+
+ENDINGS
+Usually a reversal, undercut, or final punchline.
+
+12. Why Style Bible
+
+The Style Bible is the compact representation of the global style.
+
+It prevents the generation model from having to rediscover common characteristics from hundreds of individual examples on every request.
+
+13. Video Memory Index
+
+Each Video Memory receives searchable metadata.
+
+Example:
+
+{
+  "video_id": "v017",
+  "style_id": "style_001",
+  "characters": ["Jija", "Saala"],
+  "setting": ["kitchen"],
+  "topics": ["coffee"],
+  "comedy": [
+    "teasing",
+    "misunderstanding",
+    "escalation",
+    "reversal"
+  ],
+  "pace": "fast"
+}
+
+
+A vector embedding is generated from the Video Memory, not from the original video.
+
+14. Generation Retrieval
+
+When a new script is requested:
+
+USER PREMISE
+      │
+      ▼
+Semantic retrieval
+      │
+      ▼
+Relevant Video Memories
+
+
+Only relevant examples are selected.
+
+Typical context:
+
+Style Bible
++
+5–10 relevant Video Memories
++
+New premise
++
+generation instructions
+
+
+The entire reference library is not sent to Gemini.
+
+15. Generation Context
+
+Example:
+
+STYLE BIBLE
+
+[style_001]
+
+REFERENCE EXAMPLES
+
+VIDEO v017
+...
+VIDEO v042
+...
+VIDEO v081
+...
+
+NEW PREMISE
+
+Jija secretly hides the TV remote from Saala.
+
+REQUIREMENTS
+
+Create a new 60-second comedy script.
+
+Preserve:
+- language characteristics
+- dialogue rhythm
+- character dynamics
+- comedic pacing
+- comedic mechanisms
+
+Do not reproduce:
+- dialogue
+- exact jokes
+- exact scenarios
+- distinctive sequences
+- specific actions from references.
+
+16. Generation Output
+
+The generation stage produces the final script.
+
+The output format should be optimized for the downstream product rather than for archival extraction.
+
+Example:
+
+JIJA:
+कहाँ गया रिमोट?
+
+SAALA:
+मुझे क्या पता?
+
+JIJA:
+तू टीवी के सामने बैठा है।
+
+SAALA:
+टीवी देख रहा हूँ, रिमोट नहीं।
+
+...
+
+
+If the final product requires timing, timing can be added as a separate generation or application-processing stage.
+
+17. Video Is Not Used During Normal Generation
+
+After ingestion:
+
+Generation Request
+       │
+       ├── NO video upload
+       ├── NO video processing
+       ├── NO video transcription
+       └── NO video analysis
+
+
+Generation is entirely text-based.
+
+18. Gemini Cache
+
+Cache is treated as temporary working memory.
+
+It is not the permanent library.
+
+Possible cached context:
+
+Style Bible
++
+frequently used Video Memories
++
+stable generation instructions
+
+
+The cache can expire without data loss.
+
+19. Cache Recovery
+
+If cache expires:
+
+Cache expired
+     │
+     ▼
+Load Style Bible from DB
+     │
+     ▼
+Load required Video Memories
+     │
+     ▼
+Create new Gemini cache
+     │
+     ▼
+Continue generation
+
+
+No video re-upload is required.
+
+20. Cache Strategy
+
+Use explicit caching when:
+
+large context
++
+many generation requests
++
+same reference context
+
+
+Do not make the application dependent on cache existence.
+
+Application logic:
+
+if valid_cache_exists:
+    use_cache()
+else:
+    create_cache()
+
+
+The permanent source remains our database/object storage.
+
+21. Permanent Data Model
+STYLE
+------
+style_id
+version
+bible_text
+created_at
+updated_at
+
+
+VIDEO
+-----
+video_id
+sha256
+storage_uri
+duration
+language
+status
+created_at
+
+
+VIDEO_MEMORY
+------------
+video_id
+style_id
+memory_text
+structured_extraction
+embedding
+metadata
+extraction_version
+
+
+STYLE_REFERENCE
+---------------
+style_id
+video_id
+relevance
+
+22. Versioning
+
+Every important artifact is versioned.
+
+Style Bible v1
+Style Bible v2
+Style Bible v3
+
+Extraction schema v1
+Extraction schema v2
+
+Video Memory v1
+Video Memory v2
+
+
+Adding new reference videos:
+
+existing videos
++
+new videos
+       ↓
+new Style Bible
+       ↓
+Style Bible v2
+
+
+Existing versions remain reproducible.
+
+23. Reprocessing
+
+If extraction logic improves:
+
+Original Video
+      ↓
+new extraction version
+      ↓
+new Video Memory
+      ↓
+new Style Bible
+
+
+No re-upload is required because the original video is already in permanent storage.
+
+24. End-to-End Pipeline
+                    USER UPLOAD
+                         │
+                         ▼
+              PERMANENT VIDEO STORAGE
+                         │
+                         ▼
+                SHA-256 DUPLICATE CHECK
+                         │
+                         ▼
+                 GEMINI VIDEO ANALYSIS
+                         │
+                         ▼
+              COMPACT STRUCTURED JSON
+                         │
+              ┌──────────┴──────────┐
+              ▼                     ▼
+        ARCHIVE EXTRACTION      VIDEO MEMORY
+                                      │
+                                      ▼
+                              EMBEDDING + METADATA
+                                      │
+                                      ▼
+                             STYLE SYNTHESIS
+                                      │
+                                      ▼
+                                STYLE BIBLE
+                                      │
+                                      ▼
+                         ┌────────────────────┐
+                         │  GENERATION REQUEST │
+                         └─────────┬──────────┘
+                                   │
+                         New user premise
+                                   │
+                                   ▼
+                           Semantic Retrieval
+                                   │
+                                   ▼
+                      Style Bible + Relevant
+                         Video Memories
+                                   │
+                                   ▼
+                               GEMINI
+                                   │
+                                   ▼
+                           ORIGINAL SCRIPT
+
+25. Final Design Decisions
+Component	Decision
+Original videos	Store permanently in our own object storage
+Gemini video files	Temporary processing only
+Video upload	Once
+Video re-upload	Never required
+First LLM operation	Structured video extraction
+Extraction format	Compact structured JSON
+Extraction archive	Keep as backup
+RAG representation	Video Memory
+Global representation	Style Bible
+Retrieval unit	Video Memory / semantic example
+Generation input	Style Bible + relevant Video Memories + premise
+Generation medium	Text only
+Original video during generation	Not used
+Cache	Optional performance optimization
+Cache as source of truth	No
+Duplicate detection	SHA-256
+Versioning	Required
+Embeddings	Generated from Video Memory
+Final generation	New/original script
+26. Core Principle
+VIDEO = permanent raw source
+
+DETAILED EXTRACTION = permanent recovery layer
+
+VIDEO MEMORY = example-level creative memory
+
+STYLE BIBLE = global creative memory
+
+CACHE = temporary execution optimization
+
+NEW SCRIPT = final product
+
+
+The production path is therefore:
+
+UPLOAD ONCE
+     ↓
+UNDERSTAND ONCE
+     ↓
+STORE UNDERSTANDING
+     ↓
+GENERATE INDEFINITELY

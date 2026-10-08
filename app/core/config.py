@@ -1,47 +1,74 @@
 """
 app/core/config.py
-Configuration loader for environments and YAML configuration profiles.
+Centralized configuration management for Video-to-Style Script Generation.
+
+Loads environment variables from .env and exposes canonical filesystem
+paths for permanent object storage, SQLite database, and Gemini credentials.
 """
 
 import os
 from pathlib import Path
-from typing import Any, Dict, Optional
-import yaml
+from typing import Optional
 from dotenv import load_dotenv
 from rich.console import Console
 
+# Shared Rich console for formatted, elegant terminal reporting across the app
 console = Console()
 
-# Load .env file from project root
-load_dotenv()
-
+# Resolve workspace root directory
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-CONFIG_DIR = BASE_DIR / "config"
+
+# Load local environment variables from .env file if present
+load_dotenv(BASE_DIR / ".env")
+
+# Canonical data directories
 DATA_DIR = BASE_DIR / "data"
+VIDEOS_DIR = DATA_DIR / "videos"
+AUDIO_DIR = DATA_DIR / "audio"
+EXTRACTIONS_DIR = DATA_DIR / "extractions"
+
+# Ensure essential directories exist at startup
+VIDEOS_DIR.mkdir(parents=True, exist_ok=True)
+AUDIO_DIR.mkdir(parents=True, exist_ok=True)
+EXTRACTIONS_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def load_yaml(filepath: Path) -> Dict[str, Any]:
-    if not filepath.exists():
-        console.print(f"[yellow]Warning: Config file not found at {filepath}[/yellow]")
-        return {}
-    with open(filepath, "r", encoding="utf-8") as f:
-        return yaml.safe_load(f) or {}
+class Settings:
+    """Application runtime settings and environment parameter provider."""
 
-
-class EngineConfig:
     def __init__(self):
-        self.providers_cfg = load_yaml(CONFIG_DIR / "providers.yaml")
-        self.profiles_cfg = load_yaml(CONFIG_DIR / "profiles.yaml")
-        self.routing_rules = load_yaml(CONFIG_DIR / "routing_rules.yaml")
+        # Database connection string: defaults to SQLite at data/app.db
+        default_db_path = (DATA_DIR / "app.db").resolve()
+        self.database_url: str = os.getenv("DATABASE_URL", f"sqlite:///{default_db_path}")
 
-    def get_api_key(self, env_var_name: str) -> Optional[str]:
-        if not env_var_name:
-            return None
-        return os.getenv(env_var_name)
+        # Google Gemini API key
+        self.gemini_api_key: Optional[str] = os.getenv("GEMINI_API_KEY")
 
-    def get_profile(self, profile_name: str = "default") -> Dict[str, Any]:
-        profiles = self.profiles_cfg.get("profiles", {})
-        return profiles.get(profile_name, profiles.get("default", {}))
+        # Default model identifiers
+        self.extraction_model: str = os.getenv("EXTRACTION_MODEL", "gemini-2.5-flash")
+        self.synthesis_model: str = os.getenv("SYNTHESIS_MODEL", "gemini-2.5-flash")
+        self.generation_model: str = os.getenv("GENERATION_MODEL", "gemini-2.5-flash")
+        self.embedding_model: str = os.getenv("EMBEDDING_MODEL", "text-embedding-004")
+
+        # Storage paths
+        self.base_dir: Path = BASE_DIR
+        self.data_dir: Path = DATA_DIR
+        self.videos_dir: Path = VIDEOS_DIR
+        self.audio_dir: Path = AUDIO_DIR
+        self.extractions_dir: Path = EXTRACTIONS_DIR
+
+    def get_gemini_api_key(self) -> str:
+        """
+        Retrieve the Gemini API key or raise an informative configuration error.
+        """
+        key = self.gemini_api_key or os.getenv("GEMINI_API_KEY")
+        if not key:
+            raise ValueError(
+                "GEMINI_API_KEY is not set. Please set it in your environment or in a .env file."
+            )
+        return key
 
 
-config = EngineConfig()
+# Global singleton settings instance
+settings = Settings()
+config = settings
