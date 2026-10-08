@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video-to-Style Verification Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Bar -->
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-icon">🎬</span>
+      <h1>Video-to-Style Verification</h1>
+    </div>
+
+    <div class="controls">
+      <label for="video-select">Reference Video:</label>
+      <select id="video-select">
+        <option value="">Loading catalog...</option>
+      </select>
+    </div>
+
+    <div class="header-badges" id="header-badges">
+      <span class="badge" id="badge-video-id">Select a video</span>
+      <span class="badge badge-accent" id="badge-scenes">- Scenes</span>
+      <span class="badge badge-accent" id="badge-turns">- Lines</span>
+    </div>
+  </header>
+
+  <!-- Main Viewport (Fixed 100vh Layout) -->
+  <main class="dashboard-grid">
+    <!-- Left Column: Video Player & Extraction Insights -->
+    <section class="left-panel">
+      <div class="video-wrapper">
+        <video id="video-player" controls preload="auto" playsinline>
+          <p>Your browser does not support HTML5 video.</p>
+        </video>
+        <div class="video-time-overlay" id="time-overlay">00:00.000</div>
+      </div>
+
+      <div class="insights-container">
+        <!-- Tab Controls -->
+        <div class="insights-tabs">
+          <button class="tab-btn active" data-tab="speakers">Characters & Cast</button>
+          <button class="tab-btn" data-tab="dynamics">Comedy Engine</button>
+        </div>
+
+        <!-- Speakers Tab -->
+        <div class="tab-content active" id="tab-speakers">
+          <div class="speakers-list" id="speakers-list">
+            <p class="placeholder-text">Select a video to view character dynamics.</p>
+          </div>
+        </div>
+
+        <!-- Comedy Dynamics Tab -->
+        <div class="tab-content" id="tab-dynamics">
+          <div class="dynamics-panel" id="dynamics-panel">
+            <p class="placeholder-text">Select a video to view comedic mechanisms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: Interactive Teleprompter Script Container -->
+    <section class="right-panel">
+      <div class="teleprompter-header">
+        <div class="title-with-pill">
+          <h2>Synchronized Dialogue Script</h2>
+          <span class="pill" id="turns-counter">0 lines</span>
+        </div>
+        <div class="teleprompter-controls">
+          <label class="toggle-label">
+            <input type="checkbox" id="autoscroll-toggle" checked>
+            <span>Auto-Scroll</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Scrollable Script Teleprompter Container -->
+      <div class="script-scroll-container" id="script-container">
+        <div class="teleprompter-empty-state">
+          <span>📽️</span>
+          <p>Select a video from the top menu to view synchronized script playback.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
+

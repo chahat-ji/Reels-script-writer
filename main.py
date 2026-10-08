@@ -21,8 +21,9 @@ from rich.panel import Panel
 from rich.table import Table
 from rich.prompt import Prompt
 
-from app.core.config import console
+from app.core.config import console, settings
 from app.core.database import init_db
+from app.extraction.gemini_extractor import GeminiExtractor
 from app.ingestion.service import IngestionService
 
 
@@ -63,9 +64,33 @@ def run_pipeline(source: str, style_id: str = "default_style") -> None:
 
     console.print(table)
 
-    # Note: Phase 2 (Gemini Video Extraction) will be invoked here upon approval:
-    # extractor = GeminiExtractor()
-    # extraction = extractor.extract(result.video_id)
+    # Step 2: Phase 2 - One-Time Gemini Multimodal Video Extraction
+    if not result.is_duplicate or result.status != "extracted":
+        if settings.gemini_api_key:
+            try:
+                console.print("\n[bold cyan]Step 2: Launching Phase 2 Gemini Multimodal Extraction...[/bold cyan]")
+                extractor = GeminiExtractor()
+                extraction = extractor.extract(video_id=result.video_id)
+                speaker_list = [f"{code}: {name}" for code, name in extraction.speakers.items()]
+                devices = extraction.cd.mech if extraction.cd.mech else ["General Comedy"]
+                console.print(
+                    Panel(
+                        f"[bold green]✓ Phase 2 Extraction Completed for {result.video_id}![/bold green]\n"
+                        f"• Scenes: {len(extraction.sc)}\n"
+                        f"• Speakers: {', '.join(speaker_list)}\n"
+                        f"• Comedy Devices: {', '.join(devices)}\n"
+                        f"• Archive Location: data/extractions/{result.video_id}_v1.json",
+                        title=f"✨ {extractor.model_name} Extraction Result",
+                        border_style="green",
+                    )
+                )
+            except Exception as ext_err:
+                console.print(f"[bold red]Phase 2 Extraction encountered an error:[/bold red] {ext_err}")
+        else:
+            console.print(
+                f"\n[yellow]💡 Phase 1 Complete. To run Phase 2 Gemini ({settings.extraction_model}) extraction, "
+                "set GEMINI_API_KEY in your .env file.[/yellow]"
+            )
 
 
 def main():

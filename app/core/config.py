@@ -44,10 +44,10 @@ class Settings:
         # Google Gemini API key
         self.gemini_api_key: Optional[str] = os.getenv("GEMINI_API_KEY")
 
-        # Default model identifiers
-        self.extraction_model: str = os.getenv("EXTRACTION_MODEL", "gemini-2.5-flash")
-        self.synthesis_model: str = os.getenv("SYNTHESIS_MODEL", "gemini-2.5-flash")
-        self.generation_model: str = os.getenv("GENERATION_MODEL", "gemini-2.5-flash")
+        # Default model identifiers (User configured: gemini-3.8-flash)
+        self.extraction_model: str = os.getenv("EXTRACTION_MODEL", "gemini-3.8-flash")
+        self.synthesis_model: str = os.getenv("SYNTHESIS_MODEL", "gemini-3.8-flash")
+        self.generation_model: str = os.getenv("GENERATION_MODEL", "gemini-3.8-flash")
         self.embedding_model: str = os.getenv("EMBEDDING_MODEL", "text-embedding-004")
 
         # Storage paths

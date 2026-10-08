@@ -1,0 +1,291 @@
+{
+  "v": 1,
+  "sp": [
+    {
+      "c": "A",
+      "n": "Nani",
+      "desc": "Mischievous, sharp, opportunistic grandmother"
+    },
+    {
+      "c": "B",
+      "n": "Granddaughter",
+      "desc": "Greedy, naive young woman"
+    },
+    {
+      "c": "C",
+      "n": "Mother",
+      "desc": "Distracted homemaker multitasking on calls"
+    }
+  ],
+  "sc": [
+    {
+      "s": 0,
+      "e": 7000,
+      "loc": "Living room",
+      "sit": "Nani teases granddaughter about pet food",
+      "x": [
+        [
+          1500,
+          4800,
+          "A",
+          "Oye dekh, tere dabbe mein khana khaa gaya.",
+          "mocking",
+          "points at dog eating"
+        ]
+      ]
+    },
+    {
+      "s": 7000,
+      "e": 36000,
+      "loc": "Living room and kitchen threshold",
+      "sit": "Mother prepares shopping list, absurd snack demands escalate",
+      "x": [
+        [
+          7000,
+          11500,
+          "C",
+          "Oye ration ki list bana rahi hoon. Tum dono ko kuch mangwana hai toh abhi bata do mall chalenge.",
+          "annoyed",
+          "holds notepad and pen"
+        ],
+        [
+          11700,
+          13700,
+          "A",
+          "Haan likhna hum batate hain.",
+          "excited"
+        ],
+        [
+          13800,
+          15000,
+          "B",
+          "Ek chocolate ka packet.",
+          "cheerful"
+        ],
+        [
+          15100,
+          16600,
+          "A",
+          "Do packet cheese balls.",
+          "smug"
+        ],
+        [
+          16700,
+          17800,
+          "B",
+          "Dus packet Lays.",
+          "giddy"
+        ],
+        [
+          17900,
+          19800,
+          "A",
+          "Do packet Lotte Choco Pie.",
+          "insistent"
+        ],
+        [
+          19900,
+          21100,
+          "B",
+          "Ek dabba Fanta.",
+          "excited"
+        ],
+        [
+          21200,
+          22700,
+          "A",
+          "Ek packet Natkhat.",
+          "grinning"
+        ],
+        [
+          22800,
+          23900,
+          "C",
+          "Yeh kya hota hai?",
+          "confused"
+        ],
+        [
+          24000,
+          25200,
+          "A",
+          "Chakhna.",
+          "deadpan"
+        ],
+        [
+          25400,
+          29700,
+          "C",
+          "Oye Tuntun Mausi maaf kar do mujhe. Aye bhai tu yahin se ghee la de jara dukaan se.",
+          "dismissive",
+          "waves pen dismissively"
+        ],
+        [
+          29800,
+          31000,
+          "B",
+          "Ek kanastar!",
+          "shouting"
+        ],
+        [
+          31100,
+          32100,
+          "C",
+          "Pachas rupaye ka.",
+          "sarcastic"
+        ],
+        [
+          32200,
+          33500,
+          "A",
+          "Hnh gareeb.",
+          "disdainful"
+        ],
+        [
+          33600,
+          34500,
+          "B",
+          "Paise!",
+          "demanding"
+        ],
+        [
+          34600,
+          36000,
+          "C",
+          "Aake le lena.",
+          "dismissive",
+          "walks to kitchen"
+        ]
+      ]
+    },
+    {
+      "s": 36000,
+      "e": 68000,
+      "loc": "Kitchen and living room",
+      "sit": "Granddaughter tricks mother out of change and brags to Nani",
+      "x": [
+        [
+          36800,
+          39000,
+          "B",
+          "Ye lo mummy, kaat ke de do.",
+          "scheming",
+          "hands bill to distracted mother"
+        ],
+        [
+          43000,
+          52900,
+          "B",
+          "Nani yeh dekho, maine mummy ko 100 ka note diya, mummy ne 100 me se 50 rupaye kaat ke mereko 150 rupaye wapas diye! Mummy ko laga maine 200 ka note diya hai!",
+          "euphoric",
+          "counts cash proudly"
+        ],
+        [
+          53000,
+          60500,
+          "A",
+          "Bhikari hai tu! Gareeb aadmi ke paise maar liye, sharam nahi aati? Izzatdaar log hain hum log izzatdaar! Hum logon ko yeh shobha nahi deta. Chal mere saath uske paise wapas denge.",
+          "indignant",
+          "stands up to march to kitchen"
+        ],
+        [
+          60600,
+          68000,
+          "B",
+          "Chhodo na Nani, aadhe-aadhe kar lenge! Aadhe aapke aadhe mere. Please na Nani maan jao!",
+          "pleading",
+          "follows and clings to Nani"
+        ]
+      ]
+    },
+    {
+      "s": 68000,
+      "e": 96000,
+      "loc": "Kitchen",
+      "sit": "Nani cons mother for even more money instead of returning it",
+      "x": [
+        [
+          69000,
+          70800,
+          "A",
+          "Oye! Yeh galti kari hai tune!",
+          "accusing",
+          "points at mother"
+        ],
+        [
+          71000,
+          73000,
+          "B",
+          "Abhi bhi keh rahi hoon Nani maan jao!",
+          "anxious"
+        ],
+        [
+          73100,
+          78700,
+          "A",
+          "Chup kar! Oye isne tujhe 500 rupaye diye the, tune sirf 150 wapas kare! La 300 aur de!",
+          "authoritative",
+          "holds hand out"
+        ],
+        [
+          79000,
+          80200,
+          "C",
+          "Sorry, sorry.",
+          "flustered",
+          "hands over remaining change"
+        ],
+        [
+          82000,
+          85600,
+          "A",
+          "Sorry-worry sunne ki aadat nahi hai humein! Pagal hi bana diya bacche ko!",
+          "scolding"
+        ],
+        [
+          86000,
+          87500,
+          "A",
+          "Ab karenge aadhe-aadhe!",
+          "triumphant",
+          "winks to granddaughter"
+        ],
+        [
+          88000,
+          90700,
+          "A",
+          "Dekh le, kahin 2000 ka toh nahi de diya tha?",
+          "greedy"
+        ],
+        [
+          90800,
+          95000,
+          "B",
+          "Arey chup karo 2000 ka band ho gaya hua hai, acting band karo! Jaldi chalo yahan se!",
+          "panicked",
+          "pushes Nani out"
+        ]
+      ]
+    }
+  ],
+  "cd": {
+    "mech": [
+      "status-reversal",
+      "moral-hypocrisy",
+      "con-escalation",
+      "underhanded-teamwork"
+    ],
+    "setup": "Granddaughter boasts about accidentally scamming mother out of 50 rupees change.",
+    "esc": "Nani feigns righteous anger about family dignity and refuses a 50-50 bribe.",
+    "rev": "Instead of returning the money, Nani claims the note was 500 and extorts 300 more.",
+    "punch": "Nani happily offers the 50-50 split and asks if they should claim it was 2000.",
+    "rhythm": "Rapid back-and-forth listing shifting into high-energy accusation and hasty getaway",
+    "pace": "Fast and bouncy",
+    "phys": [
+      "Counting paper cash frantically",
+      "Virtuous moral lecturing with exaggerated posture",
+      "Pleading hand-clasp and trailing steps",
+      "Greedy wink and conspiratorial nudging"
+    ]
+  },
+  "lang": "hi"
+}
