@@ -34,27 +34,55 @@ def utc_now() -> datetime:
     return datetime.now(timezone.utc)
 
 
+class User(Base):
+    """
+    USER entity.
+    Future-proofed for OAuth providers (Google, Clerk, Auth0).
+    In pilot mode, auth_provider defaults to 'local'.
+    """
+
+    __tablename__ = "users"
+
+    user_id = Column(String(64), primary_key=True, index=True)
+    username = Column(String(64), unique=True, index=True, nullable=False)
+    email = Column(String(128), unique=True, nullable=True)
+    auth_provider = Column(String(32), default="local", nullable=False)
+    created_at = Column(DateTime(timezone=True), default=utc_now, nullable=False)
+
+    # Relational associations
+    styles = relationship("Style", back_populates="user", cascade="all, delete-orphan")
+    scripts = relationship("Script", back_populates="user", cascade="all, delete-orphan")
+
+    def __repr__(self) -> str:
+        return f"<User(id={self.user_id}, username={self.username})>"
+
+
 class Style(Base):
     """
-    STYLE entity (Section 21 of description.txt).
-    Represents a creative style catalog entry (e.g. 'style_001', 'relatable_desi_comedy').
-    Holds the synthesized Style Bible and current version number.
+    STYLE / CREATOR entity (Section 21 of description.txt).
+    Represents a creative style catalog or creator profile (e.g. 'ashish_chanchlani', 'desi_comedy').
+    Holds the synthesized Style Bible, human-friendly creator name, and current version number.
     """
 
     __tablename__ = "styles"
 
     style_id = Column(String(64), primary_key=True, index=True)
+    user_id = Column(String(64), ForeignKey("users.user_id"), nullable=True, index=True)
+    name = Column(String(128), nullable=True)  # Human-friendly creator name e.g. "Ashish Chanchlani"
+    description = Column(Text, nullable=True)
     version = Column(Integer, default=1, nullable=False)
     bible_text = Column(Text, nullable=True)  # Markdown text of the synthesized Style Bible
     created_at = Column(DateTime(timezone=True), default=utc_now, nullable=False)
     updated_at = Column(DateTime(timezone=True), default=utc_now, onupdate=utc_now, nullable=False)
 
     # Relational associations
+    user = relationship("User", back_populates="styles")
     memories = relationship("VideoMemory", back_populates="style", cascade="all, delete-orphan")
     references = relationship("StyleReference", back_populates="style", cascade="all, delete-orphan")
+    scripts = relationship("Script", back_populates="style", cascade="all, delete-orphan")
 
     def __repr__(self) -> str:
-        return f"<Style(id={self.style_id}, version={self.version})>"
+        return f"<Style(id={self.style_id}, name={self.name}, version={self.version})>"
 
 
 class Video(Base):
@@ -149,4 +177,28 @@ class StyleReference(Base):
 
     def __repr__(self) -> str:
         return f"<StyleReference(style={self.style_id}, video={self.video_id}, relevance={self.relevance})>"
+
+
+class Script(Base):
+    """
+    SCRIPT entity.
+    Stores original comedic screenplays generated in a creator's style based on a user premise.
+    Maintains permanent history for the user and creator.
+    """
+
+    __tablename__ = "scripts"
+
+    script_id = Column(String(64), primary_key=True, index=True)
+    user_id = Column(String(64), ForeignKey("users.user_id"), nullable=True, index=True)
+    style_id = Column(String(64), ForeignKey("styles.style_id"), index=True, nullable=False)
+    premise = Column(Text, nullable=False)
+    script_text = Column(Text, nullable=False)
+    created_at = Column(DateTime(timezone=True), default=utc_now, nullable=False)
+
+    # Relational associations
+    user = relationship("User", back_populates="scripts")
+    style = relationship("Style", back_populates="scripts")
+
+    def __repr__(self) -> str:
+        return f"<Script(id={self.script_id}, style={self.style_id})>"
 

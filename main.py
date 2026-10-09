@@ -27,6 +27,7 @@ from app.extraction.gemini_extractor import GeminiExtractor
 from app.ingestion.service import IngestionService
 from app.ingestion.url_parser import clean_input_string
 from app.memory.service import MemoryService
+from app.style.service import StyleService
 
 
 def run_pipeline(source: str, style_id: str = "default_style") -> None:
@@ -117,6 +118,21 @@ def run_pipeline(source: str, style_id: str = "default_style") -> None:
                 )
             except Exception as mem_err:
                 console.print(f"[bold red]Phase 3 Memory Indexing encountered an error:[/bold red] {mem_err}")
+
+    # Step 4: Phase 4 - Style Bible Status
+    style_service = StyleService()
+    active_style = style_service.get_style(style_id=style_id)
+    if active_style and active_style.bible_text:
+        console.print(
+            f"\n[dim]📖 Active Style Bible: [bold green]{style_id} (v{active_style.version})[/bold green] "
+            f"(data/styles/{style_id}_v{active_style.version}.md)[/dim]\n"
+            f"[dim]To synthesize or update the Style Bible, run: [bold cyan]python batch_process.py --synthesize-style {style_id}[/bold cyan][/dim]"
+        )
+    else:
+        console.print(
+            f"\n[yellow]💡 Phase 4 Ready: To synthesize the global Style Bible for '{style_id}', "
+            f"run: [bold cyan]python batch_process.py --synthesize-style {style_id}[/bold cyan][/yellow]"
+        )
 
 
 def main():

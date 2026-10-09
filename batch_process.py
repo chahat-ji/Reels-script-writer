@@ -20,7 +20,8 @@ from app.core.database import get_db_session, init_db
 from app.extraction.gemini_extractor import GeminiExtractor
 from app.ingestion.service import IngestionService
 from app.memory.service import MemoryService
-from app.models.schema import Video, VideoMemory, StyleReference
+from app.models.schema import Style, StyleReference, Video, VideoMemory
+from app.style.service import StyleService
 
 
 def display_dashboard() -> List[Video]:
@@ -103,6 +104,16 @@ def display_dashboard() -> List[Video]:
             f"[bold green]Phase 3 Indexed:[/bold green] {indexed_count}"
         )
         console.print(Panel(summary, border_style="dim", title="📈 Pipeline Status Summary"))
+
+        # Display active Style Bibles if synthesized
+        styles = session.query(Style).all()
+        active_bibles = [f"[bold green]{s.style_id} (v{s.version})[/bold green]" for s in styles if s.bible_text]
+        if active_bibles:
+            bible_summary = " | ".join(active_bibles)
+            console.print(f"[dim]📖 Synthesized Style Bibles (Phase 4): {bible_summary}[/dim]\n")
+        else:
+            console.print("[dim]📖 Style Bibles: None synthesized yet. Run with --synthesize-style to build.[/dim]\n")
+
         return videos
 
 
@@ -211,19 +222,55 @@ def process_url_file(file_path: Path, sync_level: bool = False) -> None:
     display_dashboard()
 
 
+def synthesize_style_corpus(style_id: str = "default_style") -> None:
+    """
+    Synthesize the canonical Style Bible for a target style across all indexed memories.
+    """
+    init_db()
+    service = StyleService()
+    try:
+        style = service.synthesize_style(style_id=style_id)
+        console.print(
+            Panel(
+                f"[bold green]✓ Successfully Synthesized Style Bible v{style.version} for '{style_id}'![/bold green]\n"
+                f"• Artifact Location: data/styles/{style_id}_v{style.version}.md\n"
+                f"• Latest Pointer: data/styles/{style_id}_latest.md\n"
+                f"• Persisted in SQLite 'styles' table",
+                title=f"📖 Style Bible v{style.version} Ready",
+                border_style="green",
+            )
+        )
+    except Exception as exc:
+        console.print(f"[bold red]Style Synthesis failed:[/bold red] {exc}")
+
+
 def main():
     """
     CLI Entrypoint for batch management, status reporting, and synchronization.
     Usage:
-        python batch_process.py               -> Shows progress dashboard
-        python batch_process.py --sync        -> Syncs all stored videos in DB to current pipeline level
-        python batch_process.py -s            -> Shortcut for --sync
-        python batch_process.py <urls.txt>    -> Ingests URLs from file
-        python batch_process.py <urls.txt> -s -> Ingests URLs from file and syncs them
+        python batch_process.py                         -> Shows progress dashboard
+        python batch_process.py --sync                  -> Syncs all stored videos in DB to current pipeline level
+        python batch_process.py -s                      -> Shortcut for --sync
+        python batch_process.py --synthesize-style [id] -> Synthesize Style Bible for style (Phase 4)
+        python batch_process.py -b [id]                 -> Shortcut for --synthesize-style
+        python batch_process.py <urls.txt>              -> Ingests URLs from file
+        python batch_process.py <urls.txt> -s           -> Ingests URLs from file and syncs them
     """
     args = sys.argv[1:]
     sync_requested = any(arg in ("--sync", "-s", "--sync-all") for arg in args)
     file_args = [arg for arg in args if not arg.startswith("-")]
+
+    # Check for Style Synthesis request
+    if "--synthesize-style" in args or "-b" in args:
+        flag = "--synthesize-style" if "--synthesize-style" in args else "-b"
+        flag_idx = args.index(flag)
+        target_style = (
+            args[flag_idx + 1]
+            if flag_idx + 1 < len(args) and not args[flag_idx + 1].startswith("-")
+            else "default_style"
+        )
+        synthesize_style_corpus(style_id=target_style)
+        return
 
     if file_args:
         target_file = Path(file_args[0])
