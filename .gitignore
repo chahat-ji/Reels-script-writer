@@ -37,6 +37,9 @@ data/videos/*
 !data/videos/.gitkeep
 data/audio/*
 !data/audio/.gitkeep
+data/extractions/*
+!data/extractions/.gitkeep
+!data/extractions/v_eee566bd14_v1.json
 data/staging/
 data/cache/
 data/reels/

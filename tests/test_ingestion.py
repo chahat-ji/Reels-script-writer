@@ -96,3 +96,47 @@ def test_ingestion_service_flow_and_deduplication(synthetic_video, tmp_path, mon
     assert result2.video_id == result1.video_id
     assert result2.sha256 == result1.sha256
 
+
+def test_pre_download_idempotency_skips_ytdl(synthetic_video, tmp_path, monkeypatch):
+    """
+    Verify pre-download idempotency:
+    If a video with the canonical source URL already exists,
+    ingest() must immediately return is_duplicate=True without calling yt-dlp.
+    """
+    test_db_url = f"sqlite:///{tmp_path / 'isolated_test_idempotent.db'}"
+    test_engine = create_engine(test_db_url, connect_args={"check_same_thread": False})
+    Base.metadata.create_all(bind=test_engine)
+    TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=test_engine)
+    monkeypatch.setattr(app.core.database, "SessionLocal", TestingSessionLocal)
+
+    storage = LocalStorageProvider(root_dir=tmp_path / "storage")
+    service = IngestionService(storage=storage)
+
+    # First ingest a video and record its canonical URL
+    test_reel_url = "https://www.instagram.com/reel/TEST_REEL_999/"
+    res1 = service.ingest(source=synthetic_video, style_id="test_style")
+    with TestingSessionLocal() as session:
+        from app.models.schema import Video
+        video = session.query(Video).filter_by(video_id=res1.video_id).first()
+        video.source_url = test_reel_url
+        session.commit()
+
+    # Track calls to download_video
+    ytdl_called = False
+
+    def mock_download_video(*args, **kwargs):
+        nonlocal ytdl_called
+        ytdl_called = True
+        raise AssertionError("download_video should not be called for an existing URL!")
+
+    monkeypatch.setattr("app.ingestion.service.download_video", mock_download_video)
+
+    # Ingest the same reel URL with tracking query parameters
+    url_with_tracking = "https://www.instagram.com/reel/TEST_REEL_999/?utm_source=ig_web_copy_link&obrf=abc"
+    res2 = service.ingest(source=url_with_tracking, style_id="test_style")
+
+    assert not ytdl_called, "download_video was called despite pre-download idempotency!"
+    assert res2.is_duplicate is True
+    assert res2.video_id == res1.video_id
+
+

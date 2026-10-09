@@ -25,6 +25,8 @@ from app.core.config import console, settings
 from app.core.database import init_db
 from app.extraction.gemini_extractor import GeminiExtractor
 from app.ingestion.service import IngestionService
+from app.ingestion.url_parser import clean_input_string
+from app.memory.service import MemoryService
 
 
 def run_pipeline(source: str, style_id: str = "default_style") -> None:
@@ -65,7 +67,7 @@ def run_pipeline(source: str, style_id: str = "default_style") -> None:
     console.print(table)
 
     # Step 2: Phase 2 - One-Time Gemini Multimodal Video Extraction
-    if not result.is_duplicate or result.status != "extracted":
+    if result.status == "stored":
         if settings.gemini_api_key:
             try:
                 console.print("\n[bold cyan]Step 2: Launching Phase 2 Gemini Multimodal Extraction...[/bold cyan]")
@@ -92,6 +94,30 @@ def run_pipeline(source: str, style_id: str = "default_style") -> None:
                 "set GEMINI_API_KEY in your .env file.[/yellow]"
             )
 
+    # Step 3: Phase 3 - Video Memory Distillation & Vector Indexing
+    if settings.gemini_api_key:
+        archive_path = settings.extractions_dir / f"{result.video_id}_v1.json"
+        if archive_path.is_file():
+            try:
+                console.print("\n[bold cyan]Step 3: Launching Phase 3 Video Memory Distillation & Indexing...[/bold cyan]")
+                memory_service = MemoryService()
+                mem = memory_service.distill_and_index_video(video_id=result.video_id, style_id=style_id)
+                chars = mem.metadata_json.get("characters", []) if mem.metadata_json else []
+                mechs = mem.metadata_json.get("comedy_mechanisms", []) if mem.metadata_json else []
+                console.print(
+                    Panel(
+                        f"[bold green]✓ Phase 3 Video Memory & Vector Index Ready for {result.video_id}![/bold green]\n"
+                        f"• Characters: {', '.join(chars) if chars else 'N/A'}\n"
+                        f"• Comedy Mechanisms: {', '.join(mechs) if mechs else 'N/A'}\n"
+                        f"• Embedding: 768-dim float32 NumPy vector stored in SQLite\n"
+                        f"• Pipeline Status: [bold green]INDEXED[/bold green]",
+                        title="🧠 Creative Video Memory Distilled",
+                        border_style="green",
+                    )
+                )
+            except Exception as mem_err:
+                console.print(f"[bold red]Phase 3 Memory Indexing encountered an error:[/bold red] {mem_err}")
+
 
 def main():
     """
@@ -101,12 +127,11 @@ def main():
     """
     if len(sys.argv) > 1:
         # User passed URL or path directly as first argument
-        source = sys.argv[1].strip()
+        source = clean_input_string(sys.argv[1])
     else:
         # Interactive prompt if no arguments were provided
-        source = Prompt.ask(
-            "[bold cyan]Enter Instagram Reel URL or video file path[/bold cyan]"
-        ).strip()
+        raw_prompt = Prompt.ask("[bold cyan]Enter Instagram Reel URL or video file path[/bold cyan]")
+        source = clean_input_string(raw_prompt)
 
     if not source:
         console.print("[bold red]Error: No video URL or file path provided.[/bold red]")

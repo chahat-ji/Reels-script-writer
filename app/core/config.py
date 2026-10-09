@@ -48,7 +48,7 @@ class Settings:
         self.extraction_model: str = os.getenv("EXTRACTION_MODEL", "gemini-3.8-flash")
         self.synthesis_model: str = os.getenv("SYNTHESIS_MODEL", "gemini-3.8-flash")
         self.generation_model: str = os.getenv("GENERATION_MODEL", "gemini-3.8-flash")
-        self.embedding_model: str = os.getenv("EMBEDDING_MODEL", "text-embedding-004")
+        self.embedding_model: str = os.getenv("EMBEDDING_MODEL", "gemini-embedding-001")
 
         # Storage paths
         self.base_dir: Path = BASE_DIR

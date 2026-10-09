@@ -68,6 +68,7 @@ class Video(Base):
 
     video_id = Column(String(64), primary_key=True, index=True)
     sha256 = Column(String(64), unique=True, index=True, nullable=False)  # For duplicate detection
+    source_url = Column(Text, nullable=True, index=True)  # Canonical web source URL for pre-download idempotency
     storage_uri = Column(Text, nullable=False)  # Permanent URI (e.g. file:///... or s3://...)
     audio_uri = Column(Text, nullable=True)     # Extracted audio URI (e.g. file:///.../audio.m4a)
     duration_ms = Column(Integer, nullable=True)  # Duration in milliseconds

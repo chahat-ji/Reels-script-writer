@@ -8,7 +8,7 @@ context-managed sessions for transactions.
 
 from contextlib import contextmanager
 from typing import Generator, Optional
-from sqlalchemy import create_engine, event
+from sqlalchemy import create_engine, event, text
 from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, sessionmaker
 
@@ -44,6 +44,19 @@ def init_db(custom_engine: Optional[Engine] = None) -> None:
     """
     target_engine = custom_engine or engine
     Base.metadata.create_all(bind=target_engine)
+
+    # Ensure source_url column exists in SQLite videos table for existing installations
+    if "sqlite" in str(target_engine.url):
+        try:
+            with target_engine.connect() as conn:
+                cursor = conn.execute(text("PRAGMA table_info(videos)"))
+                cols = [r[1] for r in cursor.fetchall()]
+                if "source_url" not in cols:
+                    conn.execute(text("ALTER TABLE videos ADD COLUMN source_url TEXT"))
+                    conn.commit()
+        except Exception:
+            pass
+
     console.print(
         f"[bold green][DB INITIALIZED][/bold green] Database schema ready at: "
         f"[cyan]{target_engine.url}[/cyan]"

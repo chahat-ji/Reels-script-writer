@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Optional
 import yt_dlp
 from app.core.config import console
+from app.ingestion.url_parser import canonicalize_url
 
 
 @dataclass
@@ -37,10 +38,11 @@ def download_video(url: str, output_dir: Optional[Path] = None) -> DownloadedVid
     Raises:
         RuntimeError: If download fails or output file cannot be located.
     """
+    clean_url = canonicalize_url(url)
     staging_dir = Path(output_dir) if output_dir else Path(tempfile.mkdtemp(prefix="reel_download_"))
     staging_dir.mkdir(parents=True, exist_ok=True)
 
-    console.print(f"[bold cyan][DOWNLOADING][/bold cyan] Fetching video from: [underline]{url}[/underline]")
+    console.print(f"[bold cyan][DOWNLOADING][/bold cyan] Fetching video from: [underline]{clean_url}[/underline]")
 
     # Template for yt-dlp output file
     output_template = str(staging_dir / "%(id)s.%(ext)s")
@@ -57,9 +59,9 @@ def download_video(url: str, output_dir: Optional[Path] = None) -> DownloadedVid
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             # Extract video info and download
-            info_dict = ydl.extract_info(url, download=True)
+            info_dict = ydl.extract_info(clean_url, download=True)
             if not info_dict:
-                raise RuntimeError(f"Unable to extract video information from {url}")
+                raise RuntimeError(f"Unable to extract video information from {clean_url}")
 
             video_id = info_dict.get("id", "downloaded_video")
             title = info_dict.get("title")
@@ -85,10 +87,10 @@ def download_video(url: str, output_dir: Optional[Path] = None) -> DownloadedVid
                 video_path=downloaded_file,
                 title=title,
                 duration_seconds=float(duration) if duration else None,
-                source_url=url,
+                source_url=clean_url,
             )
 
     except Exception as exc:
         console.print(f"[bold red][DOWNLOAD ERROR][/bold red] Failed to download video: {exc}")
-        raise RuntimeError(f"Download failed for {url}: {exc}") from exc
+        raise RuntimeError(f"Download failed for {clean_url}: {exc}") from exc
 

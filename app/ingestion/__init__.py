@@ -6,6 +6,7 @@ Provides video download, audio extraction, deduplication, and ingestion coordina
 from app.ingestion.audio_extractor import extract_audio
 from app.ingestion.downloader import download_video
 from app.ingestion.service import IngestionResult, IngestionService, compute_sha256
+from app.ingestion.url_parser import canonicalize_url, is_instagram_url, parse_instagram_shortcode
 
 __all__ = [
     "download_video",
@@ -13,5 +14,8 @@ __all__ = [
     "compute_sha256",
     "IngestionService",
     "IngestionResult",
+    "canonicalize_url",
+    "is_instagram_url",
+    "parse_instagram_shortcode",
 ]
 
