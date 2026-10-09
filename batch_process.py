@@ -15,21 +15,29 @@ from typing import List, Optional
 from rich.panel import Panel
 from rich.table import Table
 
+from app.account.service import get_authenticated_user
 from app.core.config import console, settings
 from app.core.database import get_db_session, init_db
 from app.extraction.gemini_extractor import GeminiExtractor
 from app.ingestion.service import IngestionService
 from app.memory.service import MemoryService
-from app.models.schema import Style, StyleReference, Video, VideoMemory
+from app.models.schema import Style, StyleReference, User, Video, VideoMemory
 from app.style.service import StyleService
 
 
-def display_dashboard() -> List[Video]:
+def display_dashboard(user: Optional[User] = None) -> List[Video]:
     """
     Query the SQLite database and display a formatted Rich table
     showing all ingested videos and their current pipeline progression.
+    Enforces active user authentication.
     """
     init_db()
+    active_user = user or get_authenticated_user()
+
+    console.print(
+        f"[bold cyan]👤 Logged in as:[/bold cyan] [bold green]{active_user.username}[/bold green] "
+        f"([dim]{active_user.user_id}[/dim])"
+    )
 
     with get_db_session() as session:
         videos = session.query(Video).order_by(Video.created_at.desc()).all()
@@ -117,29 +125,44 @@ def display_dashboard() -> List[Video]:
         return videos
 
 
-def sync_all_videos(style_id: Optional[str] = None) -> None:
+def sync_all_videos(style_id: Optional[str] = None, user_id: Optional[str] = None) -> None:
     """
-    Synchronize all stored videos in SQLite to the current active pipeline level.
-    Executes Phase 2 Gemini extraction on any videos that are in 'stored' state.
+    Synchronize stored videos in SQLite to current active pipeline level (Phase 2 & 3).
+    - If user_id is provided, scopes synchronization to videos owned by that user's creators.
+    - If style_id is provided, scopes to that specific creator.
+    - If both are None, synchronizes across the entire library.
     """
     init_db()
-    console.print(
-        Panel(
-            f"[bold cyan]Synchronizing library videos to current pipeline level (Phase 2 - Gemini Extraction)...[/bold cyan]\n"
-            f"[dim]Model: {settings.extraction_model}[/dim]",
-            title="🔄 Pipeline Batch Synchronizer",
-            border_style="cyan",
-        )
-    )
 
     with get_db_session() as session:
-        query = session.query(Video)
+        query = session.query(Video).distinct()
+        scope_title = "Global Library (Entire DB)"
         if style_id:
             query = query.join(StyleReference).filter(StyleReference.style_id == style_id)
+            scope_title = f"Creator: {style_id}"
+        elif user_id:
+            owned_styles = [s.style_id for s in session.query(Style).filter_by(user_id=user_id).all()]
+            if not owned_styles:
+                console.print(f"[yellow]No creator profiles found for user '{user_id}'. Nothing to sync.[/yellow]")
+                return
+            query = query.join(StyleReference).filter(StyleReference.style_id.in_(owned_styles))
+            scope_title = f"User Scoped: {user_id} ({len(owned_styles)} Creators)"
+
         videos = query.all()
 
+        console.print(
+            Panel(
+                f"[bold cyan]Synchronizing videos to current pipeline level (Phase 2 & 3)...[/bold cyan]\n"
+                f"• Scope: [green]{scope_title}[/green]\n"
+                f"• Target Videos: [yellow]{len(videos)}[/yellow]\n"
+                f"[dim]Model: {settings.extraction_model}[/dim]",
+                title="🔄 Pipeline Batch Synchronizer",
+                border_style="cyan",
+            )
+        )
+
         if not videos:
-            console.print("[yellow]No videos found in library to synchronize.[/yellow]")
+            console.print("[yellow]No matching videos found in scope to synchronize.[/yellow]")
             return
 
         # Step A: Identify and run Phase 2 Extraction for videos in 'stored' state
@@ -256,6 +279,22 @@ def main():
         python batch_process.py <urls.txt>              -> Ingests URLs from file
         python batch_process.py <urls.txt> -s           -> Ingests URLs from file and syncs them
     """
+    init_db()
+
+    # Enforce mandatory user authentication
+    try:
+        user = get_authenticated_user()
+    except PermissionError as auth_err:
+        console.print(
+            Panel(
+                f"[bold red]Access Denied:[/bold red] You must be logged in to view the dashboard or run batch operations.\n\n"
+                f"Please log in using: [cyan]python -m app.cli user login <username>[/cyan]",
+                title="🔒 Authentication Required",
+                border_style="red",
+            )
+        )
+        sys.exit(1)
+
     args = sys.argv[1:]
     sync_requested = any(arg in ("--sync", "-s", "--sync-all") for arg in args)
     file_args = [arg for arg in args if not arg.startswith("-")]
@@ -279,11 +318,14 @@ def main():
             return
 
     if sync_requested:
-        sync_all_videos()
+        if any(arg in ("--all", "--global") for arg in args):
+            sync_all_videos()
+        else:
+            sync_all_videos(user_id=user.user_id)
         return
 
     # Default action: display progress dashboard
-    display_dashboard()
+    display_dashboard(user=user)
 
 
 if __name__ == "__main__":

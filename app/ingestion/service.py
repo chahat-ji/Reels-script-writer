@@ -128,6 +128,11 @@ class IngestionService:
                                 session.add(Style(style_id=style_id, version=1))
                             session.add(StyleReference(style_id=style_id, video_id=existing_video.video_id, relevance=1.0))
                             session.commit()
+                            console.print(
+                                f"[bold green][SUPERPOWER DEDUPLICATION][/bold green] Cross-creator link established: "
+                                f"[cyan]{existing_video.video_id}[/cyan] linked to creator '[magenta]{style_id}[/magenta]' "
+                                f"(0 download / 0 extraction tokens)."
+                            )
 
                         return IngestionResult(
                             video_id=existing_video.video_id,
@@ -188,6 +193,11 @@ class IngestionService:
                         session.add(Style(style_id=style_id, version=1))
                     session.add(StyleReference(style_id=style_id, video_id=existing_video.video_id, relevance=1.0))
                     session.commit()
+                    console.print(
+                        f"[bold green][SUPERPOWER DEDUPLICATION][/bold green] Cross-creator link established: "
+                        f"[cyan]{existing_video.video_id}[/cyan] linked to creator '[magenta]{style_id}[/magenta]' "
+                        f"(0 download / 0 extraction tokens)."
+                    )
 
                 # Clean up temporary downloads
                 for p in temp_cleanup_paths:

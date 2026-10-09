@@ -9,10 +9,61 @@ in pilot mode.
 
 import re
 import uuid
+from pathlib import Path
 from typing import Any, Dict, List, Optional
-from app.core.config import console
+from app.core.config import console, settings
 from app.core.database import get_db_session
 from app.models.schema import Script, Style, StyleReference, User, Video, VideoMemory, utc_now
+
+SESSION_FILE = settings.data_dir / ".current_user"
+
+
+def get_current_user_id(session_file: Optional[Path] = None) -> Optional[str]:
+    """Return the active user_id from the local session file if present, else None."""
+    target_file = session_file or SESSION_FILE
+    if target_file.is_file():
+        saved = target_file.read_text(encoding="utf-8").strip()
+        if saved:
+            return saved
+    return None
+
+
+def set_current_user_id(user_id: str, session_file: Optional[Path] = None) -> None:
+    """Save the active user_id to the local session file."""
+    target_file = session_file or SESSION_FILE
+    target_file.parent.mkdir(parents=True, exist_ok=True)
+    target_file.write_text(user_id.strip(), encoding="utf-8")
+
+
+def clear_current_session(session_file: Optional[Path] = None) -> None:
+    """Clear the active user session file."""
+    target_file = session_file or SESSION_FILE
+    if target_file.is_file():
+        target_file.unlink(missing_ok=True)
+
+
+def get_authenticated_user(session_file: Optional[Path] = None) -> User:
+    """
+    Retrieve the currently authenticated User instance from the local session.
+    Raises PermissionError if no user session is active or the user is not found in DB.
+    """
+    uid = get_current_user_id(session_file=session_file)
+    if not uid:
+        raise PermissionError(
+            "Access Denied: No user is currently logged in.\n"
+            "Please log in using: python -m app.cli user login <username>"
+        )
+
+    with get_db_session() as session:
+        user = session.query(User).filter_by(user_id=uid).first()
+        if not user:
+            raise PermissionError(
+                f"Access Denied: Logged-in user '{uid}' was not found in the database.\n"
+                f"Please log in using: python -m app.cli user login <username>"
+            )
+        _ = (user.user_id, user.username, user.email, user.auth_provider)
+        session.expunge(user)
+        return user
 
 
 def slugify(text: str) -> str:
@@ -27,6 +78,22 @@ class AccountService:
     """
     Service managing User accounts, Creator profiles (styles), and historical records.
     """
+
+    def get_authenticated_user(self, session_file: Optional[Path] = None) -> User:
+        """Retrieve the currently authenticated user from session or raise PermissionError."""
+        return get_authenticated_user(session_file=session_file)
+
+    def login(
+        self,
+        username: str,
+        email: Optional[str] = None,
+        auth_provider: str = "local",
+        session_file: Optional[Path] = None,
+    ) -> User:
+        """Retrieve or create user and set local active session."""
+        user = self.create_or_get_user(username=username, email=email, auth_provider=auth_provider)
+        set_current_user_id(user.user_id, session_file=session_file)
+        return user
 
     def create_or_get_user(
         self,

@@ -40,17 +40,33 @@ class MemoryService:
         Returns:
             Persisted VideoMemory database model instance.
         """
-        # 1. Load canonical extraction
-        extraction = load_archived_extraction(video_id)
-        if not extraction:
-            raise FileNotFoundError(f"No archived extraction found for video: {video_id}")
-
-        # 2. Resolve style association
+        # 1. Resolve style association and check for existing memory in SQLite
         target_style_id = style_id
         with get_db_session() as session:
             if not target_style_id:
                 ref = session.query(StyleReference).filter_by(video_id=video_id).first()
                 target_style_id = ref.style_id if ref else "default_style"
+
+            # Superpower Reuse: if video memory and vector already exist, reuse instantly
+            existing_memory = session.query(VideoMemory).filter_by(video_id=video_id).first()
+            if existing_memory and existing_memory.embedding is not None and existing_memory.memory_text:
+                ref = session.query(StyleReference).filter_by(style_id=target_style_id, video_id=video_id).first()
+                if not ref:
+                    session.add(StyleReference(style_id=target_style_id, video_id=video_id, relevance=1.0))
+                    session.commit()
+                _ = (existing_memory.video_id, existing_memory.memory_text, existing_memory.embedding)
+                session.expunge(existing_memory)
+                console.print(
+                    f"[bold green][SUPERPOWER REUSE][/bold green] Creative memory and 768-dim embedding "
+                    f"already exist for [cyan]{video_id}[/cyan]. Linked to creator '[magenta]{target_style_id}[/magenta]' "
+                    f"(0 LLM/embedding tokens)."
+                )
+                return existing_memory
+
+        # 2. Load canonical extraction
+        extraction = load_archived_extraction(video_id)
+        if not extraction:
+            raise FileNotFoundError(f"No archived extraction found for video: {video_id}")
 
         console.print(
             f"[bold cyan][MEMORY DISTILLATION][/bold cyan] Transforming "

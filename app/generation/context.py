@@ -14,12 +14,10 @@ from typing import Any, Dict, List, Optional
 from app.core.config import console
 from app.core.database import get_db_session
 from app.memory.index import VectorRetriever
-from app.models.schema import Style, VideoMemory
+from app.models.schema import Style, StyleReference, VideoMemory
 
 
 SCRIPT_GENERATION_SYSTEM_PROMPT = """You are an elite television and digital sketch comedy writer.
-Your job is to write an original, high-energy 60-second comedy screenplay based on a NEW USER PREMISE.
-
 You are provided with:
 1. The creator's master STYLE BIBLE (defining language register, dialogue rhythm, comedic escalation engine, and endings).
 2. Up to 10 REFERENCE VIDEO MEMORIES (demonstrating previous successful sketches in this style).
@@ -87,8 +85,15 @@ class ContextBuilder:
             bible_text = style.bible_text
             creator_name = style.name or style_id
 
-            # Count total memories for this style
-            total_memories = session.query(VideoMemory).filter_by(style_id=style_id).count()
+            # Count total memories for this style (directly assigned or linked via StyleReference)
+            referenced_ids = [
+                ref.video_id
+                for ref in session.query(StyleReference).filter_by(style_id=style_id).all()
+            ]
+            memories_query = session.query(VideoMemory).filter(
+                (VideoMemory.style_id == style_id) | (VideoMemory.video_id.in_(referenced_ids))
+            )
+            total_memories = memories_query.count()
 
         if total_memories == 0:
             raise ValueError(
@@ -101,7 +106,15 @@ class ContextBuilder:
             # Default Ground Model: Load all available memories directly (0 embedding calls)
             retrieval_mode = "direct_all"
             with get_db_session() as session:
-                memories = session.query(VideoMemory).filter_by(style_id=style_id).all()
+                referenced_ids = [
+                    ref.video_id
+                    for ref in session.query(StyleReference).filter_by(style_id=style_id).all()
+                ]
+                memories = (
+                    session.query(VideoMemory)
+                    .filter((VideoMemory.style_id == style_id) | (VideoMemory.video_id.in_(referenced_ids)))
+                    .all()
+                )
                 memory_texts = [
                     f"--- REFERENCE MEMORY {idx}/{len(memories)}: {m.video_id} ---\n{m.memory_text.strip()}"
                     for idx, m in enumerate(memories, 1)

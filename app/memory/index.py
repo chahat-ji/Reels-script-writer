@@ -107,11 +107,18 @@ class VectorRetriever:
         if q_norm_val > 0:
             query_vec = query_vec / q_norm_val
 
-        # 2. Fetch all memories for the style from SQLite
+        # 2. Fetch all memories for the style from SQLite (directly assigned or linked via StyleReference)
         with get_db_session() as session:
+            referenced_ids = [
+                ref.video_id
+                for ref in session.query(StyleReference).filter_by(style_id=style_id).all()
+            ]
             memories = (
                 session.query(VideoMemory)
-                .filter(VideoMemory.style_id == style_id, VideoMemory.embedding.isnot(None))
+                .filter(
+                    (VideoMemory.style_id == style_id) | (VideoMemory.video_id.in_(referenced_ids)),
+                    VideoMemory.embedding.isnot(None),
+                )
                 .all()
             )
 

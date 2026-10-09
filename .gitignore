@@ -52,6 +52,7 @@ data/reels/
 data/app.db
 data/*.db
 data/*.sqlite
+data/.current_user
 
 # Exports, scratch & temporary files
 export/

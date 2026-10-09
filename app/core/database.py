@@ -45,15 +45,27 @@ def init_db(custom_engine: Optional[Engine] = None) -> None:
     target_engine = custom_engine or engine
     Base.metadata.create_all(bind=target_engine)
 
-    # Ensure source_url column exists in SQLite videos table for existing installations
+    # Ensure backward-compatible column migrations in SQLite tables
     if "sqlite" in str(target_engine.url):
         try:
             with target_engine.connect() as conn:
+                # Videos table migrations
                 cursor = conn.execute(text("PRAGMA table_info(videos)"))
                 cols = [r[1] for r in cursor.fetchall()]
                 if "source_url" not in cols:
                     conn.execute(text("ALTER TABLE videos ADD COLUMN source_url TEXT"))
-                    conn.commit()
+
+                # Styles table migrations
+                cursor_styles = conn.execute(text("PRAGMA table_info(styles)"))
+                style_cols = [r[1] for r in cursor_styles.fetchall()]
+                if "user_id" not in style_cols:
+                    conn.execute(text("ALTER TABLE styles ADD COLUMN user_id VARCHAR(64)"))
+                if "name" not in style_cols:
+                    conn.execute(text("ALTER TABLE styles ADD COLUMN name VARCHAR(128)"))
+                if "description" not in style_cols:
+                    conn.execute(text("ALTER TABLE styles ADD COLUMN description TEXT"))
+
+                conn.commit()
         except Exception:
             pass
 

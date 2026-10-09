@@ -22,29 +22,19 @@ from typing import List, Optional
 from rich.panel import Panel
 from rich.table import Table
 
-from app.account.service import AccountService
+from app.account.service import (
+    AccountService,
+    get_authenticated_user,
+    get_current_user_id,
+    set_current_user_id,
+)
 from app.core.config import console, settings
-from app.core.database import init_db
+from app.core.database import get_db_session, init_db
 from app.generation.service import ScriptService
 from app.ingestion.queue import IngestionQueue
 from app.ingestion.url_parser import clean_input_string
+from app.models.schema import User
 from app.style.service import StyleService
-
-SESSION_FILE = settings.data_dir / ".current_user"
-
-
-def get_current_user_id() -> str:
-    """Return the currently logged-in user_id from local session, defaulting to 'usr_pilot_default'."""
-    if SESSION_FILE.is_file():
-        saved = SESSION_FILE.read_text(encoding="utf-8").strip()
-        if saved:
-            return saved
-    return "usr_pilot_default"
-
-
-def set_current_user_id(user_id: str) -> None:
-    """Save the active user_id to local session."""
-    SESSION_FILE.write_text(user_id.strip(), encoding="utf-8")
 
 
 # ---------------------------------------------------------------------------
@@ -55,8 +45,7 @@ def handle_user(args: argparse.Namespace) -> None:
     """Handle user account commands."""
     service = AccountService()
     if args.user_action == "login":
-        user = service.create_or_get_user(username=args.username, email=args.email)
-        set_current_user_id(user.user_id)
+        user = service.login(username=args.username, email=args.email)
         console.print(
             Panel(
                 f"[bold green]✓ Logged in as:[/bold green] [cyan]{user.username}[/cyan]\n"
@@ -68,17 +57,29 @@ def handle_user(args: argparse.Namespace) -> None:
             )
         )
     elif args.user_action == "whoami":
-        uid = get_current_user_id()
-        console.print(f"[bold cyan]Current Active User ID:[/bold cyan] [green]{uid}[/green]")
+        try:
+            user = get_authenticated_user()
+            console.print(
+                Panel(
+                    f"[bold green]Active User:[/bold green] [cyan]{user.username}[/cyan]\n"
+                    f"• User ID: {user.user_id}\n"
+                    f"• Email: {user.email or 'N/A'}\n"
+                    f"• Provider: {user.auth_provider}",
+                    title="👤 Active Session",
+                    border_style="green",
+                )
+            )
+        except PermissionError:
+            console.print(
+                "[yellow]No active user logged in. Please log in with: [cyan]python -m app.cli user login <username>[/cyan][/yellow]"
+            )
     elif args.user_action == "list":
-        # Query all users
-        with service.create_or_get_user("pilot_default"):
-            pass  # Ensure DB initialized
-        from app.core.database import get_db_session
-        from app.models.schema import User
         with get_db_session() as session:
             users = session.query(User).order_by(User.created_at.desc()).all()
-            table = Table(title="👥 Registered Users", border_style="cyan")
+            if not users:
+                console.print("[yellow]No users registered in database.[/yellow]")
+                return
+            table = Table(title=f"👥 Registered Users ({len(users)} Total)", border_style="cyan")
             table.add_column("User ID", style="bold cyan")
             table.add_column("Username", style="green")
             table.add_column("Email", style="dim")
@@ -90,8 +91,14 @@ def handle_user(args: argparse.Namespace) -> None:
 
 def handle_creator(args: argparse.Namespace) -> None:
     """Handle creator profile commands."""
+    try:
+        user = get_authenticated_user()
+    except PermissionError as err:
+        console.print(f"[bold red]{err}[/bold red]")
+        return
+
     service = AccountService()
-    user_id = get_current_user_id()
+    user_id = user.user_id
 
     if args.creator_action == "add":
         creator = service.create_creator(
@@ -140,6 +147,12 @@ def handle_creator(args: argparse.Namespace) -> None:
 
 def handle_upload(args: argparse.Namespace) -> None:
     """Handle batch video uploads under a creator profile."""
+    try:
+        user = get_authenticated_user()
+    except PermissionError as err:
+        console.print(f"[bold red]{err}[/bold red]")
+        return
+
     creator_id = args.creator_id
     raw_source = args.source
     concurrency = args.concurrency or 2
@@ -158,6 +171,7 @@ def handle_upload(args: argparse.Namespace) -> None:
     console.print(
         Panel(
             f"[bold green]Upload Completed for '{creator_id}'![/bold green]\n"
+            f"• Authenticated User: {user.username} ({user.user_id})\n"
             f"• Total Submitted: {res.total}\n"
             f"• Successfully Indexed: [green]{len(res.succeeded)}[/green]\n"
             f"• Failed: [red]{len(res.failed)}[/red]\n"
@@ -170,12 +184,17 @@ def handle_upload(args: argparse.Namespace) -> None:
 
 def handle_generate(args: argparse.Namespace) -> None:
     """Handle screenplay generation for a creator."""
-    user_id = get_current_user_id()
+    try:
+        user = get_authenticated_user()
+    except PermissionError as err:
+        console.print(f"[bold red]{err}[/bold red]")
+        return
+
     script_service = ScriptService()
     script = script_service.generate_script(
         style_id=args.creator_id,
         premise=args.premise,
-        user_id=user_id,
+        user_id=user.user_id,
     )
     console.print(
         Panel(
@@ -188,8 +207,14 @@ def handle_generate(args: argparse.Namespace) -> None:
 
 def handle_history(args: argparse.Namespace) -> None:
     """Handle history queries for uploads and generated scripts."""
+    try:
+        user = get_authenticated_user()
+    except PermissionError as err:
+        console.print(f"[bold red]{err}[/bold red]")
+        return
+
     service = AccountService()
-    user_id = get_current_user_id()
+    user_id = user.user_id
 
     if args.history_action == "uploads":
         style_id = args.creator
@@ -226,6 +251,23 @@ def handle_history(args: argparse.Namespace) -> None:
             premise_disp = (s.premise[:37] + "...") if len(s.premise) > 40 else s.premise
             table.add_row(s.script_id, s.style_id, premise_disp, created_str)
         console.print(table)
+
+
+def handle_sync(args: argparse.Namespace) -> None:
+    """Handle synchronization of pending video extractions and vector indexing."""
+    try:
+        user = get_authenticated_user()
+    except PermissionError as err:
+        console.print(f"[bold red]{err}[/bold red]")
+        return
+
+    from batch_process import sync_all_videos
+    if args.all:
+        sync_all_videos()
+    elif args.creator:
+        sync_all_videos(style_id=args.creator)
+    else:
+        sync_all_videos(user_id=user.user_id)
 
 
 # ---------------------------------------------------------------------------
@@ -279,6 +321,15 @@ def build_parser() -> argparse.ArgumentParser:
     scr_h.add_argument("--creator", default=None, help="Filter by creator ID")
     scr_h.add_argument("--all", action="store_true", help="List across all users")
 
+    # Sync subparser
+    sync_p = subparsers.add_parser("sync", help="Synchronize pending video extractions & vector indexing")
+    sync_p.add_argument("--all", action="store_true", help="Sync all library videos across entire database (global)")
+    sync_p.add_argument("--creator", default=None, help="Sync videos under specific creator ID")
+
+    # Menu / Interactive option
+    parser.add_argument("--interactive", "-i", action="store_true", help="Launch interactive studio mode")
+    subparsers.add_parser("menu", help="Launch interactive studio mode")
+
     return parser
 
 
@@ -286,11 +337,19 @@ def main() -> None:
     """CLI Entrypoint."""
     init_db()
     parser = build_parser()
+
+    # Launch interactive wizard by default if no arguments are provided
     if len(sys.argv) == 1:
-        parser.print_help()
-        sys.exit(0)
+        from app.interactive import interactive_main
+        interactive_main()
+        return
 
     args = parser.parse_args()
+    if getattr(args, "interactive", False) or args.subcommand == "menu":
+        from app.interactive import interactive_main
+        interactive_main()
+        return
+
     if args.subcommand == "user":
         handle_user(args)
     elif args.subcommand == "creator":
@@ -301,6 +360,8 @@ def main() -> None:
         handle_generate(args)
     elif args.subcommand == "history":
         handle_history(args)
+    elif args.subcommand == "sync":
+        handle_sync(args)
     else:
         parser.print_help()
 

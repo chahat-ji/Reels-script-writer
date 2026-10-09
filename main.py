@@ -17,39 +17,61 @@ as they are implemented.
 
 import sys
 from pathlib import Path
+from typing import Optional
 from rich.panel import Panel
 from rich.table import Table
 from rich.prompt import Prompt
 
+from app.account.service import AccountService, get_authenticated_user
 from app.core.config import console, settings
 from app.core.database import init_db
 from app.extraction.gemini_extractor import GeminiExtractor
 from app.ingestion.service import IngestionService
 from app.ingestion.url_parser import clean_input_string
 from app.memory.service import MemoryService
+from app.models.schema import User
 from app.style.service import StyleService
 
 
-def run_pipeline(source: str, style_id: str = "default_style") -> None:
+def run_pipeline(source: str, style_id: Optional[str] = None, user: Optional[User] = None) -> None:
     """
-    Execute a single video source through the current pipeline level.
+    Execute a single video source through the current pipeline level for an authenticated user.
     """
+    # Ensure database schema is initialized
+    init_db()
+
+    active_user = user or get_authenticated_user()
+    account_service = AccountService()
+
+    # Resolve target creator / style
+    if not style_id:
+        user_creators = account_service.list_creators(user_id=active_user.user_id)
+        if user_creators:
+            target_style_id = user_creators[0].style_id
+        else:
+            creator = account_service.create_creator(
+                user_id=active_user.user_id,
+                creator_name=f"{active_user.username.capitalize()}'s Style",
+                creator_id=f"c_{active_user.username}",
+            )
+            target_style_id = creator.style_id
+    else:
+        target_style_id = style_id
+
     console.print(
         Panel.fit(
             f"[bold cyan]Video-to-Style Pipeline[/bold cyan]\n"
+            f"[green]User:[/green] {active_user.username} ({active_user.user_id})\n"
             f"[yellow]Source:[/yellow] {source}\n"
-            f"[yellow]Target Style:[/yellow] {style_id}",
+            f"[yellow]Target Style / Creator:[/yellow] {target_style_id}",
             border_style="cyan",
             title="🎬 Video Intake",
         )
     )
 
-    # Ensure database schema is initialized
-    init_db()
-
     # Step 1: Ingestion & Storage Pipeline
     ingestion_service = IngestionService()
-    result = ingestion_service.ingest(source=source, style_id=style_id)
+    result = ingestion_service.ingest(source=source, style_id=target_style_id)
 
     # Render summary table of the ingestion result
     table = Table(title="Pipeline Ingestion Summary", border_style="green")
@@ -121,39 +143,65 @@ def run_pipeline(source: str, style_id: str = "default_style") -> None:
 
     # Step 4: Phase 4 - Style Bible Status
     style_service = StyleService()
-    active_style = style_service.get_style(style_id=style_id)
+    # Step 4: Phase 4 - Style Bible Status
+    active_style = style_service.get_style(style_id=target_style_id)
     if active_style and active_style.bible_text:
         console.print(
-            f"\n[dim]📖 Active Style Bible: [bold green]{style_id} (v{active_style.version})[/bold green] "
-            f"(data/styles/{style_id}_v{active_style.version}.md)[/dim]\n"
-            f"[dim]To synthesize or update the Style Bible, run: [bold cyan]python batch_process.py --synthesize-style {style_id}[/bold cyan][/dim]"
+            f"\n[dim]📖 Active Style Bible: [bold green]{target_style_id} (v{active_style.version})[/bold green] "
+            f"(data/styles/{target_style_id}_v{active_style.version}.md)[/dim]\n"
+            f"[dim]To synthesize or update the Style Bible, run: [bold cyan]python batch_process.py --synthesize-style {target_style_id}[/bold cyan][/dim]"
         )
     else:
         console.print(
-            f"\n[yellow]💡 Phase 4 Ready: To synthesize the global Style Bible for '{style_id}', "
-            f"run: [bold cyan]python batch_process.py --synthesize-style {style_id}[/bold cyan][/yellow]"
+            f"\n[yellow]💡 Phase 4 Ready: To synthesize the global Style Bible for '{target_style_id}', "
+            f"run: [bold cyan]python batch_process.py --synthesize-style {target_style_id}[/bold cyan][/yellow]"
         )
 
 
 def main():
     """
     CLI Entrypoint.
-    Accepts URL directly via argument: python main.py <url>
+    Accepts URL directly via argument: python main.py <url> [creator_id]
     Or prompts interactively if run without arguments.
+    Enforces mandatory authentication - backdoor access closed.
     """
+    init_db()
+
+    # Enforce mandatory user authentication
+    try:
+        user = get_authenticated_user()
+    except PermissionError as auth_err:
+        console.print(
+            Panel(
+                f"[bold red]Access Denied:[/bold red] You must be logged in to run the pipeline.\n\n"
+                f"Please log in using: [cyan]python -m app.cli user login <username>[/cyan]",
+                title="🔒 Authentication Required",
+                border_style="red",
+            )
+        )
+        sys.exit(1)
+
+    target_style = None
     if len(sys.argv) > 1:
-        # User passed URL or path directly as first argument
         source = clean_input_string(sys.argv[1])
+        if len(sys.argv) > 2 and not sys.argv[2].startswith("-"):
+            target_style = clean_input_string(sys.argv[2])
     else:
-        # Interactive prompt if no arguments were provided
-        raw_prompt = Prompt.ask("[bold cyan]Enter Instagram Reel URL or video file path[/bold cyan]")
+        raw_prompt = Prompt.ask(
+            "[bold cyan]Enter Instagram Reel URL / video file path[/bold cyan] [dim](or press Enter for Interactive Studio)[/dim]",
+            default="",
+        )
         source = clean_input_string(raw_prompt)
+        if not source:
+            from app.interactive import interactive_main
+            interactive_main()
+            return
 
     if not source:
         console.print("[bold red]Error: No video URL or file path provided.[/bold red]")
         sys.exit(1)
 
-    run_pipeline(source=source)
+    run_pipeline(source=source, style_id=target_style, user=user)
 
 
 if __name__ == "__main__":

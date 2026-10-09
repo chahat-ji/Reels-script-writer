@@ -55,12 +55,12 @@ class IngestionQueue:
         Advance an individual video through Ingestion -> Extraction -> Memory Indexing.
         """
         # 1. Phase 1 Ingestion
-        res = self.ingestion_service.ingest(source=source)
+        res = self.ingestion_service.ingest(source=source, style_id=style_id)
         video_id = res.video_id
 
-        # 2. Phase 2 Extraction (if needed)
+        # 2. Phase 2 Extraction (only if archive is missing)
         archive_path = settings.extractions_dir / f"{video_id}_v1.json"
-        if not archive_path.is_file() or res.status == "stored":
+        if not archive_path.is_file():
             if not self.extractor:
                 self.extractor = GeminiExtractor()
             self.extractor.extract(video_id=video_id)

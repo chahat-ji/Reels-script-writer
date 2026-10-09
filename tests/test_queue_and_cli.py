@@ -34,7 +34,7 @@ def mock_db_session(tmp_path, monkeypatch):
 def test_ingestion_queue_concurrent_batch():
     """Verify IngestionQueue processes items with worker pool and triggers 1 style synthesis at end."""
     mock_ingestion_service = MagicMock()
-    mock_ingestion_service.ingest.side_effect = lambda source: IngestionResult(
+    mock_ingestion_service.ingest.side_effect = lambda source, style_id="default_style", **kwargs: IngestionResult(
         video_id=f"v_{source}",
         sha256=f"hash_{source}",
         storage_uri=f"/path/{source}.mp4",
@@ -109,3 +109,21 @@ def test_cli_parser_commands():
     assert args4.subcommand == "history"
     assert args4.history_action == "scripts"
     assert args4.creator == "nani_comedy"
+
+    # Interactive flag & menu subcommand
+    args5 = parser.parse_args(["--interactive"])
+    assert args5.interactive is True
+
+    args6 = parser.parse_args(["menu"])
+    assert args6.subcommand == "menu"
+
+    # Sync subcommand
+    args7 = parser.parse_args(["sync", "--all"])
+    assert args7.subcommand == "sync"
+    assert args7.all is True
+    assert args7.creator is None
+
+    args8 = parser.parse_args(["sync", "--creator", "nani_comedy"])
+    assert args8.subcommand == "sync"
+    assert args8.all is False
+    assert args8.creator == "nani_comedy"
