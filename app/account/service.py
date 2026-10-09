@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 from app.core.config import console, settings
 from app.core.database import get_db_session
+from app.core.security import hash_password, verify_password
 from app.models.schema import Script, Style, StyleReference, User, Video, VideoMemory, utc_now
 
 SESSION_FILE = settings.data_dir / ".current_user"
@@ -99,11 +100,13 @@ class AccountService:
         self,
         username: str,
         email: Optional[str] = None,
+        password: Optional[str] = None,
+        role: str = "user",
         auth_provider: str = "local",
     ) -> User:
         """
         Retrieve an existing user by username or register a new user.
-        Future-proofed: accepts optional email and OAuth auth_provider.
+        Accepts optional password and role ('user' | 'admin').
         """
         clean_name = username.strip().lower()
         if not clean_name:
@@ -113,20 +116,70 @@ class AccountService:
             user = session.query(User).filter_by(username=clean_name).first()
             if not user:
                 user_id = f"usr_{slugify(clean_name)}"
+                hashed = hash_password(password) if password else None
                 user = User(
                     user_id=user_id,
                     username=clean_name,
                     email=email.strip().lower() if email else None,
+                    hashed_password=hashed,
+                    role=role if role in ("admin", "user") else "user",
                     auth_provider=auth_provider,
                     created_at=utc_now(),
                 )
                 session.add(user)
                 session.flush()
                 console.print(f"[bold green]Registered new user:[/bold green] [cyan]{clean_name}[/cyan] ({user_id})")
+            else:
+                if password and not user.hashed_password:
+                    user.hashed_password = hash_password(password)
+                if role and user.role != role:
+                    user.role = role
+                session.flush()
 
-            _ = (user.user_id, user.username, user.email, user.auth_provider)
+            _ = (user.user_id, user.username, user.email, user.role, user.auth_provider, user.hashed_password)
             session.expunge(user)
             return user
+
+    def authenticate(self, username_or_email: str, password: str) -> Optional[User]:
+        """
+        Verify credentials for a user by username or email.
+        Returns user instance if authenticated, else None.
+        """
+        clean_target = username_or_email.strip().lower()
+        if not clean_target or not password:
+            return None
+
+        with get_db_session() as session:
+            user = (
+                session.query(User)
+                .filter((User.username == clean_target) | (User.email == clean_target))
+                .first()
+            )
+            if not user or not user.hashed_password:
+                return None
+
+            if verify_password(password, user.hashed_password):
+                _ = (user.user_id, user.username, user.email, user.role, user.auth_provider)
+                session.expunge(user)
+                return user
+        return None
+
+    def ensure_default_accounts(self) -> None:
+        """
+        Seed default admin and test creator accounts for the platform if not present.
+        """
+        self.create_or_get_user(
+            username="admin",
+            email="admin@scriptwriter.local",
+            password="admin123",
+            role="admin",
+        )
+        self.create_or_get_user(
+            username="creator",
+            email="creator@scriptwriter.local",
+            password="creator123",
+            role="user",
+        )
 
     def create_creator(
         self,

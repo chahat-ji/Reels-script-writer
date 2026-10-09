@@ -46,6 +46,8 @@ class User(Base):
     user_id = Column(String(64), primary_key=True, index=True)
     username = Column(String(64), unique=True, index=True, nullable=False)
     email = Column(String(128), unique=True, nullable=True)
+    hashed_password = Column(String(256), nullable=True)
+    role = Column(String(32), default="user", nullable=False)  # "user" or "admin"
     auth_provider = Column(String(32), default="local", nullable=False)
     created_at = Column(DateTime(timezone=True), default=utc_now, nullable=False)
 

@@ -261,7 +261,7 @@ def handle_sync(args: argparse.Namespace) -> None:
         console.print(f"[bold red]{err}[/bold red]")
         return
 
-    from batch_process import sync_all_videos
+    from app.ingestion.sync import sync_all_videos
     if args.all:
         sync_all_videos()
     elif args.creator:
@@ -331,6 +331,12 @@ def build_parser() -> argparse.ArgumentParser:
     dash_p.add_argument("--port", type=int, default=8080, help="Web server port (default: 8080)")
     dash_p.add_argument("--host", default="127.0.0.1", help="Host interface (default: 127.0.0.1)")
 
+    # Serve subparser (FastAPI production REST API)
+    serve_p = subparsers.add_parser("serve", help="Launch the FastAPI production REST API server")
+    serve_p.add_argument("--host", default="127.0.0.1", help="Host interface (default: 127.0.0.1)")
+    serve_p.add_argument("--port", type=int, default=8000, help="Port (default: 8000)")
+    serve_p.add_argument("--reload", action="store_true", help="Enable development auto-reload")
+
     # Menu / Interactive option
     parser.add_argument("--interactive", "-i", action="store_true", help="Launch interactive studio mode")
     subparsers.add_parser("menu", help="Launch interactive studio mode")
@@ -383,6 +389,19 @@ def main() -> None:
         )
         app = create_app()
         web.run_app(app, host=host, port=port, print=None)
+    elif args.subcommand == "serve":
+        import uvicorn
+        console.print(
+            Panel.fit(
+                f"[bold green]Script Writer Production REST API[/bold green]\n"
+                f"[cyan]API Base URL:[/cyan] [underline]http://{args.host}:{args.port}[/underline]\n"
+                f"[cyan]Interactive Swagger Docs:[/cyan] [underline]http://{args.host}:{args.port}/docs[/underline]\n"
+                f"[dim]User Studio Endpoints: /api/v1/scripts/* | Admin: /api/v1/admin/*[/dim]",
+                title="🚀 FastAPI Server",
+                border_style="green",
+            )
+        )
+        uvicorn.run("app.api.main:app", host=args.host, port=args.port, reload=args.reload)
     else:
         parser.print_help()
 

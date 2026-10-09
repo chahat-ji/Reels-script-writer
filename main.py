@@ -149,12 +149,12 @@ def run_pipeline(source: str, style_id: Optional[str] = None, user: Optional[Use
         console.print(
             f"\n[dim]📖 Active Style Bible: [bold green]{target_style_id} (v{active_style.version})[/bold green] "
             f"(data/styles/{target_style_id}_v{active_style.version}.md)[/dim]\n"
-            f"[dim]To synthesize or update the Style Bible, run: [bold cyan]python batch_process.py --synthesize-style {target_style_id}[/bold cyan][/dim]"
+            f"[dim]To synthesize or update the Style Bible, run: [bold cyan]python -m app.cli style synthesize {target_style_id}[/bold cyan][/dim]"
         )
     else:
         console.print(
             f"\n[yellow]💡 Phase 4 Ready: To synthesize the global Style Bible for '{target_style_id}', "
-            f"run: [bold cyan]python batch_process.py --synthesize-style {target_style_id}[/bold cyan][/yellow]"
+            f"run: [bold cyan]python -m app.cli style synthesize {target_style_id}[/bold cyan][/yellow]"
         )
 
 

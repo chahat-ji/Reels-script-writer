@@ -55,7 +55,8 @@ data/*.sqlite
 data/.current_user
 
 # Exports, scratch & temporary files
-export/
+/data/exports/
+scratch/
 *.tmp
 reel_download_*
 

@@ -14,6 +14,7 @@ from typing import Any, Dict, List, Optional
 from app.core.config import settings
 from app.core.database import get_db_session
 from app.extraction.normalizer import get_media_duration_ms, normalize_extraction
+from app.generation.parser import parse_screenplay_elements
 from app.models.schema import Video, VideoMemory, StyleReference, Style, Script
 
 
@@ -97,82 +98,6 @@ def get_video_payload(video_id: str) -> Optional[Dict[str, Any]]:
             "has_video_file": bool(video_path),
             "extraction": extraction_data,
         }
-
-
-def parse_screenplay_elements(script_text: str) -> List[Dict[str, str]]:
-    """
-    Parse screenplay text into typed elements for syntax-highlighted teleprompter rendering.
-    Types: slugline, character, parenthetical, dialogue, action, button, meta
-    """
-    elements = []
-    lines = script_text.splitlines()
-    prev_was_character = False
-    prev_was_parenthetical = False
-
-    for raw_line in lines:
-        line = raw_line.strip()
-        if not line:
-            prev_was_character = False
-            prev_was_parenthetical = False
-            elements.append({"type": "blank", "text": ""})
-            continue
-
-        # Meta comment
-        if line.startswith("#"):
-            elements.append({"type": "meta", "text": line})
-            prev_was_character = False
-            prev_was_parenthetical = False
-            continue
-
-        # Slugline
-        clean_upper = re.sub(r"^\*+|\*+$", "", line).strip().upper()
-        if clean_upper.startswith("INT.") or clean_upper.startswith("EXT."):
-            elements.append({"type": "slugline", "text": line})
-            prev_was_character = False
-            prev_was_parenthetical = False
-            continue
-
-        # Button / Transition
-        if clean_upper in ("BLACKOUT.", "BLACKOUT", "FADE OUT.", "FADE OUT", "CUT TO BLACK.", "THE END."):
-            elements.append({"type": "button", "text": line})
-            prev_was_character = False
-            prev_was_parenthetical = False
-            continue
-
-        # Parenthetical
-        if line.startswith("(") and line.endswith(")"):
-            elements.append({"type": "parenthetical", "text": line})
-            prev_was_character = False
-            prev_was_parenthetical = True
-            continue
-
-        # Character cue (Short, mostly uppercase or uppercase name before parenthetical)
-        upper_token = re.sub(r"\s*\([^)]*\)", "", line).strip()
-        is_character = (
-            len(upper_token) > 0
-            and len(upper_token) <= 30
-            and upper_token.isupper()
-            and not upper_token.endswith((".", "!", "?"))
-            and not upper_token.startswith(("INT", "EXT"))
-        )
-
-        if is_character:
-            elements.append({"type": "character", "text": line})
-            prev_was_character = True
-            prev_was_parenthetical = False
-            continue
-
-        # Dialogue
-        if prev_was_character or prev_was_parenthetical:
-            elements.append({"type": "dialogue", "text": line})
-            continue
-
-        # Action line
-        elements.append({"type": "action", "text": line})
-        prev_was_character = False
-        prev_was_parenthetical = False
-
-    return elements
 
 
 def get_all_scripts(style_id: Optional[str] = None, user_id: Optional[str] = None) -> List[Dict[str, Any]]:

@@ -75,6 +75,14 @@ def init_db(custom_engine: Optional[Engine] = None) -> None:
                 if "review_notes" not in script_cols:
                     conn.execute(text("ALTER TABLE scripts ADD COLUMN review_notes TEXT"))
 
+                # Users table migrations
+                cursor_users = conn.execute(text("PRAGMA table_info(users)"))
+                user_cols = [r[1] for r in cursor_users.fetchall()]
+                if "hashed_password" not in user_cols:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN hashed_password VARCHAR(256)"))
+                if "role" not in user_cols:
+                    conn.execute(text("ALTER TABLE users ADD COLUMN role VARCHAR(32) DEFAULT 'user'"))
+
                 conn.commit()
         except Exception:
             pass

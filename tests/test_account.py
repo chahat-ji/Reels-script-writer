@@ -218,3 +218,29 @@ def test_cross_creator_superpower_deduplication(mock_db_session):
     matches_b = retriever.search_memories(query="Prank idea", style_id="c_creator_b", top_k=5)
     assert len(matches_b) == 1
     assert matches_b[0].video_id == "v_shared100"
+
+
+def test_authenticate_and_roles(mock_db_session):
+    """Verify password-based authentication and role assignment."""
+    service = AccountService()
+    service.ensure_default_accounts()
+
+    # Authenticate admin
+    admin = service.authenticate("admin", "admin123")
+    assert admin is not None
+    assert admin.role == "admin"
+    assert admin.username == "admin"
+
+    # Authenticate by email
+    admin_by_email = service.authenticate("admin@scriptwriter.local", "admin123")
+    assert admin_by_email is not None
+    assert admin_by_email.user_id == admin.user_id
+
+    # Reject invalid password
+    assert service.authenticate("admin", "wrong_password") is None
+
+    # Authenticate regular creator user
+    creator = service.authenticate("creator", "creator123")
+    assert creator is not None
+    assert creator.role == "user"
+

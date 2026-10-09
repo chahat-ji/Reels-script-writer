@@ -9,3 +9,10 @@ assemblyai>=0.20.0
 # Optional testing utility
 pytest>=8.0.0
 rich>=13.7.0
+
+# API & Security
+fastapi>=0.115.0
+uvicorn>=0.30.0
+pyjwt>=2.9.0
+bcrypt>=4.2.0
+python-multipart>=0.0.12

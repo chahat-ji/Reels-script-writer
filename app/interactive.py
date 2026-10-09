@@ -356,7 +356,7 @@ def flow_sync_videos(user: User) -> None:
     console.print("  [bold green][0][/bold green] ↩️  Back to Main Menu")
 
     choice = Prompt.ask("\nSelect sync scope [0-3]", default="1").strip()
-    from batch_process import sync_all_videos
+    from app.ingestion.sync import sync_all_videos
 
     if choice == "1":
         sync_all_videos(user_id=user.user_id)
@@ -414,7 +414,7 @@ def interactive_main() -> None:
             elif choice == "6":
                 flow_view_history(user)
             elif choice == "7":
-                from batch_process import display_dashboard
+                from app.ingestion.sync import display_dashboard
                 display_dashboard(user=user)
             elif choice == "8":
                 from tools.dashboard.server import create_app

@@ -133,3 +133,10 @@ def test_cli_parser_commands():
     assert args9.subcommand == "dashboard"
     assert args9.port == 9000
     assert args9.host == "127.0.0.1"
+
+    # Serve subcommand (FastAPI REST API)
+    args10 = parser.parse_args(["serve", "--port", "8000", "--host", "0.0.0.0", "--reload"])
+    assert args10.subcommand == "serve"
+    assert args10.port == 8000
+    assert args10.host == "0.0.0.0"
+    assert args10.reload is True
