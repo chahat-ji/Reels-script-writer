@@ -5,19 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video-to-Style Verification Dashboard</title>
   <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/studio.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header Bar -->
   <header class="app-header">
     <div class="brand">
       <span class="brand-icon">🎬</span>
-      <h1>Video-to-Style Verification</h1>
+      <h1>Video-to-Style Studio</h1>
     </div>
 
-    <div class="controls">
+    <!-- Navigation View Switcher -->
+    <div class="nav-tabs">
+      <button id="nav-reels-btn" class="nav-tab-btn active">🎬 Reel Verification</button>
+      <button id="nav-studio-btn" class="nav-tab-btn">✍️ Script Studio</button>
+    </div>
+
+    <div class="controls" id="reel-controls">
       <label for="video-select">Reference Video:</label>
       <select id="video-select">
         <option value="">Loading catalog...</option>
@@ -31,8 +38,8 @@
     </div>
   </header>
 
-  <!-- Main Viewport (Fixed 100vh Layout) -->
-  <main class="dashboard-grid">
+  <!-- View 1: Reel Verification Viewport (Fixed 100vh Layout) -->
+  <main class="dashboard-grid" id="view-reels">
     <!-- Left Column: Video Player & Extraction Insights -->
     <section class="left-panel">
       <div class="video-wrapper">
@@ -90,7 +97,120 @@
     </section>
   </main>
 
+  <!-- View 2: Phase 6 Script Studio & Human Review Interface -->
+  <main class="script-studio-grid" id="view-studio" style="display: none;">
+    <!-- Left Column: Script Catalog + Style Bible + Reference Reels -->
+    <aside class="studio-sidebar">
+      <div class="studio-section">
+        <div class="studio-section-header">
+          <h3>📜 Generated Scripts (<span id="studio-scripts-count">0</span>)</h3>
+        </div>
+        <div class="studio-script-list" id="studio-script-list">
+          <p class="placeholder-text">Loading candidate scripts...</p>
+        </div>
+      </div>
+
+      <div class="studio-section">
+        <div class="studio-section-header" id="studio-bible-toggle">
+          <h3>📖 Creator Style Bible</h3>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">▼ Toggle</span>
+        </div>
+        <div class="bible-container" id="studio-bible-body">
+          <div id="studio-bible-content">Select a script to load Style Bible...</div>
+        </div>
+      </div>
+
+      <div class="studio-section">
+        <div class="studio-section-header">
+          <h3>🎥 Reference Reels Used</h3>
+        </div>
+        <div class="ref-reels-container" id="studio-ref-reels">
+          <p class="placeholder-text">Select a script to view references.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Center Column: Screenplay Viewer -->
+    <section class="screenplay-viewport">
+      <div class="screenplay-banner">
+        <div class="script-heading">
+          <h2 id="studio-script-id">Select a Screenplay</h2>
+          <p class="script-heading-premise" id="studio-script-premise">Choose a candidate script from the sidebar to inspect its screenplay</p>
+        </div>
+        <div class="script-banner-badges">
+          <span class="badge badge-accent" id="studio-badge-runtime">⏱️ 0s</span>
+          <span class="badge badge-accent" id="studio-badge-words">0 words</span>
+          <span class="badge status-badge draft" id="studio-badge-status">DRAFT</span>
+          <button id="export-pdf-btn" class="export-action-btn" title="Download Hollywood PDF">📥 PDF</button>
+          <button id="export-beats-btn" class="export-action-btn" title="View Shooting Beat Sheet">📋 Beat Sheet</button>
+        </div>
+      </div>
+
+      <div class="screenplay-paper" id="studio-screenplay-paper">
+        <p class="placeholder-text" style="text-align: center; margin-top: 4rem;">Select a script from the left sidebar to read.</p>
+      </div>
+
+      <!-- Beat Sheet Modal Overlay -->
+      <div class="beatsheet-overlay" id="beatsheet-overlay" style="display: none;">
+        <div class="beatsheet-modal">
+          <div class="beatsheet-modal-header">
+            <h3 id="beatsheet-modal-title">🎬 Shooting Beat Sheet & Shot List</h3>
+            <div class="beatsheet-header-actions">
+              <button id="download-beatsheet-md-btn" class="export-action-btn">📥 Download Markdown</button>
+              <button id="close-beatsheet-btn" class="close-btn">✕</button>
+            </div>
+          </div>
+          <div class="beatsheet-modal-body" id="beatsheet-modal-body">
+            <!-- Populated via studio.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: Human Review & Decision Panel -->
+    <aside class="review-panel">
+      <div class="review-card">
+        <div class="review-card-header">
+          <h3>Human Review & Decision</h3>
+        </div>
+
+        <div class="review-group">
+          <label for="review-status-select">Status Decision:</label>
+          <select id="review-status-select" class="review-select">
+            <option value="draft">Draft (Under Review)</option>
+            <option value="approved">Approved for Production</option>
+            <option value="needs_revision">Needs Revision</option>
+            <option value="rejected">Rejected</option>
+          </select>
+        </div>
+
+        <div class="review-group">
+          <label>Comedic Quality Rating:</label>
+          <div class="star-rating-row">
+            <div class="star-rating">
+              <button class="star-btn" data-rating="1">★</button>
+              <button class="star-btn" data-rating="2">★</button>
+              <button class="star-btn" data-rating="3">★</button>
+              <button class="star-btn" data-rating="4">★</button>
+              <button class="star-btn" data-rating="5">★</button>
+            </div>
+            <span class="star-rating-text" id="star-rating-text">Not Rated</span>
+          </div>
+        </div>
+
+        <div class="review-group">
+          <label for="review-notes-input">Reviewer Notes & Feedback:</label>
+          <textarea id="review-notes-input" class="review-textarea" placeholder="Enter notes on comedic timing, character voice match, punchline punch, or adjustments..."></textarea>
+        </div>
+
+        <button id="save-review-btn" class="save-review-btn">💾 Save Human Review</button>
+        <div id="review-toast" class="review-feedback-toast"></div>
+      </div>
+    </aside>
+  </main>
+
   <script src="/static/script.js"></script>
+  <script src="/static/studio.js"></script>
 </body>
 </html>
 

@@ -394,11 +394,12 @@ def interactive_main() -> None:
             console.print("  [bold green][4][/bold green] ✨ Add Creator Profile    [dim](Create new comedic style)[/dim]")
             console.print("  [bold green][5][/bold green] 📖 Creator Profiles & Bibles [dim](View profiles & synthesize)[/dim]")
             console.print("  [bold green][6][/bold green] 📜 View History           [dim](Uploads & generated screenplays)[/dim]")
-            console.print("  [bold green][7][/bold green] 📊 Pipeline Dashboard     [dim](View reference library status)[/dim]")
-            console.print("  [bold green][8][/bold green] 👤 Switch User / Login    [dim](Change active account)[/dim]")
+            console.print("  [bold green][7][/bold green] 📊 Pipeline Status        [dim](View terminal database stats)[/dim]")
+            console.print("  [bold green][8][/bold green] 🌐 Web Studio Dashboard   [dim](Launch browser Reel & Script Reviewer)[/dim]")
+            console.print("  [bold green][9][/bold green] 👤 Switch User / Login    [dim](Change active account)[/dim]")
             console.print("  [bold green][0][/bold green] 🚪 Exit")
 
-            choice = Prompt.ask("\nSelect an option [0-8]", default="1").strip()
+            choice = Prompt.ask("\nSelect an option [0-9]", default="1").strip()
 
             if choice == "1":
                 flow_generate_script(user)
@@ -416,12 +417,22 @@ def interactive_main() -> None:
                 from batch_process import display_dashboard
                 display_dashboard(user=user)
             elif choice == "8":
+                from tools.dashboard.server import create_app
+                from aiohttp import web
+                console.print("\n[bold green]Starting Web Studio Dashboard on http://127.0.0.1:8080...[/bold green]")
+                console.print("[dim]Press Ctrl+C in terminal when finished to return to the interactive studio.[/dim]\n")
+                try:
+                    app = create_app()
+                    web.run_app(app, host="127.0.0.1", port=8080, print=None)
+                except KeyboardInterrupt:
+                    console.print("\n[cyan]Dashboard stopped.[/cyan]")
+            elif choice == "9":
                 user = flow_switch_user()
             elif choice in ("0", "q", "exit"):
                 console.print("[cyan]Goodbye! Happy writing! 🎬[/cyan]")
                 break
             else:
-                console.print("[bold red]Invalid option. Please choose a number between 0 and 8.[/bold red]")
+                console.print("[bold red]Invalid option. Please choose a number between 0 and 9.[/bold red]")
 
             Prompt.ask("\n[dim]Press Enter to return to main menu...[/dim]", default="")
         except (EOFError, KeyboardInterrupt):

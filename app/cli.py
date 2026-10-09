@@ -326,6 +326,11 @@ def build_parser() -> argparse.ArgumentParser:
     sync_p.add_argument("--all", action="store_true", help="Sync all library videos across entire database (global)")
     sync_p.add_argument("--creator", default=None, help="Sync videos under specific creator ID")
 
+    # Dashboard subparser
+    dash_p = subparsers.add_parser("dashboard", help="Launch the local Web Studio verification dashboard")
+    dash_p.add_argument("--port", type=int, default=8080, help="Web server port (default: 8080)")
+    dash_p.add_argument("--host", default="127.0.0.1", help="Host interface (default: 127.0.0.1)")
+
     # Menu / Interactive option
     parser.add_argument("--interactive", "-i", action="store_true", help="Launch interactive studio mode")
     subparsers.add_parser("menu", help="Launch interactive studio mode")
@@ -362,6 +367,22 @@ def main() -> None:
         handle_history(args)
     elif args.subcommand == "sync":
         handle_sync(args)
+    elif args.subcommand == "dashboard":
+        from tools.dashboard.server import create_app
+        from aiohttp import web
+        port = args.port
+        host = args.host
+        console.print(
+            Panel.fit(
+                f"[bold green]Video-to-Style Verification Dashboard & Script Studio[/bold green]\n"
+                f"[cyan]Server URL:[/cyan] [underline]http://{host}:{port}[/underline]\n"
+                f"[dim]Reel verification & interactive script review in your browser.[/dim]",
+                title="🎬 Web Studio",
+                border_style="green",
+            )
+        )
+        app = create_app()
+        web.run_app(app, host=host, port=port, print=None)
     else:
         parser.print_help()
 

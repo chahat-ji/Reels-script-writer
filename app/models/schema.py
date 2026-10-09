@@ -193,6 +193,9 @@ class Script(Base):
     style_id = Column(String(64), ForeignKey("styles.style_id"), index=True, nullable=False)
     premise = Column(Text, nullable=False)
     script_text = Column(Text, nullable=False)
+    status = Column(String(32), default="draft", nullable=False)  # draft, approved, needs_revision, rejected
+    rating = Column(Integer, nullable=True)                      # 1-5 star human rating
+    review_notes = Column(Text, nullable=True)                   # Human evaluation notes
     created_at = Column(DateTime(timezone=True), default=utc_now, nullable=False)
 
     # Relational associations
@@ -200,5 +203,5 @@ class Script(Base):
     style = relationship("Style", back_populates="scripts")
 
     def __repr__(self) -> str:
-        return f"<Script(id={self.script_id}, style={self.style_id})>"
+        return f"<Script(id={self.script_id}, style={self.style_id}, status={self.status})>"
 

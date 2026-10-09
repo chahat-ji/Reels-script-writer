@@ -92,7 +92,7 @@ class ContextBuilder:
             ]
             memories_query = session.query(VideoMemory).filter(
                 (VideoMemory.style_id == style_id) | (VideoMemory.video_id.in_(referenced_ids))
-            )
+            ).filter(VideoMemory.memory_text.isnot(None))
             total_memories = memories_query.count()
 
         if total_memories == 0:
@@ -113,11 +113,13 @@ class ContextBuilder:
                 memories = (
                     session.query(VideoMemory)
                     .filter((VideoMemory.style_id == style_id) | (VideoMemory.video_id.in_(referenced_ids)))
+                    .filter(VideoMemory.memory_text.isnot(None))
                     .all()
                 )
                 memory_texts = [
-                    f"--- REFERENCE MEMORY {idx}/{len(memories)}: {m.video_id} ---\n{m.memory_text.strip()}"
+                    f"--- REFERENCE MEMORY {idx}/{len(memories)}: {m.video_id} ---\n{(m.memory_text or '').strip()}"
                     for idx, m in enumerate(memories, 1)
+                    if (m.memory_text or "").strip()
                 ]
             console.print(
                 f"[bold cyan][CONTEXT BUILDER][/bold cyan] Creator '{creator_name}' has {total_memories} videos "
@@ -128,8 +130,9 @@ class ContextBuilder:
             retrieval_mode = "dynamic_vector_top10"
             matches = self.retriever.search_memories(style_id=style_id, query=clean_premise, top_k=10)
             memory_texts = [
-                f"--- REFERENCE MEMORY {idx}/{len(matches)}: {m.video_id} (Score: {m.score:.3f}) ---\n{m.memory_text.strip()}"
+                f"--- REFERENCE MEMORY {idx}/{len(matches)}: {m.video_id} (Score: {m.score:.3f}) ---\n{(m.memory_text or '').strip()}"
                 for idx, m in enumerate(matches, 1)
+                if (m.memory_text or "").strip()
             ]
             console.print(
                 f"[bold cyan][CONTEXT BUILDER][/bold cyan] Creator '{creator_name}' has {total_memories} videos "

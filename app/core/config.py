@@ -28,6 +28,7 @@ AUDIO_DIR = DATA_DIR / "audio"
 EXTRACTIONS_DIR = DATA_DIR / "extractions"
 STYLES_DIR = DATA_DIR / "styles"
 SCRIPTS_DIR = DATA_DIR / "scripts"
+EXPORTS_DIR = DATA_DIR / "exports"
 
 # Ensure essential directories exist at startup
 VIDEOS_DIR.mkdir(parents=True, exist_ok=True)
@@ -35,6 +36,7 @@ AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 EXTRACTIONS_DIR.mkdir(parents=True, exist_ok=True)
 STYLES_DIR.mkdir(parents=True, exist_ok=True)
 SCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
+EXPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 
 class Settings:
@@ -62,6 +64,7 @@ class Settings:
         self.extractions_dir: Path = EXTRACTIONS_DIR
         self.styles_dir: Path = STYLES_DIR
         self.scripts_dir: Path = SCRIPTS_DIR
+        self.exports_dir: Path = EXPORTS_DIR
 
     def get_gemini_api_key(self) -> str:
         """

@@ -127,3 +127,9 @@ def test_cli_parser_commands():
     assert args8.subcommand == "sync"
     assert args8.all is False
     assert args8.creator == "nani_comedy"
+
+    # Dashboard subcommand
+    args9 = parser.parse_args(["dashboard", "--port", "9000"])
+    assert args9.subcommand == "dashboard"
+    assert args9.port == 9000
+    assert args9.host == "127.0.0.1"

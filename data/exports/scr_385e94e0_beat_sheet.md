@@ -1,0 +1,25 @@
+# Shooting Beat Sheet & Shot List: scr_385e94e0
+
+**Creator Style**: default_style  
+**Premise**: Mummy discovers her expensive anti-aging night cream has been replaced with homemade curd by Dadi.  
+**Target Runtime**: 60 seconds | **Total Beats**: 17
+
+| Beat # | Time Code | Phase | Camera Framing | Character | Dialogue Cue | Actor Blocking & Props |
+| :---: | :---: | :---: | :--- | :--- | :--- | :--- |
+| 1 | 00:00 - 00:03 | Hook / Setup | Medium Shot (Hook / Establishing) | MUMMY | "Paris se special mangwayi hai chaar hazaar ki imported night cream. Kal subah dekhna, baees saal ki college girl lagungi!" | DAUGHTER (18) sits on the sofa, scrolling on her phone. |
+| 2 | 00:03 - 00:07 | Hook / Setup | Medium Close-up (Two-shot reverse) | DAUGHTER | "Mummy, Paris ki ladkiyan munh pe lassi lagake soti hain kya?" | Daughter stops scrolling. She aggressively sniffs the air, scrunching her nose. |
+| 3 | 00:07 - 00:10 | Escalation Beat 1 | Medium Close-up (Two-shot reverse) | MUMMY | "Karela jaisi shakal wali, tujhe French aroma ki kya tameez? Lavender and botanical extracts hain isme!" | - |
+| 4 | 00:10 - 00:14 | Escalation Beat 2 | Medium Close-up (Two-shot reverse) | DAUGHTER | "Botanical chhod, mujhe toh tazi dahi ki booboo aa rahi hai!" | - |
+| 5 | 00:14 - 00:17 | Escalation Beat 3 | Tight Close-up / Snap Zoom | MUMMY | "Yeh... yeh chehre pe sour cream jaisi khushboo kyun aa rahi hai?!" | Mummy halts. She sniffs her own palms. Her eyes widen in horror. |
+| 6 | 00:17 - 00:21 | Escalation Beat 4 | Medium Close-up (Two-shot reverse) | DAUGHTER | "Mummy, lavender gaya tel lene. Isme toh raayi ka daana aur kadi patta tair raha hai!" | Daughter picks up the fancy, gold-rimmed cream jar from the coffee table. She peers inside, dipping a pinky finger. |
+| 7 | 00:21 - 00:24 | Escalation Beat 5 | Medium Close-up (Two-shot reverse) | MUMMY | "Kya?!" | - |
+| 8 | 00:24 - 00:28 | Escalation Beat 6 | Medium Close-up (Two-shot reverse) | DADI | "Chilla kyun rahi hai tinde jaisi shakal wali? Ghar ko machhi market bana diya!" | Enter DADI (70), walking with swagger, blissfully rolling up the bottom of her salwar. |
+| 9 | 00:28 - 00:31 | Escalation Beat 7 | Medium Close-up (Two-shot reverse) | MUMMY | "Mummy ji! Meri chaar hazaar rupaye ki French anti-aging cream mein ghar ka khatta dahi kisne bhara?!" | - |
+| 10 | 00:31 - 00:35 | Escalation Beat 8 | Medium Close-up (Two-shot reverse) | DADI | "Maine bhara! Dabba kitna sundar tha, sonpapdi ke dabbe se bhi mazboot! Maine socha isme jaaman daal ke mast dahi jamaungi." | - |
+| 11 | 00:35 - 00:38 | Escalation Beat 9 | Medium Close-up (Two-shot reverse) | MUMMY | "Toh meri chaar hazaar ki cream kahan gayi?! Kahan phek di aapne?!" | - |
+| 12 | 00:38 - 00:42 | Escalation Beat 10 | Wide Handheld (Fast Track) | DADI | "Ghutno pe ghis li saari! Subah se dholak jaise baj rahe the mere joint!" | Dadi proudly lifts her foot and slaps both her knees with resounding thuds. |
+| 13 | 00:42 - 00:45 | Escalation Beat 11 | Medium Close-up (Two-shot reverse) | DAUGHTER | "Dadi! Aapne France ki anti-wrinkle cream ghutno pe ragad di?!" | - |
+| 14 | 00:45 - 00:49 | Escalation Beat 12 | Medium Close-up (Two-shot reverse) | DADI | "Aur nahi toh kya? Chehra dikhe bees saal ka aur ghutne chale assi saal ke... aisi langdi Pari ban ke kitty party mein thumke lagati kya?" | - |
+| 15 | 00:49 - 00:52 | Climactic Reversal | Medium Close-up (Two-shot reverse) | MUMMY | "Aapne meri chaar hazaar ki jawani apne ghutno mein masal di! Main munh dho rahi hoon!" | Mummy clutches her chest, ready to faint from blood pressure. |
+| 16 | 00:52 - 00:56 | Climactic Reversal | Medium Close-up (Two-shot reverse) | DADI | "Oye, ruk! Dho mat, paap lagega! Thodi cheeni daal le gaalon pe, meethi lassi ban jayegi!" | Mummy turns to storm off, but Dadi instantly catches her wrist and shoves a katori of sugar into her hand. |
+| 17 | 00:56 - 00:60 | Punchline Button | Wide Handheld (Fast Track) | SCENE | "**BLACKOUT.**" | Dadi scurries toward the bedroom with lightning-fast agility as Mummy lets out a blood-curdling screech. |

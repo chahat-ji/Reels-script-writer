@@ -54,11 +54,24 @@ class ScreenplayGenerator:
             max_output_tokens=4000,
         )
 
-        response = self.client.models.generate_content(
-            model=self.model_name,
-            contents=context.user_prompt,
-            config=config,
-        )
+        import time
+        max_attempts = 4
+        last_error = None
+        for attempt in range(1, max_attempts + 1):
+            try:
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=context.user_prompt,
+                    config=config,
+                )
+                break
+            except Exception as err:
+                last_error = err
+                if attempt < max_attempts and ("503" in str(err) or "UNAVAILABLE" in str(err)):
+                    console.print(f"[yellow][RETRY][/yellow] Transient 503 spike. Retrying in {attempt * 2}s (attempt {attempt}/{max_attempts})...")
+                    time.sleep(attempt * 2)
+                else:
+                    raise
 
         raw_script = response.text or ""
         cleaned_script = self._clean_script(raw_script)

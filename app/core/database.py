@@ -65,6 +65,16 @@ def init_db(custom_engine: Optional[Engine] = None) -> None:
                 if "description" not in style_cols:
                     conn.execute(text("ALTER TABLE styles ADD COLUMN description TEXT"))
 
+                # Scripts table migrations
+                cursor_scripts = conn.execute(text("PRAGMA table_info(scripts)"))
+                script_cols = [r[1] for r in cursor_scripts.fetchall()]
+                if "status" not in script_cols:
+                    conn.execute(text("ALTER TABLE scripts ADD COLUMN status VARCHAR(32) DEFAULT 'draft'"))
+                if "rating" not in script_cols:
+                    conn.execute(text("ALTER TABLE scripts ADD COLUMN rating INTEGER"))
+                if "review_notes" not in script_cols:
+                    conn.execute(text("ALTER TABLE scripts ADD COLUMN review_notes TEXT"))
+
                 conn.commit()
         except Exception:
             pass

@@ -25,11 +25,12 @@ What would you like to do?
   [4] ✨ Add Creator Profile    (Create new comedic style)
   [5] 📖 Creator Profiles & Bibles (View profiles & synthesize)
   [6] 📜 View History           (Uploads & generated screenplays)
-  [7] 📊 Pipeline Dashboard     (View reference library status)
-  [8] 👤 Switch User / Login    (Change active account)
+  [7] 📊 Pipeline Status        (View reference library status)
+  [8] 🌐 Web Studio Dashboard   (Launch browser Reel & Script Reviewer)
+  [9] 👤 Switch User / Login    (Change active account)
   [0] 🚪 Exit
 
-Select an option [0-8] (1):
+Select an option [0-9] (1):
 ```
 
 ### How Each Option Works:
@@ -42,8 +43,9 @@ Select an option [0-8] (1):
 | **[4] ✨ Add Creator** | 1. Creator display name<br>2. Optional description | Registers a new creator profile under your account |
 | **[5] 📖 View Profiles** | 1. Shows table of creators<br>2. Option `[S]` to synthesize Style Bible | Inspects all creators and lets you trigger manual Style Bible synthesis |
 | **[6] 📜 View History** | Choose `[1]` Uploads or `[2]` Scripts | Displays full formatted history tables |
-| **[7] 📊 Dashboard** | No inputs needed | Displays progress dashboard of all library videos |
-| **[8] 👤 Switch User** | Enter username & optional email | Switches active session or registers a new user |
+| **[7] 📊 Pipeline Status** | No inputs needed | Displays progress dashboard of all library videos in terminal |
+| **[8] 🌐 Web Studio** | No inputs needed | Launches local web dashboard on `http://127.0.0.1:8080` for video playback and script review |
+| **[9] 👤 Switch User** | Enter username & optional email | Switches active session or registers a new user |
 | **[0] 🚪 Exit** | None | Exits cleanly |
 
 ---
@@ -99,3 +101,10 @@ python -m app.cli creator add "<Name>" [--id <id>]
 python -m app.cli creator list
 python -m app.cli history scripts --creator <creator_id>
 ```
+
+### 6. Web Studio Dashboard
+```bash
+python -m app.cli dashboard             # Launches on http://127.0.0.1:8080
+python -m app.cli dashboard --port 9000  # Custom port
+```
+
